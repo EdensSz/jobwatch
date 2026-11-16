@@ -13,6 +13,11 @@ jobs:
         with: {python-version: "3.12"}
       - run: pip install -r requirements.txt
       - run: python jobwatch.py --explain
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       - name: Sauvegarde
         run: |
           git config user.name "jobwatch"; git config user.email "jobwatch@users.noreply.github.com"
