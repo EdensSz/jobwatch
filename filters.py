@@ -43,6 +43,7 @@ class Verdict:
     description: str = ""
     summary: str = ""
     note_source: str = "règles"
+    ai_model: str = ""
 
 
 # --------------------------------------------------------------------------- titres

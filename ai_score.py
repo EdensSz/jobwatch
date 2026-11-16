@@ -12,6 +12,7 @@ import requests
 URL = "https://generativelanguage.googleapis.com/v1beta/interactions"
 DEFAULT_MODEL = "gemini-3.1-flash-lite"
 LAST_ERROR = ""
+RATE_STOP = False   # passe à True quand le plafond gratuit du jour est atteint : on arrête d'appeler l'IA
 
 SYSTEM = (
     "Tu aides Théo à trier des offres d'emploi. Profil : analyste Investor Relations à Paris dans une société "
@@ -112,7 +113,9 @@ def _json_from_text(text):
 
 def review(job_title, company, location, description, api_key, model=None, provider="gemini"):
     """Retourne un dict {note, chinese, ...} ou None."""
-    global LAST_ERROR
+    global LAST_ERROR, RATE_STOP
+    if RATE_STOP:
+        return None
     cfg = PROVIDERS[provider]
     model = model or cfg["model"]
     prompt = _prompt(job_title, company, location, description)
@@ -131,8 +134,12 @@ def review(job_title, company, location, description, api_key, model=None, provi
             LAST_ERROR = LAST_ERROR or f"réseau : {e}"
             return None
         if r.status_code == 429:
-            time.sleep(25)
-            continue
+            if attempt == 0:
+                time.sleep(25)
+                continue
+            RATE_STOP = True
+            LAST_ERROR = LAST_ERROR or f"{provider} : limite gratuite atteinte (429), analyse IA arrêtée pour ce passage"
+            return None
         if r.status_code == 400 and "response_format" in body:
             body.pop("response_format")     # on retente sans schéma imposé
             LAST_ERROR = LAST_ERROR or f"400 avec schéma : {r.text[:200]}"
@@ -156,6 +163,7 @@ def review(job_title, company, location, description, api_key, model=None, provi
         except (TypeError, ValueError):
             LAST_ERROR = LAST_ERROR or f"{provider} : note absente de la réponse"
             return None
+        res["model"] = (data.get("model") if isinstance(data, dict) else None) or model
         res["chinese"] = res.get("chinese") if res.get("chinese") in ("non", "souhaité", "requis") else "non"
         return res
     return None

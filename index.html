@@ -190,7 +190,7 @@ function normalize(raw){
     company:o.company||o.source||"",title:o.title,location:o.location||"",posted:o.posted||"",first_seen:o.first_seen||"",
     is_new:!!o.is_new,note10:(typeof o.note10==="number")?o.note10:null,rating:o.rating||"",chinese:o.chinese||"unknown",
     other_langs:o.other_langs||[],years:(o.years==null?null:o.years),
-    flags:Array.isArray(o.flags)?o.flags:(o.flags?String(o.flags).split(" ; "):[]),why:o.why||[],excerpt:o.excerpt||"",description:o.description||"",summary:o.summary||"",note_source:o.note_source||"règles",
+    flags:Array.isArray(o.flags)?o.flags:(o.flags?String(o.flags).split(" ; "):[]),why:o.why||[],excerpt:o.excerpt||"",description:o.description||"",summary:o.summary||"",note_source:o.note_source||"règles",ai_model:o.ai_model||"",
     excluded:!!o.excluded,excluded_reason:o.excluded_reason||"",url:o.url||"",preview:false}));
 }
 function repoUrls(){
@@ -258,7 +258,7 @@ function renderOffres(){
 }
 function detail(o,k,st){
   const sum=o.summary?`<div class="sumbox">${esc(o.summary)}</div>`:"";
-  const why=o.why&&o.why.length?`<h3>Pourquoi cette note${o.note_source==="ia"?" (analyse IA)":" (règles du script)"}</h3><ul>${o.why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:"";
+  const why=o.why&&o.why.length?`<h3>Pourquoi cette note${o.note_source==="ia"?" (analyse IA"+(o.ai_model?" : "+esc(o.ai_model):"")+")":" (règles du script)"}</h3><ul>${o.why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:"";
   const fl=o.flags&&o.flags.length?`<h3>Points d'attention</h3><ul>${o.flags.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:"";
   const zl=zhLabel(o);
   const kv=`<dl class="kv"><dt>Chinois</dt><dd>${zl[0].replace("Chinois : ","").replace("Chinois ","")}${o.excluded?" · offre exclue du tri normal":""}</dd>

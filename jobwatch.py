@@ -128,7 +128,7 @@ def apply_ai(kept, rejected, state, cfg):
         return kept
     provider, key, pcfg = picked
     model = ai_cfg.get("model") or pcfg["model"]
-    budget = int(ai_cfg.get("max_per_run", 80))
+    budget = int(ai_cfg.get("max_per_run", 40 if provider == "openrouter" else 80))
     pause = float(ai_cfg.get("pause_seconds", 5))
     out = []
     for j, v in kept:
@@ -145,6 +145,7 @@ def apply_ai(kept, rejected, state, cfg):
             out.append((j, v))
             continue
         v.note_source = "ia"
+        v.ai_model = ai.get("model", "")
         v.note10 = ai["note"]
         v.summary = ai.get("summary", "")
         reasons = [f"IA : {r}" for r in (ai.get("reasons") or [])]
@@ -189,7 +190,7 @@ def write_outputs(kept, rejected, errors, cfg, explain):
                     is_new=(getattr(j, "first_seen", "") == date.today().isoformat()),
                     note10=v.note10, rating=v.rating, chinese=v.chinese, other_langs=v.other_langs,
                     years=v.min_years, flags=v.flags, why=v.why, excerpt=v.excerpt,
-                    description=v.description, summary=v.summary, note_source=v.note_source,
+                    description=v.description, summary=v.summary, note_source=v.note_source, ai_model=v.ai_model,
                     excluded=excluded, excluded_reason=v.reason if excluded else "",
                     url=j.url, source=j.source, score=v.score)
     rows = [row(jv, False) for jv in kept]
