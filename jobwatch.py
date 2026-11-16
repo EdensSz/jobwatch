@@ -122,11 +122,12 @@ CH_ORDER = {"non": 0, "unknown": 0, "souhaité": 1, "fortement souhaité": 2, "r
 
 def apply_ai(kept, rejected, state, cfg):
     """Relecture IA des offres retenues (résultats gardés en cache dans state.json)."""
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
     ai_cfg = cfg.get("ai", {}) or {}
-    if not key or ai_cfg.get("enabled", True) is False:
+    picked = None if ai_cfg.get("enabled", True) is False else ai_score.pick_provider(os.environ, ai_cfg.get("provider"))
+    if not picked:
         return kept
-    model = ai_cfg.get("model", ai_score.DEFAULT_MODEL)
+    provider, key, pcfg = picked
+    model = ai_cfg.get("model") or pcfg["model"]
     budget = int(ai_cfg.get("max_per_run", 80))
     pause = float(ai_cfg.get("pause_seconds", 5))
     out = []
@@ -136,7 +137,7 @@ def apply_ai(kept, rejected, state, cfg):
         ai = st.get("ai") if st.get("ai_h") == h else None
         if ai is None and budget > 0 and v.description:
             budget -= 1
-            ai = ai_score.review(j.title, j.company, j.location, v.description, key, model)
+            ai = ai_score.review(j.title, j.company, j.location, v.description, key, model, provider)
             if ai:
                 st["ai"], st["ai_h"] = ai, h
             time.sleep(pause)
@@ -246,7 +247,7 @@ def main():
         sys.exit(1 if check_sources(cfg) else 0)
     kept, rejected, new, errors = collect(cfg, a.explain)
     if ai_score.LAST_ERROR:
-        errors.append("IA (Gemini) : " + ai_score.LAST_ERROR)
+        errors.append("IA : " + ai_score.LAST_ERROR)
     write_outputs(kept, rejected, errors, cfg, a.explain)
     try:
         send_digest(new, errors)

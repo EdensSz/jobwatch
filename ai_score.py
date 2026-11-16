@@ -79,16 +79,54 @@ def _prompt(job_title, company, location, description):
             "years_required, summary, reasons.")
 
 
-def review(job_title, company, location, description, api_key, model=DEFAULT_MODEL):
+PROVIDERS = {   # ordre de préférence ; le premier dont la clé existe est utilisé
+    "openrouter": {"env": "OPENROUTER_API_KEY", "url": "https://openrouter.ai/api/v1/chat/completions",
+                   "model": "openrouter/free"},
+    "groq": {"env": "GROQ_API_KEY", "url": "https://api.groq.com/openai/v1/chat/completions",
+             "model": "llama-3.3-70b-versatile"},
+    "mistral": {"env": "MISTRAL_API_KEY", "url": "https://api.mistral.ai/v1/chat/completions",
+                "model": "mistral-small-latest"},
+    "gemini": {"env": "GEMINI_API_KEY", "url": URL, "model": DEFAULT_MODEL},
+}
+
+
+def pick_provider(env, wanted=None):
+    """Retourne (nom, clé, config) du premier fournisseur disponible, ou None."""
+    for name in ([wanted] if wanted else list(PROVIDERS)):
+        p = PROVIDERS.get(name)
+        if p and (env.get(p["env"]) or "").strip():
+            return name, env[p["env"]].strip(), p
+    return None
+
+
+def _json_from_text(text):
+    t = re.sub(r"^```(?:json)?|```$", "", (text or "").strip(), flags=re.M).strip()
+    a, b = t.find("{"), t.rfind("}")
+    if a != -1 and b > a:
+        try:
+            return json.loads(t[a:b + 1])
+        except ValueError:
+            return None
+    return None
+
+
+def review(job_title, company, location, description, api_key, model=None, provider="gemini"):
     """Retourne un dict {note, chinese, ...} ou None."""
     global LAST_ERROR
-    body = {"model": model, "input": _prompt(job_title, company, location, description),
-            "system_instruction": SYSTEM,
-            "response_format": {"type": "text", "mime_type": "application/json", "schema": SCHEMA}}
-    headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
+    cfg = PROVIDERS[provider]
+    model = model or cfg["model"]
+    prompt = _prompt(job_title, company, location, description)
+    if provider == "gemini":
+        body = {"model": model, "input": prompt, "system_instruction": SYSTEM,
+                "response_format": {"type": "text", "mime_type": "application/json", "schema": SCHEMA}}
+        headers = {"x-goog-api-key": api_key, "Content-Type": "application/json"}
+    else:   # format OpenAI (OpenRouter, Groq, Mistral)
+        body = {"model": model, "messages": [{"role": "system", "content": SYSTEM},
+                                              {"role": "user", "content": prompt + "\nRéponds uniquement avec l'objet JSON."}]}
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
     for attempt in range(3):
         try:
-            r = requests.post(URL, headers=headers, json=body, timeout=60)
+            r = requests.post(cfg["url"], headers=headers, json=body, timeout=90)
         except requests.RequestException as e:
             LAST_ERROR = LAST_ERROR or f"réseau : {e}"
             return None
@@ -100,16 +138,23 @@ def review(job_title, company, location, description, api_key, model=DEFAULT_MOD
             LAST_ERROR = LAST_ERROR or f"400 avec schéma : {r.text[:200]}"
             continue
         if r.status_code >= 400:
-            LAST_ERROR = LAST_ERROR or f"HTTP {r.status_code} : {r.text[:300]}"
+            LAST_ERROR = LAST_ERROR or f"{provider} HTTP {r.status_code} : {r.text[:300]}"
             return None
-        res = parse_response(r.json())
+        data = r.json()
+        if provider == "gemini":
+            res = parse_response(data)
+        else:
+            try:
+                res = _json_from_text(data["choices"][0]["message"]["content"])
+            except (KeyError, IndexError, TypeError):
+                res = None
         if not res:
-            LAST_ERROR = LAST_ERROR or f"réponse illisible : {r.text[:300]}"
+            LAST_ERROR = LAST_ERROR or f"{provider} : réponse illisible : {r.text[:300]}"
             return None
         try:
             res["note"] = max(0, min(10, int(res.get("note"))))
         except (TypeError, ValueError):
-            LAST_ERROR = LAST_ERROR or "note absente de la réponse"
+            LAST_ERROR = LAST_ERROR or f"{provider} : note absente de la réponse"
             return None
         res["chinese"] = res.get("chinese") if res.get("chinese") in ("non", "souhaité", "requis") else "non"
         return res
