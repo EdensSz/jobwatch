@@ -1,0 +1,51 @@
+# ---------- Profil de recherche ----------
+locations: ["Hong Kong", "Singapore"]     # Tokyo : ajoute "Tokyo" (pour VIE / postes anglophones)
+max_years: 3                               # rejette si > 3 ans d'expérience demandés
+min_score: 3                               # monte à 5 si trop de bruit
+exclude_languages: ["chinois", "japonais", "coréen", "thaï", "vietnamien", "indonésien"]
+reject_highly_preferred: false             # true : rejette aussi « Mandarin highly preferred »
+max_age_days: 45
+max_description_fetches_per_source: 150
+
+# Mots-clés : on cherche par ville (les sites font une recherche « tous les mots »), les filtres jugent ensuite chaque offre
+search_terms:
+  - "Hong Kong"
+  - "Singapore"
+
+# ---------- Sources ----------
+# Les entrées marquées « À VÉRIFIER » sont écrites de mémoire : lance `python jobwatch.py --check`.
+# Pour ajouter un site : `python jobwatch.py --detect "<url de la page carrières>"`.
+sources:
+  # ===== VÉRIFIÉ dans Chrome le 16/11/2026 : l'API répond =====
+  # -- Gestion d'actifs / private markets / wealth
+  - {name: "Fidelity International", type: workday, url: "https://fil.wd3.myworkdayjobs.com/en-US/001"}
+  - {name: "BlackRock",              type: workday, url: "https://blackrock.wd1.myworkdayjobs.com/en-US/BlackRock_Professional"}
+  - {name: "Invesco",                type: workday, url: "https://invesco.wd1.myworkdayjobs.com/IVZ"}
+  - {name: "T. Rowe Price",          type: workday, url: "https://troweprice.wd5.myworkdayjobs.com/TRowePriceInternational"}
+  - {name: "AllianceBernstein",      type: workday, url: "https://abglobal.wd1.myworkdayjobs.com/alliancebernsteincareers"}
+  - {name: "abrdn",                  type: workday, url: "https://abrdn.wd3.myworkdayjobs.com/abrdn"}
+  - {name: "Franklin Templeton",     type: workday, url: "https://franklintempleton.wd5.myworkdayjobs.com/Primary-External-1"}   # répond, 0 offre Asie aujourd'hui
+  - {name: "Blackstone",             type: workday, url: "https://blackstone.wd1.myworkdayjobs.com/Blackstone_Careers"}
+  - {name: "Carlyle",                type: workday, url: "https://carlyle.wd1.myworkdayjobs.com/Carlyle"}
+  - {name: "Ares",                   type: workday, url: "https://aresmgmt.wd1.myworkdayjobs.com/External"}
+  - {name: "Brookfield",             type: workday, url: "https://brookfield.wd5.myworkdayjobs.com/brookfield"}
+  - {name: "Hamilton Lane",          type: workday, url: "https://hamiltonlane.wd108.myworkdayjobs.com/Search"}
+  - {name: "Manulife",               type: workday, url: "https://manulife.wd3.myworkdayjobs.com/MFCJH_Jobs"}
+  # -- Banques / wealth
+  - {name: "HSBC",                   type: eightfold, host: "portal.careers.hsbc.com", domain: "hsbc.com"}
+  - {name: "Morgan Stanley",         type: workday, url: "https://ms.wd5.myworkdayjobs.com/External"}
+  - {name: "J.P. Morgan",            type: oracle, host: "jpmc.fa.oraclecloud.com", site_number: "CX_1001", site_name: "CX_1001"}
+  - {name: "Julius Baer",            type: workday, url: "https://juliusbaer.wd3.myworkdayjobs.com/External"}
+  - {name: "State Street",           type: workday, url: "https://statestreet.wd1.myworkdayjobs.com/Global"}
+  - {name: "Northern Trust",         type: workday, url: "https://ntrs.wd1.myworkdayjobs.com/northerntrust"}
+  - {name: "Deutsche Bank",          type: workday, url: "https://db.wd3.myworkdayjobs.com/DBWebsite"}
+  - {name: "Barclays",               type: workday, url: "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays"}
+  - {name: "UOB",                    type: workday, url: "https://uobgroup.wd3.myworkdayjobs.com/UOBExternal"}
+  # -- VIE / VIA (BNP, SG, CA-CIB, Natixis... publient leurs VIE ici)
+  - {name: "VIE Business France", type: civiweb, terms: ["Hong Kong", "Singapour", "Singapore", "Tokyo"]}
+
+  # ===== PAS de connecteur (autre système, pas d'API publique simple) =====
+  #   Nomura (careers.nomura.com), Amundi (jobs.amundi.com), Allianz GI (internal-careers.allianz.com),
+  #   BNP Paribas (group.bnpparibas), Natixis IM (Welcome to the Jungle), Principal (iCIMS), Schroders (à identifier).
+  # -> alertes e-mail sur leurs sites, ou flux RSS : - {name: "Nom", type: rss, url: "https://...", location_hint: "Hong Kong"}
+  # -> pour un autre site : `python jobwatch.py --detect "<url de la page d'offres>"`
