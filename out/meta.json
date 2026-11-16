@@ -1,0 +1,173 @@
+{
+ "generated_at": "2026-11-16T18:27:00Z",
+ "generated_paris": "16/11/2026 19:27",
+ "offers_total": 80,
+ "offers_kept": 30,
+ "new_today": 30,
+ "reused_from_previous": 0,
+ "ai_calls": 35,
+ "sources": [
+  {
+   "name": "Fidelity International",
+   "ok": true,
+   "read": 14,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "BlackRock",
+   "ok": true,
+   "read": 21,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Invesco",
+   "ok": true,
+   "read": 13,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "T. Rowe Price",
+   "ok": true,
+   "read": 9,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "AllianceBernstein",
+   "ok": true,
+   "read": 3,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "abrdn",
+   "ok": true,
+   "read": 6,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Franklin Templeton",
+   "ok": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Blackstone",
+   "ok": true,
+   "read": 9,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Carlyle",
+   "ok": true,
+   "read": 8,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Ares",
+   "ok": true,
+   "read": 8,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Brookfield",
+   "ok": true,
+   "read": 4,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Hamilton Lane",
+   "ok": true,
+   "read": 5,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Manulife",
+   "ok": true,
+   "read": 583,
+   "kept": 6,
+   "reused": 0
+  },
+  {
+   "name": "HSBC",
+   "ok": true,
+   "read": 265,
+   "kept": 9,
+   "reused": 0
+  },
+  {
+   "name": "Morgan Stanley",
+   "ok": true,
+   "read": 70,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "J.P. Morgan",
+   "ok": true,
+   "read": 150,
+   "kept": 5,
+   "reused": 0
+  },
+  {
+   "name": "Julius Baer",
+   "ok": true,
+   "read": 75,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "State Street",
+   "ok": true,
+   "read": 37,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Northern Trust",
+   "ok": true,
+   "read": 1,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Deutsche Bank",
+   "ok": true,
+   "read": 53,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Barclays",
+   "ok": true,
+   "read": 38,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "UOB",
+   "ok": true,
+   "read": 818,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "VIE Business France",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "401 Client Error: Unauthorized for url: https://api-mon-vie-via.businessfrance.fr/api/Offers/search"
+  }
+ ]
+}

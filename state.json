@@ -1,107 +1,1575 @@
 {
  "BlackRock::/job/Hong-Kong-Hong-Kong/Institutional-RFP-Writer-APAC-ex-Japan--Associate_R267156": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 4,
+   "chinese": "non",
+   "other_langs": [],
+   "years_required": 0,
+   "summary": "RFP Writer (Associate) \u2013 BlackRock Hong\u202fKong. R\u00e9dige des propositions pour des clients institutionnels APAC (hors Japon). Le poste exige un dipl\u00f4me, 3\u202f+\u202fans d'exp\u00e9rience en services financiers, des comp\u00e9tences approfondies en r\u00e9daction de RFP et une ma\u00eetrise de l'anglais. Non adapt\u00e9 \u00e0 un profil junior et ne correspond pas directement aux ventes/distribution/IR/support produit/client service.",
+   "reasons": [
+    "R\u00f4le d'associ\u00e9 plut\u00f4t que de niveau junior/analyste",
+    "Exp\u00e9rience requise de 3+ ans, ce qui d\u00e9passe l'exp\u00e9rience de Th\u00e9o (<3 ans)",
+    "Fonction de r\u00e9dacteur de RFP, pas un r\u00f4le typique de ventes/distribution/IR/support produit/client service"
+   ],
+   "model": "cohere/north-mini-code:free"
+  },
+  "ai_h": "996d8966a8aa"
  },
  "BlackRock::/job/Singapore-Singapore/Associate--Private-Markets-Data-Services_R266779": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 5,
+   "chinese": "non",
+   "other_langs": "none specified",
+   "years_required": 0,
+   "summary": "Associate, Client Success Specialist at BlackRock in Singapore, focusing on managing client relationships and service delivery for LP clients in the alternative asset industry.",
+   "reasons": [
+    "Position level is Associate, which is above the Analyst or junior level Th\u00e9o is seeking.",
+    "Requires 3+ years of experience, but Th\u00e9o has less than 3 years, making it a significant mismatch.",
+    "Field involves client success, which may partially align with investor relations or client service, but not a perfect match for sales/distribution/IR.",
+    "Location (Singapore) is acceptable, and no Chinese or other language requirements are mentioned, so no language deductions."
+   ],
+   "model": "dots-studio/dots-3-note-preview:free"
+  },
+  "ai_h": "36bb24d9066c"
  },
  "Invesco::/job/Hong-Kong-Hong-Kong/Analyst--Portfolio-Management--Real-Estate-_R-15796": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": [
+    "French",
+    "English"
+   ],
+   "years_required": 2,
+   "summary": "Th\u00e9o correspond au profil junior recherch\u00e9 (Analyst), ma\u00eetrise l'anglais, aucune exigence de chinois, less than 3 years d'exp\u00e9rience, et le poste \u00e0 Hong Kong correspond \u00e0 ses pr\u00e9f\u00e9rences g\u00e9ographiques.",
+   "reasons": "Le r\u00f4le d'Analyst en Portfolio Management implique reporting, fundraising et support client, align\u00e9s avec son parcours IR. L'exp\u00e9rience demand\u00e9e (1-3 ans) est compatible, l'anglais est requis et il le parle, le chinois n'est pas requis, et le poste est en localisation souhait\u00e9e.",
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+  },
+  "ai_h": "c647a6366483"
  },
  "Hamilton Lane::/job/Singapore/Associate--Secondaries_R003136": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 8,
+   "chinese": "non",
+   "other_langs": "None",
+   "years_required": 2,
+   "summary": "Candidat analyste Investor Relations avec master NEOMA 2026, exp\u00e9rience inf\u00e9rieure \u00e0 3 ans dans le secteur financier (PE, M&A, capital markets, valuation). Ma\u00eetrise mod\u00e9lisation, analyses de valeurs et r\u00e9daction de m\u00e9morandums. Parle fran\u00e7ais et anglais ; le chinois n'est pas exig\u00e9. Disponible janvier 2027 pour un poste junior en ventes, distribution, relations investisseurs ou support produit/service client dans la gestion d'actifs, la banque priv\u00e9e ou le private equity \u00e0 Hong Kong, Singapour ou Tokyo.",
+   "reasons": [
+    "Correspond au profil junior (Analyst/VIE) et aux secteurs recherch\u00e9s (ventes, distribution, IR, produits, private equity).",
+    "Atteint l'exigence minimale de 2 ans d'exp\u00e9rience dans les domaines financiers indiqu\u00e9s (private equity, investment banking, M&A, capital markets, valuation).",
+    "Exp\u00e9rience pr\u00e9alable en secondaires et/ou \u00e9quity direct (avantage mais non obligatoire).",
+    "Comp\u00e9tences en analyse financi\u00e8re complexe, mod\u00e9lisation de transactions secondaires et sc\u00e9narios de projection.",
+    "Forte capacit\u00e9 de communication \u00e9crite et orale, travail d'\u00e9quipe et adaptabilit\u00e9 internationale.",
+    "Langues : fran\u00e7ais et anglais ; le chinois n'est pas requis pour ce poste.",
+    "Disponibilit\u00e9 en janvier 2027 et flexibilit\u00e9 pour travailler au-del\u00e0 des heures de base."
+   ],
+   "model": "liquid/lfm-3-1.7b:free"
+  },
+  "ai_h": "6f74a0fed520"
  },
  "HSBC::563774612620175": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 6,
+   "chinese": "souhait\u00e9",
+   "other_langs": [],
+   "years_required": 0,
+   "summary": "Product Specialist chez HSBC Private Banking \u00e0 Hong Kong : soutien aux gestionnaires de relation pour solutions discr\u00e9tionnaires et fonds. Exp\u00e9rience pertinente en gestion de patrimoine/actifs demand\u00e9e, dipl\u00f4me requis. Mandarin/cantonais mentionn\u00e9s comme atout suppl\u00e9mentaire.",
+   "reasons": "Bonne correspondance secteur (private banking/asset management) et lieu (Hong Kong). R\u00f4le support produit/distribution align\u00e9 avec les int\u00e9r\u00eats. Chinois list\u00e9 comme 'added advantage' pas requis formellement, mais quasi indispensable en pratique pour la client\u00e8le locale. Aucune anciennet\u00e9 explicite demand\u00e9e. Niveau junior non pr\u00e9cis\u00e9 mais possible. Disponibilit\u00e9 janvier 2027 non confirm\u00e9e.",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+  },
+  "ai_h": "97282df955ca"
  },
  "HSBC::563774612588275": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 8,
+   "chinese": "non",
+   "other_langs": "Anglais, Fran\u00e7ais",
+   "years_required": 2,
+   "summary": "Offre globalement align\u00e9e avec le profil junior IR/support/vente, mais le volet trade execution reste \u00e0 compl\u00e9ter.",
+   "reasons": [
+    "Poste junior Analyst en IR, ventes et support produit.",
+    "Secteur financier et localisation Hong Kong coh\u00e9rentes.",
+    "Missions de distribution, relations investisseurs et client.",
+    "Anglais suffisant selon l'offre, fran\u00e7ais en plus.",
+    "Chinois non exig\u00e9 dans l'annonce.",
+    "Exp\u00e9rience en trade execution \u00e0 renforcer."
+   ],
+   "model": "recursive/flint-v1.0:free"
+  },
+  "ai_h": "ddfa03b22350"
  },
  "HSBC::563774612187323": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "souhait\u00e9",
+   "other_langs": "none",
+   "years_required": 0,
+   "summary": "Product Specialist role at HSBC in Hong Kong, focusing on private banking, asset management, and client support.",
+   "reasons": "The position aligns with Th\u00e9o's target location (Hong Kong) and field (product support in finance). English is sufficient, and Chinese is only desired, not required. Experience requirements are not specified, so likely suitable for less than 3 years of experience. Slight deduction as the role may not be strictly junior due to 'high calibre' description, but overall a strong match.",
+   "model": "dots-studio/dots-3-note-preview:free"
+  },
+  "ai_h": "2226abe25eba"
  },
  "HSBC::563774611634841": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 6,
+   "chinese": "non",
+   "other_langs": [],
+   "years_required": 5,
+   "summary": "Brokerage Business Development Manager chez HSBC Life, Hong Kong \u2013 r\u00f4le ax\u00e9 sur les ventes, niveau manager (non junior), exp\u00e9rience >=5 ans, anglais seul suffisant.",
+   "reasons": "Correspond aux ventes/distribution et au domaine des services financiers. Deductions : \u20132 points pour le niveau manager (non junior) et \u20132 points pour l'exp\u00e9rience requise >3 ans. Aucune exigence en chinois.",
+   "model": "cohere/north-mini-code:free"
+  },
+  "ai_h": "20f9d1cd2b80"
  },
  "HSBC::563774611054838": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 1,
+   "chinese": "requis",
+   "other_langs": [],
+   "years_required": 0,
+   "summary": "Poste Manager en assurance commerciale chez HSBC Hong Kong, niveau trop senior, exp\u00e9rience 5+ ans implicite, chinois indispensable pour la vente d'assurance locale, licences HK requises, secteur assurance \u2260 gestion d'actifs/private equity/banque priv\u00e9e.",
+   "reasons": [
+    "Niveau Manager pas junior/analyste",
+    "Exp\u00e9rience demand\u00e9e (track record, people development) > 3 ans",
+    "Chinois/Cantonais requis de facto pour vente assurance \u00e0 Hong Kong",
+    "Secteur assurance commerciale \u2260 asset management / private equity / private banking",
+    "Fonction business development manager \u2260 analyst IR / ventes / distribution / support produit / service client",
+    "Licences d'assurance HK sp\u00e9cifiques exig\u00e9es",
+    "Disponibilit\u00e9 janvier 2027 non compatible avec poste imm\u00e9diat"
+   ],
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+  },
+  "ai_h": "549b73dc9cb9"
  },
  "HSBC::563774607727111": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 3,
+   "chinese": "requis",
+   "other_langs": [
+    "chinois",
+    "putonghua"
+   ],
+   "years_required": 2,
+   "summary": "Relationship Support Officer chez Hang Seng Bank (HSBC) \u00e0 Hong Kong, d\u00e9partement Retail Distribution/wealth management. Support administratif et commercial aux Relationship Managers, service client, prise d'appels et business referral. Dipl\u00f4me bancaire/finance et minimum 2 ans d'exp\u00e9rience requis. Anglais et chinois exig\u00e9s, putonghua avantage.",
+   "reasons": [
+    "Lieu Hong Kong et secteur banque/distribution coh\u00e9rents avec la cible de Th\u00e9o",
+    "Niveau junior compatible (2 ans demand\u00e9s, Th\u00e9o < 3 ans)",
+    "Fonction support client/vente pertinente",
+    "Chinois exig\u00e9 (anglais + chinois), bloquant pour Th\u00e9o qui ne parle que fran\u00e7ais et anglais"
+   ],
+   "model": "nvidia/nemotron-3.5-super-vl:free"
+  },
+  "ai_h": "3a2f43ec8697"
  },
  "HSBC::563774612562045": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 7,
+   "chinese": "non",
+   "other_langs": null,
+   "years_required": 1,
+   "summary": "HSBC Asset Management (Singapore) \u2014 Client Relationship Management, CDD de 12 mois : gestion de portefeuille de clients institutionnels, reporting, due diligence, onboarding et revues d'investissement avec les g\u00e9rants.",
+   "reasons": [
+    "Localisation id\u00e9ale : Singapour fait partie de ses cibles.",
+    "Secteur parfait : gestion d'actifs (asset management), un de ses secteurs vis\u00e9s.",
+    "Exp\u00e9rience demand\u00e9e (1-2 ans) compatible avec son profil de moins de 3 ans et son niveau junior/analyste.",
+    "Aucune langue exig\u00e9e : l'anglais suffit, pas de chinois requis.",
+    "Poste orient\u00e9 relation client / service client avec composante IR (due diligence, revues d'investissement, \u00e9changes avec les g\u00e9rants), transf\u00e9rable depuis son exp\u00e9rience en Investor Relations.",
+    "Points en retrait : contrat de 12 mois (pr\u00e9caire, pas un CDI) et r\u00f4le davantage orient\u00e9 servicing/op\u00e9rations que vente/distribution pure, d'o\u00f9 une note de 7 plut\u00f4t que 8-9."
+   ],
+   "model": "baidu/ernie-5.5-flash-preview:free"
+  },
+  "ai_h": "74dcc4fd0436"
  },
  "HSBC::563774612208562": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 10,
+   "chinese": "non",
+   "other_langs": "English",
+   "years_required": 0,
+   "summary": "Entry-level Wealth Manager role at HSBC Singapore focusing on sales, distribution, and investment/insurance products. Welcomes new graduates. English-only working language. Location aligns with Th\u00e9o's preferred destinations.",
+   "reasons": "Score of 10/10: matches junior level (new graduate welcome), covers sales/distribution/product, English-only requirement (no Chinese/Japanese/Korean needed), experience does not exceed 3 years, and location aligns with Th\u00e9o's preferred destinations.",
+   "model": "nvidia/nemotron-3.5-lightning:free"
+  },
+  "ai_h": "d9fdfae467e8"
  },
  "HSBC::563774612203357": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 6,
+   "chinese": "non",
+   "other_langs": "anglais",
+   "years_required": 0,
+   "summary": "Poste de Client Services Executive en private banking \u00e0 Singapour, adapt\u00e9 \u00e0 la fonction service client et \u00e0 la zone g\u00e9ographique, avec l\u2019anglais comme langue de travail. Cependant, l\u2019offre demande une exp\u00e9rience en private banking/client servicing et des comp\u00e9tences cr\u00e9dit que Th\u00e9o ne poss\u00e8de pas encore clairement, et le caract\u00e8re junior n\u2019est pas explicite.",
+   "reasons": [
+    "Lieu et fonction align\u00e9s : Singapour, private banking, service client.",
+    "Anglais suffisant : aucun chinois requis dans l\u2019offre.",
+    "Pas de niveau Analyst/VIE explicitement junior ; bande abaiss\u00e9e possible mais non garantie.",
+    "Exigence d\u2019exp\u00e9rience en private banking comme client service executive ou \u00e9quivalent.",
+    "Comp\u00e9tences cr\u00e9dit et compr\u00e9hension des produits private banking demand\u00e9es, peu pr\u00e9sentes dans le profil IR/VC de Th\u00e9o.",
+    "Disponibilit\u00e9 janvier 2027 non mentionn\u00e9e dans l\u2019offre, \u00e0 v\u00e9rifier."
+   ],
+   "model": "particle-ai/particle-1:free"
+  },
+  "ai_h": "304e1a2338fb"
  },
  "J.P. Morgan::210808766": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": "English, French",
+   "years_required": 2,
+   "summary": "Entry-level Client Service Associate at J.P. Morgan International Private Bank, Kwun Tong, Hong Kong. Junior/analyst role in private banking client service, matching Th\u00e9o's interest in investment assets. English is sufficient; Chinese language not required. Expected experience about 2 years, within his under 3 year background. Location aligns with target cities (Hong Kong).",
+   "reasons": [
+    "Role matches junior/analyst (Associate) level in private banking/client service.",
+    "Sector aligns with asset management and private equity interests.",
+    "Location (Hong Kong) is one of the preferred cities.",
+    "No Chinese language requirement; Th\u00e9o speaks English and French.",
+    "Required experience (~2 years) is below his 3 year limit."
+   ],
+   "model": "liquid/lfm-3-1.7b:free"
+  },
+  "ai_h": "5c118ad1f7c1"
  },
  "J.P. Morgan::210740052": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 6,
+   "chinese": "souhait\u00e9",
+   "other_langs": "Cantonais/Mandarin implicitement attendus pour un poste de vente \u00e0 Hong Kong",
+   "years_required": 0,
+   "summary": "Poste Analyst/Associate en ventes et marketing de produits structur\u00e9s cot\u00e9s chez J.P. Morgan \u00e0 Hong Kong. Fonction align\u00e9e (vente, produit, \u00e9ducation investisseur), localisation cibl\u00e9e, niveau junior. Cependant, l'absence de mention explicite des langues et le contexte de vente \u00e0 Hong Kong laissent fortement pr\u00e9sumer que le chinois est au minimum souhait\u00e9, voire requis pour couvrir la client\u00e8le locale.",
+   "reasons": [
+    "Niveau Analyst/Associate = junior, correspond au profil",
+    "Fonction ventes/marketing/produit = match direct avec les int\u00e9r\u00eats (distribution, support produit, IR)",
+    "Localisation Hong Kong = cible prioritaire",
+    "Exp\u00e9rience probable 0-3 ans = compatible (<3 ans)",
+    "Chinois non mentionn\u00e9 mais quasi indispensable pour de la vente structur\u00e9e \u00e0 Hong Kong (p\u00e9nalit\u00e9 -2)",
+    "Secteur banque d'investissement vs gestion d'actifs/banque priv\u00e9e/PE = l\u00e9ger d\u00e9calage"
+   ],
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free"
+  },
+  "ai_h": "1022b93d77cd"
  },
  "J.P. Morgan::210806229": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "souhait\u00e9",
+   "other_langs": "English primarily required; other languages may be beneficial",
+   "years_required": 0,
+   "summary": "Client service analyst role in global banking payments at J.P. Morgan in Singapore, focusing on delivering exceptional service to top-tier clients.",
+   "reasons": "The role is junior level (Analyst), aligns with Th\u00e9o's interest in client service, location is Singapore (target city), English is sufficient as primary language, Chinese is desired but not required, and experience requirement is within Th\u00e9o's less than 3 years. No major deductions apply.",
+   "model": "dots-studio/dots-3-note-preview:free"
+  },
+  "ai_h": "a72fce9fc8d3"
  },
  "J.P. Morgan::210802843": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 8,
+   "chinese": "non",
+   "other_langs": [
+    "French"
+   ],
+   "years_required": 2,
+   "summary": "Poste 'Singapore Country Business Management - Associate' chez J.P. Morgan, situ\u00e9 \u00e0 Singapour. Il porte sur le soutien \u00e0 la croissance des affaires, la gouvernance et les contr\u00f4les pour les op\u00e9rations en Asie du Sud-Est, correspondant aux missions IR/relations investisseurs ou gestion d'actifs. Niveau junior/associ\u00e9, langue anglaise requise (fran\u00e7ais bonus).",
+   "reasons": [
+    "Correspond au niveau Analyst/junior (Associate).",
+    "Situ\u00e9 \u00e0 Singapour, ville cible pour Th\u00e9o.",
+    "Domaine li\u00e9 \u00e0 la croissance des affaires, gouvernance et contr\u00f4le, align\u00e9 sur IR et banque priv\u00e9e.",
+    "Langue anglaise suffisante ; ma\u00eetrise du fran\u00e7ais suppl\u00e9mentaire.",
+    "Exp\u00e9rience inf\u00e9rieure \u00e0 3 ans (moins de 3 ans d'exp\u00e9rience)."
+   ],
+   "model": "liquid/lfm-3-1.7b:free"
+  },
+  "ai_h": "6d0826577077"
  },
  "J.P. Morgan::210797827": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 8,
+   "chinese": "non",
+   "other_langs": "english",
+   "years_required": 0,
+   "summary": "Analyst role in FICC Electronic Sales at J.P. Morgan in Singapore, focusing on electronic trading in fixed income, currencies, and commodities.",
+   "reasons": "Good match for junior sales role in a preferred location (Singapore), no Chinese language required, and experience level likely aligns with Th\u00e9o's background (analyst position). Minor deduction as electronic sales may be slightly technical, but still within sales/distribution scope.",
+   "model": "dots-studio/dots-3-note-preview:free"
+  },
+  "ai_h": "666627f9d5ea"
  },
  "Fidelity International::/job/Hong-Kong-Office-New/Marketing-Specialist--6-month-contract-_J71823": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 7,
+   "chinese": "non",
+   "other_langs": "English",
+   "years_required": 1,
+   "summary": "Marketing Specialist (6-month contract) at Fidelity International in Hong Kong. Requires English proficiency and involves marketing campaigns, client events, and asset management support. Location matches Th\u00e9o's target (Hong Kong). Experience requirement (1-3 years, fresh grads encouraged) aligns with his <3 years profile.",
+   "reasons": "Positive: Location (Hong Kong) aligns with target roles; English-only language requirement fits Th\u00e9o's profile exactly; experience ceiling (1-3 years, open to fresh grads) matches his <3 years criterion. Negative: Role is Marketing Specialist, not directly sales, distribution, investor relations, product support, or customer service as Th\u00e9o specifically seeks; may not align with his preferred analyst/junior function areas in asset management/private banking/PE.",
+   "model": "nvidia/nemotron-3.5-lightning:free"
+  },
+  "ai_h": "91f5ec03e97a"
  },
  "Fidelity International::/job/Hong-Kong-Office-New/Client-Services-Manager_J72294": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 3,
+   "chinese": "non",
+   "other_langs": [
+    "English"
+   ],
+   "years_required": 3,
+   "summary": "Th\u00e9o ne correspond pas au profil junior, d'exp\u00e9rience (\u22653 ans) et de fonction (vente/distribution/IR/produit) exig\u00e9s, m\u00eame si le poste \u00e0 Hong Kong requiert l'anglais et ne demande pas le chinois.",
+   "reasons": [
+    "Exp\u00e9rience insuffisante (<3 ans)",
+    "Poste non junior (niveau 5, gestionnaire)",
+    "Fonction diff\u00e9rente (client services vs ventes/IR/produit)",
+    "Langue anglaise requise, il la poss\u00e8de",
+    "Le chinois n'est pas requis"
+   ],
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+  },
+  "ai_h": "a4c207a64a15"
  },
  "abrdn::/job/Hong-Kong/Sales-Support_R0074185": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 3,
+   "chinese": "non",
+   "other_langs": [
+    "French"
+   ],
+   "years_required": 2,
+   "summary": "L'offre correspond au poste de support commercial et recherche de fonds en gestion d'actifs \u00e0 Hong Kong, mais demande la ma\u00eetrise du chinois mandarin/cantonien et moins de 3 ans d'exp\u00e9rience en finance ; Th\u00e9o poss\u00e8de 2-3 ans d'exp\u00e9rience, parle anglais et fran\u00e7ais, et cherche \u00e0 travailler en Asie-Pacifique.",
+   "reasons": [
+    "Correspondance avec le niveau junior/support commercial recherch\u00e9.",
+    "Localisation Hong Kong compatible avec sa disponibilit\u00e9 janvier 2027.",
+    "Exp\u00e9rience minimale de 2 ans satisfaite (moins de 3 ans).",
+    "Ne parle pas le chinois, ce qui est un point n\u00e9gatif puisque c'est pr\u00e9f\u00e9r\u00e9.",
+    "Pas d'exp\u00e9rience explicite en gestion d'actifs ou en capital-risque, bien que son parcours en VC soit pertinent.",
+    "Absence d'exp\u00e9rience avec Salesforce ou autres outils CRM."
+   ],
+   "model": "liquid/lfm-3-1.7b:free"
+  },
+  "ai_h": "f37b0857f624"
  },
  "Carlyle::/job/Hong-Kong/Product-Specialist---Associate--Carlyle-AlpInvest_R-00372": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": "francais, anglais",
+   "years_required": 3,
+   "summary": "Th\u00e9o correspond bien au poste : r\u00f4le d\u2019associate en IR/produit, localisation Hong Kong, langue anglaise requise, pas de mandarin, exp\u00e9rience <3 ans compatible com 2\u20115 ans demand\u00e9s.",
+   "reasons": "Le poste demande 2\u20115 ans d\u2019exp\u00e9rience, Th\u00e9o en a moins de 3, donc compatible. L\u2019anglais est la seule langue requise, le japonais est un plus mais non obligatoire. Aucun exigence de chinois. Le poste correspond \u00e0 ses comp\u00e9tences en relations investisseurs et produit.",
+   "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+  },
+  "ai_h": "aa20ea8e367e"
  },
  "Carlyle::/job/Hong-Kong/Analyst_R-00196": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 10,
+   "chinese": "non",
+   "other_langs": "Second Asian language considered advantage, but not required",
+   "years_required": 2,
+   "summary": "Analyst position in private equity at Carlyle AlpInvest in Hong Kong, focusing on primary fund investments with responsibilities in financial modeling, valuation, and investor relations.",
+   "reasons": "The job perfectly matches Th\u00e9o's profile: it is at Analyst level, involves investor relations components, requires only English (which he speaks), and is located in Hong Kong. The experience requirement of 2 years does not exceed 3 years, and no Chinese is required. Thus, it scores a 10.",
+   "model": "dots-studio/dots-3-note-preview:free"
+  },
+  "ai_h": "402f13610e63"
  },
  "Ares::/job/Hong-Kong/Analyst--APAC-Relationship-Management--Hong-Kong-and-Southeast-Asia-_R8357-1": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": "aucune exig\u00e9e ; anglais uniquement suffit",
+   "years_required": 2,
+   "summary": "Poste d'Analyst au sein de l'\u00e9quipe APAC Relationship Management d'Ares \u00e0 Hong Kong : support investor relations, service client et op\u00e9rations investisseurs aupr\u00e8s de clients institutionnels \u00e0 Hong Kong et en Asie du Sud-Est, avec \u00e9volution possible vers un r\u00f4le de junior Relationship Manager. Niveau junior, aucune langue asiatique requise, exp\u00e9rience minimale de 2 ans en asset management, private markets, IR ou client servicing.",
+   "reasons": [
+    "Correspond exactement \u00e0 la cible de Th\u00e9o : niveau Analyst, fonctions IR / relation client / service investisseurs en gestion d'actifs alternatifs",
+    "Localisation \u00e0 Hong Kong, l'une des trois villes vis\u00e9es",
+    "Aucune exigence de chinois (ni d'autre langue) \u2014 l'anglais suffit, aucun point retir\u00e9",
+    "Exp\u00e9rience requise (minimum 2 ans) compatible avec le profil de Th\u00e9o (< 3 ans)",
+    "Mission \u00e9volutive vers junior Relationship Manager, coh\u00e9rente avec un projet long terme en IR/distribution",
+    "Candidature sans date limite, compatible avec une disponibilit\u00e9 en janvier 2027",
+    "L\u00e9ger b\u00e9mol : exigence d'un Bachelor et d'une exp\u00e9rience minimum de 2 ans, \u00e0 v\u00e9rifier selon le parcours exact de Th\u00e9o \u00e0 la sortie de NEOMA en 2026"
+   ],
+   "model": "inclusionai/ling-3.2-flash:free"
+  },
+  "ai_h": "f8674fef6109"
  },
  "Manulife::/job/Hong-Kong/Officer---Distribution-Management_JR26100897": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 7,
+   "chinese": "non",
+   "other_langs": "anglais",
+   "years_required": 0,
+   "summary": "Offre junior en distribution/sales operations \u00e0 Hong Kong, sans exigence de chinois et avec 2 ans d'exp\u00e9rience minimum compatibles avec le profil de Th\u00e9o. Fit partiel : forte composante reporting/incentives/Excel plut\u00f4t qu'IR ou support produit, mais proche de la distribution commerciale.",
+   "reasons": [
+    "Aucune exigence de chinois, de japonais ou de cor\u00e9en dans l'offre",
+    "Anglais suffisant selon la description",
+    "2 ans d'exp\u00e9rience minimum, donc sous le seuil de 3 ans",
+    "Poste de niveau Officer, relativement junior",
+    "Localisation Hong Kong correspondante",
+    "R\u00f4le orient\u00e9 distribution, sales reporting et support aux ventes",
+    "Fit partiel avec le profil Investor Relations : analyse/reporting plut\u00f4t que relations investisseurs",
+    "Secteur financier/assurance-gestion d'actifs, mais moins cibl\u00e9 que la banque priv\u00e9e ou le private equity"
+   ],
+   "model": "particle-ai/particle-1:free"
+  },
+  "ai_h": "9b63ec6b02e1"
  },
  "Manulife::/job/Hong-Kong/Client-Portfolio-Analyst--Fixed-Income_JR26110645": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 8,
+   "chinese": "souhait\u00e9",
+   "other_langs": [
+    "fran\u00e7ais",
+    "anglais"
+   ],
+   "years_required": 3,
+   "summary": "Offre junior compatible avec le profil IR/support client, mais \u00e9cart sur le chinois et l'exp\u00e9rience en fixed income.",
+   "reasons": [
+    "Niveau Analyst/VIE junior conforme \u00e0 l'offre.",
+    "M\u00e9tier proche des responsabilit\u00e9s IR, ventes et reporting client.",
+    "Exigence d'anglais satisfaite par Th\u00e9o ; chinois non exig\u00e9 mais souhait\u00e9.",
+    "Exp\u00e9rience en fixed income pr\u00e9f\u00e9r\u00e9e, non obligatoire au-del\u00e0 de 3 ans.",
+    "Lieu Hong Kong et disponibilit\u00e9 en janvier 2027 en ad\u00e9quation."
+   ],
+   "model": "recursive/flint-v1.0:free"
+  },
+  "ai_h": "8463594ac158"
  },
  "Manulife::/job/Singapore/Sales-Support-Executive--1-year-contract-_JR26081187": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": "English",
+   "years_required": 0,
+   "summary": "Strong match for Th\u00e9o's profile: Sales Support Executive at Manulife Singapore aligns with desired fields (sales, distribution, product support). Entry-level/1-year contract, no mandatory experience, location is target Singapore. English suffices, no Chinese/Jap/Korean required.",
+   "reasons": "Role fits sales/distribution/product support theme. Location Singapore is ideal. Experience description ('advantageous but not mandatory') keeps it under 3 years. No language barriers. 1-year contract suits junior profile.",
+   "model": "nvidia/nemotron-3.5-lightning:free"
+  },
+  "ai_h": "3de59f1e912a"
  },
  "Manulife::/job/Singapore/Analyst--Retail-Partnership-and-Distribution_JR26090674": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": [
+    "anglais"
+   ],
+   "years_required": 0,
+   "summary": "Poste Analyst/Associate en Retail Partnership and Distribution chez Manulife \u00e0 Singapour, secteur gestion d'actifs, ouvert aux juniors/fresh graduates, anglais suffisant, aucune exigence de chinois.",
+   "reasons": [
+    "Localisation cible : Singapour",
+    "Secteur : gestion d'actifs / asset management",
+    "Fonction : distribution et ventes aupr\u00e8s de private banks et retail banking partners",
+    "Niveau junior : Analyst/Associate, fresh graduates encourag\u00e9s",
+    "Anglais seul suffisant, pas de chinois/japonais/cor\u00e9en requis",
+    "Exp\u00e9rience demand\u00e9e inf\u00e9rieure \u00e0 3 ans ou non exig\u00e9e"
+   ],
+   "model": "nvidia/nemotron-3.5-super-vl:free"
+  },
+  "ai_h": "1eb97b094428"
  },
  "Manulife::/job/Singapore/Assistant-Manager---Manager--Client-Service_JR26100069-1": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 2,
+   "chinese": "non",
+   "other_langs": "Anglais",
+   "years_required": 5,
+   "summary": "Offre peu align\u00e9e pour Th\u00e9o : poste de Team Lead / Manager Contact Centre, plut\u00f4t senior et m\u00e9tier service client, alors que son profil est analyste IR junior (<3 ans) dans la venture capital.",
+   "reasons": [
+    "Exp\u00e9rience requise de 5 ans en contact centre et 3 ans en supervision d\u00e9passe le seuil de 3 ans, incompatible avec le profil junior de Th\u00e9o.",
+    "M\u00e9tier et niveau ne correspondent pas au poste cherch\u00e9 : manager/Team Lead plut\u00f4t qu'Analyst, VIE ou junior.",
+    "Domaine peu align\u00e9 avec ventes, distribution, IR, produit ou private equity.",
+    "Langue chinoise non requise ; anglais semble suffisant pour Singapour, mais le r\u00f4le reste peu pertinent.",
+    "Disponibilit\u00e9 en janvier 2027 et lieu \u00e0 Singapour possibles, mais \u00e9cart senior/m\u00e9tier important."
+   ],
+   "model": "recursive/flint-v1.0:free"
+  },
+  "ai_h": "721ae870c72a"
  },
  "Manulife::/job/Singapore/Assistant-Manager-Manager--Distribution-Strategy-Financial-Advisory_JR26101244": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 5,
+   "chinese": "non",
+   "other_langs": "Aucune exigence de chinois, japonais ou cor\u00e9en \u2014 anglais uniquement, ce qui convient \u00e0 Th\u00e9o.",
+   "years_required": 3,
+   "summary": "Poste de Distribution Strategy chez Manulife \u00e0 Singapour, dans la distribution financi\u00e8re (assurance/services financiers). Bonne ad\u00e9quation sur la localisation, la langue (anglais seul) et le domaine (distribution/ventes). Mais le niveau Assistant Manager/Manager et l'exigence de 3-5 ans d'exp\u00e9rience d\u00e9passent le profil junior de Th\u00e9o (<3 ans, cible Analyst/VIE).",
+   "reasons": [
+    "Localisation id\u00e9ale : Singapour, l'une des trois villes cibl\u00e9es par Th\u00e9o.",
+    "Anglais seul suffisant : aucune mention de chinois/japonais/cor\u00e9en requis.",
+    "Domaine partiellement align\u00e9 : distribution/ventes dans les services financiers, mais orient\u00e9 assurance plut\u00f4t que gestion d'actifs, banque priv\u00e9e ou private equity.",
+    "Exp\u00e9rience demand\u00e9e (3-5 ans) sup\u00e9rieure \u00e0 celle de Th\u00e9o (moins de 3 ans, master 2026).",
+    "Niveau du poste (Assistant Manager/Manager) au-dessus de la cible Analyst/junior/VIE de Th\u00e9o.",
+    "Comp\u00e9tences analytiques (Excel, Power BI, performance reporting) coh\u00e9rentes avec un profil IR/analyste, atout transf\u00e9rable.",
+    "Disponibilit\u00e9 janvier 2027 non pr\u00e9cis\u00e9e dans l'offre, \u00e0 v\u00e9rifier."
+   ],
+   "model": "particle-ai/particle-1:free"
+  },
+  "ai_h": "3e0ca378b97a"
  },
  "State Street::/job/Singapore-Singapore/Investor-Services---Associate-2_R-800337": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 9,
+   "chinese": "non",
+   "other_langs": "English",
+   "years_required": 2,
+   "summary": "Investor Services \u2013 Associate 2 at State Street in Singapore matches Th\u00e9o's profile: location fits, role aligns with IR/support/product, English is the working language, no Chinese/Japanese/Korean required, and experience requirements are not explicitly exceeding 3 years. Strong compatibility with his job search criteria.",
+   "reasons": "Location Singapore is one of Th\u00e9o's target destinations. The role involves investor onboarding, lifecycle activities, and client communications, fitting sales/distribution/IR/product support. English is the working language, matching Th\u00e9o's French+English profile with English suffice. No Chinese, Japanese, or Korean language requirement. Experience not explicitly stated beyond 3 years, compatible with <3 years experience. Start date January 2027 aligns with Th\u00e9o's availability.",
+   "model": "nvidia/nemotron-3.5-lightning:free"
+  },
+  "ai_h": "a00200bbbce4"
  },
  "State Street::/job/Tokyo-Japan/Fund-Connect-Client-Service-and-Production-Support-Specialist--Officer_R-800285": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 5,
+   "chinese": "non",
+   "other_langs": "French and English; Japanese and/or Korean are preferred but not required, and not spoken by Th\u00e9o",
+   "years_required": 5,
+   "summary": "Offre partiellement pertinente c\u00f4t\u00e9 support client et production, mais insuffisamment align\u00e9e avec le profil junior de Th\u00e9o et le niveau d'exp\u00e9rience requis.",
+   "reasons": [
+    "Exp\u00e9rience requise de 5 ans dont au moins 3 ans en op\u00e9rations ou service client, alors que Th\u00e9o a moins de 3 ans d'exp\u00e9rience.",
+    "Poste de client service et production support plut\u00f4t que ventes, distribution, relations investisseurs, support produit ou service client dans la gestion d'actifs, la banque priv\u00e9e ou le private equity.",
+    "Anglais requis et suffisant selon l'offre ; le fran\u00e7ais et l'anglais correspondent \u00e0 ses langues, sans exigence chinoise.",
+    "Le niveau d'exp\u00e9rience demand\u00e9 d\u00e9passe 3 ans, ce qui entra\u00eene une retenue de points.",
+    "Le profil junior Analyst ou VIE recherch\u00e9 n'est pas totalement coh\u00e9rent avec l'exp\u00e9rience et la disponibilit\u00e9 de Th\u00e9o."
+   ],
+   "model": "recursive/flint-v1.0:free"
+  },
+  "ai_h": "aa43eb89a3f3"
  },
  "Deutsche Bank::/job/Singapore-One-Raffles-Quay/KYC-Solutions---Change-Intern----YTP-program_R0453247": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 4,
+   "chinese": "non",
+   "other_langs": "Anglais requis ; fran\u00e7ais non requis",
+   "years_required": 0,
+   "summary": "Offre d'internat KYC Solutions & Change (Deutsche Bank, Singapour) dans le cadre du programme YTP. Fonction junior mais orient\u00e9e KYC, transformation, process intelligence et AI, \u00e9loign\u00e9e des cibles de Th\u00e9o en ventes/distribution, relations investisseurs, produit ou service client dans la gestion d'actifs, la banque priv\u00e9e ou le private equity.",
+   "reasons": [
+    "Niveau junior compatible (intern) et exp\u00e9rience requise limit\u00e9e.",
+    "Langue: pas de chinois exig\u00e9, anglais suffisant probablement.",
+    "\u00c9loignement fonctionnel: KYC/change/AI op\u00e9rations plut\u00f4t que ventes, distribution, IR, produit ou service client.",
+    "Disponibilit\u00e9 en janvier 2027 plausible pour un programme YTP, mais non confirm\u00e9e.",
+    "Pas de retrait de points li\u00e9 au chinois ou \u00e0 une exp\u00e9rience demand\u00e9e sup\u00e9rieure \u00e0 3 ans."
+   ],
+   "model": "recursive/flint-v1.0:free"
+  },
+  "ai_h": "b6bf38ad49ea"
  },
  "UOB::/job/Kuala-Lumpur-City-Area/Banking---Wealth-Career--Opportunities-in-Malaysia---Singapore-_JR92862": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 6,
+   "chinese": "non",
+   "other_langs": "anglais suffisant ; malais non exig\u00e9 ; fran\u00e7ais non requis",
+   "years_required": 0,
+   "summary": "Offre bancaire UOB en Malaisie et Singapour couvrant des postes de vente/conseil wealth et support digital. Le poste \u00e0 Singapour peut convenir \u00e0 un profil junior orient\u00e9 relation client, mais l'offre est peu cibl\u00e9e sur l'IR, le private equity ou l'asset management, et inclut des r\u00f4les plus seniors ou bas\u00e9s en Malaisie.",
+   "reasons": [
+    "Singapour est une g\u00e9ographie cible, mais l'offre inclut aussi la Malaisie, hors cible.",
+    "Pas d'exigence de chinois ou d'autre langue asiatique : l'anglais seul suffit.",
+    "Les fonctions Personal Wealth Executive / Branch Digital Executive sont proches du service client/ventes, mais pas d'un poste Analyst IR ou support produit en asset management/PE.",
+    "Le poste Manager/AVP Relationship Manager semble au-dessus du niveau <3 ans ; les autres postes sont plus juniors mais non pr\u00e9cis\u00e9s.",
+    "L'offre est un agr\u00e9gat de plusieurs opportunit\u00e9s, donc le niveau et le contenu exact varient."
+   ],
+   "model": "particle-ai/particle-1:free"
+  },
+  "ai_h": "3da57ad7da62"
  },
  "UOB::/job/Malim-City-Area/SO-MGR--Personal-Banker--Southern-Region-_JR68243-1": {
-  "first_seen": "2026-11-16"
+  "first_seen": "2026-11-16",
+  "ai": {
+   "note": 4,
+   "chinese": "non",
+   "other_langs": "Non pr\u00e9cis\u00e9 dans l'offre. Le poste \u00e9tant chez UOB Malaysia (Southern Region), le malais (Bahasa Malaysia) est probablement n\u00e9cessaire en pratique aupr\u00e8s des clients locaux. Certification Malaysian (FIMM, PCE, CEILI, IPPC) \u00e0 obtenir.",
+   "years_required": 0,
+   "summary": "Personal Wealth Executive chez UOB Malaysia (Southern Region) : vente et promotion de produits bancaires ( OPCVM/unit trusts, assurances, d\u00e9p\u00f4ts), cross-selling et gestion de la relation client avec service apr\u00e8s-vente, dans un environnement retail tr\u00e8s commercial avec des certifications r\u00e9glementaires malaisiennes \u00e0 passer.",
+   "reasons": [
+    "Fonction et s\u00e9niorit\u00e9 qui correspondent : vente et distribution de produits de gestion de patrimoine (unit trusts, assurance), poste junior ouvert aux jeunes dipl\u00f4m\u00e9s, sans exp\u00e9rience exig\u00e9e, donc compatible avec un master 2026 et une dispo en janvier 2027.",
+    "Langue : aucune exigence de chinois, japonais ou cor\u00e9en. L'anglais est la langue de travail chez UOB, mais la pratique du malais est probable sur le march\u00e9 de la \u00ab Southern Region \u00bb (sud de la p\u00e9ninsule, Johor).",
+    "Localisation non conforme : le poste n'est ni \u00e0 Hong Kong, ni \u00e0 Singapour, ni \u00e0 Tokyo. Il s'agit de la filiale malaisienne (United Overseas Bank (Malaysia) Bhd), distincte de la banque m\u00e8re singapourienne, et sans lien direct avec une mobilit\u00e9 vers les places vis\u00e9es.",
+    "Peu de proximit\u00e9 avec le profil de Th\u00e9o : banque de d\u00e9tail et vente de cr\u00e9dits (unit trusts, assurances, d\u00e9p\u00f4ts) avec objectifs commerciaux agressifs, alors que Th\u00e9o vient de l'Investor Relations en capital-risque. Aucune exposition \u00e0 la client\u00e8le institutionnelle, aux relations investisseurs ou au private equity.",
+    "Barri\u00e8re administrative et linguistique suppl\u00e9mentaire : certifications r\u00e9glementaires locales (FIMM, PCE, CEILI, IPPC) et permis de travail en Malaisie \u00e0 obtenir pour un candidat \u00e9tranger."
+   ],
+   "model": "baidu/ernie-5.5-flash-preview:free"
+  },
+  "ai_h": "d1059bf09116"
+ },
+ "Fidelity International::/job/Hong-Kong-Office-New/Investment-Analyst_J71176": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "BlackRock::/job/Hong-Kong-Hong-Kong/Aladdin-Client-Engagement--Associate_R266292": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "BlackRock::/job/Singapore-Singapore/Forward-Deployed-Business-Analyst--Associate--Vice-President---BTO_R266862": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "BlackRock::/job/Singapore-Singapore/Associate--Investment-Onboarding_R266997": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "BlackRock::/job/Singapore-Singapore/Associate--Market-Data-Services_R266956": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Invesco::/job/Hong-Kong-Hong-Kong/Equity-ETF-Strategist--APAC_R-15484": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Invesco::/job/Hong-Kong-Hong-Kong/Fixed-Income-ETF-Strategist--APAC_R-15485": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "T. Rowe Price::/job/Tokyo-Japan/Research-Support-Associate--Japan-Equities--1-year-Contract_81367": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "T. Rowe Price::/job/Tokyo-Japan/Research-Support-Associate--Japan-Equities-_81366-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Brookfield::/job/Hong-Kong/Associate--Family-Investors_R2053341": {
+  "first_seen": "2026-11-16",
+  "rej": "4 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Hamilton Lane::/job/Hong-Kong/Analyst--Fund-Investments---Managed-Solutions_R003047": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--Customer-Relations--Hong-Kong-Retirement_JR26081544": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/SEO-GEO-Specialist_JR26021699-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/XMLNAME--Assistant--Manager--Client-Liaison-Team_JR26040754": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager---Assistant-Manager---Client-Liaison-Team_JR26040765": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--Proposition-Marketing_JR26090987-1": {
+  "first_seen": "2026-11-16",
+  "rej": "8 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Officer--Product-Proposition---Solutions_JR26100335-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Assistant-Manager---Manager--Agency-Contracting-and-Benefits_JR26100068": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager---Business-Development--HK-Retirement_JR26101212": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Assistant-Manager--Sales-Support_JR26101133-1": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Assistant-Manager--Sales-Support_JR26101134-1": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Sustainability-Analyst_JR26101552-1": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--Customer---Market-Insights--Asia_JR26101529-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--Agency-Training-and-Development_JR26101680-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager-Asst-Manager--Bancassurance-Partnership-Management_JR26101413-1": {
+  "first_seen": "2026-11-16",
+  "rej": "4 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Communication-Manager--HK-Retirement_JR26110011": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--Brand-Activation--Asia_JR26110353": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Officer--Strategy-Support_JR26110523-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Hong-Kong/Manager--HNW-Policy-Service_JR26110428-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Business-Systems-Analyst_JR26100673-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Ontario-Waterloo-500-King-Street-North/Insurance-Inforce-Case-Coordinator_JR26081929-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Ontario-Waterloo-500-King-Street-North/Bilingual-Life-Events-Specialist_JR26101465": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Montreal-Quebec/Directeurtrice-Bilingue--Services-aux-clients-AdminAdvantage_JR26110239-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Quezon-City/Training-Specialist_JR26091236": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/Digital-Business---GenAI-Intern--Bancassurance_JR26110010": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Quezon-City/WFM-Real-Time-Analyst_JR26020685": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/HNW-Post-Sales_JR26100642": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Quezon-City/Plan-Member-Administrator-I_JR26091210": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/Manager--Product-Pricing_JR26091185-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/Associate--Analyst--Research--Equity-_JR26091270": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Winter-Co-op-2027---Transformation-Delivery-Analyst_JR26100711": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Zamboanga-Manulife-Chinabank-Life-Assuance-Corporation-MCBL/Financial-Sales-Associate_JR26090330-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Waterloo-Ontario/Presale-Marketing-Consultant_JR26101358-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Ontario---Full-Time-Remote/Critical-Illness-Claims-Assessor_JR26101544": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/Executive--Concierge_JR26071903": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Manager--Vendor-Governance---Performance_JR26080834": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Singapore/Project-Manager_JR26091197": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Pricing-Specialist-Senior-Pricing-Specialist_JR26071489": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Retirement-Financial-Advisor_JR26090474-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Shanghai/XMLNAME-2027-NEXT-Program---_JR26101051": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Beijing-Beijing/XMLNAME-2027-NEXT-Program--_JR26101052": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Waterloo-Ontario/Plan-Design-System-Coder_JR26100490-2": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Waterloo-Ontario/Salesforce-Functional-Analyst_JR26101237": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Manager-Change-Enablement_JR26101097": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Technical-Program-Manager_JR26100086-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Waterloo-Ontario/Manager---Deposits--Billing-and-Commissions_JR26100030-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-British-Columbia---Full-Time-Remote/External-Wholesaler--Guaranteed-Wealth-Solutions---Entrepreneurial-Channels--BC_JR26101170": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Ontario---Full-Time-Remote/External-Wholesaler--Guaranteed-Wealth-Solutions---Entrepreneurial-Channels--Ontario_JR26101169-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Digital-Marketing-Manager_JR26031387": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Waterloo-Ontario/Default-Management-Consultant_JR26090286-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Senior-Integration-Architect_JR26090757-2": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Ontario-Toronto-200-Bloor-Street-East/Senior-Data-Architect_JR26090760": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Quezon-City/Specialist--Asset-Servicing_JR26100484": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Sales-Technology-Data-Operations-Specialist_JR26100618": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Marketing-Consultant--Sponsor-Advisor-Marketing---Growth_JR26101548-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Manager--Affinity-Advisor-Marketing_JR26090822": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/CAN-Quebec---Full-Time-Remote/Coordonnateurtrice--l-Admission-en-Radaptation--Radaptation-Nationale_JR26101729-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Manager--Suitability-Oversight---Fixed-Index-Annuities--FIA-_JR26081749-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/USA-Massachusetts---Full-Time-Remote/Competition-Analyst_JR26042118-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Service-Model-Transformation-Manager_JR26100303-1": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Toronto-Ontario/Directeurtrice--Services-aux-clients-AdminAdvantage_JR26101018": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Boston-Massachusetts/Technical-Program-Manager-Health---Wellness_JR26090565": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Manulife::/job/Quezon-City/Manager--Global-Operational-Resilience_JR26101630": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611624686": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612631163": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612583497": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612582376": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612543983": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612516467": {
+  "first_seen": "2026-11-16",
+  "rej": "7 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612472351": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612462916": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612423681": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612411133": {
+  "first_seen": "2026-11-16",
+  "rej": "7 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612373236": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612360459": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612285826": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612243806": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612243804": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612225211": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612144658": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612139156": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612091410": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612075333": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612030528": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612027535": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612027442": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612021997": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612016323": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611861244": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611806705": {
+  "first_seen": "2026-11-16",
+  "rej": "6 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611786948": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611586174": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611445550": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611111601": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611060797": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774610838988": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774609620236": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774609441388": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774608327231": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774608014479": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607745075": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607744853": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607742533": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607739311": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607739219": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607725321": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607725242": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607714967": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607714766": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607703148": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774607686462": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612648491": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612634837": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612631961": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612620828": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612588161": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612557150": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612543981": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612520254": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612463474": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612140338": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774612026054": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "HSBC::563774611738604": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Project-Manager--Business-Services-Group--ISG-Management_JR044090-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Project-Manager--Business-Services-Group--ISG-Management_JR044681": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Morgan-Stanley-Fund-Services--Portfolio-Analytics---Associate--Hong-Kong_JR042286-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Product-Support---Services-Associate_PT-JR045429": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/NY---2000-Westchester-Ave/Fund-Services-Investor-Services_JR039425": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Investment-Management---Employee-Investing-Program-Associate--Hong-Kong_JR039486-1": {
+  "first_seen": "2026-11-16",
+  "rej": "4 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Asia-Wealth-Management--Client-Services-Manager--Hong-Kong_JR018380-1": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Asia-Wealth-Management--Client-Services-Manager--Trade-Execution---Hong-Kong_JR023751": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210808744": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210805733": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210795711": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210794830": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210808760": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210806194": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210775690": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "J.P. Morgan::210796423": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong/Assistant-Relationship-Manager_r-10451": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong/Client-Documentation-Services-Officer_r-19729-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong/Client-Onboarding-Officer_r-19920-2": {
+  "first_seen": "2026-11-16",
+  "rej": "4 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong/Marketing-Specialist_r-20289-1": {
+  "first_seen": "2026-11-16",
+  "rej": "8 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong/Fixed-Income-Specialist_r-20117-2": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Cash-Management-Specialist_r-20341-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Hong-Kong-Training-Site---TTP/Structured-Lombard-Credit-Officer_r-20315-2": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Process-Excellence-Specialist_r-18515-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Securities-Transfer-Specialist_r-20053-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Strategy-Specialist---Group-Strategy--100---m-f-d-_r-19881": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Client-Onboarding-Officer_r-19766": {
+  "first_seen": "2026-11-16",
+  "rej": "8 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Credit-Development-Officer_r-16124-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/XMLNAME-12-months-Contract---Business-Analyst---Structured-Product--Through-an-External-Agency-_r-16676": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-18758-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/GPS-Strategy---Business-Development-Project-Leader_r-18957": {
+  "first_seen": "2026-11-16",
+  "rej": "10 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-19352-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-19396-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Investment-Support-Specialist_r-19500-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Account-Manager_r-19552-1": {
+  "first_seen": "2026-11-16",
+  "rej": "chinois requis",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Business-Manager_r-19558": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-19546-2": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Execution--Asia----Night-Desk-Officer_r-19431-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Multi-Asset-Execution-Specialist---Night-Desk_r-19811-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Front-KYC-Advisory-Specialist_r-19812-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Investment-Advisor_r-19794-2": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-20043-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Front-KYC-Advisory-Specialist_r-20096": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-20081-1": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/Assistant-Relationship-Manager_r-20317": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Julius Baer::/job/Singapore/KYC-Advisor_r-20323-2": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "State Street::/job/Singapore-Singapore/Client-Service---Hedge-FOF--Officer_R-799405": {
+  "first_seen": "2026-11-16",
+  "rej": "7 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "State Street::/job/Tokyo-Japan/Fund-Connect-Client-Service-and-Production-Support-Specialist--Officer_R-800047": {
+  "first_seen": "2026-11-16",
+  "rej": "japonais requis",
+  "checked": "2026-11-16"
+ },
+ "Deutsche Bank::/job/Hong-Kong-Intl-Commerce-Ctr/Structured-Products-and-Derivatives-Specialist--Associate_R0455518": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "Deutsche Bank::/job/Singapore-One-Raffles-Quay/Business-Analysis-Intern---YTP-program_R0453246": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "Deutsche Bank::/job/do-not-use-Mumbai-Nirlon-Know-Pk-B4-B5/Apprentice---Non-Technology_R0357981": {
+  "first_seen": "2026-11-16",
+  "rej": "lieu",
+  "checked": "2026-11-16"
+ },
+ "Barclays::/job/Singapore-Marina-Bay-Financial-Tower-2/Research-Analyst--Asia-FX---EM-Macro-Strategy_JR-0000128711": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
+ },
+ "Barclays::/job/Singapore-Marina-Bay-Financial-Tower-2/BA4--Private-Bank-Executive_JR-0000059883-4": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (2)",
+  "checked": "2026-11-16"
+ },
+ "UOB::/job/Hong-Kong-City-Area/XMLNAME-2027-UOB-Hong-Kong-Management-Associate-Programme_JR97128": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (1)",
+  "checked": "2026-11-16"
+ },
+ "UOB::/job/Hong-Kong-City-Area/Client-Advisor-Assistant--Private-Banking_JR92693": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "UOB::/job/Hong-Kong-City-Area/Manager--Private-Banking---Investment-Advisory_JR97204": {
+  "first_seen": "2026-11-16",
+  "rej": "5 ans demand\u00e9s",
+  "checked": "2026-11-16"
+ },
+ "UOB::/job/Jalan-Kelawei-City-Area/Client-Advisor_JR68838": {
+  "first_seen": "2026-11-16",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-16"
  }
 }
