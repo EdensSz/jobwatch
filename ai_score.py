@@ -163,6 +163,10 @@ def review(job_title, company, location, description, api_key, model=None, provi
         except (TypeError, ValueError):
             LAST_ERROR = LAST_ERROR or f"{provider} : note absente de la réponse"
             return None
+        try:
+            res["years_required"] = int(float(str(res.get("years_required") or 0).split("-")[0].strip() or 0))
+        except (TypeError, ValueError):
+            res["years_required"] = 0
         res["model"] = (data.get("model") if isinstance(data, dict) else None) or model
         res["chinese"] = res.get("chinese") if res.get("chinese") in ("non", "souhaité", "requis") else "non"
         return res
