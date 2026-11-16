@@ -204,7 +204,8 @@ async function load(){
     try{
       const r=await fetch(url,{cache:"no-store"});if(!r.ok)continue;
       const raw=await r.json();if(!Array.isArray(raw))continue;
-      DATA=normalize(raw);META={at:r.headers.get("last-modified")||new Date().toISOString()};
+      let meta=null;try{const rm=await fetch(url.replace("jobs.json","meta.json"),{cache:"no-store"});if(rm.ok)meta=await rm.json()}catch(e){}
+      DATA=normalize(raw);META={at:r.headers.get("last-modified")||"",meta,loadedAt:new Date().toISOString()};
       $("banner").hidden=true;renderAll();return;
     }catch(e){}
   }
@@ -216,6 +217,9 @@ const noteCls=o=>o.excluded?"n-x":o.note10>=7?"n-hi":o.note10>=5?"n-mid":"n-lo";
 const city=o=>/hong/i.test(o.location)?"hk":/singap/i.test(o.location)?"sg":"";
 const stOf=o=>{const t=TRK[hid(keyOf(o))];return t&&t.status||""};
 const ST={todo:"À postuler",applied:"Postulé",skip:"Ignoré"};
+function isNew(o){if(!o.first_seen)return false;const d=new Date(o.first_seen);return !isNaN(d)&&(Date.now()-d.getTime())<=2*86400000}
+const nTrk=st=>Object.values(TRK).filter(t=>t.status===st).length;
+const parisFmt=iso=>{const d=new Date(iso);return isNaN(d)?"":d.toLocaleString("fr-FR",{timeZone:"Europe/Paris",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}).replace(",", " à")};
 
 function filtered(){
   const q=$("q").value.trim().toLowerCase(),fz=$("fz").value,fc=$("fc").value,fn=+$("fn").value,fs=$("fs").value,so=$("so").value,nw=$("fnew").checked;
@@ -227,10 +231,9 @@ function filtered(){
     if(fz==="requis"&&!o.excluded)return false;
     if(fc&&city(o)!==fc)return false;
     if(fn&&!(o.note10>=fn))return false;
-    if(nw&&!o.is_new)return false;
+    if(nw&&!isNew(o))return false;
     const st=stOf(o)||"none";
     if(fs&&st!==fs)return false;
-    if(!fs&&st==="skip"&&fz!=="all")return false;
     return true;
   });
   a.sort((x,y)=>so==="date"?(y.posted||"").localeCompare(x.posted||""):so==="co"?x.company.localeCompare(y.company)||((y.note10||0)-(x.note10||0)):((y.note10==null?-1:y.note10)-(x.note10==null?-1:x.note10))||(y.posted||"").localeCompare(x.posted||""));
@@ -238,18 +241,25 @@ function filtered(){
 }
 function renderOffres(){
   const kept=DATA.filter(o=>!o.excluded);
-  const d=new Date(META.at);$("sub").textContent=DATA.length&&!isNaN(d)?"Dernière mise à jour : "+d.toLocaleString("fr-FR",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"}):"";
-  const stats=[[kept.length,"offres retenues"],[kept.filter(o=>o.is_new).length,"nouvelles"],[kept.filter(o=>o.note10>=7).length,"notées 7 et plus"],[kept.filter(o=>o.chinese==="non").length,"sans aucun chinois"],[DATA.filter(o=>o.excluded).length,"exclues (chinois requis)"]];
+  const M=META.meta;let t="";
+  if(DATA.length&&M&&M.generated_at){t="Données du "+parisFmt(M.generated_at)+" (heure de Paris), fichier jobs.json";
+    const r=(M.sources||[]).reduce((a,x)=>a+(x.read||0),0);
+    t+=" · "+r+" annonces lues sur les sites · "+(M.new_today||0)+" nouvelles · "+(M.reused_from_previous||0)+" déjà connues, non retraitées";
+    const ko=(M.sources||[]).filter(x=>!x.ok).map(x=>x.name);if(ko.length)t+=" · sources en panne : "+ko.join(", ");}
+  else if(DATA.length&&META.at){t="Données du "+parisFmt(META.at)+" (date du fichier jobs.json)"}
+  if(META.loadedAt)t+=" · chargé ici à "+new Date(META.loadedAt).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+  $("sub").textContent=t;
+  const stats=[[kept.length,"offres retenues"],[kept.filter(isNew).length,"nouvelles"],[kept.filter(o=>o.note10>=7).length,"notées 7 et plus"],[kept.filter(o=>o.chinese==="non").length,"sans aucun chinois"],[nTrk("todo"),"à postuler"],[nTrk("applied"),"postulées"],[DATA.filter(o=>o.excluded).length,"exclues (chinois requis)"]];
   $("stats").innerHTML=stats.map(s=>`<div class="stat"><div class="n">${s[0]}</div><div class="l">${s[1]}</div></div>`).join("");
   const a=filtered();
   $("count").textContent=a.length+" offre"+(a.length>1?"s":"");
   if(!a.length){$("list").innerHTML=`<div class="empty">Aucune offre ne correspond à ces filtres.</div>`;return}
   $("list").innerHTML=a.map(o=>{
     const k=keyOf(o),isOpen=open_===k,zl=zhLabel(o),st=stOf(o);
-    const chips=[o.is_new?`<span class="chip c-new">Nouvelle</span>`:"",`<span class="chip ${zl[1]}">${zl[0]}</span>`,
+    const chips=[isNew(o)?`<span class="chip c-new">Nouvelle</span>`:"",`<span class="chip ${zl[1]}">${zl[0]}</span>`,
       st==="applied"?`<span class="chip c-good">Postulé</span>`:st==="todo"?`<span class="chip c-warn">À postuler</span>`:st==="skip"?`<span class="chip c-grey">Ignoré</span>`:""].join("");
     const nv=o.excluded?"–":(o.note10==null?"?":o.note10);
-    return `<div class="row${isOpen?" open":""}${o.excluded?" excl":""}">
+    return `<div class="row${isOpen?" open":""}${o.excluded||st==="skip"?" excl":""}">
       <button class="row-head" data-k="${esc(k)}" aria-expanded="${isOpen}">
         <div class="note ${noteCls(o)}">${nv}<small>/10</small></div>
         <div style="min-width:0"><div class="t">${esc(o.title)}</div><div class="meta">${esc(o.company)} · ${esc(o.location)}${o.posted?" · publiée le "+fmtDate(o.posted):""}</div></div>

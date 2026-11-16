@@ -35,6 +35,34 @@ OUT = HERE / "out"
 STATE = HERE / "state.json"
 
 
+CACHED_ROWS, SRC_STATS, RUN = [], [], {"ai_calls": 0}
+
+
+def load_prev() -> dict:
+    """Offres déjà traitées au passage précédent (out/jobs.json), indexées par clé."""
+    try:
+        rows = json.loads((OUT / "jobs.json").read_text(encoding="utf-8"))
+        return {r["key"]: r for r in rows if isinstance(r, dict) and r.get("key")}
+    except Exception:
+        return {}
+
+
+def is_fresh(day: str, days: int) -> bool:
+    try:
+        return (date.today() - date.fromisoformat(day)).days <= days
+    except (TypeError, ValueError):
+        return False
+
+
+def too_old(row: dict, max_age) -> bool:
+    if not max_age or not row.get("posted"):
+        return False
+    try:
+        return (date.today() - date.fromisoformat(row["posted"])).days > max_age
+    except ValueError:
+        return False
+
+
 def load_state() -> dict:
     try:
         return json.loads(STATE.read_text())
@@ -69,20 +97,39 @@ def collect(cfg: dict, explain: bool):
     today = date.today().isoformat()
     kept, rejected, errors = [], [], []
     max_desc = cfg.get("max_description_fetches_per_source", 150)
+    prev = load_prev()
+    refresh_days = int(cfg.get("refresh_days", 7))
+    CACHED_ROWS.clear()
+    SRC_STATS.clear()
     for src in cfg["sources"]:
         try:
             jobs = run_source(src, cfg)
         except Exception as e:
             errors.append(f"{src['name']}: {type(e).__name__}: {str(e)[:150]}")
             print(f"[KO] {src['name']}: {e}", file=sys.stderr)
+            # source en panne : on garde ses offres du passage précédent
+            old = [r for r in prev.values() if r.get("source") == src["name"] or r.get("company") == src["name"]]
+            CACHED_ROWS.extend(old)
+            SRC_STATS.append({"name": src["name"], "ok": False, "read": 0, "kept": 0, "reused": len(old),
+                              "error": str(e)[:120]})
             continue
         fetched = 0
         n_keep = 0
+        n_reused = 0
         seen_ids = set()
         for j in jobs:
             if j.key in seen_ids:
                 continue
             seen_ids.add(j.key)
+            row = prev.get(j.key)
+            if row and is_fresh(row.get("checked_at", ""), refresh_days) and not too_old(row, cfg.get("max_age_days")):
+                CACHED_ROWS.append(row)          # déjà analysée récemment : on ne la retraite pas
+                n_reused += 1
+                continue
+            st0 = state.get(j.key, {})
+            if st0.get("rej") and is_fresh(st0.get("checked", ""), refresh_days):
+                n_reused += 1                    # déjà jugée hors profil récemment
+                continue
             v = cheap_check(j, cfg)
             if not v.keep:
                 rejected.append((j, v))
@@ -103,7 +150,11 @@ def collect(cfg: dict, explain: bool):
                 kept.append((j, v))
             else:
                 rejected.append((j, v))
-        print(f"[ok] {src['name']:<28} {len(jobs):>4} lues, {n_keep} retenues")
+                if "plafond" not in (v.reason or ""):
+                    st = state.setdefault(j.key, {"first_seen": today})
+                    st["rej"], st["checked"] = v.reason, today
+        SRC_STATS.append({"name": src["name"], "ok": True, "read": len(jobs), "kept": n_keep, "reused": n_reused})
+        print(f"[ok] {src['name']:<28} {len(jobs):>4} lues, {n_keep} retenues, {n_reused} déjà connues")
     # état : première apparition
     for j, v in kept:
         st = state.setdefault(j.key, {"first_seen": today})
@@ -137,6 +188,7 @@ def apply_ai(kept, rejected, state, cfg):
         ai = st.get("ai") if st.get("ai_h") == h else None
         if ai is None and budget > 0 and v.description:
             budget -= 1
+            RUN["ai_calls"] += 1
             ai = ai_score.review(j.title, j.company, j.location, v.description, key, model, provider)
             if ai:
                 st["ai"], st["ai_h"] = ai, h
@@ -152,7 +204,10 @@ def apply_ai(kept, rejected, state, cfg):
         v.why = reasons + [w for w in v.why if not reasons]
         if CH_ORDER.get(ai["chinese"], 0) > CH_ORDER.get(v.chinese, 0):
             v.chinese = ai["chinese"]
-        yrs = ai.get("years_required") or 0
+        try:
+            yrs = int(float(ai.get("years_required") or 0))
+        except (TypeError, ValueError):
+            yrs = 0
         if v.chinese == "requis":
             v.keep, v.reason = False, "chinois requis (IA)"
             rejected.append((j, v))
@@ -178,6 +233,18 @@ def write_outputs(kept, rejected, errors, cfg, explain):
             f"<link>{escape(j.url)}</link><guid isPermaLink=\"false\">{escape(j.key)}</guid>"
             f"<description>{escape(desc)}</description>"
             f"<pubDate>{format_datetime(datetime.fromisoformat(j.first_seen).replace(tzinfo=timezone.utc))}</pubDate></item>")
+    for r in CACHED_ROWS:
+        if r.get("excluded"):
+            continue
+        try:
+            pub = format_datetime(datetime.fromisoformat(r.get("first_seen") or date.today().isoformat()).replace(tzinfo=timezone.utc))
+        except ValueError:
+            continue
+        items.append(
+            f"<item><title>{escape('[' + str(r.get('rating', '')) + '] ' + r.get('title', '') + ' — ' + r.get('company', ''))}</title>"
+            f"<link>{escape(r.get('url', ''))}</link><guid isPermaLink=\"false\">{escape(r.get('key', ''))}</guid>"
+            f"<description>{escape((r.get('summary') or '') + chr(10) + (r.get('description') or '')[:1500])}</description>"
+            f"<pubDate>{pub}</pubDate></item>")
     rss = ('<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel>'
            f"<title>Jobwatch – offres filtrées</title><link>https://example.invalid/</link>"
            f"<description>Analyst / Associate, HK-SG, sans chinois</description><lastBuildDate>{now}</lastBuildDate>"
@@ -192,11 +259,30 @@ def write_outputs(kept, rejected, errors, cfg, explain):
                     years=v.min_years, flags=v.flags, why=v.why, excerpt=v.excerpt,
                     description=v.description, summary=v.summary, note_source=v.note_source, ai_model=v.ai_model,
                     excluded=excluded, excluded_reason=v.reason if excluded else "",
-                    url=j.url, source=j.source, score=v.score)
+                    url=j.url, source=j.source, score=v.score, key=j.key, checked_at=date.today().isoformat())
     rows = [row(jv, False) for jv in kept]
     rows += [row(jv, True) for jv in rejected
              if re.search(r"requis|ans demandés", jv[1].reason or "")]
+    have = {r["key"] for r in rows}
+    today_s = date.today().isoformat()
+    for r in CACHED_ROWS:
+        if r.get("key") not in have:
+            r = dict(r, is_new=(r.get("first_seen") == today_s))
+            rows.append(r)
+            have.add(r["key"])
     (OUT / "jobs.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1), encoding="utf-8")
+    now_utc = datetime.now(timezone.utc)
+    try:
+        from zoneinfo import ZoneInfo
+        paris = now_utc.astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y %H:%M")
+    except Exception:
+        paris = ""
+    live = [r for r in rows if not r.get("excluded")]
+    meta = {"generated_at": now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"), "generated_paris": paris,
+            "offers_total": len(rows), "offers_kept": len(live),
+            "new_today": sum(1 for r in live if r.get("is_new")),
+            "reused_from_previous": len(CACHED_ROWS), "ai_calls": RUN["ai_calls"], "sources": SRC_STATS}
+    (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     with open(OUT / "jobs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["rating"])
         w.writeheader()
