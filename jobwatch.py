@@ -9,12 +9,14 @@ Usage :
   python jobwatch.py --detect URL    # identifie le type de site carrières et propose la ligne de config
 """
 import argparse
+import hashlib
 import csv
 import json
 import re
 import os
 import smtplib
 import sys
+import time
 import traceback
 from datetime import date, datetime, timezone
 from email.message import EmailMessage
@@ -24,6 +26,7 @@ from xml.sax.saxutils import escape
 
 import yaml
 
+import ai_score
 import sources
 from filters import cheap_check, full_check, html_to_text
 
@@ -105,11 +108,59 @@ def collect(cfg: dict, explain: bool):
     for j, v in kept:
         st = state.setdefault(j.key, {"first_seen": today})
         j.first_seen = st["first_seen"]
+    kept = apply_ai(kept, rejected, state, cfg)
     new = [(j, v) for j, v in kept if j.first_seen == today]
     STATE.write_text(json.dumps(state, indent=1))
     rk = {"A": 0, "B": 1, "C": 2}
     kept.sort(key=lambda jv: (rk.get(jv[1].rating, 3), jv[0].first_seen), reverse=False)
     return kept, rejected, new, errors
+
+
+
+CH_ORDER = {"non": 0, "unknown": 0, "souhaité": 1, "fortement souhaité": 2, "requis": 3}
+
+
+def apply_ai(kept, rejected, state, cfg):
+    """Relecture IA des offres retenues (résultats gardés en cache dans state.json)."""
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    ai_cfg = cfg.get("ai", {}) or {}
+    if not key or ai_cfg.get("enabled", True) is False:
+        return kept
+    model = ai_cfg.get("model", ai_score.DEFAULT_MODEL)
+    budget = int(ai_cfg.get("max_per_run", 80))
+    pause = float(ai_cfg.get("pause_seconds", 5))
+    out = []
+    for j, v in kept:
+        st = state.setdefault(j.key, {"first_seen": date.today().isoformat()})
+        h = hashlib.sha1((j.title + (v.description or "")[:3000]).encode("utf-8")).hexdigest()[:12]
+        ai = st.get("ai") if st.get("ai_h") == h else None
+        if ai is None and budget > 0 and v.description:
+            budget -= 1
+            ai = ai_score.review(j.title, j.company, j.location, v.description, key, model)
+            if ai:
+                st["ai"], st["ai_h"] = ai, h
+            time.sleep(pause)
+        if not ai:
+            out.append((j, v))
+            continue
+        v.note_source = "ia"
+        v.note10 = ai["note"]
+        v.summary = ai.get("summary", "")
+        reasons = [f"IA : {r}" for r in (ai.get("reasons") or [])]
+        v.why = reasons + [w for w in v.why if not reasons]
+        if CH_ORDER.get(ai["chinese"], 0) > CH_ORDER.get(v.chinese, 0):
+            v.chinese = ai["chinese"]
+        yrs = ai.get("years_required") or 0
+        if v.chinese == "requis":
+            v.keep, v.reason = False, "chinois requis (IA)"
+            rejected.append((j, v))
+            continue
+        if yrs > cfg.get("max_years", 3):
+            v.keep, v.reason = False, f"{yrs} ans demandés (IA)"
+            rejected.append((j, v))
+            continue
+        out.append((j, v))
+    return out
 
 
 def write_outputs(kept, rejected, errors, cfg, explain):
@@ -137,6 +188,7 @@ def write_outputs(kept, rejected, errors, cfg, explain):
                     is_new=(getattr(j, "first_seen", "") == date.today().isoformat()),
                     note10=v.note10, rating=v.rating, chinese=v.chinese, other_langs=v.other_langs,
                     years=v.min_years, flags=v.flags, why=v.why, excerpt=v.excerpt,
+                    description=v.description, summary=v.summary, note_source=v.note_source,
                     excluded=excluded, excluded_reason=v.reason if excluded else "",
                     url=j.url, source=j.source, score=v.score)
     rows = [row(jv, False) for jv in kept]
@@ -193,6 +245,8 @@ def main():
     if a.check:
         sys.exit(1 if check_sources(cfg) else 0)
     kept, rejected, new, errors = collect(cfg, a.explain)
+    if ai_score.LAST_ERROR:
+        errors.append("IA (Gemini) : " + ai_score.LAST_ERROR)
     write_outputs(kept, rejected, errors, cfg, a.explain)
     try:
         send_digest(new, errors)

@@ -40,6 +40,9 @@ class Verdict:
     note10: Optional[int] = None          # note /10 selon ton profil
     why: List[str] = field(default_factory=list)
     excerpt: str = ""
+    description: str = ""
+    summary: str = ""
+    note_source: str = "règles"
 
 
 # --------------------------------------------------------------------------- titres
@@ -259,7 +262,7 @@ def full_check(job: Job, cfg: dict) -> Verdict:
     score += min(desc_hits, 3)
     if desc_hits:
         why.append(f"Mots de l'annonce qui collent à ton profil +{min(desc_hits, 3)}")
-    base = dict(score=score, why=why, excerpt=_excerpt(text) if text else "")
+    base = dict(score=score, why=why, excerpt=_excerpt(text) if text else "", description=text[:9000])
     if score < cfg.get("min_score", 3):
         return Verdict(False, f"fit insuffisant ({score})", **base)
 
@@ -314,4 +317,4 @@ def full_check(job: Job, cfg: dict) -> Verdict:
     note10 = max(0, min(10, note))
     return Verdict(True, "", score=score, rating=rating, flags=flags, min_years=years,
                    chinese=chinese, other_langs=other, note10=note10, why=why,
-                   excerpt=base["excerpt"])
+                   excerpt=base["excerpt"], description=base["description"])

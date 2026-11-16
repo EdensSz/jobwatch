@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Jobwatch Offres</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap">
+<style>
+:root{color-scheme:light}
+[hidden]{display:none!important}
+body{margin:0}
+
+/* Layout: en-tête compact, bandeau de chiffres, filtres, liste d'offres déroulables */
+:root{
+  --bg:#f5f7fa; --surface:#ffffff; --fg:#14202e; --muted:#5d6b7c; --line:#e1e6ed; --accent:#1f3a5f; --accent-fg:#ffffff;
+  --good:#17724a; --good-bg:#e3f4ec; --warn:#8a5a00; --warn-bg:#fdf1d8; --bad:#a32828; --bad-bg:#fbe6e6; --mid:#3d5a80; --mid-bg:#e8eef7; --low:#5d6b7c; --low-bg:#eceff3;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif; --font-head:'Space Grotesk','Inter',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1621; --surface:#172131; --fg:#e8edf4; --muted:#93a1b3; --line:#27344a; --accent:#8fb4e8; --accent-fg:#0f1621;
+  --good:#5fd39b; --good-bg:#12362a; --warn:#f0c46a; --warn-bg:#3a2d10; --bad:#f08a8a; --bad-bg:#3d1a1a; --mid:#9fbbe6; --mid-bg:#1c2b44; --low:#93a1b3; --low-bg:#202c3f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1621; --surface:#172131; --fg:#e8edf4; --muted:#93a1b3; --line:#27344a; --accent:#8fb4e8; --accent-fg:#0f1621;
+  --good:#5fd39b; --good-bg:#12362a; --warn:#f0c46a; --warn-bg:#3a2d10; --bad:#f08a8a; --bad-bg:#3d1a1a; --mid:#9fbbe6; --mid-bg:#1c2b44; --low:#93a1b3; --low-bg:#202c3f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:14px;line-height:1.5;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:20px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px}
+h1{font-family:var(--font-head);font-size:28px;line-height:1.1;margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);margin-top:4px;min-width:0}
+.btn{font:inherit;font-weight:500;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:8px 14px;border-radius:8px;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.btn:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible,.row-head:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.banner{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between}
+.banner b{font-weight:600}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.stat .n{font-family:var(--font-head);font-size:26px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.stat .l{color:var(--muted);font-size:12px;margin-top:6px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters input[type=search],.filters select{font:inherit;background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;min-width:0}
+.filters input[type=search]{flex:1 1 200px}
+.check{display:inline-flex;gap:6px;align-items:center;color:var(--muted);white-space:nowrap}
+.count{color:var(--muted);font-size:12px;margin-left:auto}
+.list{display:flex;flex-direction:column;gap:8px}
+.row{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.row.open{border-color:var(--accent)}
+.row.excl{opacity:.62}
+.row-head{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 14px;cursor:pointer;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0}
+.note{width:52px;height:52px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-head);font-weight:700;font-size:20px;line-height:1;font-variant-numeric:tabular-nums}
+.note small{font-family:var(--font-body);font-weight:500;font-size:10px;opacity:.75;margin-top:2px}
+.n-hi{background:var(--good-bg);color:var(--good)} .n-mid{background:var(--mid-bg);color:var(--mid)} .n-lo{background:var(--low-bg);color:var(--low)} .n-x{background:var(--bad-bg);color:var(--bad)}
+.t{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.meta{color:var(--muted);font-size:13px;margin-top:2px;overflow-wrap:anywhere}
+.chips{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.chip{font-size:12px;font-weight:500;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.c-good{background:var(--good-bg);color:var(--good)} .c-warn{background:var(--warn-bg);color:var(--warn)} .c-bad{background:var(--bad-bg);color:var(--bad)} .c-new{background:var(--accent);color:var(--accent-fg)} .c-grey{background:var(--low-bg);color:var(--low)}
+.detail{border-top:1px solid var(--line);padding:16px 14px 16px 84px;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:20px}
+.detail h3{font-family:var(--font-head);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;font-weight:600}
+.detail p{margin:0 0 14px;overflow-wrap:anywhere}
+.detail ul{margin:0 0 14px;padding-left:18px}
+.detail li{margin-bottom:3px}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;margin:0 0 14px}
+.kv dt{color:var(--muted)} .kv dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.actions a.btn{text-decoration:none;display:inline-block}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{font:inherit;border:0;background:var(--surface);color:var(--muted);padding:7px 12px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed=true]{background:var(--accent);color:var(--accent-fg)}
+.empty{text-align:center;color:var(--muted);padding:40px 16px;background:var(--surface);border:1px dashed var(--line);border-radius:10px}
+.how{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.how summary{cursor:pointer;font-weight:600}
+.how ol{margin:10px 0 0;padding-left:20px} .how code{background:var(--low-bg);padding:1px 6px;border-radius:5px;font-size:13px}
+.drop{outline:2px dashed var(--accent);outline-offset:6px}
+
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);overflow-x:auto}
+.tab{font:inherit;font-weight:500;color:var(--muted);background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;cursor:pointer;white-space:nowrap;margin-bottom:-1px}
+.tab[aria-selected=true]{color:var(--fg);border-bottom-color:var(--accent)}
+.tab .pill{background:var(--low-bg);color:var(--low);border-radius:999px;font-size:12px;padding:1px 8px;margin-left:6px;font-variant-numeric:tabular-nums}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.trow{display:grid;grid-template-columns:minmax(0,1fr) 150px 160px auto;gap:12px;align-items:center;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.trow .t a{color:inherit;text-decoration:none;border-bottom:1px dotted var(--muted)}
+.trow select,.trow input[type=date]{font:inherit;background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:6px 8px;min-width:0;width:100%}
+.trow .lbl{display:none}
+.mrow{grid-template-columns:minmax(0,1fr) 200px auto}
+.mail{display:flex;align-items:center;gap:10px;font-weight:500}
+.mail input{width:20px;height:20px;accent-color:var(--accent)}
+.ok-d{color:var(--good);font-size:12px}
+.tsum{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted)} .tsum b{color:var(--fg);font-family:var(--font-head);font-size:18px}
+.rm{font:inherit;color:var(--muted);background:none;border:0;cursor:pointer;text-decoration:underline;padding:4px}
+@media (max-width:720px){
+  .trow,.mrow{grid-template-columns:1fr 1fr}
+  .trow>div:first-child{grid-column:1 / -1}
+  .trow .lbl{display:block;color:var(--muted);font-size:12px;margin-bottom:2px}
+  .row-head{grid-template-columns:48px minmax(0,1fr);gap:12px}
+  .row-head .chips{grid-column:1 / -1;justify-content:flex-start}
+  .note{width:46px;height:46px;font-size:18px}
+  .detail{grid-template-columns:1fr;padding:14px}
+  h1{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.fulltext{grid-column:1 / -1;border-top:1px solid var(--line);padding-top:14px}
+.fulltext h3{font-family:var(--font-head);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:600}
+.fulltext .body{white-space:pre-wrap;overflow-wrap:anywhere;max-width:78ch;line-height:1.6}
+.sumbox{background:var(--mid-bg);color:var(--fg);border-radius:8px;padding:10px 12px;margin:0 0 14px}
+.src{color:var(--muted);font-size:12px}
+</style></head><body>
+
+<div class="wrap" id="app">
+  <header>
+    <div>
+      <h1>Jobwatch Offres</h1>
+      <div class="sub" id="sub"></div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="pick" type="button">Actualiser</button>
+    </div>
+  </header>
+
+  <div class="banner" id="banner" hidden><span id="bantxt"></span></div>
+
+  <div class="tabs" role="tablist" id="tabs">
+    <button class="tab" role="tab" data-tab="offres" id="tab-offres">Offres<span class="pill" id="p-offres">0</span></button>
+    <button class="tab" role="tab" data-tab="candidatures" id="tab-candidatures">Candidatures<span class="pill" id="p-candidatures">0</span></button>
+    <button class="tab" role="tab" data-tab="mails" id="tab-mails">Mails<span class="pill" id="p-mails">0</span></button>
+  </div>
+
+  <section id="v-offres" class="wrap" style="gap:20px">
+  <div class="stats" id="stats"></div>
+
+  <div class="filters">
+    <input type="search" id="q" placeholder="Rechercher un poste ou un groupe" aria-label="Rechercher">
+    <select id="fz" aria-label="Chinois">
+      <option value="ok">Sans chinois requis</option>
+      <option value="non">Aucun chinois demandé</option>
+      <option value="souhaité">Chinois souhaité seulement</option>
+      <option value="requis">Chinois requis (exclues)</option>
+      <option value="all">Toutes</option>
+    </select>
+    <select id="fc" aria-label="Ville"><option value="">Hong Kong et Singapour</option><option value="hk">Hong Kong</option><option value="sg">Singapour</option></select>
+    <select id="fn" aria-label="Note minimale"><option value="0">Toutes notes</option><option value="5">Note 5 et plus</option><option value="7">Note 7 et plus</option></select>
+    <select id="fs" aria-label="Suivi"><option value="">Tout le suivi</option><option value="todo">À postuler</option><option value="applied">Postulé</option><option value="none">Non traité</option><option value="skip">Ignoré</option></select>
+    <select id="so" aria-label="Tri"><option value="note">Tri : meilleure note</option><option value="date">Tri : plus récentes</option><option value="co">Tri : groupe</option></select>
+    <label class="check"><input type="checkbox" id="fnew"> Nouvelles</label>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="list" id="list"></div>
+  </section>
+
+  <section id="v-candidatures" class="wrap" hidden></section>
+  <section id="v-mails" class="wrap" hidden></section>
+
+  <details class="how">
+    <summary>Comment ça se met à jour</summary>
+    <ol>
+      <li>GitHub lance le script à 7h, 11h, 15h et 19h (heure de Paris) et enregistre les offres dans le dépôt.</li>
+      <li>Cette page lit le fichier à chaque ouverture. « Actualiser » recharge les dernières offres.</li>
+      <li>Ton suivi (à postuler, postulé, mails envoyés) est gardé dans ce navigateur, sur cet appareil.</li>
+    </ol>
+  </details>
+</div>
+
+<script>
+// Aperçu relevé à la main le 16/11/2026 (note recalculée comme dans le script). Remplacé dès qu'un jobs.json est chargé.
+let DATA=[], META={at:""}, TRK={}, TAB="offres", open_=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const keyOf=o=>(o.url||o.company+"|"+o.title+"|"+o.location);
+function hid(s){let a=5381,b=0;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a=((a<<5)+a+c)|0;b=(Math.imul(b^c,16777619))|0}return (a>>>0).toString(36)+(b>>>0).toString(36)}
+const today=()=>new Date().toISOString().slice(0,10);
+function lsGet(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function fmtDate(s){if(!s)return"";const d=new Date(s);return isNaN(d)?s:d.toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}
+
+/* ---------- stockage : navigateur ---------- */
+function save(){lsSet("jw_trk",JSON.stringify(TRK))}
+function trkSave(id,data){TRK[id]=data;save();renderAll()}
+function trkDel(id){delete TRK[id];save();renderAll()}
+function setStatus(o,st){
+  const id=hid(keyOf(o)),cur=TRK[id];
+  if(cur&&cur.status===st){ if(cur.mailSent) trkSave(id,{...cur,status:""}); else trkDel(id); return }
+  const base=cur||{key:keyOf(o),company:o.company,title:o.title,location:o.location,url:o.url||"",addedAt:today(),mailSent:false,mailDate:"",appliedAt:""};
+  trkSave(id,{...base,status:st,appliedAt:st==="applied"?(base.appliedAt||today()):base.appliedAt});
+}
+
+/* ---------- offres ---------- */
+function normalize(raw){
+  return raw.filter(o=>o&&o.title).map(o=>({
+    company:o.company||o.source||"",title:o.title,location:o.location||"",posted:o.posted||"",first_seen:o.first_seen||"",
+    is_new:!!o.is_new,note10:(typeof o.note10==="number")?o.note10:null,rating:o.rating||"",chinese:o.chinese||"unknown",
+    other_langs:o.other_langs||[],years:(o.years==null?null:o.years),
+    flags:Array.isArray(o.flags)?o.flags:(o.flags?String(o.flags).split(" ; "):[]),why:o.why||[],excerpt:o.excerpt||"",description:o.description||"",summary:o.summary||"",note_source:o.note_source||"règles",
+    excluded:!!o.excluded,excluded_reason:o.excluded_reason||"",url:o.url||"",preview:false}));
+}
+function repoUrls(){
+  const u=[];const m=location.hostname.match(/^([^.]+)\.github\.io$/);
+  if(m){const repo=location.pathname.split("/").filter(Boolean)[0];if(repo)u.push(`https://raw.githubusercontent.com/${m[1]}/${repo}/main/out/jobs.json`)}
+  u.push("out/jobs.json");return u;
+}
+async function load(){
+  $("bantxt").textContent="Chargement des offres…";$("banner").hidden=false;
+  for(const url of repoUrls()){
+    try{
+      const r=await fetch(url,{cache:"no-store"});if(!r.ok)continue;
+      const raw=await r.json();if(!Array.isArray(raw))continue;
+      DATA=normalize(raw);META={at:r.headers.get("last-modified")||new Date().toISOString()};
+      $("banner").hidden=true;renderAll();return;
+    }catch(e){}
+  }
+  $("bantxt").textContent="Impossible de lire out/jobs.json. Vérifie que le premier passage du script a bien eu lieu dans GitHub.";
+  renderAll();
+}
+const zhLabel=o=>({"non":["Chinois : non","c-good"],"souhaité":["Chinois souhaité","c-warn"],"fortement souhaité":["Chinois très souhaité","c-warn"],"requis":["Chinois requis","c-bad"],"unknown":["Chinois : non vérifié","c-grey"]}[o.chinese]||["Chinois : non vérifié","c-grey"]);
+const noteCls=o=>o.excluded?"n-x":o.note10>=7?"n-hi":o.note10>=5?"n-mid":"n-lo";
+const city=o=>/hong/i.test(o.location)?"hk":/singap/i.test(o.location)?"sg":"";
+const stOf=o=>{const t=TRK[hid(keyOf(o))];return t&&t.status||""};
+const ST={todo:"À postuler",applied:"Postulé",skip:"Ignoré"};
+
+function filtered(){
+  const q=$("q").value.trim().toLowerCase(),fz=$("fz").value,fc=$("fc").value,fn=+$("fn").value,fs=$("fs").value,so=$("so").value,nw=$("fnew").checked;
+  let a=DATA.filter(o=>{
+    if(q&&!(o.title+" "+o.company+" "+o.location).toLowerCase().includes(q))return false;
+    if(fz==="ok"&&o.excluded)return false;
+    if(fz==="non"&&!(o.chinese==="non"&&!o.excluded))return false;
+    if(fz==="souhaité"&&!/souhaité/.test(o.chinese))return false;
+    if(fz==="requis"&&!o.excluded)return false;
+    if(fc&&city(o)!==fc)return false;
+    if(fn&&!(o.note10>=fn))return false;
+    if(nw&&!o.is_new)return false;
+    const st=stOf(o)||"none";
+    if(fs&&st!==fs)return false;
+    if(!fs&&st==="skip"&&fz!=="all")return false;
+    return true;
+  });
+  a.sort((x,y)=>so==="date"?(y.posted||"").localeCompare(x.posted||""):so==="co"?x.company.localeCompare(y.company)||((y.note10||0)-(x.note10||0)):((y.note10==null?-1:y.note10)-(x.note10==null?-1:x.note10))||(y.posted||"").localeCompare(x.posted||""));
+  return a;
+}
+function renderOffres(){
+  const kept=DATA.filter(o=>!o.excluded);
+  const d=new Date(META.at);$("sub").textContent=DATA.length&&!isNaN(d)?"Dernière mise à jour : "+d.toLocaleString("fr-FR",{day:"numeric",month:"long",hour:"2-digit",minute:"2-digit"}):"";
+  const stats=[[kept.length,"offres retenues"],[kept.filter(o=>o.is_new).length,"nouvelles"],[kept.filter(o=>o.note10>=7).length,"notées 7 et plus"],[kept.filter(o=>o.chinese==="non").length,"sans aucun chinois"],[DATA.filter(o=>o.excluded).length,"exclues (chinois requis)"]];
+  $("stats").innerHTML=stats.map(s=>`<div class="stat"><div class="n">${s[0]}</div><div class="l">${s[1]}</div></div>`).join("");
+  const a=filtered();
+  $("count").textContent=a.length+" offre"+(a.length>1?"s":"");
+  if(!a.length){$("list").innerHTML=`<div class="empty">Aucune offre ne correspond à ces filtres.</div>`;return}
+  $("list").innerHTML=a.map(o=>{
+    const k=keyOf(o),isOpen=open_===k,zl=zhLabel(o),st=stOf(o);
+    const chips=[o.is_new?`<span class="chip c-new">Nouvelle</span>`:"",`<span class="chip ${zl[1]}">${zl[0]}</span>`,
+      st==="applied"?`<span class="chip c-good">Postulé</span>`:st==="todo"?`<span class="chip c-warn">À postuler</span>`:st==="skip"?`<span class="chip c-grey">Ignoré</span>`:""].join("");
+    const nv=o.excluded?"–":(o.note10==null?"?":o.note10);
+    return `<div class="row${isOpen?" open":""}${o.excluded?" excl":""}">
+      <button class="row-head" data-k="${esc(k)}" aria-expanded="${isOpen}">
+        <div class="note ${noteCls(o)}">${nv}<small>/10</small></div>
+        <div style="min-width:0"><div class="t">${esc(o.title)}</div><div class="meta">${esc(o.company)} · ${esc(o.location)}${o.posted?" · publiée le "+fmtDate(o.posted):""}</div></div>
+        <div class="chips">${chips}</div>
+      </button>${isOpen?detail(o,k,st):""}</div>`}).join("");
+}
+function detail(o,k,st){
+  const sum=o.summary?`<div class="sumbox">${esc(o.summary)}</div>`:"";
+  const why=o.why&&o.why.length?`<h3>Pourquoi cette note${o.note_source==="ia"?" (analyse IA)":" (règles du script)"}</h3><ul>${o.why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:"";
+  const fl=o.flags&&o.flags.length?`<h3>Points d'attention</h3><ul>${o.flags.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`:"";
+  const zl=zhLabel(o);
+  const kv=`<dl class="kv"><dt>Chinois</dt><dd>${zl[0].replace("Chinois : ","").replace("Chinois ","")}${o.excluded?" · offre exclue du tri normal":""}</dd>
+    <dt>Autres langues</dt><dd>${o.other_langs&&o.other_langs.length?esc(o.other_langs.join(", ")):"Aucune détectée"}</dd>
+    <dt>Expérience</dt><dd>${o.years==null?"Non précisée":o.years+" an"+(o.years>1?"s":"")+" demandé"+(o.years>1?"s":"")}</dd>
+    ${o.first_seen?`<dt>Vue pour la 1re fois</dt><dd>${fmtDate(o.first_seen)}</dd>`:""}
+    ${o.excluded?`<dt>Exclue car</dt><dd>${esc(o.excluded_reason)}</dd>`:""}</dl>`;
+  const link=o.url?`<a class="btn primary" href="${esc(o.url)}" target="_blank" rel="noopener">Ouvrir l'offre</a>`:"";
+  const seg=`<div class="seg" role="group" aria-label="Suivi">${Object.keys(ST).map(s=>`<button type="button" data-st="${s}" data-k="${esc(k)}" aria-pressed="${st===s}">${s==="skip"?"Ignorer":ST[s]}</button>`).join("")}</div>`;
+  const full=o.description?`<div class="fulltext"><h3>Annonce complète</h3><div class="body">${esc(o.description)}</div></div>`:`<div class="fulltext"><h3>Annonce complète</h3><p class="src">Le texte de l'annonce n'a pas pu être lu par le script. Utilise « Ouvrir l'offre ».</p></div>`;
+  return `<div class="detail"><div>${sum}${why}</div><div>${kv}${fl}<div class="actions">${link}${seg}</div></div>${full}</div>`;
+}
+
+/* ---------- candidatures ---------- */
+const cands=()=>Object.entries(TRK).filter(([,t])=>t.status==="todo"||t.status==="applied")
+  .sort((a,b)=>(b[1].addedAt||"").localeCompare(a[1].addedAt||""));
+function renderCands(){
+  const c=cands(),ap=c.filter(x=>x[1].status==="applied").length;
+  if(!c.length){$("v-candidatures").innerHTML=`<div class="empty">Aucune candidature suivie pour l'instant. Dans l'onglet Offres, ouvre une offre puis clique sur « À postuler » ou « Postulé ».</div>`;return}
+  $("v-candidatures").innerHTML=`<div class="tsum"><span><b>${c.length}</b> suivies</span><span><b>${ap}</b> postulées</span><span><b>${c.length-ap}</b> à postuler</span></div><div class="list">`+
+  c.map(([id,t])=>`<div class="trow">
+    <div style="min-width:0"><div class="t">${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>`:esc(t.title)}</div><div class="meta">${esc(t.company)} · ${esc(t.location)}</div></div>
+    <div><span class="lbl">Statut</span><select data-id="${id}" data-f="status" aria-label="Statut">${["todo","applied"].map(s=>`<option value="${s}"${t.status===s?" selected":""}>${ST[s]}</option>`).join("")}</select></div>
+    <div><span class="lbl">Date de candidature</span><input type="date" data-id="${id}" data-f="appliedAt" value="${esc(t.appliedAt||"")}" aria-label="Date de candidature"${t.status==="applied"?"":" disabled"}></div>
+    <div><button class="rm" data-rm="${id}" type="button">Retirer</button></div></div>`).join("")+`</div>`;
+}
+function renderMails(){
+  const c=cands(),sent=c.filter(x=>x[1].mailSent).length;
+  if(!c.length){$("v-mails").innerHTML=`<div class="empty">Les candidatures suivies apparaissent ici pour que tu coches les mails envoyés.</div>`;return}
+  $("v-mails").innerHTML=`<div class="tsum"><span><b>${sent}</b> mails envoyés</span><span><b>${c.length-sent}</b> à envoyer</span></div><div class="list">`+
+  c.sort((a,b)=>(a[1].mailSent?1:0)-(b[1].mailSent?1:0)).map(([id,t])=>`<div class="trow mrow">
+    <div style="min-width:0"><div class="t">${esc(t.title)}</div><div class="meta">${esc(t.company)} · ${esc(t.location)}</div></div>
+    <label class="mail"><input type="checkbox" data-id="${id}" data-mail="1"${t.mailSent?" checked":""}> Mail envoyé : ${t.mailSent?"oui":"non"}</label>
+    <div class="ok-d">${t.mailSent&&t.mailDate?"Envoyé le "+fmtDate(t.mailDate):""}</div></div>`).join("")+`</div>`;
+}
+
+/* ---------- onglets ---------- */
+function renderAll(){
+  const c=cands();
+  $("p-offres").textContent=DATA.filter(o=>!o.excluded).length;$("p-candidatures").textContent=c.length;$("p-mails").textContent=c.filter(x=>x[1].mailSent).length+"/"+c.length;
+  ["offres","candidatures","mails"].forEach(t=>{$("v-"+t).hidden=TAB!==t;$("tab-"+t).setAttribute("aria-selected",TAB===t)});
+  if(TAB==="offres")renderOffres();else if(TAB==="candidatures")renderCands();else renderMails();
+}
+function goTab(t){TAB=t;if(location.hash!=="#"+t)history.replaceState(null,"","#"+t);renderAll()}
+$("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b)goTab(b.dataset.tab)});
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(["offres","candidatures","mails"].includes(h)){TAB=h;renderAll()}});
+
+$("list").addEventListener("click",e=>{
+  const b=e.target.closest("[data-st]");
+  if(b){const o=DATA.find(x=>keyOf(x)===b.dataset.k);if(o)setStatus(o,b.dataset.st);return}
+  const h=e.target.closest(".row-head");
+  if(h){open_=open_===h.dataset.k?null:h.dataset.k;renderAll()}
+});
+$("v-candidatures").addEventListener("change",e=>{
+  const el=e.target.closest("[data-f]");if(!el)return;const id=el.dataset.id,t=TRK[id];if(!t)return;
+  if(el.dataset.f==="status")trkSave(id,{...t,status:el.value,appliedAt:el.value==="applied"?(t.appliedAt||today()):t.appliedAt});
+  else trkSave(id,{...t,appliedAt:el.value});
+});
+$("v-candidatures").addEventListener("click",e=>{const b=e.target.closest("[data-rm]");if(b)trkDel(b.dataset.rm)});
+$("v-mails").addEventListener("change",e=>{
+  const el=e.target.closest("[data-mail]");if(!el)return;const id=el.dataset.id,t=TRK[id];if(!t)return;
+  trkSave(id,{...t,mailSent:el.checked,mailDate:el.checked?today():""});
+});
+["q","fz","fc","fn","fs","so","fnew"].forEach(id=>$(id).addEventListener("input",()=>{open_=null;renderAll()}));
+$("pick").addEventListener("click",load);
+
+/* ---------- démarrage ---------- */
+(function boot(){
+  const h=location.hash.slice(1);if(["offres","candidatures","mails"].includes(h))TAB=h;
+  try{TRK=JSON.parse(lsGet("jw_trk")||"{}")}catch(e){TRK={}}
+  renderAll();load();
+})();
+</script>
+</body></html>
