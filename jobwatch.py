@@ -123,6 +123,10 @@ class Skipped(Exception):
     pass
 
 
+class Fresh(Skipped):
+    """Source lue récemment (ex. Workday toutes les 12 h) : on garde ses offres du passage précédent."""
+
+
 def all_sources(cfg: dict) -> list:
     """Sources de config.yaml + grandes entreprises en découverte automatique (section companies) + agrégateurs à la fin
     (pour qu'une offre trouvée sur le site de l'entreprise gagne sur son doublon d'agrégateur)."""
@@ -144,11 +148,21 @@ def fetch_all(cfg: dict, health: dict):
     """Lit les listes d'offres de toutes les sources en parallèle. Une source en panne 3 passages de suite
     n'est plus réessayée qu'une fois par jour (« quarantaine »)."""
     today = date.today().isoformat()
+    now = datetime.now(timezone.utc)
+    every = {"workday": 12, **(cfg.get("refresh_hours") or {})}     # heures minimum entre deux lectures, par type
 
     def one(src):
         h = health.get(src["name"], {})
         if h.get("fail", 0) >= 3 and h.get("last_try") == today:
             return src, None, Skipped(f"en quarantaine ({h['fail']} échecs de suite)")
+        hrs = every.get(src.get("type"))
+        if hrs and h.get("last_ok") and not RUN.get("reset"):
+            try:
+                age = (now - datetime.fromisoformat(h["last_ok"])).total_seconds() / 3600
+                if age < hrs:
+                    return src, None, Fresh(f"lu il y a {age:.0f} h (toutes les {hrs} h)")
+            except ValueError:
+                pass
         try:
             terms = (cfg.get("role_terms") if src.get("aggregator") else None) or src.get("terms") or cfg["search_terms"]
             conn = sources.CONNECTORS.get(src["type"])
@@ -166,6 +180,8 @@ def fetch_all(cfg: dict, health: dict):
             continue
         h["last_try"] = today
         h["fail"] = h.get("fail", 0) + 1 if err is not None else 0
+        if err is None:
+            h["last_ok"] = now.isoformat(timespec="minutes")
     try:
         sources.save_ats_cache()
     except Exception:
@@ -204,8 +220,8 @@ def collect(cfg: dict, explain: bool):
         if isinstance(err, Skipped):
             old = [r for r in prev.values() if r.get("source") == name]
             CACHED_ROWS.extend(old)
-            stats[name] = {"name": name, "ok": False, "skipped": True, "read": 0, "kept": 0, "reused": len(old),
-                           "error": str(err)}
+            stats[name] = {"name": name, "ok": isinstance(err, Fresh), "skipped": True, "read": 0, "kept": 0,
+                           "reused": len(old), "error": str(err)}
             continue
         if err is not None:
             errors.append(f"{name}: {type(err).__name__}: {str(err)[:150]}")

@@ -30,3 +30,10 @@ python test_filters.py          # tests des règles (hors ligne)
 python test_ai.py               # tests de l'analyse IA (hors ligne)
 ```
 Ajouter un site : `python jobwatch.py --detect "<url de la page carrières>"` puis coller la ligne dans `config.yaml`.
+
+## Sources (≈ 400)
+- **Sites carrières directs** (`sources` dans `config.yaml`) : Workday, Oracle, Eightfold, Greenhouse, Lever, SmartRecruiters, Amazon, VIE Business France.
+- **Grands groupes en découverte automatique** (`companies`) : le script trouve seul leur site d'offres (Greenhouse, Lever, Ashby, SmartRecruiters, Workable, Recruitee) et le garde dans `ats_cache.json`. Ceux qui ont un site maison sont listés dans les jauges.
+- **Agrégateurs** (`aggregators`, recherche par métier) : MyCareersFuture (toutes les offres de Singapour) et JobStreet (Singapour) sans clé (JobsDB et le site VIE refusent les accès automatiques : utiliser leurs alertes e-mail) ; Jooble, Adzuna, Careerjet avec clé gratuite (secrets `JOOBLE_KEYS` au format `hk:CLÉ,sg:CLÉ`, `ADZUNA_APP_ID` + `ADZUNA_APP_KEY`, `CAREERJET_API_KEY`).
+- Une source qui échoue 3 passages de suite n'est plus réessayée qu'une fois par jour. Les doublons entre sources sont retirés.
+- `python test_sources.py` : tests des connecteurs (hors ligne).

@@ -6,6 +6,7 @@ max_years: 3                               # rejette si > 3 ans d'expérience de
 reject_preferred_languages: false          # true : exclut aussi les offres où une autre langue est juste « un plus »
 max_age_days: 60
 max_description_fetches_per_source: 400    # lecture de l'annonce complète (plafond par site et par passage)
+refresh_hours: {workday: 12}               # Workday limite les requêtes : ses sites ne sont relus que toutes les 12 h
 refresh_days: 7                            # une offre déjà analysée est relue au bout de 7 jours
 
 # Mots-clés : on cherche par ville (les sites font une recherche « tous les mots »), les règles jugent ensuite chaque offre
@@ -13,7 +14,6 @@ search_terms:
   - "Hong Kong"
   - "Singapore"
   - "Tokyo"
-  - "Japan"
 
 # ---------- IA (gratuite) ----------
 # Ordre d'essai : Gemini (clé gratuite Google AI Studio, ~500 analyses/jour) puis OpenRouter (modèles :free, ~50/jour
@@ -63,7 +63,6 @@ sources:
   - {name: "Barclays",               type: workday, url: "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays"}
   - {name: "UOB",                    type: workday, url: "https://uobgroup.wd3.myworkdayjobs.com/UOBExternal"}
   # -- VIE / VIA (BNP, SG, CA-CIB, Natixis... publient leurs VIE ici)
-  - {name: "VIE Business France", type: civiweb, terms: ["Hong Kong", "Singapour", "Singapore", "Tokyo", "Japon", "Japan"]}
 
   # ===== AJOUTÉ le 16/11/2026, VÉRIFIÉ dans le navigateur : l'API répond =====
   # (entre parenthèses : nb d'offres trouvées « Hong Kong / Singapore » ce jour-là)
@@ -181,7 +180,6 @@ sources:
   - {name: "Unilever",               type: workday, url: "https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals"}
   - {name: "Thomson Reuters",        type: workday, url: "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site"}
   - {name: "Macquarie",              type: workday, url: "https://mq.wd3.myworkdayjobs.com/CareersatMQ"}
-  - {name: "MSCI",                   type: workday, url: "https://msci.wd1.myworkdayjobs.com/MSCI"}
   - {name: "Nasdaq",                 type: workday, url: "https://nasdaq.wd1.myworkdayjobs.com/Global_External_Site"}
   - {name: "Netflix",                type: eightfold, host: "explore.jobs.netflix.net", domain: "netflix.com"}
 
@@ -195,10 +193,10 @@ sources:
 # ---------- Agrégateurs (vue globale : toutes les entreprises qui publient à HK / Singapour / Tokyo) ----------
 # Ils cherchent par MÉTIER (role_terms ci-dessous), pas par ville. Les doublons avec les sites des entreprises sont retirés.
 # MyCareersFuture (Singapour) et JobsDB (Hong Kong) / JobStreet (Singapour) : sans clé.
-# Jooble, Adzuna, Careerjet : clés gratuites à mettre dans les secrets GitHub (sinon ignorés).
+# Jooble (secret JOOBLE_KEYS = « hk:CLÉ,sg:CLÉ », une clé par pays), Careerjet (CAREERJET_API_KEY), Adzuna
+# (ADZUNA_APP_ID + ADZUNA_APP_KEY) : clés gratuites dans les secrets GitHub, sinon ignorés.
 aggregators:
   - {name: "MyCareersFuture (Singapour)", type: mycareersfuture}
-  - {name: "JobsDB (Hong Kong)",          type: seek, host: "hk.jobsdb.com", site_key: "HK-Main", city: "Hong Kong"}
   - {name: "JobStreet (Singapour)",       type: seek, host: "sg.jobstreet.com", site_key: "SG-Main", city: "Singapore"}
   - {name: "Jooble",                      type: jooble}
   - {name: "Adzuna (Singapour)",          type: adzuna, country: "sg"}

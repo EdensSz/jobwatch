@@ -25,8 +25,11 @@ def _session() -> requests.Session:
 import threading
 from urllib.parse import urlparse as _up
 
-# Workday limite le nombre de requêtes par IP (429 / 503) : au plus 3 appels Workday en même temps sur tout le passage
-_HOST_LIMITS = {"myworkdayjobs.com": threading.BoundedSemaphore(3)}
+# Workday limite le nombre de requêtes par IP (429) : on reste poli. Une seule requête Workday à la fois sur tout
+# le passage, espacées d'au moins 2 s, et on respecte le délai demandé par le site avant de réessayer.
+_HOST_LIMITS = {"myworkdayjobs.com": threading.BoundedSemaphore(1)}
+_MIN_GAP = {"myworkdayjobs.com": 2.0}
+_LAST = {}
 
 
 def _limit(url):
@@ -41,11 +44,19 @@ def _req(method, s, url, **kw):
     """Requête avec reprises : 429 / 5xx -> on attend (Retry-After si donné) et on réessaie 5 fois.
     Lève toujours une vraie erreur à la fin (jamais None)."""
     sem = _limit(url)
+    host = _up(url).netloc
+    dom = next((d for d in _MIN_GAP if host.endswith(d)), None)
     last = None
-    for attempt in range(5):
+    tries = 3 if dom else 5
+    for attempt in range(tries):
         if sem:
             sem.acquire()
         try:
+            if dom:
+                wait_ = _LAST.get(dom, 0) + _MIN_GAP[dom] - time.time()
+                if wait_ > 0:
+                    time.sleep(wait_)
+                _LAST[dom] = time.time()
             r = s.request(method, url, timeout=TIMEOUT, **kw)
         except requests.RequestException as e:
             last = e
@@ -57,7 +68,12 @@ def _req(method, s, url, **kw):
             if r.status_code in (429, 500, 502, 503, 504):
                 last = requests.HTTPError(f"{r.status_code} après {attempt + 1} essai(s) pour {url[:120]}")
                 wait = r.headers.get("Retry-After", "")
-                time.sleep(min(30, float(wait)) if wait.replace(".", "").isdigit() else 2 * 2 ** attempt)
+                pause = float(wait) if wait.replace(".", "").isdigit() else \
+                    (30 * (attempt + 1) if r.status_code == 429 else 2 * 2 ** attempt)
+                pause = min(90, pause)
+                if dom and r.status_code == 429:          # toutes les requêtes Workday attendent aussi
+                    _LAST[dom] = time.time() + pause
+                time.sleep(pause)
                 continue
             r.raise_for_status()
             return r
@@ -95,8 +111,36 @@ def _workday_posted(text: str) -> str:
     return (date.today() - timedelta(days=int(m.group(1)))).isoformat() if m else ""
 
 
+WD_CITY_RE = re.compile(r"hong ?kong|singapore|japan|tokyo|香港|東京|日本", re.I)
+WORKDAY_BLOCKED = {"n": 0}          # coupe-circuit : après 3 sites Workday refusés de suite, on arrête Workday pour ce passage
+
+
+def _wd_location_facets(facets) -> Dict[str, List[str]]:
+    """Dans la liste « facets » de la 1re réponse, trouve les filtres de lieu qui correspondent à HK / Singapour / Japon.
+    Retourne {nom_du_filtre: [ids]} (le filtre le plus précis : pays de préférence)."""
+    found: Dict[str, List[str]] = {}
+
+    def walk(fs):
+        for f in fs or []:
+            param = f.get("facetParameter") or ""
+            for v in f.get("values") or []:
+                if v.get("facetParameter") or (v.get("values") and not v.get("id")):
+                    walk([v])                                  # groupe imbriqué (ex. locationMainGroup)
+                    continue
+                if v.get("id") and WD_CITY_RE.search(v.get("descriptor") or ""):
+                    found.setdefault(param, []).append(v["id"])
+    walk(facets)
+    if not found:
+        return {}
+    best = sorted(found, key=lambda k: (0 if "country" in k.lower() else 1, -len(found[k])))[0]
+    return {best: found[best]}
+
+
 def workday(src: Dict, terms: List[str]) -> List[Job]:
-    """src: name + url (n'importe quelle page du site carrières Workday) ou host/tenant/site."""
+    """Workday, en économisant les requêtes : 1 requête pour lire les filtres de lieu du site, puis seulement les
+    pages des offres à Hong Kong / Singapour / Japon (au lieu d'une recherche par ville). Repli : recherche par ville."""
+    if WORKDAY_BLOCKED["n"] >= 3:
+        raise requests.HTTPError("Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage")
     if "url" in src:
         u = urlparse(src["url"])
         host = u.netloc
@@ -107,14 +151,23 @@ def workday(src: Dict, terms: List[str]) -> List[Job]:
         host, tenant, site = src["host"], src["tenant"], src["site"]
     base = f"https://{host}/wday/cxs/{tenant}/{site}"
     s = _session()
+    try:
+        first = _post(s, f"{base}/jobs", {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": ""}).json()
+    except requests.HTTPError as e:
+        if "429" in str(e):
+            WORKDAY_BLOCKED["n"] += 1
+        raise
+    WORKDAY_BLOCKED["n"] = 0
+    facet = _wd_location_facets(first.get("facets"))
+    queries = [(facet, "")] if facet else [({}, t) for t in terms]
     seen, jobs = set(), []
-    for term in terms:
+    for applied, text in queries:
         offset, total = 0, None
-        for _ in range(src.get("max_pages", 120)):
-            r = _post(s, f"{base}/jobs", {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term})
-            data = r.json()
-            if total is None:
-                total = data.get("total", 0)
+        for _ in range(src.get("max_pages", 60)):
+            data = _post(s, f"{base}/jobs", {"appliedFacets": applied, "limit": 20, "offset": offset,
+                                              "searchText": text}).json()
+            if total is None:                       # Workday ne donne le total qu'à la 1re page
+                total = data.get("total") or 0
             postings = data.get("jobPostings", [])
             if not postings:
                 break
@@ -125,9 +178,8 @@ def workday(src: Dict, terms: List[str]) -> List[Job]:
                 seen.add(path)
                 jobs.append(_workday_job(src, s, host, base, site, p))
             offset += 20
-            if offset >= (total or 0):
+            if offset >= total:
                 break
-            time.sleep(PAUSE)
     return jobs
 
 
@@ -328,9 +380,7 @@ def civiweb(src: Dict, terms: List[str]) -> List[Job]:
             body = {"limit": 50, "skip": skip, "query": term, "activitySectorId": [], "missionsTypesIds": [],
                     "missionsDurations": [], "gerographicZones": [], "countriesIds": [], "studiesLevelId": [],
                     "companiesSizes": [], "specializationsIds": [], "entreprisesIds": [0], "missionStartDate": None}
-            r = _post(s, f"{api}/search", body, headers={"Origin": "https://mon-vie-via.businessfrance.fr",
-                                                          "Referer": "https://mon-vie-via.businessfrance.fr/offres/recherche",
-                                                          "Content-Type": "application/json"})
+            r = _post(s, f"{api}/search", body)
             res = r.json().get("result") or []
             if not res:
                 break
@@ -599,22 +649,32 @@ def seek(src: Dict, terms: List[str]) -> List[Job]:
 
 
 def jooble(src: Dict, terms: List[str]) -> List[Job]:
-    """Jooble (agrégateur, clé gratuite JOOBLE_API_KEY). Résumé de l'annonce seulement."""
-    key = _os.environ.get("JOOBLE_API_KEY", "").strip()
-    if not key:
+    """Jooble (agrégateur : JobsDB, CTgoodjobs, eFinancialCareers, cabinets…). Une clé gratuite PAR PAYS
+    (formulaire sur hk.jooble.org/api/about, sg.jooble.org/api/about…), 100 requêtes / jour / clé.
+    Secret GitHub JOOBLE_KEYS au format « hk:CLÉ1,sg:CLÉ2 » (ancien JOOBLE_API_KEY = clé seule, pays hk)."""
+    raw = _os.environ.get("JOOBLE_KEYS", "").strip() or (
+        "hk:" + _os.environ["JOOBLE_API_KEY"].strip() if _os.environ.get("JOOBLE_API_KEY", "").strip() else "")
+    if not raw:
         return []
+    city = {"hk": "Hong Kong", "sg": "Singapore", "jp": "Tokyo"}
     s = _session()
     out, seen = [], set()
-    for city in src.get("cities", ["Hong Kong", "Singapore", "Tokyo"]):
-        for term in src.get("terms") or terms:
-            d = _post(s, f"https://jooble.org/api/{key}", {"keywords": term, "location": city, "page": "1"}).json()
+    per_run = int(src.get("terms_per_run", 20))        # 4 passages x 20 = 80 requêtes / jour < 100
+    for pair in raw.split(","):
+        cc, _, key = pair.strip().partition(":")
+        if not key:
+            continue
+        host = "jooble.org" if cc in ("us", "") else f"{cc}.jooble.org"
+        for term in (src.get("terms") or terms)[:per_run]:
+            d = _post(s, f"https://{host}/api/{key}", {"keywords": term, "location": city.get(cc, cc), "page": "1",
+                                                     "ResultOnPage": "50"}).json()
             for q in d.get("jobs") or []:
                 jid = str(q.get("id") or q.get("link"))
                 if jid in seen:
                     continue
                 seen.add(jid)
                 out.append(Job(source=src["name"], company=q.get("company") or "", id=jid, title=q.get("title", ""),
-                               location=q.get("location") or city, url=q.get("link", ""),
+                               location=q.get("location") or city.get(cc, ""), url=q.get("link", ""),
                                posted=_iso(q.get("updated")) or None, description=q.get("snippet") or ""))
             time.sleep(PAUSE)
     return out
@@ -649,28 +709,44 @@ def adzuna(src: Dict, terms: List[str]) -> List[Job]:
 
 
 def careerjet(src: Dict, terms: List[str]) -> List[Job]:
-    """Careerjet Hong Kong / Singapour / Japon (identifiant gratuit CAREERJET_AFFID)."""
-    affid = _os.environ.get("CAREERJET_AFFID", "").strip()
-    if not affid:
+    """Careerjet API v4 (agrégateur, Hong Kong / Singapour / Japon). Clé gratuite d'éditeur :
+    careerjet.com/partners/register/as-publisher -> secret GitHub CAREERJET_API_KEY."""
+    key = (_os.environ.get("CAREERJET_API_KEY") or _os.environ.get("CAREERJET_AFFID") or "").strip()
+    if not key:
         return []
     s = _session()
+    try:                                           # l'API demande l'IP de l'appelant : celle du serveur GitHub
+        ip = s.get("https://api.ipify.org", timeout=10).text.strip()
+    except Exception:
+        ip = "127.0.0.1"
     out, seen = [], set()
     for locale, city in src.get("locales", [["en_HK", "Hong Kong"], ["en_SG", "Singapore"], ["ja_JP", "Tokyo"]]):
         for term in src.get("terms") or terms:
-            d = _get(s, "http://public.api.careerjet.net/search",
-                     params={"locale_code": locale, "keywords": term, "location": city, "affid": affid,
-                             "user_ip": "1.1.1.1", "user_agent": "jobwatch", "pagesize": 99, "page": 1,
-                             "sort": "date"}).json()
-            for q in d.get("jobs") or []:
+            r = s.get("https://search.api.careerjet.net/v4/query", auth=(key, ""), timeout=TIMEOUT,
+                      params={"locale_code": locale, "keywords": term, "location": city, "sort": "date",
+                              "page_size": 100, "user_ip": ip, "user_agent": UA["User-Agent"]})
+            if r.status_code == 400 and "locale" in r.text.lower():
+                break                              # pays non couvert par Careerjet : on passe au suivant
+            r.raise_for_status()
+            for q in r.json().get("jobs") or []:
                 jid = q.get("url", "")
-                if jid in seen:
+                if not jid or jid in seen:
                     continue
                 seen.add(jid)
+                locs = q.get("locations")
                 out.append(Job(source=src["name"], company=q.get("company") or "", id=jid, title=q.get("title", ""),
-                               location=q.get("locations") or city, url=jid, posted=None,
-                               description=q.get("description") or ""))
+                               location=locs if isinstance(locs, str) else " ; ".join(locs or [city]), url=jid,
+                               posted=_iso(_rfc(q.get("date"))) or None, description=q.get("description") or ""))
             time.sleep(PAUSE)
     return out
+
+
+def _rfc(v):
+    try:
+        from email.utils import parsedate_to_datetime
+        return parsedate_to_datetime(v).date().isoformat()
+    except Exception:
+        return ""
 
 
 # --------------------------------------------------------------------------- découverte automatique de l'ATS
