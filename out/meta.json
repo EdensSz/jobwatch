@@ -1,138 +1,18 @@
 {
- "generated_at": "2026-11-17T15:31:54Z",
- "generated_paris": "17/11/2026 16:31",
- "offers_total": 1447,
- "offers_kept": 912,
- "new_today": 897,
- "reused_from_previous": 1373,
+ "generated_at": "2026-11-17T17:07:20Z",
+ "generated_paris": "17/11/2026 18:07",
+ "offers_total": 1373,
+ "offers_kept": 893,
+ "new_today": 884,
+ "reused_from_previous": 1351,
  "ai_calls": 0,
  "sources": [
   {
-   "name": "Fidelity International",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "BlackRock",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 3,
-   "error": "429 après 3 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
-  },
-  {
-   "name": "Invesco",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 4,
-   "error": "429 après 3 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
-  },
-  {
-   "name": "T. Rowe Price",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 1,
-   "error": "429 après 3 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs"
-  },
-  {
-   "name": "AllianceBernstein",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "abrdn",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Franklin Templeton",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "429 après 3 essai(s) pour https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/"
-  },
-  {
-   "name": "Blackstone",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Carlyle",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Ares",
-   "ok": true,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 1,
-   "error": "lu il y a 1 h (toutes les 12 h)"
-  },
-  {
-   "name": "Brookfield",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Hamilton Lane",
-   "ok": true,
-   "read": 6,
-   "kept": 0,
-   "reused": 2
-  },
-  {
-   "name": "Manulife",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
    "name": "HSBC",
    "ok": true,
-   "read": 287,
+   "read": 282,
    "kept": 0,
    "reused": 66
-  },
-  {
-   "name": "Morgan Stanley",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "J.P. Morgan",
@@ -142,133 +22,9 @@
    "reused": 19
   },
   {
-   "name": "Julius Baer",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "State Street",
-   "ok": true,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 4,
-   "error": "lu il y a 1 h (toutes les 12 h)"
-  },
-  {
-   "name": "Northern Trust",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "429 après 3 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
-  },
-  {
-   "name": "Deutsche Bank",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Barclays",
-   "ok": true,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 1,
-   "error": "lu il y a 1 h (toutes les 12 h)"
-  },
-  {
-   "name": "UOB",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Bain Capital",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Apollo",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "429 après 3 essai(s) pour https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs"
-  },
-  {
-   "name": "Oaktree",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Blue Owl",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "HarbourVest",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "ICG",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "PineBridge Investments",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Brevan Howard",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
    "name": "General Atlantic",
    "ok": true,
-   "read": 13,
+   "read": 12,
    "kept": 0,
    "reused": 1
   },
@@ -296,338 +52,16 @@
   {
    "name": "ExodusPoint",
    "ok": true,
-   "read": 5,
+   "read": 4,
    "kept": 0,
    "reused": 0
   },
   {
-   "name": "PIMCO",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Wellington Management",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Capital Group",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Neuberger Berman",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Fidelity Investments",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Guggenheim",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Eastspring (Prudential)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Lombard Odier",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Morgan Stanley Wealth (private)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Citi",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "DBS",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "OCBC",
+   "name": "eFinancialCareers (HK - IR Analyst)",
    "ok": true,
-   "read": 702,
-   "kept": 0,
-   "reused": 77
-  },
-  {
-   "name": "MUFG",
-   "ok": false,
-   "skipped": true,
    "read": 0,
    "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "ING",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Santander",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "RBC",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "TD Securities",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "PJT Partners (Park Hill)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "TP ICAP",
-   "ok": true,
-   "read": 17,
-   "kept": 0,
-   "reused": 7
-  },
-  {
-   "name": "PwC",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "PwC (campus / graduate)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "AIA",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Prudential",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "FWD",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Sun Life",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "AIG",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "HKEX",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "LSEG",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "S&P Global",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Morningstar",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Broadridge",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "JLL (immobilier / capital markets)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Visa",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Mastercard",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "PayPal",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Global Payments (TSYS)",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Fiserv",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
+   "reused": 0
   },
   {
    "name": "Stripe",
@@ -690,7 +124,7 @@
   {
    "name": "Coinbase",
    "ok": true,
-   "read": 260,
+   "read": 259,
    "kept": 0,
    "reused": 2
   },
@@ -725,15 +159,6 @@
   {
    "name": "Crypto.com",
    "ok": true,
-   "read": 85,
-   "kept": 0,
-   "reused": 3,
-   "ats": "lever",
-   "no_ats": false
-  },
-  {
-   "name": "Anchorage Digital",
-   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
@@ -741,92 +166,20 @@
    "no_ats": true
   },
   {
+   "name": "Anchorage Digital",
+   "ok": true,
+   "read": 21,
+   "kept": 1,
+   "reused": 0,
+   "ats": "lever",
+   "no_ats": false
+  },
+  {
    "name": "Microsoft",
    "ok": true,
-   "read": 199,
+   "read": 198,
    "kept": 0,
    "reused": 39
-  },
-  {
-   "name": "Salesforce",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Workday",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Adobe",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "NVIDIA",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "HP",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "HPE",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Samsung",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "CrowdStrike",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Equinix",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Grab",
@@ -845,7 +198,7 @@
   {
    "name": "Databricks",
    "ok": true,
-   "read": 894,
+   "read": 895,
    "kept": 0,
    "reused": 20
   },
@@ -853,8 +206,8 @@
    "name": "Datadog",
    "ok": true,
    "read": 380,
-   "kept": 1,
-   "reused": 17
+   "kept": 0,
+   "reused": 18
   },
   {
    "name": "MongoDB",
@@ -873,77 +226,77 @@
   {
    "name": "Okta",
    "ok": true,
-   "read": 360,
+   "read": 355,
    "kept": 0,
-   "reused": 9
+   "reused": 8
   },
   {
    "name": "Zscaler",
    "ok": true,
-   "read": 378,
+   "read": 376,
    "kept": 0,
-   "reused": 12
+   "reused": 11
   },
   {
    "name": "Pure Storage",
    "ok": true,
-   "read": 380,
+   "read": 379,
    "kept": 0,
    "reused": 12
   },
   {
    "name": "Elastic",
    "ok": true,
-   "read": 383,
+   "read": 382,
    "kept": 0,
    "reused": 6
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 113,
+   "read": 110,
    "kept": 0,
    "reused": 4
   },
   {
    "name": "Rubrik",
    "ok": true,
-   "read": 189,
+   "read": 190,
    "kept": 0,
-   "reused": 6
+   "reused": 7
   },
   {
    "name": "Cloudflare",
    "ok": true,
-   "read": 475,
+   "read": 473,
    "kept": 0,
    "reused": 13
   },
   {
    "name": "Anthropic",
    "ok": true,
-   "read": 660,
+   "read": 659,
    "kept": 0,
    "reused": 6
   },
   {
    "name": "Airbnb",
    "ok": true,
-   "read": 205,
+   "read": 204,
    "kept": 0,
    "reused": 3
   },
   {
    "name": "Agoda",
    "ok": true,
-   "read": 349,
+   "read": 348,
    "kept": 0,
    "reused": 12
   },
   {
    "name": "Pinterest",
    "ok": true,
-   "read": 167,
+   "read": 170,
    "kept": 0,
    "reused": 3
   },
@@ -980,76 +333,6 @@
    "reused": 13
   },
   {
-   "name": "Intel",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Nike",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Philips",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Shell",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Unilever",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Thomson Reuters",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 10,
-   "error": "429 après 3 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
-  },
-  {
-   "name": "Macquarie",
-   "ok": false,
-   "skipped": true,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "en quarantaine (3 échecs de suite)"
-  },
-  {
-   "name": "Nasdaq",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 4,
-   "error": "429 après 3 essai(s) pour https://nasdaq.wd1.myworkdayjobs.com/wday/cxs/nasdaq/Global_External_Site/jobs"
-  },
-  {
    "name": "Netflix",
    "ok": true,
    "read": 33,
@@ -1059,7 +342,7 @@
   {
    "name": "OpenAI",
    "ok": true,
-   "read": 840,
+   "read": 839,
    "kept": 0,
    "reused": 8,
    "ats": "ashby",
@@ -1068,7 +351,7 @@
   {
    "name": "Scale AI",
    "ok": true,
-   "read": 168,
+   "read": 167,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1077,7 +360,7 @@
   {
    "name": "Notion",
    "ok": true,
-   "read": 165,
+   "read": 164,
    "kept": 0,
    "reused": 7,
    "ats": "ashby",
@@ -1113,7 +396,7 @@
   {
    "name": "Brex",
    "ok": true,
-   "read": 277,
+   "read": 274,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1149,7 +432,7 @@
   {
    "name": "Chime",
    "ok": true,
-   "read": 74,
+   "read": 75,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1176,7 +459,7 @@
   {
    "name": "Lyft",
    "ok": true,
-   "read": 144,
+   "read": 145,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1203,7 +486,7 @@
   {
    "name": "Snowflake",
    "ok": true,
-   "read": 380,
+   "read": 378,
    "kept": 0,
    "reused": 5,
    "ats": "ashby",
@@ -1212,7 +495,7 @@
   {
    "name": "Asana",
    "ok": true,
-   "read": 113,
+   "read": 114,
    "kept": 0,
    "reused": 3,
    "ats": "greenhouse",
@@ -1248,7 +531,7 @@
   {
    "name": "Miro",
    "ok": true,
-   "read": 12,
+   "read": 13,
    "kept": 0,
    "reused": 1,
    "ats": "ashby",
@@ -1266,7 +549,7 @@
   {
    "name": "Gusto",
    "ok": true,
-   "read": 78,
+   "read": 79,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1329,7 +612,7 @@
   {
    "name": "Block",
    "ok": true,
-   "read": 186,
+   "read": 188,
    "kept": 0,
    "reused": 3,
    "ats": "greenhouse",
@@ -1347,7 +630,7 @@
   {
    "name": "Samsara",
    "ok": true,
-   "read": 314,
+   "read": 313,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1383,7 +666,7 @@
   {
    "name": "Wiz",
    "ok": true,
-   "read": 108,
+   "read": 107,
    "kept": 0,
    "reused": 2,
    "ats": "greenhouse",
@@ -1437,7 +720,7 @@
   {
    "name": "Mixpanel",
    "ok": true,
-   "read": 40,
+   "read": 39,
    "kept": 0,
    "reused": 5,
    "ats": "greenhouse",
@@ -1527,7 +810,7 @@
   {
    "name": "Cohere",
    "ok": true,
-   "read": 126,
+   "read": 127,
    "kept": 0,
    "reused": 3,
    "ats": "ashby",
@@ -1563,11 +846,11 @@
   {
    "name": "SpaceX",
    "ok": true,
-   "read": 0,
+   "read": 2794,
    "kept": 0,
    "reused": 0,
-   "ats": "",
-   "no_ats": true
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Spotify",
@@ -1761,7 +1044,7 @@
   {
    "name": "Monzo",
    "ok": true,
-   "read": 60,
+   "read": 59,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1833,7 +1116,7 @@
   {
    "name": "Ebury",
    "ok": true,
-   "read": 153,
+   "read": 152,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1905,9 +1188,9 @@
   {
    "name": "Binance",
    "ok": true,
-   "read": 225,
+   "read": 224,
    "kept": 0,
-   "reused": 35,
+   "reused": 36,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2058,7 +1341,7 @@
   {
    "name": "iCapital",
    "ok": true,
-   "read": 225,
+   "read": 226,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -2094,7 +1377,7 @@
   {
    "name": "Juniper Square",
    "ok": true,
-   "read": 51,
+   "read": 52,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -2202,7 +1485,7 @@
   {
    "name": "Man Group",
    "ok": true,
-   "read": 68,
+   "read": 66,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2247,7 +1530,7 @@
   {
    "name": "Hudson River Trading",
    "ok": true,
-   "read": 84,
+   "read": 85,
    "kept": 0,
    "reused": 2,
    "ats": "greenhouse",
@@ -2976,7 +2259,7 @@
   {
    "name": "Back Market",
    "ok": true,
-   "read": 30,
+   "read": 31,
    "kept": 0,
    "reused": 2,
    "ats": "ashby",
@@ -2985,7 +2268,7 @@
   {
    "name": "Dataiku",
    "ok": true,
-   "read": 14,
+   "read": 13,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -3030,7 +2313,7 @@
   {
    "name": "Celonis",
    "ok": true,
-   "read": 262,
+   "read": 260,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -3039,11 +2322,11 @@
   {
    "name": "Personio",
    "ok": true,
-   "read": 1,
+   "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "recruitee",
-   "no_ats": false
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bosch",
@@ -3299,11 +2582,12 @@
   },
   {
    "name": "Mercari",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/mercari"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "SmartNews",
@@ -3380,17 +2664,26 @@
   {
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
-   "read": 1593,
-   "kept": 68,
-   "reused": 726,
+   "read": 1594,
+   "kept": 2,
+   "reused": 792,
    "aggregator": true
+  },
+  {
+   "name": "JobsDB (Hong Kong)",
+   "ok": true,
+   "skipped": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "lu par le passage sur ton ordinateur (Workday bloque les serveurs GitHub)"
   },
   {
    "name": "JobStreet (Singapour)",
    "ok": true,
-   "read": 4756,
-   "kept": 3,
-   "reused": 487,
+   "read": 4750,
+   "kept": 5,
+   "reused": 481,
    "aggregator": true
   },
   {
@@ -3416,28 +2709,76 @@
    "kept": 0,
    "reused": 0,
    "aggregator": true
+  },
+  {
+   "name": "JSearch (Google for Jobs)",
+   "ok": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "aggregator": true
+  },
+  {
+   "name": "Google Jobs (SerpApi)",
+   "ok": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "aggregator": true
+  },
+  {
+   "name": "Active Jobs DB (Workday & co)",
+   "ok": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "aggregator": true
+  },
+  {
+   "name": "HK Science Park (HKSTP)",
+   "ok": true,
+   "read": 476,
+   "kept": 12,
+   "reused": 0,
+   "aggregator": true
+  },
+  {
+   "name": "HKMA",
+   "ok": true,
+   "read": 12,
+   "kept": 0,
+   "reused": 0,
+   "aggregator": true
+  },
+  {
+   "name": "Alertes e-mail",
+   "ok": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "aggregator": true
   }
  ],
- "seconds": 1571,
+ "seconds": 213,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 912,
+ "ai_pending": 893,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 28372,
-  "reused": 1867,
+  "read": 30831,
+  "reused": 1811,
   "rejected": {
-   "lieu": 18485,
-   "langue": 23,
-   "niveau": 2048,
-   "metier": 1182,
-   "ancienne": 201,
-   "autre": 555
+   "lieu": 20635,
+   "langue": 60,
+   "niveau": 1781,
+   "metier": 1289,
+   "ancienne": 251,
+   "autre": 415
   },
-  "kept": 912,
-  "langs_ok": 892,
-  "sources_ok": 313,
-  "sources_total": 390
+  "kept": 893,
+  "langs_ok": 874,
+  "sources_ok": 316,
+  "sources_total": 316
  }
 }

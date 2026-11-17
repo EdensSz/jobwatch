@@ -1,9 +1,0 @@
-BlackRock: HTTPError: 429 après 3 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs
-Invesco: HTTPError: 429 après 3 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs
-T. Rowe Price: HTTPError: 429 après 3 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs
-Franklin Templeton: HTTPError: 429 après 3 essai(s) pour https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs
-Northern Trust: HTTPError: 429 après 3 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs
-Apollo: HTTPError: 429 après 3 essai(s) pour https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs
-Thomson Reuters: HTTPError: 429 après 3 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs
-Nasdaq: HTTPError: 429 après 3 essai(s) pour https://nasdaq.wd1.myworkdayjobs.com/wday/cxs/nasdaq/Global_External_Site/jobs
-Mercari: HTTPError: 429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/mercari
