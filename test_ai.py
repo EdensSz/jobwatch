@@ -8,6 +8,7 @@ from filters import Job, full_check
 import yaml
 
 cfg = yaml.safe_load(open("config.yaml", encoding="utf-8"))
+cfg["ai"]["auto_score"] = True          # on teste le mode « IA pendant le passage »
 
 # 1) réponse mal formée (listes en texte, notes en texte) -> remise au propre
 raw = {"exclude": "false", "role": "Distribution", "level": "Junior", "years_required": "2-3 years",

@@ -101,61 +101,137 @@ def run_source(src: dict, cfg: dict):
 
 
 def check_sources(cfg: dict) -> int:
-    ko = 0
-    for src in cfg["sources"]:
+    ko, srcs = 0, all_sources(cfg)
+    for src in srcs:
         try:
-            jobs = sources.CONNECTORS[src["type"]](
-                {**src, "max_pages": 1}, (src.get("terms") or cfg["search_terms"])[:1])
-            print(f"OK  {src['name']:<28} {len(jobs)} offres (1re page, 1er mot-clé)")
+            terms = (cfg.get("role_terms") if src.get("aggregator") else None) or src.get("terms") or cfg["search_terms"]
+            jobs = sources.CONNECTORS[src["type"]]({**src, "max_pages": 1}, terms[:1])
+            extra = ""
+            if src["type"] == "auto":
+                c = sources.ATS_CACHE.get(src["name"], {})
+                extra = f"  ({c.get('ats')} : {c.get('slug')})" if c.get("ats") else "  (aucun ATS public trouvé)"
+            print(f"OK  {src['name']:<28} {len(jobs)} offres{extra}")
         except Exception as e:
             ko += 1
             print(f"KO  {src['name']:<28} {type(e).__name__}: {str(e)[:120]}")
-    print(f"\n{ko} source(s) en échec sur {len(cfg['sources'])}.")
+    sources.save_ats_cache()
+    print(f"\n{ko} source(s) en échec sur {len(srcs)}.")
     return ko
 
 
-def fetch_all(cfg: dict):
-    """Lit les listes d'offres de toutes les sources en parallèle."""
+class Skipped(Exception):
+    pass
+
+
+def all_sources(cfg: dict) -> list:
+    """Sources de config.yaml + grandes entreprises en découverte automatique (section companies) + agrégateurs à la fin
+    (pour qu'une offre trouvée sur le site de l'entreprise gagne sur son doublon d'agrégateur)."""
+    srcs = list(cfg.get("sources") or [])
+    names = {x["name"] for x in srcs}
+    for group, items in (cfg.get("companies") or {}).items():
+        for it in items or []:
+            name, _, slugs = str(it).partition("|")
+            name = name.strip()
+            if name and name not in names:
+                names.add(name)
+                srcs.append({"name": name, "type": "auto", "group": group,
+                             "slugs": [x.strip() for x in slugs.split(",") if x.strip()]})
+    aggs = [dict(x, aggregator=True) for x in cfg.get("aggregators") or []]
+    return srcs + aggs
+
+
+def fetch_all(cfg: dict, health: dict):
+    """Lit les listes d'offres de toutes les sources en parallèle. Une source en panne 3 passages de suite
+    n'est plus réessayée qu'une fois par jour (« quarantaine »)."""
+    today = date.today().isoformat()
+
     def one(src):
+        h = health.get(src["name"], {})
+        if h.get("fail", 0) >= 3 and h.get("last_try") == today:
+            return src, None, Skipped(f"en quarantaine ({h['fail']} échecs de suite)")
         try:
-            return src, run_source(src, cfg), None
+            terms = (cfg.get("role_terms") if src.get("aggregator") else None) or src.get("terms") or cfg["search_terms"]
+            conn = sources.CONNECTORS.get(src["type"])
+            if not conn:
+                raise ValueError(f"type inconnu : {src['type']}")
+            return src, conn(src, terms), None
         except Exception as e:
             return src, None, e
-    with ThreadPoolExecutor(max_workers=int(cfg.get("workers", 8))) as ex:
-        return list(ex.map(one, cfg["sources"]))
+    srcs = all_sources(cfg)
+    with ThreadPoolExecutor(max_workers=int(cfg.get("workers", 16))) as ex:
+        res = list(ex.map(one, srcs))
+    for src, jobs, err in res:
+        h = health.setdefault(src["name"], {})
+        if isinstance(err, Skipped):
+            continue
+        h["last_try"] = today
+        h["fail"] = h.get("fail", 0) + 1 if err is not None else 0
+    try:
+        sources.save_ats_cache()
+    except Exception:
+        pass
+    return res
+
+
+def norm_key(j) -> str:
+    """Clé de doublon entre sources : entreprise + intitulé + ville."""
+    co = re.sub(r"\b(limited|ltd|pte|inc|llc|plc|group|holdings?|co|sa|ag|nv|the)\b|[^a-z0-9]", "", (j.company or "").lower())
+    ti = re.sub(r"[^a-z0-9]", "", (j.title or "").lower())
+    return f"{co[:20]}|{ti}|{city_of(j.location or '')}"
 
 
 def collect(cfg: dict, explain: bool):
     t0 = time.time()
     state = load_state()
+    if RUN.get("reset"):                       # remise à zéro demandée : on garde seulement les dates de 1re apparition
+        state = {k: {"first_seen": v.get("first_seen")} for k, v in state.items() if v.get("first_seen")}
     today = date.today().isoformat()
     kept, rejected, errors = [], [], []
     max_desc = cfg.get("max_description_fetches_per_source", 150)
-    prev = load_prev()
+    prev = {} if RUN.get("reset") else load_prev()
     refresh_days = int(cfg.get("refresh_days", 7))
     ai_cfg = cfg.get("ai", {}) or {}
-    ai_on = ai_cfg.get("enabled", True) is not False and bool(ai_score.available(os.environ, ai_cfg))
+    ai_on = ai_cfg.get("enabled", True) is not False and ai_cfg.get("auto_score", True) is not False \
+        and bool(ai_score.available(os.environ, ai_cfg))
     CACHED_ROWS.clear()
     SRC_STATS.clear()
     pending = []      # (nom de source, offre, verdict provisoire)
     stats = {}
-    for src, jobs, err in fetch_all(cfg):
+    health = state.setdefault("_sources", {})
+    seen_norm = set()
+    for src, jobs, err in fetch_all(cfg, health):
         name = src["name"]
+        if isinstance(err, Skipped):
+            old = [r for r in prev.values() if r.get("source") == name]
+            CACHED_ROWS.extend(old)
+            stats[name] = {"name": name, "ok": False, "skipped": True, "read": 0, "kept": 0, "reused": len(old),
+                           "error": str(err)}
+            continue
         if err is not None:
             errors.append(f"{name}: {type(err).__name__}: {str(err)[:150]}")
             print(f"[KO] {name}: {err}", file=sys.stderr)
             # source en panne : on garde ses offres du passage précédent
-            old = [r for r in prev.values() if r.get("source") == name or r.get("company") == name]
+            old = [r for r in prev.values() if r.get("source") == name]
             CACHED_ROWS.extend(old)
             stats[name] = {"name": name, "ok": False, "read": 0, "kept": 0, "reused": len(old), "error": str(err)[:120]}
             continue
         st_src = stats[name] = {"name": name, "ok": True, "read": len(jobs), "kept": 0, "reused": 0}
+        if src.get("type") == "auto":
+            c = sources.ATS_CACHE.get(name) or {}
+            st_src["ats"] = c.get("ats") or ""
+            st_src["no_ats"] = not c.get("ats")
+        if src.get("aggregator"):
+            st_src["aggregator"] = True
         fetched = 0
         seen_ids = set()
         for j in jobs:
             if j.key in seen_ids:
                 continue
             seen_ids.add(j.key)
+            nk = norm_key(j)
+            if nk in seen_norm:                  # même offre déjà vue sur une autre source
+                continue
+            seen_norm.add(nk)
             row = prev.get(j.key)
             needs_ai = bool(row) and ai_on and not row.get("excluded") and \
                 (row.get("note_source") != "ia" or row.get("ai_v", 0) < ai_score.AI_VERSION)
@@ -197,7 +273,7 @@ def collect(cfg: dict, explain: bool):
             rejected.append((j, v))
             st = state.setdefault(j.key, {"first_seen": today})
             st["rej"], st["checked"], st["rv"] = v.reason, today, RULES_VERSION
-    for src in cfg["sources"]:
+    for src in all_sources(cfg):
         s = stats.get(src["name"])
         if s:
             SRC_STATS.append(s)
@@ -234,7 +310,8 @@ def canon_lang(x: str) -> str:
 def apply_ai(kept, rejected, state, cfg):
     """Relecture IA des offres retenues, les plus récentes d'abord (résultats en cache dans state.json)."""
     ai_cfg = cfg.get("ai", {}) or {}
-    provs = [] if ai_cfg.get("enabled", True) is False else ai_score.available(os.environ, ai_cfg)
+    provs = [] if ai_cfg.get("enabled", True) is False or ai_cfg.get("auto_score", True) is False \
+        else ai_score.available(os.environ, ai_cfg)
     if not provs:
         return kept
     RUN["provider"] = provs[0]
@@ -429,6 +506,8 @@ def main():
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--explain", action="store_true")
     ap.add_argument("--detect")
+    ap.add_argument("--reset-ai", action="store_true",
+                    help="oublie toutes les analyses IA et les offres déjà traitées : tout est réévalué et réanalysé")
     a = ap.parse_args()
     if a.detect:
         print(sources.detect(a.detect))
@@ -436,6 +515,8 @@ def main():
     cfg = yaml.safe_load(open(a.config, encoding="utf-8"))
     if a.check:
         sys.exit(1 if check_sources(cfg) else 0)
+    if a.reset_ai:
+        RUN["reset"] = True
     kept, rejected, new, errors = collect(cfg, a.explain)
     if ai_score.LAST_ERROR:
         errors.append("IA : " + ai_score.LAST_ERROR)
