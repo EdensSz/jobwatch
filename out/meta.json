@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-17T10:03:54Z",
- "generated_paris": "17/11/2026 11:03",
- "offers_total": 531,
- "offers_kept": 195,
- "new_today": 168,
+ "generated_at": "2026-11-17T10:51:24Z",
+ "generated_paris": "17/11/2026 11:51",
+ "offers_total": 392,
+ "offers_kept": 77,
+ "new_today": 64,
  "reused_from_previous": 0,
- "ai_calls": 12,
+ "ai_calls": 0,
  "sources": [
   {
    "name": "Fidelity International",
@@ -17,27 +17,24 @@
   },
   {
    "name": "BlackRock",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "ok": true,
+   "read": 37,
+   "kept": 2,
+   "reused": 0
   },
   {
    "name": "Invesco",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 28,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "T. Rowe Price",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 13,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "AllianceBernstein",
@@ -57,11 +54,10 @@
   },
   {
    "name": "Franklin Templeton",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "Blackstone",
@@ -81,11 +77,10 @@
   },
   {
    "name": "Ares",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "ok": true,
+   "read": 31,
+   "kept": 1,
+   "reused": 0
   },
   {
    "name": "Brookfield",
@@ -97,11 +92,10 @@
   },
   {
    "name": "Hamilton Lane",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 6,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "Manulife",
@@ -114,8 +108,8 @@
   {
    "name": "HSBC",
    "ok": true,
-   "read": 286,
-   "kept": 24,
+   "read": 287,
+   "kept": 8,
    "reused": 0
   },
   {
@@ -130,7 +124,7 @@
    "name": "J.P. Morgan",
    "ok": true,
    "read": 188,
-   "kept": 5,
+   "kept": 2,
    "reused": 0
   },
   {
@@ -151,11 +145,10 @@
   },
   {
    "name": "Northern Trust",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 1,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "Deutsche Bank",
@@ -167,11 +160,10 @@
   },
   {
    "name": "Barclays",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "ok": true,
+   "read": 45,
+   "kept": 1,
+   "reused": 0
   },
   {
    "name": "UOB",
@@ -257,7 +249,7 @@
    "name": "General Atlantic",
    "ok": true,
    "read": 13,
-   "kept": 1,
+   "kept": 0,
    "reused": 0
   },
   {
@@ -271,14 +263,14 @@
    "name": "Point72",
    "ok": true,
    "read": 197,
-   "kept": 4,
+   "kept": 1,
    "reused": 0
   },
   {
    "name": "Schonfeld",
    "ok": true,
    "read": 72,
-   "kept": 3,
+   "kept": 1,
    "reused": 0
   },
   {
@@ -379,8 +371,8 @@
   {
    "name": "OCBC",
    "ok": true,
-   "read": 1260,
-   "kept": 82,
+   "read": 1258,
+   "kept": 17,
    "reused": 0
   },
   {
@@ -409,10 +401,11 @@
   },
   {
    "name": "RBC",
-   "ok": true,
-   "read": 4,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "TD Securities",
@@ -434,7 +427,7 @@
    "name": "TP ICAP",
    "ok": true,
    "read": 22,
-   "kept": 5,
+   "kept": 4,
    "reused": 0
   },
   {
@@ -584,7 +577,7 @@
   {
    "name": "Stripe",
    "ok": true,
-   "read": 792,
+   "read": 793,
    "kept": 6,
    "reused": 0
   },
@@ -592,42 +585,43 @@
    "name": "Adyen",
    "ok": true,
    "read": 242,
-   "kept": 2,
+   "kept": 0,
    "reused": 0
   },
   {
    "name": "Carta",
    "ok": true,
    "read": 77,
-   "kept": 2,
+   "kept": 0,
    "reused": 0
   },
   {
    "name": "Thunes",
    "ok": true,
    "read": 35,
-   "kept": 1,
+   "kept": 0,
    "reused": 0
   },
   {
    "name": "Wise",
    "ok": true,
    "read": 62,
-   "kept": 2,
+   "kept": 0,
    "reused": 0
   },
   {
    "name": "Nium",
-   "ok": true,
-   "read": 32,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/nium?mode=json"
   },
   {
    "name": "OKX",
    "ok": true,
    "read": 394,
-   "kept": 3,
+   "kept": 2,
    "reused": 0
   },
   {
@@ -655,7 +649,7 @@
    "name": "BitGo",
    "ok": true,
    "read": 58,
-   "kept": 2,
+   "kept": 0,
    "reused": 0
   },
   {
@@ -674,23 +668,25 @@
   },
   {
    "name": "Crypto.com",
-   "ok": true,
-   "read": 85,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/crypto?mode=json"
   },
   {
    "name": "Anchorage Digital",
-   "ok": true,
-   "read": 21,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/anchorage?mode=json"
   },
   {
    "name": "Microsoft",
    "ok": true,
    "read": 202,
-   "kept": 8,
+   "kept": 1,
    "reused": 0
   },
   {
@@ -769,14 +765,14 @@
    "name": "Grab",
    "ok": true,
    "read": 148,
-   "kept": 9,
+   "kept": 5,
    "reused": 0
   },
   {
    "name": "ServiceNow",
    "ok": true,
    "read": 64,
-   "kept": 4,
+   "kept": 2,
    "reused": 0
   },
   {
@@ -789,14 +785,14 @@
   {
    "name": "Datadog",
    "ok": true,
-   "read": 382,
-   "kept": 8,
+   "read": 380,
+   "kept": 3,
    "reused": 0
   },
   {
    "name": "MongoDB",
    "ok": true,
-   "read": 398,
+   "read": 399,
    "kept": 0,
    "reused": 0
   },
@@ -804,7 +800,7 @@
    "name": "GitLab",
    "ok": true,
    "read": 253,
-   "kept": 3,
+   "kept": 2,
    "reused": 0
   },
   {
@@ -831,14 +827,14 @@
   {
    "name": "Elastic",
    "ok": true,
-   "read": 387,
+   "read": 381,
    "kept": 2,
    "reused": 0
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 114,
+   "read": 115,
    "kept": 0,
    "reused": 0
   },
@@ -853,7 +849,7 @@
    "name": "Cloudflare",
    "ok": true,
    "read": 473,
-   "kept": 6,
+   "kept": 3,
    "reused": 0
   },
   {
@@ -866,14 +862,14 @@
   {
    "name": "Airbnb",
    "ok": true,
-   "read": 206,
+   "read": 205,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Agoda",
    "ok": true,
-   "read": 347,
+   "read": 348,
    "kept": 0,
    "reused": 0
   },
@@ -888,46 +884,2275 @@
    "name": "Figma",
    "ok": true,
    "read": 140,
-   "kept": 3,
+   "kept": 1,
    "reused": 0
   },
   {
    "name": "Palantir",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/palantir?mode=json"
+  },
+  {
+   "name": "Ninja Van",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/ninjavan?mode=json"
+  },
+  {
+   "name": "Amazon / AWS",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : amazon"
+  },
+  {
+   "name": "Intel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Dell",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "422 Client Error: Unprocessable Entity for url: https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs"
+  },
+  {
+   "name": "Nike",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Philips",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Shell",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Unilever",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Thomson Reuters",
    "ok": true,
-   "read": 303,
+   "read": 34,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Macquarie",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "UBS",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "422 Client Error: Unprocessable Entity for url: https://ubs.wd3.myworkdayjobs.com/wday/cxs/ubs/UBS_Experienced_Professio"
+  },
+  {
+   "name": "Moody's",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "422 Client Error: Unprocessable Entity for url: https://moodys.wd5.myworkdayjobs.com/wday/cxs/moodys/moodys/jobs"
+  },
+  {
+   "name": "MSCI",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Nasdaq",
+   "ok": true,
+   "read": 6,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "BNY",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "404 Client Error: NOT FOUND for url: https://bnymellon.eightfold.ai/api/apply/v2/jobs?domain=bnymellon.com&start=0&num=2"
+  },
+  {
+   "name": "Netflix",
+   "ok": true,
+   "read": 33,
    "kept": 0,
    "reused": 0
   },
   {
-   "name": "Ninja Van",
-   "ok": true,
-   "read": 146,
+   "name": "OpenAI",
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Scale AI",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Notion",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ramp",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Rippling",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Deel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Brex",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Plaid",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Robinhood",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Affirm",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Chime",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Dropbox",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "DoorDash",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Lyft",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Reddit",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Discord",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Snowflake",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Asana",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "HubSpot",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Intercom",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Canva",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Miro",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Airtable",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Gusto",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Coursera",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Duolingo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Roblox",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Unity",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Epic Games",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Riot Games",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Block",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Toast",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Samsara",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Confluent",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "HashiCorp",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Snyk",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Wiz",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Vanta",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Gong",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Klaviyo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Braze",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Amplitude",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Mixpanel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Algolia",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Contentful",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Postman",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Grammarly",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Calendly",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Zapier",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Webflow",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Retool",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Vercel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Cohere",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Hugging Face",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Perplexity",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Anduril",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "SpaceX",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Spotify",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Uber",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Zoom",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Atlassian",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Shopify",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Squarespace",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Twitch",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Instacart",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Snap",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "LinkedIn",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bloomberg",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Google",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Apple",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Meta",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Oracle",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "IBM",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Cisco",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "AMD",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Qualcomm",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Accenture",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Revolut",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Monzo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "N26",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Klarna",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Checkout.com",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Rapyd",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Payoneer",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Marqeta",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Remitly",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ebury",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Qonto",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Pennylane",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Swile",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Spendesk",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ledger",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Kraken",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Circle",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Binance",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bitpanda",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Animoca Brands",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "HashKey",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Amber Group",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Matrixport",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Galaxy Digital",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Airwallex",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Aspire",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "YouTrip",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Xendit",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "dLocal",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Funding Societies",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Endowus",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "StashAway",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Syfe",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Addepar",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "iCapital",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Moonfare",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Allfunds",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Clearwater Analytics",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Juniper Square",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Forge Global",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Titanbay",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Yieldstreet",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Alan",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Lydia",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bridgewater",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "AQR",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Two Sigma",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Millennium",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Balyasny",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "D. E. Shaw",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Man Group",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Marshall Wace",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Jane Street",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Optiver",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "IMC Trading",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Hudson River Trading",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Jump Trading",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Citadel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Tikehau Capital",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ardian",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Eurazeo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "PAI Partners",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "EQT",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "CVC Capital Partners",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Permira",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Cinven",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Hg",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "TPG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Warburg Pincus",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Advent International",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Hillhouse",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "PAG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Partners Group",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Pantheon",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Adams Street",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Coller Capital",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Lexington Partners",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "KKR",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Goldman Sachs",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Nomura",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Standard Chartered",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Schroders",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Amundi",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "AXA Investment Managers",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Natixis",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Robeco",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Allianz Global Investors",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Vanguard",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Charles Schwab",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Nuveen",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Principal",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Temasek",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "GIC",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Danone",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "L'Oréal",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "LVMH",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Kering",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Hermès",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Chanel",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Pernod Ricard",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Michelin",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Schneider Electric",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Capgemini",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Dassault Systèmes",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Airbus",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Safran",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Thales",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "TotalEnergies",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Engie",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "AXA",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Sanofi",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "BNP Paribas",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Société Générale",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Crédit Agricole",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Nestlé",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Novartis",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Roche",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "ABB",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Siemens",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "SAP",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Allianz",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Adidas",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "ASML",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Heineken",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "BP",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Diageo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Reckitt",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "GSK",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "AstraZeneca",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Booking.com",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ubisoft",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Criteo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Doctolib",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "BlaBlaCar",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Mirakl",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Contentsquare",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Back Market",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Dataiku",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Vinted",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bolt",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Delivery Hero",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Zalando",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Celonis",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Personio",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bosch",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "IKEA",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Mistral AI",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Procter & Gamble",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Coca-Cola",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "PepsiCo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Mondelez",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Johnson & Johnson",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Pfizer",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Estée Lauder",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "McKinsey",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "BCG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Bain & Company",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Deloitte",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "EY",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "KPMG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Sea Group",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Shopee",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Lazada",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Gojek",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "ShopBack",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Carousell",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "PropertyGuru",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Razer",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Lalamove",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Klook",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Trip.com",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Rakuten",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Mercari",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "SmartNews",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Money Forward",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Sony",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Fast Retailing (Uniqlo)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "TikTok / ByteDance",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Alibaba",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Tencent",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "Ant International",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : auto"
+  },
+  {
+   "name": "MyCareersFuture (Singapour)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : mycareersfuture"
+  },
+  {
+   "name": "JobsDB (Hong Kong)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : seek"
+  },
+  {
+   "name": "JobStreet (Singapour)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : seek"
+  },
+  {
+   "name": "Jooble",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : jooble"
+  },
+  {
+   "name": "Adzuna (Singapour)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : adzuna"
+  },
+  {
+   "name": "Careerjet",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "type inconnu : careerjet"
   }
  ],
- "seconds": 573,
- "ai_provider": "openrouter",
- "ai_reviewed": 12,
- "ai_pending": 183,
- "ai_models": [
-  "nvidia/nemotron-3.5-super-vl:free"
- ],
+ "seconds": 178,
+ "ai_provider": "",
+ "ai_reviewed": 0,
+ "ai_pending": 77,
+ "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 11072,
+  "read": 10709,
   "reused": 0,
   "rejected": {
-   "lieu": 8515,
-   "langue": 223,
-   "niveau": 1357,
-   "metier": 710,
-   "ancienne": 72,
-   "autre": 0
+   "lieu": 6708,
+   "langue": 201,
+   "niveau": 1310,
+   "metier": 593,
+   "ancienne": 51,
+   "autre": 239
   },
-  "kept": 195,
-  "langs_ok": 180,
-  "sources_ok": 46,
-  "sources_total": 118
+  "kept": 77,
+  "langs_ok": 70,
+  "sources_ok": 51,
+  "sources_total": 397
  }
 }

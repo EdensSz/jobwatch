@@ -69,7 +69,10 @@
    ],
    "model": "liquid/lfm-3-1.7b:free"
   },
-  "ai_h": "6f74a0fed520"
+  "ai_h": "6f74a0fed520",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612620175": {
   "first_seen": "2026-11-16",
@@ -105,7 +108,7 @@
   "ai_h": "ddfa03b22350",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612187323": {
   "first_seen": "2026-11-16",
@@ -251,7 +254,10 @@
    "reasons": "Score of 10/10: matches junior level (new graduate welcome), covers sales/distribution/product, English-only requirement (no Chinese/Japanese/Korean needed), experience does not exceed 3 years, and location aligns with Th\u00e9o's preferred destinations.",
    "model": "nvidia/nemotron-3.5-lightning:free"
   },
-  "ai_h": "d9fdfae467e8"
+  "ai_h": "d9fdfae467e8",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612203357": {
   "first_seen": "2026-11-16",
@@ -293,7 +299,7 @@
   "ai_h": "5c118ad1f7c1",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210740052": {
   "first_seen": "2026-11-16",
@@ -316,7 +322,7 @@
   "ai_h": "1022b93d77cd",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210806229": {
   "first_seen": "2026-11-16",
@@ -366,7 +372,7 @@
   "ai_h": "666627f9d5ea",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Fidelity International::/job/Hong-Kong-Office-New/Marketing-Specialist--6-month-contract-_J71823": {
   "first_seen": "2026-11-16",
@@ -686,43 +692,51 @@
  },
  "BlackRock::/job/Hong-Kong-Hong-Kong/Aladdin-Client-Engagement--Associate_R266292": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "BlackRock::/job/Singapore-Singapore/Forward-Deployed-Business-Analyst--Associate--Vice-President---BTO_R266862": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "BlackRock::/job/Singapore-Singapore/Associate--Investment-Onboarding_R266997": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "BlackRock::/job/Singapore-Singapore/Associate--Market-Data-Services_R266956": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Invesco::/job/Hong-Kong-Hong-Kong/Equity-ETF-Strategist--APAC_R-15484": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "chinois requis",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Invesco::/job/Hong-Kong-Hong-Kong/Fixed-Income-ETF-Strategist--APAC_R-15485": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "chinois requis",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "T. Rowe Price::/job/Tokyo-Japan/Research-Support-Associate--Japan-Equities--1-year-Contract_81367": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "T. Rowe Price::/job/Tokyo-Japan/Research-Support-Associate--Japan-Equities-_81366-1": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Brookfield::/job/Hong-Kong/Associate--Family-Investors_R2053341": {
   "first_seen": "2026-11-16",
@@ -732,7 +746,8 @@
  "Hamilton Lane::/job/Hong-Kong/Analyst--Fund-Investments---Managed-Solutions_R003047": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
-  "checked": "2026-11-16"
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Manulife::/job/Hong-Kong/Manager--Customer-Relations--Hong-Kong-Retirement_JR26081544": {
   "first_seen": "2026-11-16",
@@ -1048,13 +1063,13 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612631163": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612583497": {
   "first_seen": "2026-11-16",
@@ -1065,82 +1080,85 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612543983": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612516467": {
   "first_seen": "2026-11-16",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612472351": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612462916": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612423681": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612411133": {
   "first_seen": "2026-11-16",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612373236": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612360459": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612285826": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612243806": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612243804": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612225211": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612144658": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612139156": {
   "first_seen": "2026-11-16",
@@ -1152,7 +1170,7 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612075333": {
   "first_seen": "2026-11-16",
@@ -1164,7 +1182,7 @@
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612027535": {
   "first_seen": "2026-11-16",
@@ -1181,31 +1199,31 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612016323": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611861244": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611806705": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611786948": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611586174": {
   "first_seen": "2026-11-16",
@@ -1216,12 +1234,12 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611111601": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
   "ai": {
    "exclude": false,
    "exclude_reason": "",
@@ -1272,31 +1290,32 @@
    "model": "nvidia/nemotron-3.5-super-vl:free",
    "v": 4
   },
-  "ai_h": "d5571d52be36"
+  "ai_h": "d5571d52be36",
+  "rv": 5
  },
  "HSBC::563774611060797": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774610838988": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774609620236": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774609441388": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774608327231": {
   "first_seen": "2026-11-16",
@@ -1308,7 +1327,7 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607745075": {
   "first_seen": "2026-11-16",
@@ -1324,19 +1343,19 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607739311": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607739219": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607725321": {
   "first_seen": "2026-11-16",
@@ -1357,35 +1376,36 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607703148": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607686462": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612648491": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612634837": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612631961": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
   "ai": {
    "exclude": false,
    "exclude_reason": "",
@@ -1437,40 +1457,43 @@
    "model": "nvidia/nemotron-3.5-super-vl:free",
    "v": 4
   },
-  "ai_h": "26979d1edfda"
+  "ai_h": "26979d1edfda",
+  "rv": 5
  },
  "HSBC::563774612620828": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612588161": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612557150": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612543981": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612520254": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612463474": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
   "ai": {
    "exclude": false,
    "exclude_reason": "",
@@ -1523,22 +1546,26 @@
    "model": "nvidia/nemotron-3.5-super-vl:free",
    "v": 4
   },
-  "ai_h": "5edc0a32a7ec"
+  "ai_h": "5edc0a32a7ec",
+  "rv": 5
  },
  "HSBC::563774612140338": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774612026054": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "HSBC::563774611738604": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (1)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Morgan Stanley::/job/Hong-Kong-Hong-Kong/Project-Manager--Business-Services-Group--ISG-Management_JR044090-1": {
   "first_seen": "2026-11-16",
@@ -1584,46 +1611,49 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210805733": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210795711": {
   "first_seen": "2026-11-16",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210794830": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "J.P. Morgan::210808760": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "J.P. Morgan::210806194": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210775690": {
   "first_seen": "2026-11-16",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210796423": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (0)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Julius Baer::/job/Hong-Kong/Assistant-Relationship-Manager_r-10451": {
   "first_seen": "2026-11-16",
@@ -1807,8 +1837,9 @@
  },
  "Barclays::/job/Singapore-Marina-Bay-Financial-Tower-2/BA4--Private-Bank-Executive_JR-0000059883-4": {
   "first_seen": "2026-11-16",
-  "rej": "fit insuffisant (2)",
-  "checked": "2026-11-16"
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "UOB::/job/Hong-Kong-City-Area/XMLNAME-2027-UOB-Hong-Kong-Management-Associate-Programme_JR97128": {
   "first_seen": "2026-11-16",
@@ -1832,7 +1863,7 @@
  },
  "HSBC::563774612507240": {
   "first_seen": "2026-11-17",
-  "rej": "fit insuffisant (0)",
+  "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
   "ai": {
    "exclude": false,
@@ -1890,115 +1921,116 @@
    "model": "nvidia/nemotron-3.5-super-vl:free",
    "v": 4
   },
-  "ai_h": "3497b3968588"
+  "ai_h": "3497b3968588",
+  "rv": 5
  },
  "HSBC::563774607739554": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774607739466": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774610262828": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612387557": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774610033718": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774612384586": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774611755229": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210806692": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210808653": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210808662": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210713035": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210790687": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210790690": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210807784": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210806663": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210801170": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "J.P. Morgan::210792394": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8929646002": {
   "first_seen": "2026-11-17",
   "rej": "japonais fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8899753002": {
   "first_seen": "2026-11-17",
@@ -2022,25 +2054,25 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8545515002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8923145002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8924790002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Point72::8899750002": {
   "first_seen": "2026-11-17",
@@ -2058,13 +2090,13 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/BOS-Hong-Kong/FIM-Specialist_JR00012494": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Assistant-Manager--Data-Analytics_JR00012055": {
   "first_seen": "2026-11-17",
@@ -2076,19 +2108,19 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Assistant-Manager--Customer-Service_JR00011713": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager--Sales--General-Insurance-_JR00011621": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Assistant-Manager--1-year-contract-_JR00011486-1": {
   "first_seen": "2026-11-17",
@@ -2100,25 +2132,25 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/FX-Sales_JR00007417": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager--Service-Quality---Transformation--Consumer-Financial-Services_JR00010891": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Bank-Officer--Central-Services_JR00011000-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Manager--Client-on-boarding---Management--12-month-contract-_JR00011001": {
   "first_seen": "2026-11-17",
@@ -2136,37 +2168,37 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Investment-Consultant_JR00007159": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager---Assistant-Manager--Data-Processing---Internal-Compliance_JR00009540-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Customer-Service-Manager---SME_JR00009911": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Business-Development-Manager--Consumer-Financial-Services_JR00005771-1": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Business-Development-Manager--Emerging-Business--SME-_JR00009207": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Hong-Kong/Remittance-Officer---Manager---6-month-contract_JR00006761": {
   "first_seen": "2026-11-17",
@@ -2190,13 +2222,13 @@
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/AIMS---Alternative-Investments---MGR_JR00012626": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Trade-Finance-Officer---AM--Contract-_JR00012550": {
   "first_seen": "2026-11-17",
@@ -2232,13 +2264,13 @@
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/AI-Validation-Specialist_JR00010665": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Documentation-Officer--Contract-_JR00012537": {
   "first_seen": "2026-11-17",
@@ -2256,13 +2288,13 @@
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/International-Wealth---Affluent-Team-Manager_JR00012198": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/ERP-Business-Analyst--1-Year-contract---Group-Finance_JR00012141": {
   "first_seen": "2026-11-17",
@@ -2274,43 +2306,43 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Service-Ambassador_JR00011043": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Corporate-Banking-Relationship-Management_JR00012075": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Account-Manager--Foreign---Global-Commercial-Banking_JR00005617": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Banca-Specialist--MGR-_JR00004943": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/MGR--Policy---Analytics_JR00011871": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/MGR--Project-Manager--OCBC-Property-Services_JR00007205": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Finance-Specialist--1-Year-Contract-_JR00011975": {
   "first_seen": "2026-11-17",
@@ -2322,13 +2354,13 @@
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Business-Analyst--Global-Markets-_JR00011688": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Business-Banking-Service-Manager---Emerging-Business-Customer-Service-Unit_JR00011613": {
   "first_seen": "2026-11-17",
@@ -2340,13 +2372,13 @@
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Relationship-Development-Manager--Offshore-_JR00000104": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Trade-Finance-Manager---Contract--ending-31-Dec-26-_JR00011390": {
   "first_seen": "2026-11-17",
@@ -2388,13 +2420,13 @@
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Intership--Global-Transaction-Banking-Division--Global-Transaction-Banking--Cash-Product--Jan-2027---May-2027-_JR00011203-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Internship--Group-Finance--Divisional-Office--Jan-to-May-2027-_JR00011184": {
   "first_seen": "2026-11-17",
@@ -2418,49 +2450,49 @@
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/FRANK-Consultant---Global-Consumer-Financial-Services_JR00010674-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Project-Manager---Scrum-Master--VP-_JR00008705": {
   "first_seen": "2026-11-17",
   "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/MGR--Property-Management---Operations-Technology--OCBC-Property-Services_JR00009926": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/MGR--Property-Manager---MEP--OCBC-Property-Services_JR00006858": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Wealth-Business-Manager_JR00008657": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/AM-MGR--Collections-System-Administrator_JR00010091": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--Financial-Intermediaries_JR00000328": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Analyst--1-year-Contract---AI-Governance--Group-Data-Management-Office--GDMO-_JR00009093": {
   "first_seen": "2026-11-17",
@@ -2472,25 +2504,25 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Vulnerability-Management-Specialist_JR00008181": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Relationship-Development-Manager--Onshore-_JR00004977": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Privilege-Identity-Administrator_JR00007761": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Privilege-Identity-Administrator_JR00005872": {
   "first_seen": "2026-11-17",
@@ -2508,235 +2540,235 @@
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "TP ICAP::/job/Tokyo/Associate--Trade-Services_R5552": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "TP ICAP::/job/Tokyo/Senior-Associate-Director---Account-Management--Japan-Parameta-Solutions-_R5885": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8345653": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::7789539": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::7528816": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8348835": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8348731": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8324997": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8326105": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8188088": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8174160": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8040940": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8355357": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8345657": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8352238": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8349481": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8349475": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8355374": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8230296": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8336062": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8334550": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8141829": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8195058": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8351589": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8325019": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8199593": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8267105": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8179341": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8123400": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::8184893": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Stripe::7955056": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Adyen::8080994": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Wise::744000156724589": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Wise::744000156540949": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Wise::744000162022579": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Wise::744000160848154": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Wise::744000152585568": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OKX::8032296003": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "OKX::8032284003": {
   "first_seen": "2026-11-17",
@@ -2748,37 +2780,37 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Coinbase::8348533": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Ripple::8225681": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Ripple::8327701": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Ripple::8286436": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "BitGo::8523894002": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "BitGo::8523889002": {
   "first_seen": "2026-11-17",
@@ -2814,217 +2846,217 @@
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557048324": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557020824": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557073426": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557070807": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557056030": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557050820": {
   "first_seen": "2026-11-17",
   "rej": "japonais fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557048094": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557040328": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557053007": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557044349": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557041801": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557037806": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557040439": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557022917": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557022913": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557039443": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557006853": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557005287": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557074702": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557046348": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557070243": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557070831": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557070325": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557050312": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557054182": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557050935": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557047608": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557046358": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557043708": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393556999408": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557040866": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Microsoft::1970393557006930": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000162002219": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000161770359": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000161019199": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000160126829": {
   "first_seen": "2026-11-17",
@@ -3066,67 +3098,67 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000153418175": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000152601399": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Grab::744000152076389": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000162025799": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000161028219": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000158434359": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000162002629": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000161957370": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000161804744": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000161723739": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000161723349": {
   "first_seen": "2026-11-17",
@@ -3138,199 +3170,199 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000160784394": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000160175379": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000159742179": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000159558849": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000158198189": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000155909049": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000155678069": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000155407729": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000154581112": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000151540399": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "ServiceNow::744000151526980": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8758263002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8874579002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8495065002": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8438948002": {
   "first_seen": "2026-11-17",
   "rej": "vietnamien requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8878095002": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8194916002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8501186002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8440940002": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8440922002": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8878066002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::7856268002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8569594002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8569574002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8783602002": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8916466002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8910854002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8910842002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Databricks::8880406002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::6009777": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::6009779": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::8330344": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7436312": {
   "first_seen": "2026-11-17",
@@ -3342,13 +3374,13 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7526356": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7703553": {
   "first_seen": "2026-11-17",
@@ -3360,7 +3392,7 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::8233540": {
   "first_seen": "2026-11-17",
@@ -3378,7 +3410,7 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::6523631": {
   "first_seen": "2026-11-17",
@@ -3396,25 +3428,25 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::8247518": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::8255788": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7439569": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7439149": {
   "first_seen": "2026-11-17",
@@ -3426,67 +3458,67 @@
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Datadog::7515110": {
   "first_seen": "2026-11-17",
   "rej": "vietnamien requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "MongoDB::8158531": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "MongoDB::8104941": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "MongoDB::8153054": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "MongoDB::8350841": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::7992071": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8348116": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8288348": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8288308": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8269057": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8288480": {
   "first_seen": "2026-11-17",
@@ -3498,37 +3530,37 @@
   "first_seen": "2026-11-17",
   "rej": "indon\u00e9sien / malais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8129579": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Okta::8302473": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5215890007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5179814007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5159494007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5251772007": {
   "first_seen": "2026-11-17",
@@ -3540,7 +3572,7 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5251774007": {
   "first_seen": "2026-11-17",
@@ -3552,19 +3584,19 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5233187007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5282845007": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5276814007": {
   "first_seen": "2026-11-17",
@@ -3576,7 +3608,7 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5262054007": {
   "first_seen": "2026-11-17",
@@ -3588,7 +3620,7 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Zscaler::5263598007": {
   "first_seen": "2026-11-17",
@@ -3606,61 +3638,61 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8222531": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::7464039": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8232423": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8354970": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::7457367": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8354993": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8212900": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8276078": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8096029": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8334476": {
   "first_seen": "2026-11-17",
@@ -3672,73 +3704,73 @@
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8090534": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pure Storage::8232341": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Elastic::8246948": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Elastic::8281059": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Elastic::8156378": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Twilio::8125581": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Twilio::6372770": {
   "first_seen": "2026-11-17",
   "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Twilio::8178812": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Twilio::8350289": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Rubrik::8370557": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Rubrik::8223043": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Rubrik::8223049": {
   "first_seen": "2026-11-17",
@@ -3768,121 +3800,121 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Rubrik::8223214": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8332958": {
   "first_seen": "2026-11-17",
   "rej": "tagalog requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8378851": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::7868936": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8332960": {
   "first_seen": "2026-11-17",
   "rej": "indon\u00e9sien / malais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8332956": {
   "first_seen": "2026-11-17",
   "rej": "tagalog requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8155946": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Cloudflare::8378849": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5456491008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5477774008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5479890008": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5391356008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5458159008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Anthropic::5460521008": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Airbnb::8345532": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Airbnb::8236127": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Airbnb::8349111": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8114016": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8323920": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::7532659": {
   "first_seen": "2026-11-17",
@@ -3900,103 +3932,106 @@
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8280925": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8345104": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::7946210": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8210432": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8190448": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8163672": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::6774775": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::8238672": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Agoda::7294490": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pinterest::8016642": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pinterest::8336037": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Pinterest::8247248": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Figma::5753209004": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Figma::6161021004": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "Figma::6231832004": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 4
+  "rv": 5
  },
  "HSBC::563774608994127": {
   "first_seen": "2026-11-17"
  },
  "General Atlantic::6194607004": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Point72::8932491002": {
   "first_seen": "2026-11-17",
@@ -4062,7 +4097,10 @@
   "first_seen": "2026-11-17"
  },
  "Point72::8660807002": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Point72::8878966002": {
   "first_seen": "2026-11-17",
@@ -4218,7 +4256,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/BOS-Singapore/Investment-Analyst_JR00012029-1": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Business-Development-Manager_JR00007610": {
   "first_seen": "2026-11-17"
@@ -4236,7 +4277,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Product-Owner--Digital-Wealth_JR00011751": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Consumer-Financial-Services--Marketing--Digital-Marketing---Martech--Jan-to-Jun-2027-_JR00011748": {
   "first_seen": "2026-11-17"
@@ -4254,7 +4298,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Global-Markets-Equities---Central-Dealing--Night-Desk-_JR00011649": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Commercial-Banking-Cash--Foreign----Account-Opening_JR00002674": {
   "first_seen": "2026-11-17"
@@ -4293,7 +4340,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Assistant-Relationship-Manager---Global-Transportation--Global-Corporate-Banking_JR00011392": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Relationship---Business-Management-Associate--Global-Financial-Institutions--12-mths-contract-_JR00010394-1": {
   "first_seen": "2026-11-17"
@@ -4353,7 +4403,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/MGR--GSI--Investigative-Analytics---Group-Compliance_JR00010595": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Commercial-Banking--Global-Enterprise-Banking--Emerging-Business--November-2026---June-2027-_JR00010299": {
   "first_seen": "2026-11-17"
@@ -4362,7 +4415,10 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Data-Analytics---Support---MGR_JR00010878": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Commercial-Banking--GWB-Data-Analytics--Jan-to-May-2027-_JR00011058": {
   "first_seen": "2026-11-17"
@@ -4398,22 +4454,34 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/BOS-Singapore/Client-Due-Diligence-Analyst_JR00010387": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--9-Months-Contract-_JR00009403": {
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Business-Transformation-Project-Management---Manager_JR00010186-1": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--Europe-Middle-East---Africa_JR00006017": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Sales-Incentive-Analyst_JR00009789": {
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/Wealth-Centre-Manager--Global-Consumer-Financial-Serrvices-_JR00008659": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/OCBC-Singapore/Relationship-Officer---MGR_JR00009079": {
   "first_seen": "2026-11-17"
@@ -4422,13 +4490,22 @@
   "first_seen": "2026-11-17"
  },
  "OCBC::/job/OCBC-Singapore/SOC-Tier-3-Analyst--GTS---Command-Centre-_JR00008617": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--ASEAN_JR00008354": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--Global-South-Asia_JR00004128": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "TP ICAP::/job/Hong-Kong/Trainee-Broker--Global-Broking_R5909": {
   "first_seen": "2026-11-17"
@@ -4498,7 +4575,10 @@
    "model": "nvidia/nemotron-3.5-super-vl:free",
    "v": 4
   },
-  "ai_h": "43d1568573e8"
+  "ai_h": "43d1568573e8",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "TP ICAP::/job/Singapore/Trainee-Broker--Global-Broking_R5717": {
   "first_seen": "2026-11-17",
@@ -4639,25 +4719,43 @@
   "first_seen": "2026-11-17"
  },
  "Adyen::7840869": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Adyen::8300220": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Carta::8154341003": {
   "first_seen": "2026-11-17"
  },
  "Carta::7997771003": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Thunes::8011551003": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Wise::744000159036311": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Wise::744000155902634": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "OKX::7821266003": {
   "first_seen": "2026-11-17"
@@ -4672,19 +4770,31 @@
   "first_seen": "2026-11-17"
  },
  "BitGo::8384217002": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "BitGo::8895178002": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Anchorage Digital::b0455cc0-8c0d-4dd0-9b1c-17196d92a666": {
   "first_seen": "2026-11-17"
  },
  "Microsoft::1970393557070367": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Microsoft::1970393557043900": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Microsoft::1970393557025630": {
   "first_seen": "2026-11-17"
@@ -4693,16 +4803,28 @@
   "first_seen": "2026-11-17"
  },
  "Microsoft::1970393557023099": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Microsoft::1970393557027030": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Microsoft::1970393557000199": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Microsoft::1970393557053522": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Grab::744000161999489": {
   "first_seen": "2026-11-17",
@@ -4760,7 +4882,10 @@
   "ai_h": "b3ca03b6b7dd"
  },
  "Grab::744000161740172": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Grab::744000158197270": {
   "first_seen": "2026-11-17"
@@ -4775,13 +4900,19 @@
   "first_seen": "2026-11-17"
  },
  "Grab::744000153419129": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Grab::744000153402549": {
   "first_seen": "2026-11-17"
  },
  "Grab::744000151778689": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "ServiceNow::744000161725329": {
   "first_seen": "2026-11-17"
@@ -4790,7 +4921,10 @@
   "first_seen": "2026-11-17"
  },
  "ServiceNow::744000161447249": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "ServiceNow::744000153696339": {
   "first_seen": "2026-11-17"
@@ -4811,10 +4945,16 @@
   "first_seen": "2026-11-17"
  },
  "Datadog::8301039": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Datadog::8300636": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Datadog::8047666": {
   "first_seen": "2026-11-17"
@@ -4829,7 +4969,10 @@
   "first_seen": "2026-11-17"
  },
  "GitLab::8884627002": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "GitLab::8887399002": {
   "first_seen": "2026-11-17"
@@ -4859,10 +5002,16 @@
   "first_seen": "2026-11-17"
  },
  "Cloudflare::8219758": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Cloudflare::8384969": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Cloudflare::8326749": {
   "first_seen": "2026-11-17"
@@ -4874,15 +5023,1776 @@
   "first_seen": "2026-11-17"
  },
  "Cloudflare::8172404": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Figma::5806875004": {
   "first_seen": "2026-11-17"
  },
  "Figma::6144873004": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
  },
  "Figma::6233207004": {
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "_sources": {
+  "Fidelity International": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "BlackRock": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Invesco": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "T. Rowe Price": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "AllianceBernstein": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "abrdn": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Franklin Templeton": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Blackstone": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Carlyle": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ares": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Brookfield": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Hamilton Lane": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Manulife": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HSBC": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Morgan Stanley": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "J.P. Morgan": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Julius Baer": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "State Street": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Northern Trust": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Deutsche Bank": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Barclays": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "UOB": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "VIE Business France": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bain Capital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Apollo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Oaktree": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Blue Owl": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HarbourVest": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "ICG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PineBridge Investments": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Brevan Howard": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "General Atlantic": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "StepStone": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Point72": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Schonfeld": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "ExodusPoint": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "PIMCO": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Wellington Management": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Capital Group": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Neuberger Berman": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Fidelity Investments": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Guggenheim": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Eastspring (Prudential)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lombard Odier": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Morgan Stanley Wealth (private)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Citi": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "DBS": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "OCBC": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "MUFG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "ING": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Santander": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "RBC": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "TD Securities": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PJT Partners (Park Hill)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "TP ICAP": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "PwC": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PwC (campus / graduate)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AIA": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Prudential": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "FWD": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Sun Life": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AIG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HKEX": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "LSEG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "S&P Global": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Morningstar": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Broadridge": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "JLL (immobilier / capital markets)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Visa": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mastercard": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PayPal": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Global Payments (TSYS)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Fiserv": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Stripe": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Adyen": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Carta": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Thunes": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Wise": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Nium": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "OKX": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Bybit": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Coinbase": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Ripple": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "BitGo": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Fireblocks": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Gemini": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Crypto.com": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Anchorage Digital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Microsoft": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Salesforce": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Workday": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Adobe": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "NVIDIA": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HP": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HPE": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Samsung": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "CrowdStrike": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Equinix": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Grab": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "ServiceNow": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Databricks": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Datadog": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "MongoDB": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "GitLab": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Okta": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Zscaler": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Pure Storage": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Elastic": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Twilio": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Rubrik": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Cloudflare": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Anthropic": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Airbnb": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Agoda": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Pinterest": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Figma": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Palantir": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ninja Van": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Amazon / AWS": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Intel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Dell": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Nike": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Philips": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Shell": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Unilever": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Thomson Reuters": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "Macquarie": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "UBS": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Moody's": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "MSCI": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Nasdaq": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "BNY": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Netflix": {
+   "last_try": "2026-11-17",
+   "fail": 0
+  },
+  "OpenAI": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Scale AI": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Notion": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ramp": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Rippling": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Deel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Brex": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Plaid": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Robinhood": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Affirm": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Chime": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Dropbox": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "DoorDash": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lyft": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Reddit": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Discord": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Snowflake": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Asana": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HubSpot": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Intercom": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Canva": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Miro": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Airtable": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Gusto": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Coursera": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Duolingo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Roblox": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Unity": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Epic Games": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Riot Games": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Block": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Toast": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Samsara": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Confluent": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HashiCorp": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Snyk": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Wiz": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Vanta": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Gong": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Klaviyo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Braze": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Amplitude": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mixpanel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Algolia": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Contentful": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Postman": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Grammarly": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Calendly": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Zapier": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Webflow": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Retool": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Vercel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Cohere": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Hugging Face": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Perplexity": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Anduril": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "SpaceX": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Spotify": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Uber": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Zoom": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Atlassian": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Shopify": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Squarespace": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Twitch": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Instacart": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Snap": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "LinkedIn": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bloomberg": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Google": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Apple": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Meta": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Oracle": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "IBM": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Cisco": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AMD": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Qualcomm": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Accenture": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Revolut": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Monzo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "N26": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Klarna": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Checkout.com": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Rapyd": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Payoneer": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Marqeta": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Remitly": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ebury": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Qonto": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Pennylane": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Swile": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Spendesk": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ledger": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Kraken": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Circle": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Binance": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bitpanda": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Animoca Brands": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "HashKey": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Amber Group": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Matrixport": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Galaxy Digital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Airwallex": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Aspire": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "YouTrip": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Xendit": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "dLocal": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Funding Societies": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Endowus": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "StashAway": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Syfe": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Addepar": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "iCapital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Moonfare": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Allfunds": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Clearwater Analytics": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Juniper Square": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Forge Global": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Titanbay": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Yieldstreet": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Alan": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lydia": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bridgewater": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AQR": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Two Sigma": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Millennium": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Balyasny": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "D. E. Shaw": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Man Group": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Marshall Wace": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Jane Street": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Optiver": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "IMC Trading": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Hudson River Trading": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Jump Trading": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Citadel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Tikehau Capital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ardian": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Eurazeo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PAI Partners": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "EQT": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "CVC Capital Partners": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Permira": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Cinven": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Hg": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "TPG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Warburg Pincus": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Advent International": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Hillhouse": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PAG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Partners Group": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Pantheon": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Adams Street": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Coller Capital": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lexington Partners": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "KKR": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Goldman Sachs": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Nomura": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Standard Chartered": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Schroders": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Amundi": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AXA Investment Managers": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Natixis": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Robeco": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Allianz Global Investors": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Vanguard": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Charles Schwab": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Nuveen": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Principal": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Temasek": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "GIC": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Danone": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "L'Or\u00e9al": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "LVMH": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Kering": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Herm\u00e8s": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Chanel": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Pernod Ricard": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Michelin": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Schneider Electric": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Capgemini": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Dassault Syst\u00e8mes": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Airbus": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Safran": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Thales": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "TotalEnergies": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Engie": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AXA": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Sanofi": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "BNP Paribas": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Cr\u00e9dit Agricole": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Nestl\u00e9": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Novartis": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Roche": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "ABB": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Siemens": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "SAP": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Allianz": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Adidas": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "ASML": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Heineken": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "BP": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Diageo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Reckitt": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "GSK": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "AstraZeneca": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Booking.com": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ubisoft": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Criteo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Doctolib": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "BlaBlaCar": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mirakl": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Contentsquare": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Back Market": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Dataiku": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Vinted": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bolt": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Delivery Hero": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Zalando": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Celonis": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Personio": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bosch": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "IKEA": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mistral AI": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Procter & Gamble": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Coca-Cola": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PepsiCo": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mondelez": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Johnson & Johnson": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Pfizer": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Est\u00e9e Lauder": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "McKinsey": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "BCG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Bain & Company": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Deloitte": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "EY": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "KPMG": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Sea Group": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Shopee": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lazada": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Gojek": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "ShopBack": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Carousell": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "PropertyGuru": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Razer": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Lalamove": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Klook": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Trip.com": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Rakuten": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Mercari": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "SmartNews": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Money Forward": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Sony": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Fast Retailing (Uniqlo)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "TikTok / ByteDance": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Alibaba": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Tencent": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Ant International": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "MyCareersFuture (Singapour)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "JobsDB (Hong Kong)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "JobStreet (Singapour)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Jooble": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Adzuna (Singapour)": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  },
+  "Careerjet": {
+   "last_try": "2026-11-17",
+   "fail": 1
+  }
+ },
+ "BlackRock::/job/Tokyo-Japan/Japan-Wealth--Wholesale---Associate_R267121": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Invesco::/job/Tokyo-Japan/SA--Transactions_R-15605": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Invesco::/job/Tokyo-Japan/Adv-Analyst--Infra-CX_R-14254": {
+  "first_seen": "2026-11-17",
+  "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Invesco::/job/Tokyo-Japan/APAC-IC-Officer_R-14853": {
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "T. Rowe Price::/job/Tokyo-Japan/Manager--Client-Account-Services_83790-9": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Ares::/job/Tokyo-Japan/Analyst--ESG---Japan-Real-Estate_R8453": {
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Hong-Kong-Hong-Kong/Awards-Researcher--Events_JREQ202493": {
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Hong-Kong-Hong-Kong/Deal-Desk-Consultant_JREQ203969": {
+  "first_seen": "2026-11-17",
+  "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Singapore-Singapore/MCR-Operator_JREQ204389": {
+  "first_seen": "2026-11-17",
+  "rej": "m\u00e9tier hors cible",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Singapore-Singapore/Sponsorship-Sales-Manager_JREQ202005": {
+  "first_seen": "2026-11-17",
+  "rej": "langue asiatique fortement souhait\u00e9",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Singapore-Singapore/Deal-Desk-Manager---Asia_JREQ204673": {
+  "first_seen": "2026-11-17",
+  "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Japan-Tokyo/Solution-Consultant--Global-Trade_JREQ203093-1": {
+  "first_seen": "2026-11-17",
+  "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Japan-Tokyo/Business-Development-Manager--Global-Trade-Solutions_JREQ201187-2": {
+  "first_seen": "2026-11-17",
+  "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Japan-Tokyo/Project-Manager--Global-Trade-_JREQ204763": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Japan-Tokyo/Media-Sales-Support-Representative---Japan---Asia_JREQ203421": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Japan-Tokyo/Business-Analyst---Global-Trade_JREQ203569-4": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Nasdaq::/job/Hong-Kong---Central-Hong-Kong/Sales-Executive_R0026950": {
+  "first_seen": "2026-11-17",
+  "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Nasdaq::/job/Japan---Tokyo/Technical-Support-Analyst_R0026654-1": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790319529702": {
+  "first_seen": "2026-11-17",
+  "rej": "chinois requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790319431097": {
+  "first_seen": "2026-11-17",
+  "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790319431251": {
+  "first_seen": "2026-11-17",
+  "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790319429186": {
+  "first_seen": "2026-11-17",
+  "rej": "langue asiatique requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790318773314": {
+  "first_seen": "2026-11-17",
+  "rej": "chinois requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790319451294": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Netflix::790318912417": {
+  "first_seen": "2026-11-17",
+  "rej": "japonais requis",
+  "checked": "2026-11-17",
+  "rv": 5
+ },
+ "Thomson Reuters::/job/Hong-Kong-Hong-Kong/Sales-Manager--Sponsorship_JREQ203880": {
+  "first_seen": "2026-11-17"
+ },
+ "Thomson Reuters::/job/Singapore-Singapore/Sales-Executive--Media---Sponsorships_JREQ204784": {
+  "first_seen": "2026-11-17"
+ },
+ "Nasdaq::/job/Hong-Kong---Central-Hong-Kong/Client-Success-Analyst_R0027304": {
+  "first_seen": "2026-11-17"
+ },
+ "Nasdaq::/job/Singapore---Collyer-Quay/Business-Development-Representative_R0027089": {
   "first_seen": "2026-11-17"
  }
 }
