@@ -128,7 +128,7 @@ sources:
   - {name: "Carta",                  type: greenhouse, board: "carta"}
   - {name: "Thunes",                 type: greenhouse, board: "thunes"}
   - {name: "Wise",                   type: smartrecruiters, company: "Wise"}        # (52/3)
-  - {name: "Nium",                   type: lever, company: "nium"}
+  - {name: "Nium",                   type: auto, slugs: ["nium"]}
   # -- Crypto / actifs numériques (beaucoup de BD / sales / IR à HK-SG)
   - {name: "OKX",                    type: greenhouse, board: "okx"}                # (263)
   - {name: "Bybit",                  type: greenhouse, board: "bybit"}              # (23)
@@ -137,8 +137,8 @@ sources:
   - {name: "BitGo",                  type: greenhouse, board: "bitgo"}
   - {name: "Fireblocks",             type: greenhouse, board: "fireblocks"}
   - {name: "Gemini",                 type: greenhouse, board: "gemini"}
-  - {name: "Crypto.com",             type: lever, company: "crypto"}                # (36)
-  - {name: "Anchorage Digital",      type: lever, company: "anchorage"}
+  - {name: "Crypto.com",             type: auto, slugs: ["crypto","cryptocom"]}                # (36)
+  - {name: "Anchorage Digital",      type: auto, slugs: ["anchorage","anchoragedigital"]}
   # -- Big tech / logiciels (sales, account management, partnerships)
   - {name: "Microsoft",              type: pcsx, host: "apply.careers.microsoft.com", domain: "microsoft.com"}   # (SG + 32 HK)
   - {name: "Salesforce",             type: workday, url: "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site"}  # (0/37)
@@ -168,25 +168,21 @@ sources:
   - {name: "Agoda",                  type: greenhouse, board: "agoda"}
   - {name: "Pinterest",              type: greenhouse, board: "pinterest"}
   - {name: "Figma",                  type: greenhouse, board: "figma"}
-  - {name: "Palantir",               type: lever, company: "palantir"}
-  - {name: "Ninja Van",              type: lever, company: "ninjavan"}
+  - {name: "Palantir",               type: auto, slugs: ["palantir","palantirtechnologies"]}
+  - {name: "Ninja Van",              type: auto, slugs: ["ninjavan"]}
 
   # ===== AJOUTÉ le 17/11/2026 : grands groupes sur Workday / Eightfold / Amazon (À VÉRIFIER : écrits de mémoire ;
   #       une source qui échoue 3 fois de suite n'est plus réessayée qu'une fois par jour, voir les jauges) =====
   - {name: "Amazon / AWS",           type: amazon}
   - {name: "Intel",                  type: workday, url: "https://intel.wd1.myworkdayjobs.com/External"}
-  - {name: "Dell",                   type: workday, url: "https://dell.wd1.myworkdayjobs.com/External"}
   - {name: "Nike",                   type: workday, url: "https://nike.wd1.myworkdayjobs.com/nke"}
   - {name: "Philips",                type: workday, url: "https://philips.wd3.myworkdayjobs.com/jobs-and-careers"}
   - {name: "Shell",                  type: workday, url: "https://shell.wd3.myworkdayjobs.com/ShellCareers"}
   - {name: "Unilever",               type: workday, url: "https://unilever.wd3.myworkdayjobs.com/Unilever_Experienced_Professionals"}
   - {name: "Thomson Reuters",        type: workday, url: "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site"}
   - {name: "Macquarie",              type: workday, url: "https://mq.wd3.myworkdayjobs.com/CareersatMQ"}
-  - {name: "UBS",                    type: workday, url: "https://ubs.wd3.myworkdayjobs.com/UBS_Experienced_Professionals"}
-  - {name: "Moody's",                type: workday, url: "https://moodys.wd5.myworkdayjobs.com/moodys"}
   - {name: "MSCI",                   type: workday, url: "https://msci.wd1.myworkdayjobs.com/MSCI"}
   - {name: "Nasdaq",                 type: workday, url: "https://nasdaq.wd1.myworkdayjobs.com/Global_External_Site"}
-  - {name: "BNY",                    type: eightfold, host: "bnymellon.eightfold.ai", domain: "bnymellon.com"}
   - {name: "Netflix",                type: eightfold, host: "explore.jobs.netflix.net", domain: "netflix.com"}
 
   # ===== PAS de connecteur (testé le 16/11/2026 : site maison / API fermée) =====

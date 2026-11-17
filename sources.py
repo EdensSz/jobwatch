@@ -22,34 +22,55 @@ def _session() -> requests.Session:
     return s
 
 
-def _get(s, url, **kw):
-    for attempt in range(3):
+import threading
+from urllib.parse import urlparse as _up
+
+# Workday limite le nombre de requêtes par IP (429 / 503) : au plus 3 appels Workday en même temps sur tout le passage
+_HOST_LIMITS = {"myworkdayjobs.com": threading.BoundedSemaphore(3)}
+
+
+def _limit(url):
+    h = _up(url).netloc
+    for dom, sem in _HOST_LIMITS.items():
+        if h.endswith(dom):
+            return sem
+    return None
+
+
+def _req(method, s, url, **kw):
+    """Requête avec reprises : 429 / 5xx -> on attend (Retry-After si donné) et on réessaie 5 fois.
+    Lève toujours une vraie erreur à la fin (jamais None)."""
+    sem = _limit(url)
+    last = None
+    for attempt in range(5):
+        if sem:
+            sem.acquire()
         try:
-            r = s.get(url, timeout=TIMEOUT, **kw)
-            if r.status_code in (429, 503):
-                time.sleep(2 * (attempt + 1))
+            r = s.request(method, url, timeout=TIMEOUT, **kw)
+        except requests.RequestException as e:
+            last = e
+            r = None
+        finally:
+            if sem:
+                sem.release()
+        if r is not None:
+            if r.status_code in (429, 500, 502, 503, 504):
+                last = requests.HTTPError(f"{r.status_code} après {attempt + 1} essai(s) pour {url[:120]}")
+                wait = r.headers.get("Retry-After", "")
+                time.sleep(min(30, float(wait)) if wait.replace(".", "").isdigit() else 2 * 2 ** attempt)
                 continue
             r.raise_for_status()
             return r
-        except requests.RequestException:
-            if attempt == 2:
-                raise
-            time.sleep(1.5)
+        time.sleep(2 * 2 ** attempt)
+    raise last or requests.HTTPError(f"échec pour {url[:120]}")
+
+
+def _get(s, url, **kw):
+    return _req("GET", s, url, **kw)
 
 
 def _post(s, url, body, **kw):
-    for attempt in range(3):
-        try:
-            r = s.post(url, json=body, timeout=TIMEOUT, **kw)
-            if r.status_code in (429, 503):
-                time.sleep(2 * (attempt + 1))
-                continue
-            r.raise_for_status()
-            return r
-        except requests.RequestException:
-            if attempt == 2:
-                raise
-            time.sleep(1.5)
+    return _req("POST", s, url, json=body, **kw)
 
 
 def _iso(value) -> str:
@@ -307,7 +328,9 @@ def civiweb(src: Dict, terms: List[str]) -> List[Job]:
             body = {"limit": 50, "skip": skip, "query": term, "activitySectorId": [], "missionsTypesIds": [],
                     "missionsDurations": [], "gerographicZones": [], "countriesIds": [], "studiesLevelId": [],
                     "companiesSizes": [], "specializationsIds": [], "entreprisesIds": [0], "missionStartDate": None}
-            r = _post(s, f"{api}/search", body)
+            r = _post(s, f"{api}/search", body, headers={"Origin": "https://mon-vie-via.businessfrance.fr",
+                                                          "Referer": "https://mon-vie-via.businessfrance.fr/offres/recherche",
+                                                          "Content-Type": "application/json"})
             res = r.json().get("result") or []
             if not res:
                 break
@@ -409,3 +432,328 @@ def detect(url: str) -> str:
     if "eightfold" in h or "portal.careers" in h:
         return f'- {{name: "{h}", type: eightfold, host: "{h}", domain: "<domaine>"}}  # ex. hsbc.com'
     return "# Type non reconnu : ouvre la page, onglet Réseau (F12), et cherche la requête qui renvoie les offres en JSON."
+
+# =========================================================================== nouveaux connecteurs (17/11/2026)
+import json as _json
+import os as _os
+from pathlib import Path as _Path
+
+
+def ashby(src: Dict, terms: List[str]) -> List[Job]:
+    """Ashby (OpenAI, Notion, Ramp…) : src: name, board."""
+    s = _session()
+    data = _get(s, f"https://api.ashbyhq.com/posting-api/job-board/{src['board']}",
+                params={"includeCompensation": "false"}).json()
+    out = []
+    for q in data.get("jobs") or []:
+        if q.get("isListed") is False:
+            continue
+        locs = [q.get("location") or ""] + [x.get("location", "") for x in q.get("secondaryLocations") or []]
+        out.append(Job(source=src["name"], company=src["name"], id=str(q.get("id")), title=q.get("title", ""),
+                       location=" ; ".join(x for x in locs if x), url=q.get("jobUrl") or q.get("applyUrl") or "",
+                       posted=_iso(q.get("publishedAt")) or None,
+                       description=q.get("descriptionHtml") or q.get("descriptionPlain") or ""))
+    return out
+
+
+def workable(src: Dict, terms: List[str]) -> List[Job]:
+    """Workable : src: name, account."""
+    s = _session()
+    data = _get(s, f"https://apply.workable.com/api/v1/widget/accounts/{src['account']}",
+                params={"details": "true"}).json()
+    out = []
+    for q in data.get("jobs") or []:
+        locs = [", ".join(x for x in [l.get("city"), l.get("country")] if x) for l in q.get("locations") or []]
+        loc = " ; ".join(locs) or ", ".join(x for x in [q.get("city"), q.get("country")] if x)
+        out.append(Job(source=src["name"], company=src["name"], id=str(q.get("shortcode") or q.get("id")),
+                       title=q.get("title", ""), location=loc, url=q.get("url") or q.get("shortlink") or "",
+                       posted=_iso(q.get("published_on") or q.get("created_at")) or None,
+                       description=q.get("description") or ""))
+    return out
+
+
+def recruitee(src: Dict, terms: List[str]) -> List[Job]:
+    """Recruitee : src: name, company (sous-domaine)."""
+    s = _session()
+    data = _get(s, f"https://{src['company']}.recruitee.com/api/offers/").json()
+    out = []
+    for q in data.get("offers") or []:
+        loc = q.get("location") or ", ".join(x for x in [q.get("city"), q.get("country")] if x)
+        out.append(Job(source=src["name"], company=src["name"], id=str(q.get("id")), title=q.get("title", ""),
+                       location=loc, url=q.get("careers_url") or "", posted=_iso(q.get("published_at")) or None,
+                       description=(q.get("description") or "") + "\n" + (q.get("requirements") or "")))
+    return out
+
+
+def amazon(src: Dict, terms: List[str]) -> List[Job]:
+    """Amazon / AWS (amazon.jobs) : recherche par ville."""
+    s = _session()
+    seen, out = set(), []
+    for term in terms:
+        offset = 0
+        for _ in range(src.get("max_pages", 20)):
+            d = _get(s, "https://www.amazon.jobs/en/search.json",
+                     params={"base_query": "", "loc_query": term, "offset": offset, "result_limit": 100,
+                             "sort": "recent"}).json()
+            jobs = d.get("jobs") or []
+            if not jobs:
+                break
+            for q in jobs:
+                jid = str(q.get("id_icims") or q.get("id"))
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                desc = "\n\n".join(str(q.get(k) or "") for k in
+                                   ("description", "basic_qualifications", "preferred_qualifications"))
+                posted = ""
+                try:
+                    posted = datetime.strptime(q.get("posted_date", ""), "%B %d, %Y").date().isoformat()
+                except ValueError:
+                    pass
+                out.append(Job(source=src["name"], company=q.get("company_name") or "Amazon", id=jid,
+                               title=q.get("title", ""), location=q.get("normalized_location") or q.get("location", ""),
+                               url="https://www.amazon.jobs" + (q.get("job_path") or ""), posted=posted or None,
+                               description=desc))
+            offset += len(jobs)
+            if offset >= (d.get("hits") or 0):
+                break
+            time.sleep(PAUSE)
+    return out
+
+
+def mycareersfuture(src: Dict, terms: List[str]) -> List[Job]:
+    """MyCareersFuture (portail officiel de Singapour : quasi toutes les offres du pays, toutes entreprises).
+    Recherche par métier (role_terms de config.yaml)."""
+    s = _session()
+    seen, out = set(), []
+    for term in src.get("terms") or terms:
+        for page in range(src.get("max_pages", 5)):
+            d = _get(s, "https://api.mycareersfuture.gov.sg/v2/jobs",
+                     params={"search": term, "limit": 100, "page": page, "sortBy": "new_posting_date"}).json()
+            res = d.get("results") or []
+            if not res:
+                break
+            for q in res:
+                uid = q.get("uuid")
+                if not uid or uid in seen:
+                    continue
+                seen.add(uid)
+                meta = q.get("metadata") or {}
+                job = Job(source=src["name"], company=((q.get("postedCompany") or {}).get("name") or "").title(),
+                          id=uid, title=q.get("title", ""), location="Singapore",
+                          url=meta.get("jobDetailsUrl") or f"https://www.mycareersfuture.gov.sg/job/{uid}",
+                          posted=_iso(meta.get("newPostingDate") or meta.get("createdAt")) or None,
+                          description=q.get("description") or "")
+                if not job.description:
+                    def load(uid=uid) -> str:
+                        return _get(s, f"https://api.mycareersfuture.gov.sg/v2/jobs/{uid}").json().get("description", "")
+                    job.desc_loader = load
+                out.append(job)
+            if len(res) < 100:
+                break
+            time.sleep(PAUSE)
+    return out
+
+
+def seek(src: Dict, terms: List[str]) -> List[Job]:
+    """JobsDB Hong Kong (site_key HK-Main, host hk.jobsdb.com) / JobStreet Singapour (SG-Main, sg.jobstreet.com).
+    Recherche par métier."""
+    host, site_key = src["host"], src["site_key"]
+    s = _session()
+    seen, out = set(), []
+    for term in src.get("terms") or terms:
+        for page in range(1, src.get("max_pages", 4) + 1):
+            d = _get(s, f"https://{host}/api/jobsearch/v5/search",
+                     params={"siteKey": site_key, "sourcesystem": "houston", "page": page, "pageSize": 100,
+                             "keywords": term, "locale": "en-" + site_key[:2]}).json()
+            res = d.get("data") or []
+            if not res:
+                break
+            for q in res:
+                jid = str(q.get("id"))
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                locs = [l.get("label", "") for l in q.get("locations") or []] or [q.get("location", "")]
+                teaser = (q.get("teaser") or "") + "\n" + "\n".join(q.get("bulletPoints") or [])
+                job = Job(source=src["name"], company=q.get("companyName") or (q.get("advertiser") or {}).get("description", ""),
+                          id=jid, title=q.get("title", ""), location=" ; ".join(x for x in locs if x) or src.get("city", ""),
+                          url=f"https://{host}/job/{jid}", posted=_iso(q.get("listingDate")) or None)
+
+                def load(jid=jid, teaser=teaser) -> str:
+                    """Annonce complète lue dans la page (données intégrées), sinon le résumé."""
+                    try:
+                        html_ = _get(s, f"https://{host}/job/{jid}", headers={"Accept": "text/html"}).text
+                        m = re.search(r'"content":"((?:[^"\\]|\\.){200,})"', html_)
+                        if m:
+                            return _json.loads('"' + m.group(1) + '"')
+                    except Exception:
+                        pass
+                    return teaser
+                job.desc_loader = load
+                out.append(job)
+            if len(res) < 100:
+                break
+            time.sleep(PAUSE)
+    return out
+
+
+def jooble(src: Dict, terms: List[str]) -> List[Job]:
+    """Jooble (agrégateur, clé gratuite JOOBLE_API_KEY). Résumé de l'annonce seulement."""
+    key = _os.environ.get("JOOBLE_API_KEY", "").strip()
+    if not key:
+        return []
+    s = _session()
+    out, seen = [], set()
+    for city in src.get("cities", ["Hong Kong", "Singapore", "Tokyo"]):
+        for term in src.get("terms") or terms:
+            d = _post(s, f"https://jooble.org/api/{key}", {"keywords": term, "location": city, "page": "1"}).json()
+            for q in d.get("jobs") or []:
+                jid = str(q.get("id") or q.get("link"))
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                out.append(Job(source=src["name"], company=q.get("company") or "", id=jid, title=q.get("title", ""),
+                               location=q.get("location") or city, url=q.get("link", ""),
+                               posted=_iso(q.get("updated")) or None, description=q.get("snippet") or ""))
+            time.sleep(PAUSE)
+    return out
+
+
+def adzuna(src: Dict, terms: List[str]) -> List[Job]:
+    """Adzuna Singapour (clés gratuites ADZUNA_APP_ID / ADZUNA_APP_KEY)."""
+    app_id, app_key = _os.environ.get("ADZUNA_APP_ID", "").strip(), _os.environ.get("ADZUNA_APP_KEY", "").strip()
+    if not (app_id and app_key):
+        return []
+    s = _session()
+    out, seen = [], set()
+    for term in src.get("terms") or terms:
+        for page in range(1, src.get("max_pages", 3) + 1):
+            d = _get(s, f"https://api.adzuna.com/v1/api/jobs/{src.get('country', 'sg')}/search/{page}",
+                     params={"app_id": app_id, "app_key": app_key, "what": term, "results_per_page": 50,
+                             "sort_by": "date", "content-type": "application/json"}).json()
+            res = d.get("results") or []
+            for q in res:
+                jid = str(q.get("id"))
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                out.append(Job(source=src["name"], company=(q.get("company") or {}).get("display_name", ""), id=jid,
+                               title=q.get("title", ""), location=(q.get("location") or {}).get("display_name", "Singapore"),
+                               url=q.get("redirect_url", ""), posted=_iso(q.get("created")) or None,
+                               description=q.get("description") or ""))
+            if len(res) < 50:
+                break
+            time.sleep(PAUSE)
+    return out
+
+
+def careerjet(src: Dict, terms: List[str]) -> List[Job]:
+    """Careerjet Hong Kong / Singapour / Japon (identifiant gratuit CAREERJET_AFFID)."""
+    affid = _os.environ.get("CAREERJET_AFFID", "").strip()
+    if not affid:
+        return []
+    s = _session()
+    out, seen = [], set()
+    for locale, city in src.get("locales", [["en_HK", "Hong Kong"], ["en_SG", "Singapore"], ["ja_JP", "Tokyo"]]):
+        for term in src.get("terms") or terms:
+            d = _get(s, "http://public.api.careerjet.net/search",
+                     params={"locale_code": locale, "keywords": term, "location": city, "affid": affid,
+                             "user_ip": "1.1.1.1", "user_agent": "jobwatch", "pagesize": 99, "page": 1,
+                             "sort": "date"}).json()
+            for q in d.get("jobs") or []:
+                jid = q.get("url", "")
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                out.append(Job(source=src["name"], company=q.get("company") or "", id=jid, title=q.get("title", ""),
+                               location=q.get("locations") or city, url=jid, posted=None,
+                               description=q.get("description") or ""))
+            time.sleep(PAUSE)
+    return out
+
+
+# --------------------------------------------------------------------------- découverte automatique de l'ATS
+ATS_CACHE_FILE = _Path(__file__).parent / "ats_cache.json"
+try:
+    ATS_CACHE = _json.loads(ATS_CACHE_FILE.read_text(encoding="utf-8"))
+except Exception:
+    ATS_CACHE = {}
+
+
+def save_ats_cache():
+    ATS_CACHE_FILE.write_text(_json.dumps(ATS_CACHE, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+
+
+def _slugs(name: str, extra=None) -> List[str]:
+    import unicodedata
+    base = unicodedata.normalize("NFKD", re.sub(r"\(.*?\)", "", name)).encode("ascii", "ignore").decode().strip().lower()
+    base = base.replace("'", "")
+    base = base.replace("&", "and")
+    words = re.findall(r"[a-z0-9]+", base)
+    cands = list(extra or []) + ["".join(words), "-".join(words)]
+    if len(words) > 1:
+        cands.append(words[0])
+    # identifiants trop courts (« ey », « bp ») : risque de tomber sur une autre entreprise -> seulement s'ils sont forcés
+    return list(dict.fromkeys(c for c in cands if c and (len(c) >= 4 or c in (extra or []))))[:4]
+
+
+def _probe(s, ats: str, slug: str) -> int:
+    """Nombre d'offres trouvées pour ce slug sur cet ATS (-1 = n'existe pas)."""
+    try:
+        if ats == "greenhouse":
+            r = s.get(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs", timeout=15)
+            return len(r.json().get("jobs", [])) if r.status_code == 200 else -1
+        if ats == "lever":
+            r = s.get(f"https://api.lever.co/v0/postings/{slug}", params={"mode": "json", "limit": 1}, timeout=15)
+            return len(r.json()) if r.status_code == 200 and isinstance(r.json(), list) else -1
+        if ats == "ashby":
+            r = s.get(f"https://api.ashbyhq.com/posting-api/job-board/{slug}", timeout=15)
+            return len(r.json().get("jobs", [])) if r.status_code == 200 else -1
+        if ats == "smartrecruiters":
+            r = s.get(f"https://api.smartrecruiters.com/v1/companies/{slug}/postings", params={"limit": 1}, timeout=15)
+            return r.json().get("totalFound", 0) or -1 if r.status_code == 200 else -1
+        if ats == "workable":
+            r = s.get(f"https://apply.workable.com/api/v1/widget/accounts/{slug}", timeout=15)
+            return len(r.json().get("jobs", [])) if r.status_code == 200 else -1
+        if ats == "recruitee":
+            r = s.get(f"https://{slug}.recruitee.com/api/offers/", timeout=15)
+            return len(r.json().get("offers", [])) if r.status_code == 200 else -1
+    except Exception:
+        return -1
+    return -1
+
+
+AUTO_ATS = ["greenhouse", "lever", "ashby", "smartrecruiters", "workable", "recruitee"]
+
+
+def auto(src: Dict, terms: List[str]) -> List[Job]:
+    """Entreprise sans ATS connu : on essaie Greenhouse, Lever, Ashby, SmartRecruiters, Workable, Recruitee
+    avec quelques variantes du nom, une fois ; le résultat est gardé dans ats_cache.json (re-test tous les 14 jours)."""
+    name = src["name"]
+    c = ATS_CACHE.get(name)
+    today_ = date.today()
+    if c and c.get("ats"):
+        conn = CONNECTORS[c["ats"]]
+        key = {"greenhouse": "board", "ashby": "board", "lever": "company", "smartrecruiters": "company",
+               "workable": "account", "recruitee": "company"}[c["ats"]]
+        return conn({**src, key: c["slug"]}, terms)
+    if c and (today_ - date.fromisoformat(c.get("checked", "2000-01-01"))).days < 14:
+        return []                                  # déjà cherché récemment, rien trouvé
+    s = _session()
+    best = None
+    for slug in _slugs(name, src.get("slugs")):
+        for ats in AUTO_ATS:
+            n = _probe(s, ats, slug)
+            if n > 0 and (best is None or n > best[2]):
+                best = (ats, slug, n)
+        if best:
+            break
+    ATS_CACHE[name] = {"ats": best[0], "slug": best[1], "checked": today_.isoformat()} if best \
+        else {"ats": None, "checked": today_.isoformat()}
+    return auto(src, terms) if best else []
+
+
+CONNECTORS.update({"ashby": ashby, "workable": workable, "recruitee": recruitee, "amazon": amazon,
+                   "mycareersfuture": mycareersfuture, "seek": seek, "jooble": jooble, "adzuna": adzuna,
+                   "careerjet": careerjet, "auto": auto})
