@@ -287,9 +287,10 @@ def apply_ai(kept, rejected, state, cfg):
         yrs = ai["years_required"]
         if yrs and (v.min_years is None or yrs > v.min_years):
             v.min_years = yrs
-        if ai["exclude"] or yrs > cfg.get("max_years", 3):
+        if ai["exclude"] or yrs > cfg.get("max_years", 3) or ai["scores"]["metier"] <= 1:
             v.keep = False
-            v.reason = (ai["exclude_reason"] or f"{yrs} ans demandés") + " (IA)"
+            v.reason = (ai["exclude_reason"] or (f"{yrs} ans demandés" if yrs > cfg.get("max_years", 3)
+                                                 else "métier hors cible")) + " (IA)"
             rejected.append((j, v))
             continue
         out.append((j, v))
@@ -384,6 +385,7 @@ def write_outputs(kept, rejected, errors, cfg, explain):
             "ai_models": sorted({r.get("ai_model") for r in live if r.get("ai_model")}),
             "ai_error": ai_score.LAST_ERROR,
             "funnel": funnel(rejected, live)}
+    (OUT / "ai_prompt.json").write_text(json.dumps(ai_score.prompt_parts(), ensure_ascii=False, indent=1), encoding="utf-8")
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     with open(OUT / "jobs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["rating"])

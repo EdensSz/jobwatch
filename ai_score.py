@@ -14,7 +14,7 @@ from pathlib import Path
 import requests
 
 HERE = Path(__file__).parent
-AI_VERSION = 4                 # change = les analyses IA en cache sont refaites
+AI_VERSION = 5                 # change = les analyses IA en cache sont refaites
 LAST_ERROR = ""
 EXHAUSTED = set()              # fournisseurs dont le quota du jour est atteint pendant ce passage
 MAX_PTS = {"metier": 4, "niveau": 3, "secteur": 2, "atouts": 1}
@@ -72,7 +72,8 @@ RUBRIC = """BARÈME STRICT. Tu es exigeant, comme un recruteur qui reçoit 300 c
   (ex. : levée de fonds / LPs, RFP-DDQ, distribution wholesale, français demandé, VIE ou groupe français). Sinon 0.
 Justifie chaque note par un fait de l'annonce ET de son CV, sans flatterie. Dans cons, cite les vraies faiblesses (années,
 concurrence locale, écart de métier).
-EXCLUSION (exclude = true) si : une langue autre que français / anglais est exigée ou fortement souhaitée
+EXCLUSION (exclude = true) si : stage / internship / alternance / CDD court / temps partiel (il a fini ses études ; un VIE est
+accepté) ; metier <= 1 (poste hors de sa cible) ; une langue autre que français / anglais est exigée ou fortement souhaitée
 (mandarin, cantonais, japonais, coréen, « langue locale », « bilingue chinois »…, ou annonce rédigée dans cette langue) ;
 plus de 3 ans d'expérience exigés ; poste clairement senior. Une langue seulement « un plus / advantage » n'exclut PAS :
 mets-la dans languages_preferred."""
@@ -96,6 +97,11 @@ EXAMPLE = {
 EXAMPLE = {k: EXAMPLE[k] for k in ["scores", "explain", "exclude", "exclude_reason", "languages_required",
                                    "languages_preferred", "years_required", "role", "level", "summary", "pros",
                                    "cons", "keywords"]}
+
+
+def prompt_parts():
+    """Morceaux du prompt (pour la réanalyse depuis la page, même barème que le script)."""
+    return {"system": SYSTEM, "rubric": RUBRIC, "example": EXAMPLE, "ai_version": AI_VERSION}
 
 
 def build_prompt(job_title, company, location, description, hints=""):
@@ -244,14 +250,15 @@ def _json_from_text(text):
         return obj
     except ValueError:
         pass
-    try:
-        return json.loads(_repair(t))
-    except ValueError:
-        b = t.rfind("}")
+    for _ in range(40):                                # coupé au milieu d'une clé : on recule jusqu'à la virgule
         try:
-            return json.loads(_repair(t[:b + 1])) if b > 0 else None
+            return json.loads(_repair(t))
         except ValueError:
-            return None
+            c = t.rfind(",")
+            if c < 0:
+                return None
+            t = t[:c]
+    return None
 
 
 # --------------------------------------------------------------------------- appels

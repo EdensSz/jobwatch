@@ -12,7 +12,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Optional
 
-RULES_VERSION = 4          # change = toutes les offres sont réévaluées au passage suivant
+RULES_VERSION = 5          # change = toutes les offres sont réévaluées au passage suivant
 
 WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
          "seven": 7, "eight": 8, "nine": 9, "ten": 10,
@@ -71,9 +71,8 @@ SENIOR_RE = re.compile(
     r"部長|課長|マネージャー)\b", re.I)
 
 JUNIOR_RE = re.compile(
-    r"\b(analyst|analyste|assistant|trainee|graduate|intern|internship|junior|jr|vie|v\.i\.e\.?|"
-    r"stagiaire|apprenti|alternan\w*|coordinator|entry[- ]level|early careers?|campus|"
-    r"management associate|officer)\b", re.I)
+    r"\b(analyst|analyste|assistant|trainee|graduate|junior|jr|vie|v\.i\.e\.?|"
+    r"coordinator|entry[- ]level|early careers?|management associate)\b", re.I)
 
 # Titres hors-sujet : technique, risque, juridique, back-office, trading pur, retail...
 TITLE_NEG_RE = re.compile(
@@ -95,6 +94,16 @@ TITLE_NEG_RE = re.compile(
     r"comptab|juridique|ressources humaines|informatique|d[ée]veloppeur|ing[ée]nieur|"
     r"contr[ôo]le|conformit[ée]|tr[ée]sorerie", re.I)
 TRADING_RE = re.compile(r"\btrad(er|ing)\b", re.I)
+# Stages, alternances, CDD courts, temps partiel : tu cherches un vrai poste (le VIE reste accepté)
+INTERN_RE = re.compile(
+    r"\bintern(ship)?s?\b|\bstage\b|stagiaire|\bsummer\b|off[- ]?cycle|placement|industrial year|working student|"
+    r"apprenti|alternan|work[- ]study|part[- ]time|temporary|\btemp\b|fixed[- ]term|contractor|\bcontract\b|"
+    r"maternity|secondment|\b\d{1,2}[- ]months?\b|insight (day|week|programme)|spring (week|programme)|"
+    r"penultimate|undergraduate|campus", re.I)
+INTERN_DESC_RE = re.compile(
+    r"this (is an?|role is an?) (internship|\d+[- ]month|temporary|contract)|internship (programme|program|period)|"
+    r"currently (pursuing|enrolled)|penultimate year|expected to graduate in 202[7-9]|duration of the internship|"
+    r"(6|3|12)[- ]month (internship|contract|assignment)|stage de fin|convention de stage", re.I)
 
 TITLE_CHINA_RE = re.compile(r"\b(china|chinese|greater china|mainland|prc|taiwan|japan desk|korea desk)\b|中国|大中华", re.I)
 
@@ -304,6 +313,8 @@ def cheap_check(job: Job, cfg: dict) -> Verdict:
         return Verdict(False, "lieu")
     if SENIOR_RE.search(t) and not re.search(r"\b(assistant|analyst|associate) to\b", t, re.I):
         return Verdict(False, "titre trop senior")
+    if INTERN_RE.search(t) and not re.search(r"\bv\.?i\.?e\b|volontariat", t, re.I):
+        return Verdict(False, "stage / CDD / temps partiel")
     if re.search(r"relationship manager", t, re.I) and not JUNIOR_RE.search(t):
         return Verdict(False, "relationship manager (portefeuille)")
     neg = TITLE_NEG_RE.search(t)
@@ -344,9 +355,9 @@ def classify(title: str, text: str):
         return "", 0, "Intitulé et annonce sans lien avec IR / distribution / client / produit"
     counts.sort(key=lambda c: (-c[0], -c[1]))
     n, pts, label, hits = counts[0]
-    if n < 2:
-        return label, max(0, pts - 3), f"Intitulé vague, un seul indice ({hits[0]}) : {label} peu probable"
-    pts = max(1, pts - 1)
+    if n < 3 or pts < 3:
+        return label, 0, f"Intitulé vague et annonce peu claire ({', '.join(hits[:3])}) : hors cible"
+    pts = pts - 1
     return label, pts, f"Intitulé vague ; l'annonce parle surtout de {', '.join(hits[:4])} → {label}"
 
 
@@ -362,6 +373,8 @@ def full_check(job: Job, cfg: dict) -> Verdict:
             return Verdict(False, "lieu")
 
     base = dict(excerpt=_excerpt(text) if text else "", description=text)
+    if INTERN_DESC_RE.search(text[:3000]) and not re.search(r"\bv\.?i\.?e\b|volontariat", t + text[:500], re.I):
+        return Verdict(False, "stage / CDD / temps partiel", **base)
 
     # ---- langues (tout sauf français / anglais)
     langs = language_requirements(text) if text else {}
@@ -408,7 +421,7 @@ def full_check(job: Job, cfg: dict) -> Verdict:
 
     # ---- métier (critère /4)
     fam, met, mwhy = classify(t, text)
-    if met == 0:
+    if met <= 1:
         return Verdict(False, "métier hors cible", min_years=years, chinese=chinese, other_langs=other, **base)
     if fam.startswith("Investissement"):
         cons.append("Poste d'investissement (analyse, modélisation) plutôt que relation investisseurs / distribution")

@@ -52,7 +52,7 @@ assert prov == "openrouter" and "gemini" in ai_score.EXHAUSTED, (prov, ai_score.
 
 # 4) jobwatch.apply_ai : note décomposée, exclusion langue par l'IA
 ai_score.EXHAUSTED.clear()
-j = Job("t", "Carlyle", "1", "Analyst", "Hong Kong", "u",
+j = Job("t", "Carlyle", "1", "Distribution Analyst", "Hong Kong", "u",
         description="Fund distribution analyst for wholesale clients, asset management. 2 years of experience.")
 j.first_seen = "2026-11-17"
 v = full_check(j, cfg)

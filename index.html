@@ -107,6 +107,9 @@ main{max-width:820px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-rig
 .d-title{font-family:var(--font-head);font-size:21px;line-height:1.25;margin:0 0 4px;overflow-wrap:anywhere}
 .d-meta{color:var(--muted);font-size:14px}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin-top:12px}
+.box-h{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}.box-h h3{margin-top:4px}
+.mini{flex:none;border:1px solid var(--accent);color:var(--accent);background:none;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:600;cursor:pointer;min-height:34px}
+.mini:disabled{opacity:.5;cursor:default}
 .box h3{font-family:var(--font-head);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600}
 .score-top{display:flex;align-items:center;gap:12px}
 .score-top .note{width:62px;height:62px;font-size:26px}
@@ -162,14 +165,13 @@ main{max-width:820px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-rig
 .prog .dot{width:22px;height:22px;border:3px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:spin .9s linear infinite;flex:none}
 .cov{height:10px;border-radius:999px;background:var(--low-bg);overflow:hidden;margin:6px 0}
 .cov i{display:block;height:100%;background:var(--good)}
-.toast{position:fixed;left:50%;bottom:calc(var(--navh) + var(--safe-b) + 14px);transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:60;max-width:calc(100vw - 32px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.toast{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 64px);transform:translateX(-50%);background:var(--fg);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:14px;z-index:60;max-width:calc(100vw - 32px);box-shadow:0 6px 20px rgba(0,0,0,.2)}
 
 @media (min-width:860px){
   body{padding-bottom:24px}
   .nav{position:sticky;top:auto;bottom:auto;max-width:820px;margin:12px auto 0;border:1px solid var(--line);border-radius:14px;overflow:hidden}
   .nav button{height:48px;flex-direction:row;gap:8px;font-size:14px}
   .nav .badge{position:static}
-  .toast{bottom:24px}
 }
 .gauges{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
 .g-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)} .g-head b{color:var(--fg)}
@@ -343,7 +345,7 @@ async function load(){
   $("btn-refresh").classList.add("spin");
   try{
     const got=await fetchFirst("out/jobs.json");
-    if(got){const raw=await got.r.json();if(Array.isArray(raw)){DATA=normalize(raw);
+    if(got){const raw=await got.r.json();if(Array.isArray(raw)){DATA=normalize(raw);applyOverrides();
       let meta=null;try{const rm=await fetch(got.url.replace("jobs.json","meta.json"),{cache:"no-store"});if(rm.ok)meta=await rm.json()}catch(e){}
       META={meta,at:got.r.headers.get("last-modified")||"",loadedAt:new Date().toISOString()};$("banner").hidden=true}}
     else{$("banner").textContent="Impossible de lire out/jobs.json : vérifie que le script a tourné au moins une fois dans GitHub (onglet Actions).";$("banner").hidden=false}
@@ -428,6 +430,62 @@ function renderOffres(){
   const ai=M&&M.ai_error;if(ai&&DATA.length){$("banner").textContent="Dernière erreur IA : "+ai;$("banner").hidden=false}
 }
 
+const PROMPT_FALLBACK={"system": "Tu es un recruteur expert en gestion d'actifs et private markets en Asie (Hong Kong, Singapour, Tokyo).\nTu évalues des offres d'emploi pour Théo et réponds UNIQUEMENT par un objet JSON valide, rédigé en FRANÇAIS.", "rubric": "BARÈME STRICT. Tu es exigeant, comme un recruteur qui reçoit 300 candidatures : une offre moyenne vaut 4 à 6,\n8 = très bon fit, 9-10 = poste quasi taillé pour lui (moins de 5 % des offres). Dans le doute, prends la note inférieure.\n- metier (0-4) : 4 SEULEMENT si le poste est exactement relations investisseurs / levée de fonds, distribution ou vente de fonds,\n  ou client coverage de fonds, DANS une société de gestion / private markets / wealth ; 3 = proche (product specialist, client service\n  / reporting / RFP-DDQ, corporate access, graduate programme finance, sales de fonds dans une banque) ; 2 = transposable (vente / BD\n  hors gestion d'actifs, marketing, business management, fintech) ; 1 = éloigné (investissement : analyse de fonds, deals,\n  modélisation ; opérations) ; 0 = sans rapport.\n- niveau (0-3) : il a environ 1,5 an d'expérience réelle (alternance + stages). 3 = explicitement junior / graduate / VIE avec 0-1 an\n  demandé ; 2 = 2 ans demandés, ou « Associate », ou niveau non précisé ; 1 = 3 ans, « Manager », « Specialist » confirmé ;\n  0 = senior.\n- secteur (0-2) : 2 = société de gestion, private markets, hedge fund, wealth management ; 1 = banque, assurance, bourse, fintech\n  financière ; 0 = autre.\n- atouts (0-1) : 1 UNIQUEMENT si un élément précis de l'annonce correspond à un fait précis de son CV qui le distingue\n  (ex. : levée de fonds / LPs, RFP-DDQ, distribution wholesale, français demandé, VIE ou groupe français). Sinon 0.\nJustifie chaque note par un fait de l'annonce ET de son CV, sans flatterie. Dans cons, cite les vraies faiblesses (années,\nconcurrence locale, écart de métier).\nEXCLUSION (exclude = true) si : stage / internship / alternance / CDD court / temps partiel (il a fini ses études ; un VIE est\naccepté) ; metier <= 1 (poste hors de sa cible) ; une langue autre que français / anglais est exigée ou fortement souhaitée\n(mandarin, cantonais, japonais, coréen, « langue locale », « bilingue chinois »…, ou annonce rédigée dans cette langue) ;\nplus de 3 ans d'expérience exigés ; poste clairement senior. Une langue seulement « un plus / advantage » n'exclut PAS :\nmets-la dans languages_preferred.", "example": {"scores": {"metier": 3, "niveau": 2, "secteur": 1, "atouts": 0}, "explain": {"metier": "Support produit aux banquiers privés : proche de ta distribution chez Audacia, mais pas de la vente de fonds directe.", "niveau": "2 ans demandés, tu en as ~1,5 : juste.", "secteur": "Banque privée, pas une société de gestion.", "atouts": "Rien dans l'annonce ne te distingue nettement des candidats locaux."}, "exclude": false, "exclude_reason": "", "languages_required": [], "languages_preferred": ["mandarin"], "years_required": 2, "role": "Support produit et ventes (banque privée)", "level": "Junior+ (2 ans)", "summary": "Soutien de l'équipe de distribution wholesale Asie : supports de vente, RFP, suivi des distributeurs. Rattaché au head of wholesale Hong Kong.", "pros": ["Métier identique à ton poste chez Audacia", "Anglais suffisant"], "cons": ["Mandarin apprécié : candidats locaux avantagés"], "keywords": ["fund distribution", "wholesale", "RFP", "pitch book", "Salesforce", "private banks", "IFA"]}, "ai_version": 5};
+/* ================= réanalyse d'une offre depuis le téléphone (même barème que le script) ================= */
+let PROMPT=null;
+async function loadPrompt(){const g=await fetchFirst("out/ai_prompt.json");if(g){try{PROMPT=await g.r.json()}catch(e){}}}
+const MAXP={metier:4,niveau:3,secteur:2,atouts:1},LABP={metier:"Métier",niveau:"Niveau",secteur:"Secteur",atouts:"Atouts"};
+function cvTextJs(cv){const L=[`${cv.name||""} — ${cv.headline||""}`,cv.location_line||"","EXPÉRIENCE :"];
+  (cv.experience||[]).forEach(e=>{L.push(`- ${e.title} | ${e.company} | ${e.location} | ${e.dates}`);(e.bullets||[]).forEach(b=>L.push("  • "+b))});
+  L.push("FORMATION :");(cv.education||[]).forEach(e=>L.push(`- ${e.degree} | ${e.school} | ${e.dates} — ${e.details||""}`));
+  L.push("COMPÉTENCES :");(cv.skills||[]).forEach(s=>L.push(`- ${s.label} : ${s.text}`));return L.filter(Boolean).join("\n")}
+function analysePrompt(o){const P=PROMPT||PROMPT_FALLBACK;
+  return `${P.system}\n\nPROFIL DE THÉO\n${cvTextJs(BASE_CV)}\nLangues parlées : français et anglais UNIQUEMENT.\nCe qu'il cherche : ${BASE_CV.target||""}\n\n${P.rubric}\n\n`+
+    `OFFRE\nIntitulé : ${o.title}\nEntreprise : ${o.company}\nLieu : ${o.location}\n\nAnnonce complète :\n${(o.description||"").slice(0,15000)}\n\n`+
+    `Réponds avec un objet JSON exactement de cette forme (valeurs à remplacer, textes EN FRANÇAIS, pros/cons : 2 à 4 phrases courtes chacune, keywords : 10 à 20 mots-clés ATS en anglais tirés de l'annonce) :\n`+JSON.stringify(P.example)}
+function repairJson(t){let out="",st=[],ins=false,esc=false;for(const ch of t){if(ins){if(esc)esc=false;else if(ch==="\\")esc=true;else if(ch==='"')ins=false;else if(ch==="\n"){out+="\\n";continue}}
+  else{if(ch==='"')ins=true;else if(ch==="{"||ch==="[")st.push(ch==="{"?"}":"]");else if(ch==="}"||ch==="]")st.pop()}out+=ch}
+  if(ins)out+='"';out=out.replace(/,\s*$/,"").replace(/(:\s*)$/,'$1""')+st.reverse().join("");return out.replace(/,\s*([}\]])/g,"$1")}
+function parseLoose(t){t=String(t||"").replace(/^```(?:json)?|```$/gm,"").trim();const a=t.indexOf("{");if(a<0)throw new Error("réponse illisible");t=t.slice(a);
+  for(let b=t.lastIndexOf("}");b>0;b=t.lastIndexOf("}",b-1)){try{return JSON.parse(t.slice(0,b+1))}catch(e){}if(t.length-b>4000)break}
+  for(let i=0;i<40;i++){try{return JSON.parse(repairJson(t))}catch(e){const c=t.lastIndexOf(",");if(c<0)throw new Error("réponse illisible");t=t.slice(0,c)}}
+  throw new Error("réponse illisible")}
+const lst=v=>Array.isArray(v)?v.map(x=>typeof x==="string"?x.trim():JSON.stringify(x)).filter(x=>x&&x.length>1):(v?String(v).split(/\n+|;\s+|(?<=[.!?])\s+(?=[A-ZÀ-Ý])/).map(x=>x.replace(/^[-•*\s]+/,"").trim()).filter(Boolean):[]);
+const notLang=x=>!/^(english|anglais|french|français|none|aucune?|n\/?a)$/i.test(x.trim());
+function applyAi(o,r,model){
+  const sc=r.scores||{};if(!Object.keys(MAXP).some(k=>k in sc))throw new Error("notes absentes de la réponse");
+  const num=(v,m)=>Math.max(0,Math.min(m,Math.round(parseFloat(String(v==null?0:v).replace(",","."))||0)));
+  const ex=r.explain||{},req=lst(r.languages_required).filter(notLang),pref=lst(r.languages_preferred).filter(notLang);
+  const parts=Object.entries(MAXP).map(([k,m])=>({k,label:LABP[k],pts:num(sc[k],m),max:m,why:lst(ex[k]).join(" ")}));
+  if(pref.length)parts.push({k:"langue",label:"Langue",pts:-1,max:0,why:"Autre langue appréciée (pas exigée) : "+pref.join(", ")});
+  const yrs=num(r.years_required,30),met=parts[0].pts;
+  const excl=r.exclude===true||String(r.exclude).toLowerCase()==="true"||req.length>0||yrs>3||met<=1;
+  return {...o,parts,note10:Math.max(0,Math.min(10,parts.reduce((a,p)=>a+p.pts,0))),summary:lst(r.summary).join(" "),pros:lst(r.pros).slice(0,5),cons:lst(r.cons).slice(0,5),
+    keywords:lst(r.keywords).filter(k=>k.length<60).slice(0,25),role:String(r.role||o.role),level:String(r.level||o.level),years:yrs||o.years,
+    other_langs:[...req.map(x=>x+" requis"),...pref.map(x=>x+" souhaité")],langs_ok:!req.length&&!pref.length,
+    excluded:excl,excluded_reason:excl?(String(r.exclude_reason||"")||(req.length?"langue exigée : "+req.join(", "):yrs>3?yrs+" ans demandés":"métier hors cible"))+" (IA)":"",
+    note_source:"ia",ai_model:model+" · réanalysée ici le "+fmtDate(today()),reanalysed:true};
+}
+function applyOverrides(){const ov=jget("jw_reanalyse",{});DATA=DATA.map(o=>{const v=ov[hid(keyOf(o))];return v?{...o,...v}:o})}
+async function reanalyse(o){
+  const s=S();
+  if(!s.key){toast("Ajoute ta clé IA dans les Réglages",3500);fillSettings();openSheet("sh-settings");return}
+  if(!BASE_CV)await loadCv();if(!BASE_CV){toast(CV_SRC,4000);return}
+  if(!o.description){toast("Annonce non lue par le script : impossible de la réanalyser",4000);return}
+  const btn=$("d-rean");if(btn){btn.disabled=true;btn.textContent="Analyse en cours…"}
+  try{
+    if(!PROMPT)await loadPrompt();
+    let r,last;
+    for(let i=0;i<2;i++){r=await aiCall(s,analysePrompt(o)+(i?"\n\nRéponds avec un JSON COMPACT et VALIDE, sans texte autour.":""),90);
+      try{last=applyAi(o,parseLoose(r.text),r.model);break}catch(e){last=null;if(i)throw e}}
+    const keep=["parts","note10","summary","pros","cons","keywords","role","level","years","other_langs","langs_ok","excluded","excluded_reason","note_source","ai_model","reanalysed"];
+    const ov=jget("jw_reanalyse",{});ov[hid(keyOf(o))]=Object.fromEntries(keep.map(k=>[k,last[k]]));lsSet("jw_reanalyse",JSON.stringify(ov));
+    const i=DATA.indexOf(o);if(i>=0)DATA[i]=last;CUR=last;
+    const h=detailHtml(last);$("d-body").innerHTML=h.body;$("d-actions").innerHTML=h.actions;
+    toast(last.excluded?"Réanalysée : offre exclue ("+last.excluded_reason+")":"Réanalysée : "+last.note10+"/10",3500);
+  }catch(e){toast("Échec de la réanalyse : "+e.message,4500);if(btn){btn.disabled=false;btn.textContent="Réanalyser avec l'IA"}}
+}
+
 /* ================= jauges du dernier passage ================= */
 function nextRun(iso){/* passages à 7h, 11h, 15h, 19h heure de Paris */
   const now=new Date(),h=+now.toLocaleString("en-GB",{timeZone:"Europe/Paris",hour:"2-digit",hour12:false});
@@ -469,7 +527,7 @@ function detailHtml(o){
   if(o.parts.length){crit=o.parts.map(p=>`<div class="crit"><div class="lab">${esc(p.label)}</div>${bar(p)}<div class="pts">${p.max?p.pts+"/"+p.max:(p.pts>0?"+":"")+p.pts}</div><div class="why">${esc(p.why)}</div></div>`).join("")}
   else if(o.why.length){crit=`<ul style="margin:10px 0 0;padding-left:18px">${o.why.map(w=>`<li>${esc(w)}</li>`).join("")}</ul>`}
   const src=o.note_source==="ia"?`Analyse IA avec ton CV${o.ai_model?" ("+esc(o.ai_model)+")":""}`:"Règles automatiques (l'IA n'est pas encore passée sur cette offre)";
-  const scoreBox=`<div class="box"><h3>Comment est faite la note</h3><div class="score-top"><div class="note ${noteCls(o)}">${nv}<small>/10</small></div>
+  const scoreBox=`<div class="box"><div class="box-h"><h3>Comment est faite la note</h3><button class="mini" type="button" id="d-rean"${o.description?"":" disabled"}>Réanalyser avec l'IA</button></div><div class="score-top"><div class="note ${noteCls(o)}">${nv}<small>/10</small></div>
     <div><div style="font-weight:600">${o.excluded?"Offre exclue : "+esc(o.excluded_reason):o.note10>=8?"Très bon fit":o.note10>=6?"Fit correct":o.note10>=4?"Fit moyen":"Peu adapté"}</div><div class="src">${src}</div></div></div>${crit}</div>`;
   const sum=o.summary?`<div class="sum">${esc(o.summary)}</div>`:"";
   const pc=(o.pros.length||o.cons.length)?`<div class="box pc"><h3>Pour toi</h3>${o.pros.length?`<ul class="ok">${o.pros.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}${o.cons.length?`<ul class="ko" style="margin-top:8px">${o.cons.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</div>`:"";
@@ -803,7 +861,7 @@ $("d-actions").addEventListener("click",e=>{
   const b=e.target.closest("[data-st]");if(b&&CUR){setStatus(CUR,b.dataset.st);toast(stOf(CUR)?"Marquée : "+ST[stOf(CUR)]:"Statut retiré");return}
   if(e.target.closest("#d-cv")&&CUR)genCv(CUR,false);
 });
-$("d-body").addEventListener("click",e=>{if(e.target.id==="ft-more"){$("ft").classList.remove("clip");e.target.remove()}});
+$("d-body").addEventListener("click",e=>{if(e.target.id==="d-rean"&&CUR){reanalyse(CUR);return}if(e.target.id==="ft-more"){$("ft").classList.remove("clip");e.target.remove()}});
 $("nav").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(!b)return;TAB=b.dataset.tab;history.replaceState(history.state,"","#"+TAB);window.scrollTo(0,0);renderAll()});
 ["so","fl","fn","fc","fs"].forEach(id=>$(id).addEventListener("change",()=>{saveF();renderAll()}));
 $("q").addEventListener("input",()=>renderAll());
