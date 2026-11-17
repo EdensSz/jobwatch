@@ -1571,5 +1571,10 @@
   "first_seen": "2026-11-16",
   "rej": "fit insuffisant (0)",
   "checked": "2026-11-16"
+ },
+ "HSBC::563774612507240": {
+  "first_seen": "2026-11-17",
+  "rej": "fit insuffisant (0)",
+  "checked": "2026-11-17"
  }
 }

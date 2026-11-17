@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-17T01:20:18Z",
- "generated_paris": "17/11/2026 02:20",
+ "generated_at": "2026-11-17T08:35:24Z",
+ "generated_paris": "17/11/2026 09:35",
  "offers_total": 80,
  "offers_kept": 30,
  "new_today": 0,
@@ -57,10 +57,11 @@
   },
   {
    "name": "Franklin Templeton",
-   "ok": true,
+   "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Blackstone",
@@ -113,7 +114,7 @@
   {
    "name": "HSBC",
    "ok": true,
-   "read": 265,
+   "read": 270,
    "kept": 0,
    "reused": 69
   },
@@ -188,5 +189,22 @@
    "reused": 0,
    "error": "401 Client Error: Unauthorized for url: https://api-mon-vie-via.businessfrance.fr/api/Offers/search"
   }
- ]
+ ],
+ "seconds": 43,
+ "ai_provider": "openrouter",
+ "ai_reviewed": 30,
+ "ai_models": [
+  "baidu/ernie-5.5-flash-preview:free",
+  "cohere/north-mini-code:free",
+  "dots-studio/dots-3-note-preview:free",
+  "inclusionai/ling-3.2-flash:free",
+  "liquid/lfm-3-1.7b:free",
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "nvidia/nemotron-3.5-lightning:free",
+  "nvidia/nemotron-3.5-super-vl:free",
+  "particle-ai/particle-1:free",
+  "recursive/flint-v1.0:free"
+ ],
+ "ai_error": ""
 }
