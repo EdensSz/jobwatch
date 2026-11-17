@@ -1,53 +1,59 @@
 {
- "generated_at": "2026-11-16T18:27:00Z",
- "generated_paris": "16/11/2026 19:27",
+ "generated_at": "2026-11-17T01:20:18Z",
+ "generated_paris": "17/11/2026 02:20",
  "offers_total": 80,
  "offers_kept": 30,
- "new_today": 30,
- "reused_from_previous": 0,
- "ai_calls": 35,
+ "new_today": 0,
+ "reused_from_previous": 80,
+ "ai_calls": 0,
  "sources": [
   {
    "name": "Fidelity International",
-   "ok": true,
-   "read": 14,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 2,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "BlackRock",
-   "ok": true,
-   "read": 21,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 2,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Invesco",
-   "ok": true,
-   "read": 13,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "T. Rowe Price",
-   "ok": true,
-   "read": 9,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "AllianceBernstein",
-   "ok": true,
-   "read": 3,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "abrdn",
-   "ok": true,
-   "read": 6,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Franklin Templeton",
@@ -58,108 +64,121 @@
   },
   {
    "name": "Blackstone",
-   "ok": true,
-   "read": 9,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Carlyle",
-   "ok": true,
-   "read": 8,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 2,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Ares",
-   "ok": true,
-   "read": 8,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Brookfield",
-   "ok": true,
-   "read": 4,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 1,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Hamilton Lane",
-   "ok": true,
-   "read": 5,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 2,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Manulife",
-   "ok": true,
-   "read": 583,
-   "kept": 6,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 15,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "HSBC",
    "ok": true,
    "read": 265,
-   "kept": 9,
-   "reused": 0
+   "kept": 0,
+   "reused": 69
   },
   {
    "name": "Morgan Stanley",
-   "ok": true,
-   "read": 70,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 3,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
    "read": 150,
-   "kept": 5,
-   "reused": 0
+   "kept": 0,
+   "reused": 13
   },
   {
    "name": "Julius Baer",
-   "ok": true,
-   "read": 75,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 6,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "State Street",
-   "ok": true,
-   "read": 37,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 4,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Northern Trust",
-   "ok": true,
-   "read": 1,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Deutsche Bank",
-   "ok": true,
-   "read": 53,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "Barclays",
-   "ok": true,
-   "read": 38,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "UOB",
-   "ok": true,
-   "read": 818,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 4,
+   "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "VIE Business France",
