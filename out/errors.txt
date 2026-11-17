@@ -1,346 +1,80 @@
-Fidelity International: AttributeError: 'NoneType' object has no attribute 'json'
-AllianceBernstein: AttributeError: 'NoneType' object has no attribute 'json'
-abrdn: AttributeError: 'NoneType' object has no attribute 'json'
-Blackstone: AttributeError: 'NoneType' object has no attribute 'json'
-Carlyle: AttributeError: 'NoneType' object has no attribute 'json'
-Brookfield: AttributeError: 'NoneType' object has no attribute 'json'
-Manulife: AttributeError: 'NoneType' object has no attribute 'json'
-Morgan Stanley: AttributeError: 'NoneType' object has no attribute 'json'
-Julius Baer: AttributeError: 'NoneType' object has no attribute 'json'
-State Street: AttributeError: 'NoneType' object has no attribute 'json'
-Deutsche Bank: AttributeError: 'NoneType' object has no attribute 'json'
-UOB: AttributeError: 'NoneType' object has no attribute 'json'
+Fidelity International: HTTPError: 429 après 5 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs
+BlackRock: HTTPError: 429 après 5 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs
+Invesco: HTTPError: 429 après 5 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs
+T. Rowe Price: HTTPError: 429 après 5 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs
+AllianceBernstein: HTTPError: 429 après 5 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs
+abrdn: HTTPError: 429 après 5 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs
+Blackstone: HTTPError: 429 après 5 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs
+Carlyle: HTTPError: 429 après 5 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs
+Ares: HTTPError: 429 après 5 essai(s) pour https://aresmgmt.wd1.myworkdayjobs.com/wday/cxs/aresmgmt/External/jobs
+Brookfield: HTTPError: 429 après 5 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs
+Hamilton Lane: HTTPError: 429 après 5 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs
+Manulife: HTTPError: 429 après 5 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs
+Morgan Stanley: HTTPError: 429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs
+Julius Baer: HTTPError: 429 après 5 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs
+State Street: HTTPError: 429 après 5 essai(s) pour https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs
+Northern Trust: HTTPError: 429 après 5 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs
+Deutsche Bank: HTTPError: 429 après 5 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs
+Barclays: HTTPError: 429 après 5 essai(s) pour https://barclays.wd3.myworkdayjobs.com/wday/cxs/barclays/External_Career_Site_Barclays/jobs
+UOB: HTTPError: 429 après 5 essai(s) pour https://uobgroup.wd3.myworkdayjobs.com/wday/cxs/uobgroup/UOBExternal/jobs
 VIE Business France: HTTPError: 401 Client Error: Unauthorized for url: https://api-mon-vie-via.businessfrance.fr/api/Offers/search
-Bain Capital: AttributeError: 'NoneType' object has no attribute 'json'
-Apollo: AttributeError: 'NoneType' object has no attribute 'json'
-Oaktree: AttributeError: 'NoneType' object has no attribute 'json'
-Blue Owl: AttributeError: 'NoneType' object has no attribute 'json'
-HarbourVest: AttributeError: 'NoneType' object has no attribute 'json'
-ICG: AttributeError: 'NoneType' object has no attribute 'json'
-PineBridge Investments: AttributeError: 'NoneType' object has no attribute 'json'
-Brevan Howard: AttributeError: 'NoneType' object has no attribute 'json'
-PIMCO: AttributeError: 'NoneType' object has no attribute 'json'
-Wellington Management: AttributeError: 'NoneType' object has no attribute 'json'
-Capital Group: AttributeError: 'NoneType' object has no attribute 'json'
-Neuberger Berman: AttributeError: 'NoneType' object has no attribute 'json'
-Fidelity Investments: AttributeError: 'NoneType' object has no attribute 'json'
-Guggenheim: AttributeError: 'NoneType' object has no attribute 'json'
-Eastspring (Prudential): AttributeError: 'NoneType' object has no attribute 'json'
-Lombard Odier: AttributeError: 'NoneType' object has no attribute 'json'
-Morgan Stanley Wealth (private): AttributeError: 'NoneType' object has no attribute 'json'
-Citi: AttributeError: 'NoneType' object has no attribute 'json'
-DBS: AttributeError: 'NoneType' object has no attribute 'json'
-MUFG: AttributeError: 'NoneType' object has no attribute 'json'
-ING: AttributeError: 'NoneType' object has no attribute 'json'
-Santander: AttributeError: 'NoneType' object has no attribute 'json'
-RBC: AttributeError: 'NoneType' object has no attribute 'json'
-TD Securities: AttributeError: 'NoneType' object has no attribute 'json'
-PJT Partners (Park Hill): AttributeError: 'NoneType' object has no attribute 'json'
-PwC: AttributeError: 'NoneType' object has no attribute 'json'
-PwC (campus / graduate): AttributeError: 'NoneType' object has no attribute 'json'
-AIA: AttributeError: 'NoneType' object has no attribute 'json'
-Prudential: AttributeError: 'NoneType' object has no attribute 'json'
-FWD: AttributeError: 'NoneType' object has no attribute 'json'
-Sun Life: AttributeError: 'NoneType' object has no attribute 'json'
-AIG: AttributeError: 'NoneType' object has no attribute 'json'
-HKEX: AttributeError: 'NoneType' object has no attribute 'json'
-LSEG: AttributeError: 'NoneType' object has no attribute 'json'
-S&P Global: AttributeError: 'NoneType' object has no attribute 'json'
-Morningstar: AttributeError: 'NoneType' object has no attribute 'json'
-Broadridge: AttributeError: 'NoneType' object has no attribute 'json'
-JLL (immobilier / capital markets): AttributeError: 'NoneType' object has no attribute 'json'
-Visa: AttributeError: 'NoneType' object has no attribute 'json'
-Mastercard: AttributeError: 'NoneType' object has no attribute 'json'
-PayPal: AttributeError: 'NoneType' object has no attribute 'json'
-Global Payments (TSYS): AttributeError: 'NoneType' object has no attribute 'json'
-Fiserv: AttributeError: 'NoneType' object has no attribute 'json'
-Nium: HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/nium?mode=json
-Crypto.com: HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/crypto?mode=json
-Anchorage Digital: HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/anchorage?mode=json
-Salesforce: AttributeError: 'NoneType' object has no attribute 'json'
-Workday: AttributeError: 'NoneType' object has no attribute 'json'
-Adobe: AttributeError: 'NoneType' object has no attribute 'json'
-NVIDIA: AttributeError: 'NoneType' object has no attribute 'json'
-HP: AttributeError: 'NoneType' object has no attribute 'json'
-HPE: AttributeError: 'NoneType' object has no attribute 'json'
-Samsung: AttributeError: 'NoneType' object has no attribute 'json'
-CrowdStrike: AttributeError: 'NoneType' object has no attribute 'json'
-Equinix: AttributeError: 'NoneType' object has no attribute 'json'
-Palantir: HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/palantir?mode=json
-Ninja Van: HTTPError: 500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/ninjavan?mode=json
-Amazon / AWS: ValueError: type inconnu : amazon
-Intel: AttributeError: 'NoneType' object has no attribute 'json'
-Dell: HTTPError: 422 Client Error: Unprocessable Entity for url: https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs
-Nike: AttributeError: 'NoneType' object has no attribute 'json'
-Philips: AttributeError: 'NoneType' object has no attribute 'json'
-Shell: AttributeError: 'NoneType' object has no attribute 'json'
-Unilever: AttributeError: 'NoneType' object has no attribute 'json'
-Macquarie: AttributeError: 'NoneType' object has no attribute 'json'
-UBS: HTTPError: 422 Client Error: Unprocessable Entity for url: https://ubs.wd3.myworkdayjobs.com/wday/cxs/ubs/UBS_Experienced_Professionals/jobs
-Moody's: HTTPError: 422 Client Error: Unprocessable Entity for url: https://moodys.wd5.myworkdayjobs.com/wday/cxs/moodys/moodys/jobs
-MSCI: AttributeError: 'NoneType' object has no attribute 'json'
-BNY: HTTPError: 404 Client Error: NOT FOUND for url: https://bnymellon.eightfold.ai/api/apply/v2/jobs?domain=bnymellon.com&start=0&num=25&location=Hong+Kong&sort_by=t
-OpenAI: ValueError: type inconnu : auto
-Scale AI: ValueError: type inconnu : auto
-Notion: ValueError: type inconnu : auto
-Ramp: ValueError: type inconnu : auto
-Rippling: ValueError: type inconnu : auto
-Deel: ValueError: type inconnu : auto
-Brex: ValueError: type inconnu : auto
-Plaid: ValueError: type inconnu : auto
-Robinhood: ValueError: type inconnu : auto
-Affirm: ValueError: type inconnu : auto
-Chime: ValueError: type inconnu : auto
-Dropbox: ValueError: type inconnu : auto
-DoorDash: ValueError: type inconnu : auto
-Lyft: ValueError: type inconnu : auto
-Reddit: ValueError: type inconnu : auto
-Discord: ValueError: type inconnu : auto
-Snowflake: ValueError: type inconnu : auto
-Asana: ValueError: type inconnu : auto
-HubSpot: ValueError: type inconnu : auto
-Intercom: ValueError: type inconnu : auto
-Canva: ValueError: type inconnu : auto
-Miro: ValueError: type inconnu : auto
-Airtable: ValueError: type inconnu : auto
-Gusto: ValueError: type inconnu : auto
-Coursera: ValueError: type inconnu : auto
-Duolingo: ValueError: type inconnu : auto
-Roblox: ValueError: type inconnu : auto
-Unity: ValueError: type inconnu : auto
-Epic Games: ValueError: type inconnu : auto
-Riot Games: ValueError: type inconnu : auto
-Block: ValueError: type inconnu : auto
-Toast: ValueError: type inconnu : auto
-Samsara: ValueError: type inconnu : auto
-Confluent: ValueError: type inconnu : auto
-HashiCorp: ValueError: type inconnu : auto
-Snyk: ValueError: type inconnu : auto
-Wiz: ValueError: type inconnu : auto
-Vanta: ValueError: type inconnu : auto
-Gong: ValueError: type inconnu : auto
-Klaviyo: ValueError: type inconnu : auto
-Braze: ValueError: type inconnu : auto
-Amplitude: ValueError: type inconnu : auto
-Mixpanel: ValueError: type inconnu : auto
-Algolia: ValueError: type inconnu : auto
-Contentful: ValueError: type inconnu : auto
-Postman: ValueError: type inconnu : auto
-Grammarly: ValueError: type inconnu : auto
-Calendly: ValueError: type inconnu : auto
-Zapier: ValueError: type inconnu : auto
-Webflow: ValueError: type inconnu : auto
-Retool: ValueError: type inconnu : auto
-Vercel: ValueError: type inconnu : auto
-Cohere: ValueError: type inconnu : auto
-Hugging Face: ValueError: type inconnu : auto
-Perplexity: ValueError: type inconnu : auto
-Anduril: ValueError: type inconnu : auto
-SpaceX: ValueError: type inconnu : auto
-Spotify: ValueError: type inconnu : auto
-Uber: ValueError: type inconnu : auto
-Zoom: ValueError: type inconnu : auto
-Atlassian: ValueError: type inconnu : auto
-Shopify: ValueError: type inconnu : auto
-Squarespace: ValueError: type inconnu : auto
-Twitch: ValueError: type inconnu : auto
-Instacart: ValueError: type inconnu : auto
-Snap: ValueError: type inconnu : auto
-LinkedIn: ValueError: type inconnu : auto
-Bloomberg: ValueError: type inconnu : auto
-Google: ValueError: type inconnu : auto
-Apple: ValueError: type inconnu : auto
-Meta: ValueError: type inconnu : auto
-Oracle: ValueError: type inconnu : auto
-IBM: ValueError: type inconnu : auto
-Cisco: ValueError: type inconnu : auto
-AMD: ValueError: type inconnu : auto
-Qualcomm: ValueError: type inconnu : auto
-Accenture: ValueError: type inconnu : auto
-Revolut: ValueError: type inconnu : auto
-Monzo: ValueError: type inconnu : auto
-N26: ValueError: type inconnu : auto
-Klarna: ValueError: type inconnu : auto
-Checkout.com: ValueError: type inconnu : auto
-Rapyd: ValueError: type inconnu : auto
-Payoneer: ValueError: type inconnu : auto
-Marqeta: ValueError: type inconnu : auto
-Remitly: ValueError: type inconnu : auto
-Ebury: ValueError: type inconnu : auto
-Qonto: ValueError: type inconnu : auto
-Pennylane: ValueError: type inconnu : auto
-Swile: ValueError: type inconnu : auto
-Spendesk: ValueError: type inconnu : auto
-Ledger: ValueError: type inconnu : auto
-Kraken: ValueError: type inconnu : auto
-Circle: ValueError: type inconnu : auto
-Binance: ValueError: type inconnu : auto
-Bitpanda: ValueError: type inconnu : auto
-Animoca Brands: ValueError: type inconnu : auto
-HashKey: ValueError: type inconnu : auto
-Amber Group: ValueError: type inconnu : auto
-Matrixport: ValueError: type inconnu : auto
-Galaxy Digital: ValueError: type inconnu : auto
-Airwallex: ValueError: type inconnu : auto
-Aspire: ValueError: type inconnu : auto
-YouTrip: ValueError: type inconnu : auto
-Xendit: ValueError: type inconnu : auto
-dLocal: ValueError: type inconnu : auto
-Funding Societies: ValueError: type inconnu : auto
-Endowus: ValueError: type inconnu : auto
-StashAway: ValueError: type inconnu : auto
-Syfe: ValueError: type inconnu : auto
-Addepar: ValueError: type inconnu : auto
-iCapital: ValueError: type inconnu : auto
-Moonfare: ValueError: type inconnu : auto
-Allfunds: ValueError: type inconnu : auto
-Clearwater Analytics: ValueError: type inconnu : auto
-Juniper Square: ValueError: type inconnu : auto
-Forge Global: ValueError: type inconnu : auto
-Titanbay: ValueError: type inconnu : auto
-Yieldstreet: ValueError: type inconnu : auto
-Alan: ValueError: type inconnu : auto
-Lydia: ValueError: type inconnu : auto
-Bridgewater: ValueError: type inconnu : auto
-AQR: ValueError: type inconnu : auto
-Two Sigma: ValueError: type inconnu : auto
-Millennium: ValueError: type inconnu : auto
-Balyasny: ValueError: type inconnu : auto
-D. E. Shaw: ValueError: type inconnu : auto
-Man Group: ValueError: type inconnu : auto
-Marshall Wace: ValueError: type inconnu : auto
-Jane Street: ValueError: type inconnu : auto
-Optiver: ValueError: type inconnu : auto
-IMC Trading: ValueError: type inconnu : auto
-Hudson River Trading: ValueError: type inconnu : auto
-Jump Trading: ValueError: type inconnu : auto
-Citadel: ValueError: type inconnu : auto
-Tikehau Capital: ValueError: type inconnu : auto
-Ardian: ValueError: type inconnu : auto
-Eurazeo: ValueError: type inconnu : auto
-PAI Partners: ValueError: type inconnu : auto
-EQT: ValueError: type inconnu : auto
-CVC Capital Partners: ValueError: type inconnu : auto
-Permira: ValueError: type inconnu : auto
-Cinven: ValueError: type inconnu : auto
-Hg: ValueError: type inconnu : auto
-TPG: ValueError: type inconnu : auto
-Warburg Pincus: ValueError: type inconnu : auto
-Advent International: ValueError: type inconnu : auto
-Hillhouse: ValueError: type inconnu : auto
-PAG: ValueError: type inconnu : auto
-Partners Group: ValueError: type inconnu : auto
-Pantheon: ValueError: type inconnu : auto
-Adams Street: ValueError: type inconnu : auto
-Coller Capital: ValueError: type inconnu : auto
-Lexington Partners: ValueError: type inconnu : auto
-KKR: ValueError: type inconnu : auto
-Goldman Sachs: ValueError: type inconnu : auto
-Nomura: ValueError: type inconnu : auto
-Standard Chartered: ValueError: type inconnu : auto
-Schroders: ValueError: type inconnu : auto
-Amundi: ValueError: type inconnu : auto
-AXA Investment Managers: ValueError: type inconnu : auto
-Natixis: ValueError: type inconnu : auto
-Robeco: ValueError: type inconnu : auto
-Allianz Global Investors: ValueError: type inconnu : auto
-Vanguard: ValueError: type inconnu : auto
-Charles Schwab: ValueError: type inconnu : auto
-Nuveen: ValueError: type inconnu : auto
-Principal: ValueError: type inconnu : auto
-Temasek: ValueError: type inconnu : auto
-GIC: ValueError: type inconnu : auto
-Danone: ValueError: type inconnu : auto
-L'Oréal: ValueError: type inconnu : auto
-LVMH: ValueError: type inconnu : auto
-Kering: ValueError: type inconnu : auto
-Hermès: ValueError: type inconnu : auto
-Chanel: ValueError: type inconnu : auto
-Pernod Ricard: ValueError: type inconnu : auto
-Michelin: ValueError: type inconnu : auto
-Schneider Electric: ValueError: type inconnu : auto
-Capgemini: ValueError: type inconnu : auto
-Dassault Systèmes: ValueError: type inconnu : auto
-Airbus: ValueError: type inconnu : auto
-Safran: ValueError: type inconnu : auto
-Thales: ValueError: type inconnu : auto
-TotalEnergies: ValueError: type inconnu : auto
-Engie: ValueError: type inconnu : auto
-AXA: ValueError: type inconnu : auto
-Sanofi: ValueError: type inconnu : auto
-BNP Paribas: ValueError: type inconnu : auto
-Société Générale: ValueError: type inconnu : auto
-Crédit Agricole: ValueError: type inconnu : auto
-Nestlé: ValueError: type inconnu : auto
-Novartis: ValueError: type inconnu : auto
-Roche: ValueError: type inconnu : auto
-ABB: ValueError: type inconnu : auto
-Siemens: ValueError: type inconnu : auto
-SAP: ValueError: type inconnu : auto
-Allianz: ValueError: type inconnu : auto
-Adidas: ValueError: type inconnu : auto
-ASML: ValueError: type inconnu : auto
-Heineken: ValueError: type inconnu : auto
-BP: ValueError: type inconnu : auto
-Diageo: ValueError: type inconnu : auto
-Reckitt: ValueError: type inconnu : auto
-GSK: ValueError: type inconnu : auto
-AstraZeneca: ValueError: type inconnu : auto
-Booking.com: ValueError: type inconnu : auto
-Ubisoft: ValueError: type inconnu : auto
-Criteo: ValueError: type inconnu : auto
-Doctolib: ValueError: type inconnu : auto
-BlaBlaCar: ValueError: type inconnu : auto
-Mirakl: ValueError: type inconnu : auto
-Contentsquare: ValueError: type inconnu : auto
-Back Market: ValueError: type inconnu : auto
-Dataiku: ValueError: type inconnu : auto
-Vinted: ValueError: type inconnu : auto
-Bolt: ValueError: type inconnu : auto
-Delivery Hero: ValueError: type inconnu : auto
-Zalando: ValueError: type inconnu : auto
-Celonis: ValueError: type inconnu : auto
-Personio: ValueError: type inconnu : auto
-Bosch: ValueError: type inconnu : auto
-IKEA: ValueError: type inconnu : auto
-Mistral AI: ValueError: type inconnu : auto
-Procter & Gamble: ValueError: type inconnu : auto
-Coca-Cola: ValueError: type inconnu : auto
-PepsiCo: ValueError: type inconnu : auto
-Mondelez: ValueError: type inconnu : auto
-Johnson & Johnson: ValueError: type inconnu : auto
-Pfizer: ValueError: type inconnu : auto
-Estée Lauder: ValueError: type inconnu : auto
-McKinsey: ValueError: type inconnu : auto
-BCG: ValueError: type inconnu : auto
-Bain & Company: ValueError: type inconnu : auto
-Deloitte: ValueError: type inconnu : auto
-EY: ValueError: type inconnu : auto
-KPMG: ValueError: type inconnu : auto
-Sea Group: ValueError: type inconnu : auto
-Shopee: ValueError: type inconnu : auto
-Lazada: ValueError: type inconnu : auto
-Gojek: ValueError: type inconnu : auto
-ShopBack: ValueError: type inconnu : auto
-Carousell: ValueError: type inconnu : auto
-PropertyGuru: ValueError: type inconnu : auto
-Razer: ValueError: type inconnu : auto
-Lalamove: ValueError: type inconnu : auto
-Klook: ValueError: type inconnu : auto
-Trip.com: ValueError: type inconnu : auto
-Rakuten: ValueError: type inconnu : auto
-Mercari: ValueError: type inconnu : auto
-SmartNews: ValueError: type inconnu : auto
-Money Forward: ValueError: type inconnu : auto
-Sony: ValueError: type inconnu : auto
-Fast Retailing (Uniqlo): ValueError: type inconnu : auto
-TikTok / ByteDance: ValueError: type inconnu : auto
-Alibaba: ValueError: type inconnu : auto
-Tencent: ValueError: type inconnu : auto
-Ant International: ValueError: type inconnu : auto
-MyCareersFuture (Singapour): ValueError: type inconnu : mycareersfuture
-JobsDB (Hong Kong): ValueError: type inconnu : seek
-JobStreet (Singapour): ValueError: type inconnu : seek
-Jooble: ValueError: type inconnu : jooble
-Adzuna (Singapour): ValueError: type inconnu : adzuna
-Careerjet: ValueError: type inconnu : careerjet
+Bain Capital: HTTPError: 429 après 5 essai(s) pour https://baincapital.wd1.myworkdayjobs.com/wday/cxs/baincapital/External_Public/jobs
+Oaktree: HTTPError: 429 après 5 essai(s) pour https://oaktree.wd1.myworkdayjobs.com/wday/cxs/oaktree/Oaktree/jobs
+Blue Owl: HTTPError: 429 après 5 essai(s) pour https://blueowl.wd1.myworkdayjobs.com/wday/cxs/blueowl/BlueOwl/jobs
+HarbourVest: HTTPError: 429 après 5 essai(s) pour https://harbourvest.wd5.myworkdayjobs.com/wday/cxs/harbourvest/HVP/jobs
+ICG: HTTPError: 429 après 5 essai(s) pour https://icg.wd3.myworkdayjobs.com/wday/cxs/icg/External_Careers/jobs
+PineBridge Investments: HTTPError: 429 après 5 essai(s) pour https://pinebridge.wd5.myworkdayjobs.com/wday/cxs/pinebridge/PineBridge_Career_Site/jobs
+Brevan Howard: HTTPError: 429 après 5 essai(s) pour https://brevanhoward.wd3.myworkdayjobs.com/wday/cxs/brevanhoward/BH_ExternalCareers/jobs
+PIMCO: HTTPError: 429 après 5 essai(s) pour https://pimco.wd1.myworkdayjobs.com/wday/cxs/pimco/pimco-careers/jobs
+Wellington Management: HTTPError: 429 après 5 essai(s) pour https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs
+Capital Group: HTTPError: 429 après 5 essai(s) pour https://capgroup.wd1.myworkdayjobs.com/wday/cxs/capgroup/capitalgroupcareers/jobs
+Neuberger Berman: HTTPError: 429 après 5 essai(s) pour https://nb.wd1.myworkdayjobs.com/wday/cxs/nb/nbCareers/jobs
+Fidelity Investments: HTTPError: 429 après 5 essai(s) pour https://fmr.wd1.myworkdayjobs.com/wday/cxs/fmr/targeted/jobs
+Guggenheim: HTTPError: 429 après 5 essai(s) pour https://guggenheim.wd1.myworkdayjobs.com/wday/cxs/guggenheim/Guggenheim_Careers/jobs
+Eastspring (Prudential): HTTPError: 429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential_eastspring/jobs
+Lombard Odier: HTTPError: 429 après 5 essai(s) pour https://lombardodier.wd3.myworkdayjobs.com/wday/cxs/lombardodier/Lombard_Odier_Careers/jobs
+Morgan Stanley Wealth (private): HTTPError: 429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/private/jobs
+Citi: HTTPError: 429 après 5 essai(s) pour https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs
+DBS: HTTPError: 429 après 5 essai(s) pour https://dbs.wd3.myworkdayjobs.com/wday/cxs/dbs/Dbs_Careers/jobs
+MUFG: HTTPError: 429 après 5 essai(s) pour https://mufgub.wd3.myworkdayjobs.com/wday/cxs/mufgub/MUFG-Careers/jobs
+ING: HTTPError: 429 après 5 essai(s) pour https://ing.wd3.myworkdayjobs.com/wday/cxs/ing/ICSGBLCOR/jobs
+Santander: HTTPError: 429 après 5 essai(s) pour https://santander.wd3.myworkdayjobs.com/wday/cxs/santander/SantanderCareers/jobs
+RBC: HTTPError: 429 après 5 essai(s) pour https://rbc.wd3.myworkdayjobs.com/wday/cxs/rbc/RBCGLOBAL1/jobs
+TD Securities: HTTPError: 429 après 5 essai(s) pour https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs
+PJT Partners (Park Hill): HTTPError: 429 après 5 essai(s) pour https://pjtpartners.wd1.myworkdayjobs.com/wday/cxs/pjtpartners/Careers/jobs
+PwC: HTTPError: 429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs
+PwC (campus / graduate): HTTPError: 429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Campus_Careers/jobs
+AIA: HTTPError: 429 après 5 essai(s) pour https://aia.wd3.myworkdayjobs.com/wday/cxs/aia/External/jobs
+Prudential: HTTPError: 429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential/jobs
+FWD: HTTPError: 429 après 5 essai(s) pour https://fwd.wd3.myworkdayjobs.com/wday/cxs/fwd/FWDcareersite/jobs
+Sun Life: HTTPError: 429 après 5 essai(s) pour https://sunlife.wd3.myworkdayjobs.com/wday/cxs/sunlife/Experienced-Jobs/jobs
+AIG: HTTPError: 429 après 5 essai(s) pour https://aig.wd1.myworkdayjobs.com/wday/cxs/aig/aig/jobs
+HKEX: HTTPError: 429 après 5 essai(s) pour https://hkex.wd3.myworkdayjobs.com/wday/cxs/hkex/HKEXCareerPage/jobs
+LSEG: HTTPError: 429 après 5 essai(s) pour https://lseg.wd3.myworkdayjobs.com/wday/cxs/lseg/careers/jobs
+S&P Global: HTTPError: 429 après 5 essai(s) pour https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs
+Morningstar: HTTPError: 429 après 5 essai(s) pour https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/MORNINGSTAR/jobs
+Broadridge: HTTPError: 429 après 5 essai(s) pour https://broadridge.wd5.myworkdayjobs.com/wday/cxs/broadridge/Careers/jobs
+JLL (immobilier / capital markets): HTTPError: 429 après 5 essai(s) pour https://jll.wd1.myworkdayjobs.com/wday/cxs/jll/jllcareers/jobs
+Visa: HTTPError: 429 après 5 essai(s) pour https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs
+Mastercard: HTTPError: 429 après 5 essai(s) pour https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs
+PayPal: HTTPError: 429 après 5 essai(s) pour https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/Jobs/jobs
+Global Payments (TSYS): HTTPError: 429 après 5 essai(s) pour https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/tsys/jobs
+Fiserv: HTTPError: 429 après 5 essai(s) pour https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/Ext/jobs
+Salesforce: HTTPError: 429 après 5 essai(s) pour https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs
+Workday: HTTPError: 429 après 5 essai(s) pour https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs
+Adobe: HTTPError: 429 après 5 essai(s) pour https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs
+NVIDIA: HTTPError: 429 après 5 essai(s) pour https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs
+HP: HTTPError: 429 après 5 essai(s) pour https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs
+HPE: HTTPError: 429 après 5 essai(s) pour https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs
+Samsung: HTTPError: 429 après 5 essai(s) pour https://sec.wd3.myworkdayjobs.com/wday/cxs/sec/samsung_careers/jobs
+CrowdStrike: HTTPError: 429 après 5 essai(s) pour https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs
+Equinix: HTTPError: 429 après 5 essai(s) pour https://equinix.wd1.myworkdayjobs.com/wday/cxs/equinix/External/jobs
+Intel: HTTPError: 429 après 5 essai(s) pour https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs
+Nike: HTTPError: 429 après 5 essai(s) pour https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs
+Philips: HTTPError: 429 après 5 essai(s) pour https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs
+Shell: HTTPError: 429 après 5 essai(s) pour https://shell.wd3.myworkdayjobs.com/wday/cxs/shell/ShellCareers/jobs
+Unilever: HTTPError: 429 après 5 essai(s) pour https://unilever.wd3.myworkdayjobs.com/wday/cxs/unilever/Unilever_Experienced_Professionals/jobs
+Thomson Reuters: HTTPError: 429 après 5 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs
+Macquarie: HTTPError: 429 après 5 essai(s) pour https://mq.wd3.myworkdayjobs.com/wday/cxs/mq/CareersatMQ/jobs
+MSCI: HTTPError: 401 Client Error: Unauthorized for url: https://msci.wd1.myworkdayjobs.com/wday/cxs/msci/MSCI/jobs
+JobsDB (Hong Kong): HTTPError: 403 Client Error: Forbidden for url: https://hk.jobsdb.com/api/jobsearch/v5/search?siteKey=HK-Main&sourcesystem=houston&page=1&pageSize=100&keywords=i

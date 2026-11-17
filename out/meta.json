@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-17T10:51:24Z",
- "generated_paris": "17/11/2026 11:51",
- "offers_total": 392,
- "offers_kept": 77,
- "new_today": 64,
- "reused_from_previous": 0,
+ "generated_at": "2026-11-17T13:16:53Z",
+ "generated_paris": "17/11/2026 14:16",
+ "offers_total": 1387,
+ "offers_kept": 837,
+ "new_today": 824,
+ "reused_from_previous": 384,
  "ai_calls": 0,
  "sources": [
   {
@@ -13,28 +13,31 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs"
   },
   {
    "name": "BlackRock",
-   "ok": true,
-   "read": 37,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 3,
+   "error": "429 après 5 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
   },
   {
    "name": "Invesco",
-   "ok": true,
-   "read": 28,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 4,
+   "error": "429 après 5 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
   },
   {
    "name": "T. Rowe Price",
-   "ok": true,
-   "read": 13,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 1,
+   "error": "429 après 5 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs"
   },
   {
    "name": "AllianceBernstein",
@@ -42,7 +45,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs"
   },
   {
    "name": "abrdn",
@@ -50,7 +53,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs"
   },
   {
    "name": "Franklin Templeton",
@@ -65,7 +68,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs"
   },
   {
    "name": "Carlyle",
@@ -73,14 +76,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs"
   },
   {
    "name": "Ares",
-   "ok": true,
-   "read": 31,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "429 après 5 essai(s) pour https://aresmgmt.wd1.myworkdayjobs.com/wday/cxs/aresmgmt/External/jobs"
   },
   {
    "name": "Brookfield",
@@ -88,14 +92,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
   },
   {
    "name": "Hamilton Lane",
-   "ok": true,
-   "read": 6,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 1,
+   "error": "429 après 5 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs"
   },
   {
    "name": "Manulife",
@@ -103,14 +108,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
   },
   {
    "name": "HSBC",
    "ok": true,
    "read": 287,
-   "kept": 8,
-   "reused": 0
+   "kept": 0,
+   "reused": 66
   },
   {
    "name": "Morgan Stanley",
@@ -118,14 +123,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
    "read": 188,
-   "kept": 2,
-   "reused": 0
+   "kept": 0,
+   "reused": 23
   },
   {
    "name": "Julius Baer",
@@ -133,7 +138,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs"
   },
   {
    "name": "State Street",
@@ -141,14 +146,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs"
   },
   {
    "name": "Northern Trust",
-   "ok": true,
-   "read": 1,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "429 après 5 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
   },
   {
    "name": "Deutsche Bank",
@@ -156,14 +162,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs"
   },
   {
    "name": "Barclays",
-   "ok": true,
-   "read": 45,
-   "kept": 1,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 1,
+   "error": "429 après 5 essai(s) pour https://barclays.wd3.myworkdayjobs.com/wday/cxs/barclays/External_Career_Site_Barclays/jobs"
   },
   {
    "name": "UOB",
@@ -171,7 +178,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://uobgroup.wd3.myworkdayjobs.com/wday/cxs/uobgroup/UOBExternal/jobs"
   },
   {
    "name": "VIE Business France",
@@ -187,15 +194,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://baincapital.wd1.myworkdayjobs.com/wday/cxs/baincapital/External_Public/jobs"
   },
   {
    "name": "Apollo",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 3,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "Oaktree",
@@ -203,7 +209,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://oaktree.wd1.myworkdayjobs.com/wday/cxs/oaktree/Oaktree/jobs"
   },
   {
    "name": "Blue Owl",
@@ -211,7 +217,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://blueowl.wd1.myworkdayjobs.com/wday/cxs/blueowl/BlueOwl/jobs"
   },
   {
    "name": "HarbourVest",
@@ -219,7 +225,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://harbourvest.wd5.myworkdayjobs.com/wday/cxs/harbourvest/HVP/jobs"
   },
   {
    "name": "ICG",
@@ -227,7 +233,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://icg.wd3.myworkdayjobs.com/wday/cxs/icg/External_Careers/jobs"
   },
   {
    "name": "PineBridge Investments",
@@ -235,7 +241,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://pinebridge.wd5.myworkdayjobs.com/wday/cxs/pinebridge/PineBridge_Career_Site/jobs"
   },
   {
    "name": "Brevan Howard",
@@ -243,35 +249,35 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://brevanhoward.wd3.myworkdayjobs.com/wday/cxs/brevanhoward/BH_ExternalCareers/jobs"
   },
   {
    "name": "General Atlantic",
    "ok": true,
    "read": 13,
    "kept": 0,
-   "reused": 0
+   "reused": 1
   },
   {
    "name": "StepStone",
    "ok": true,
-   "read": 62,
+   "read": 61,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Point72",
    "ok": true,
-   "read": 197,
-   "kept": 1,
-   "reused": 0
+   "read": 198,
+   "kept": 0,
+   "reused": 7
   },
   {
    "name": "Schonfeld",
    "ok": true,
    "read": 72,
-   "kept": 1,
-   "reused": 0
+   "kept": 0,
+   "reused": 1
   },
   {
    "name": "ExodusPoint",
@@ -286,7 +292,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://pimco.wd1.myworkdayjobs.com/wday/cxs/pimco/pimco-careers/jobs"
   },
   {
    "name": "Wellington Management",
@@ -294,7 +300,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs"
   },
   {
    "name": "Capital Group",
@@ -302,7 +308,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://capgroup.wd1.myworkdayjobs.com/wday/cxs/capgroup/capitalgroupcareers/jobs"
   },
   {
    "name": "Neuberger Berman",
@@ -310,7 +316,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://nb.wd1.myworkdayjobs.com/wday/cxs/nb/nbCareers/jobs"
   },
   {
    "name": "Fidelity Investments",
@@ -318,7 +324,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://fmr.wd1.myworkdayjobs.com/wday/cxs/fmr/targeted/jobs"
   },
   {
    "name": "Guggenheim",
@@ -326,7 +332,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://guggenheim.wd1.myworkdayjobs.com/wday/cxs/guggenheim/Guggenheim_Careers/jobs"
   },
   {
    "name": "Eastspring (Prudential)",
@@ -334,7 +340,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential_eastspring/jobs"
   },
   {
    "name": "Lombard Odier",
@@ -342,7 +348,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://lombardodier.wd3.myworkdayjobs.com/wday/cxs/lombardodier/Lombard_Odier_Careers/jobs"
   },
   {
    "name": "Morgan Stanley Wealth (private)",
@@ -350,7 +356,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/private/jobs"
   },
   {
    "name": "Citi",
@@ -358,7 +364,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
   },
   {
    "name": "DBS",
@@ -366,14 +372,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://dbs.wd3.myworkdayjobs.com/wday/cxs/dbs/Dbs_Careers/jobs"
   },
   {
    "name": "OCBC",
    "ok": true,
-   "read": 1258,
-   "kept": 17,
-   "reused": 0
+   "read": 1260,
+   "kept": 0,
+   "reused": 77
   },
   {
    "name": "MUFG",
@@ -381,7 +387,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://mufgub.wd3.myworkdayjobs.com/wday/cxs/mufgub/MUFG-Careers/jobs"
   },
   {
    "name": "ING",
@@ -389,7 +395,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://ing.wd3.myworkdayjobs.com/wday/cxs/ing/ICSGBLCOR/jobs"
   },
   {
    "name": "Santander",
@@ -397,7 +403,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://santander.wd3.myworkdayjobs.com/wday/cxs/santander/SantanderCareers/jobs"
   },
   {
    "name": "RBC",
@@ -405,7 +411,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://rbc.wd3.myworkdayjobs.com/wday/cxs/rbc/RBCGLOBAL1/jobs"
   },
   {
    "name": "TD Securities",
@@ -413,7 +419,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs"
   },
   {
    "name": "PJT Partners (Park Hill)",
@@ -421,14 +427,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://pjtpartners.wd1.myworkdayjobs.com/wday/cxs/pjtpartners/Careers/jobs"
   },
   {
    "name": "TP ICAP",
    "ok": true,
-   "read": 22,
-   "kept": 4,
-   "reused": 0
+   "read": 21,
+   "kept": 0,
+   "reused": 7
   },
   {
    "name": "PwC",
@@ -436,7 +442,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
   },
   {
    "name": "PwC (campus / graduate)",
@@ -444,7 +450,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Campus_Careers/jobs"
   },
   {
    "name": "AIA",
@@ -452,7 +458,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://aia.wd3.myworkdayjobs.com/wday/cxs/aia/External/jobs"
   },
   {
    "name": "Prudential",
@@ -460,7 +466,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential/jobs"
   },
   {
    "name": "FWD",
@@ -468,7 +474,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://fwd.wd3.myworkdayjobs.com/wday/cxs/fwd/FWDcareersite/jobs"
   },
   {
    "name": "Sun Life",
@@ -476,7 +482,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://sunlife.wd3.myworkdayjobs.com/wday/cxs/sunlife/Experienced-Jobs/jobs"
   },
   {
    "name": "AIG",
@@ -484,7 +490,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://aig.wd1.myworkdayjobs.com/wday/cxs/aig/aig/jobs"
   },
   {
    "name": "HKEX",
@@ -492,7 +498,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://hkex.wd3.myworkdayjobs.com/wday/cxs/hkex/HKEXCareerPage/jobs"
   },
   {
    "name": "LSEG",
@@ -500,7 +506,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://lseg.wd3.myworkdayjobs.com/wday/cxs/lseg/careers/jobs"
   },
   {
    "name": "S&P Global",
@@ -508,7 +514,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs"
   },
   {
    "name": "Morningstar",
@@ -516,7 +522,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/MORNINGSTAR/jobs"
   },
   {
    "name": "Broadridge",
@@ -524,7 +530,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://broadridge.wd5.myworkdayjobs.com/wday/cxs/broadridge/Careers/jobs"
   },
   {
    "name": "JLL (immobilier / capital markets)",
@@ -532,7 +538,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://jll.wd1.myworkdayjobs.com/wday/cxs/jll/jllcareers/jobs"
   },
   {
    "name": "Visa",
@@ -540,7 +546,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
   },
   {
    "name": "Mastercard",
@@ -548,7 +554,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
   },
   {
    "name": "PayPal",
@@ -556,7 +562,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/Jobs/jobs"
   },
   {
    "name": "Global Payments (TSYS)",
@@ -564,7 +570,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/tsys/jobs"
   },
   {
    "name": "Fiserv",
@@ -572,85 +578,86 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/Ext/jobs"
   },
   {
    "name": "Stripe",
    "ok": true,
-   "read": 793,
-   "kept": 6,
-   "reused": 0
+   "read": 794,
+   "kept": 0,
+   "reused": 35
   },
   {
    "name": "Adyen",
    "ok": true,
-   "read": 242,
+   "read": 238,
    "kept": 0,
-   "reused": 0
+   "reused": 3
   },
   {
    "name": "Carta",
    "ok": true,
-   "read": 77,
+   "read": 78,
    "kept": 0,
-   "reused": 0
+   "reused": 1
   },
   {
    "name": "Thunes",
    "ok": true,
-   "read": 35,
+   "read": 34,
    "kept": 0,
-   "reused": 0
+   "reused": 1
   },
   {
    "name": "Wise",
    "ok": true,
    "read": 62,
    "kept": 0,
-   "reused": 0
+   "reused": 7
   },
   {
    "name": "Nium",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 32,
    "kept": 0,
    "reused": 0,
-   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/nium?mode=json"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "OKX",
    "ok": true,
-   "read": 394,
-   "kept": 2,
-   "reused": 0
+   "read": 395,
+   "kept": 0,
+   "reused": 3
   },
   {
    "name": "Bybit",
    "ok": true,
-   "read": 160,
+   "read": 161,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Coinbase",
    "ok": true,
-   "read": 260,
-   "kept": 1,
-   "reused": 0
+   "read": 259,
+   "kept": 0,
+   "reused": 2
   },
   {
    "name": "Ripple",
    "ok": true,
    "read": 111,
    "kept": 0,
-   "reused": 0
+   "reused": 3
   },
   {
    "name": "BitGo",
    "ok": true,
    "read": 58,
    "kept": 0,
-   "reused": 0
+   "reused": 3
   },
   {
    "name": "Fireblocks",
@@ -668,26 +675,28 @@
   },
   {
    "name": "Crypto.com",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 85,
    "kept": 0,
    "reused": 0,
-   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/crypto?mode=json"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Anchorage Digital",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 21,
+   "kept": 1,
    "reused": 0,
-   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/anchorage?mode=json"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Microsoft",
    "ok": true,
    "read": 202,
-   "kept": 1,
-   "reused": 0
+   "kept": 0,
+   "reused": 40
   },
   {
    "name": "Salesforce",
@@ -695,7 +704,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
   },
   {
    "name": "Workday",
@@ -703,7 +712,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
   },
   {
    "name": "Adobe",
@@ -711,7 +720,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs"
   },
   {
    "name": "NVIDIA",
@@ -719,7 +728,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
   },
   {
    "name": "HP",
@@ -727,7 +736,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
   },
   {
    "name": "HPE",
@@ -735,7 +744,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs"
   },
   {
    "name": "Samsung",
@@ -743,7 +752,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://sec.wd3.myworkdayjobs.com/wday/cxs/sec/samsung_careers/jobs"
   },
   {
    "name": "CrowdStrike",
@@ -751,7 +760,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
   },
   {
    "name": "Equinix",
@@ -759,157 +768,158 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://equinix.wd1.myworkdayjobs.com/wday/cxs/equinix/External/jobs"
   },
   {
    "name": "Grab",
    "ok": true,
    "read": 148,
-   "kept": 5,
-   "reused": 0
+   "kept": 0,
+   "reused": 15
   },
   {
    "name": "ServiceNow",
    "ok": true,
-   "read": 64,
-   "kept": 2,
-   "reused": 0
+   "read": 65,
+   "kept": 0,
+   "reused": 22
   },
   {
    "name": "Databricks",
    "ok": true,
-   "read": 891,
-   "kept": 2,
-   "reused": 0
+   "read": 892,
+   "kept": 0,
+   "reused": 20
   },
   {
    "name": "Datadog",
    "ok": true,
    "read": 380,
-   "kept": 3,
-   "reused": 0
+   "kept": 2,
+   "reused": 13
   },
   {
    "name": "MongoDB",
    "ok": true,
    "read": 399,
    "kept": 0,
-   "reused": 0
+   "reused": 4
   },
   {
    "name": "GitLab",
    "ok": true,
    "read": 253,
-   "kept": 2,
-   "reused": 0
+   "kept": 0,
+   "reused": 3
   },
   {
    "name": "Okta",
    "ok": true,
    "read": 358,
-   "kept": 1,
-   "reused": 0
+   "kept": 0,
+   "reused": 9
   },
   {
    "name": "Zscaler",
    "ok": true,
-   "read": 382,
-   "kept": 2,
-   "reused": 0
+   "read": 379,
+   "kept": 0,
+   "reused": 11
   },
   {
    "name": "Pure Storage",
    "ok": true,
    "read": 376,
    "kept": 0,
-   "reused": 0
+   "reused": 12
   },
   {
    "name": "Elastic",
    "ok": true,
-   "read": 381,
-   "kept": 2,
-   "reused": 0
+   "read": 384,
+   "kept": 1,
+   "reused": 5
   },
   {
    "name": "Twilio",
    "ok": true,
    "read": 115,
    "kept": 0,
-   "reused": 0
+   "reused": 4
   },
   {
    "name": "Rubrik",
    "ok": true,
    "read": 188,
-   "kept": 3,
-   "reused": 0
+   "kept": 0,
+   "reused": 6
   },
   {
    "name": "Cloudflare",
    "ok": true,
-   "read": 473,
-   "kept": 3,
-   "reused": 0
+   "read": 475,
+   "kept": 0,
+   "reused": 13
   },
   {
    "name": "Anthropic",
    "ok": true,
    "read": 660,
    "kept": 0,
-   "reused": 0
+   "reused": 6
   },
   {
    "name": "Airbnb",
    "ok": true,
    "read": 205,
    "kept": 0,
-   "reused": 0
+   "reused": 3
   },
   {
    "name": "Agoda",
    "ok": true,
-   "read": 348,
+   "read": 349,
    "kept": 0,
-   "reused": 0
+   "reused": 12
   },
   {
    "name": "Pinterest",
    "ok": true,
    "read": 167,
    "kept": 0,
-   "reused": 0
+   "reused": 3
   },
   {
    "name": "Figma",
    "ok": true,
    "read": 140,
-   "kept": 1,
-   "reused": 0
+   "kept": 0,
+   "reused": 6
   },
   {
    "name": "Palantir",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 1,
    "kept": 0,
    "reused": 0,
-   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/palantir?mode=json"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Ninja Van",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 146,
    "kept": 0,
    "reused": 0,
-   "error": "500 Server Error: Internal Server Error for url: https://api.lever.co/v0/postings/ninjavan?mode=json"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Amazon / AWS",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "type inconnu : amazon"
+   "ok": true,
+   "read": 2000,
+   "kept": 1,
+   "reused": 0
   },
   {
    "name": "Intel",
@@ -917,15 +927,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
-  },
-  {
-   "name": "Dell",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "422 Client Error: Unprocessable Entity for url: https://dell.wd1.myworkdayjobs.com/wday/cxs/dell/External/jobs"
+   "error": "429 après 5 essai(s) pour https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
   },
   {
    "name": "Nike",
@@ -933,7 +935,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
   },
   {
    "name": "Philips",
@@ -941,7 +943,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
   },
   {
    "name": "Shell",
@@ -949,7 +951,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://shell.wd3.myworkdayjobs.com/wday/cxs/shell/ShellCareers/jobs"
   },
   {
    "name": "Unilever",
@@ -957,14 +959,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "429 après 5 essai(s) pour https://unilever.wd3.myworkdayjobs.com/wday/cxs/unilever/Unilever_Experienced_Professionals/jo"
   },
   {
    "name": "Thomson Reuters",
-   "ok": true,
-   "read": 34,
-   "kept": 2,
-   "reused": 0
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 10,
+   "error": "429 après 5 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
   },
   {
    "name": "Macquarie",
@@ -972,23 +975,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
-  },
-  {
-   "name": "UBS",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "422 Client Error: Unprocessable Entity for url: https://ubs.wd3.myworkdayjobs.com/wday/cxs/ubs/UBS_Experienced_Professio"
-  },
-  {
-   "name": "Moody's",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "422 Client Error: Unprocessable Entity for url: https://moodys.wd5.myworkdayjobs.com/wday/cxs/moodys/moodys/jobs"
+   "error": "429 après 5 essai(s) pour https://mq.wd3.myworkdayjobs.com/wday/cxs/mq/CareersatMQ/jobs"
   },
   {
    "name": "MSCI",
@@ -996,2101 +983,2351 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "error": "401 Client Error: Unauthorized for url: https://msci.wd1.myworkdayjobs.com/wday/cxs/msci/MSCI/jobs"
   },
   {
    "name": "Nasdaq",
    "ok": true,
    "read": 6,
-   "kept": 2,
-   "reused": 0
-  },
-  {
-   "name": "BNY",
-   "ok": false,
-   "read": 0,
    "kept": 0,
-   "reused": 0,
-   "error": "404 Client Error: NOT FOUND for url: https://bnymellon.eightfold.ai/api/apply/v2/jobs?domain=bnymellon.com&start=0&num=2"
+   "reused": 4
   },
   {
    "name": "Netflix",
    "ok": true,
    "read": 33,
    "kept": 0,
-   "reused": 0
+   "reused": 7
   },
   {
    "name": "OpenAI",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 840,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Scale AI",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 169,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Notion",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 164,
+   "kept": 2,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Ramp",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 179,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Rippling",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Deel",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Brex",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 277,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Plaid",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 140,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Robinhood",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 166,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Affirm",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 213,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Chime",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 74,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Dropbox",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 41,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "DoorDash",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Lyft",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 144,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Reddit",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 148,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Discord",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 25,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Snowflake",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 379,
+   "kept": 1,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Asana",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 113,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "HubSpot",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Intercom",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 115,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Canva",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Miro",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 12,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Airtable",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 9,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Gusto",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 78,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Coursera",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 39,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Duolingo",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 59,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Roblox",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 265,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Unity",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Epic Games",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 139,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Riot Games",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 201,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Block",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 185,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Toast",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 331,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Samsara",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 315,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Confluent",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "HashiCorp",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Snyk",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 39,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Wiz",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 108,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Vanta",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 80,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Gong",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Klaviyo",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 141,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Braze",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 335,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Amplitude",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 47,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Mixpanel",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 40,
+   "kept": 1,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Algolia",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 30,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Contentful",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 51,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Postman",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Grammarly",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Calendly",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 5,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Zapier",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 10,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Webflow",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 28,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Retool",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Vercel",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 87,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Cohere",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 125,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Hugging Face",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 6,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "workable",
+   "no_ats": false
   },
   {
    "name": "Perplexity",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 148,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Anduril",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "SpaceX",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 2799,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Spotify",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 87,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Uber",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Zoom",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Atlassian",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Shopify",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Squarespace",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 17,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Twitch",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 51,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Instacart",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 83,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Snap",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "LinkedIn",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 23,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Bloomberg",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Google",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Apple",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Meta",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 1,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "recruitee",
+   "no_ats": false
   },
   {
    "name": "Oracle",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "IBM",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Cisco",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "AMD",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Qualcomm",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Accenture",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Revolut",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Monzo",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 59,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "N26",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Klarna",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Checkout.com",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Rapyd",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Payoneer",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 101,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Marqeta",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Remitly",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Ebury",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 153,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Qonto",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 54,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Pennylane",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 212,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Swile",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 27,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Spendesk",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Ledger",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 17,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Kraken",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Circle",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 6,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Binance",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 224,
+   "kept": 6,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Bitpanda",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 49,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Animoca Brands",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 13,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "HashKey",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Amber Group",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 3,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Matrixport",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Galaxy Digital",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 2,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Airwallex",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 486,
+   "kept": 2,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Aspire",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "YouTrip",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 57,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "workable",
+   "no_ats": false
   },
   {
    "name": "Xendit",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 22,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "dLocal",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Funding Societies",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 90,
+   "kept": 2,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "workable",
+   "no_ats": false
   },
   {
    "name": "Endowus",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "StashAway",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Syfe",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Addepar",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "iCapital",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 224,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Moonfare",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 19,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Allfunds",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Clearwater Analytics",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 14,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Juniper Square",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 51,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Forge Global",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Titanbay",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Yieldstreet",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Alan",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 137,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Lydia",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bridgewater",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 18,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "AQR",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Two Sigma",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Millennium",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Balyasny",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "D. E. Shaw",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Man Group",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 68,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Marshall Wace",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Jane Street",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 216,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Optiver",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "IMC Trading",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 154,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Hudson River Trading",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 85,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Jump Trading",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 89,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Citadel",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Tikehau Capital",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Ardian",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Eurazeo",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "PAI Partners",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "EQT",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "CVC Capital Partners",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Permira",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Cinven",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Hg",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "TPG",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Warburg Pincus",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Advent International",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Hillhouse",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "PAG",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Partners Group",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Pantheon",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 12,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Adams Street",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 14,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Coller Capital",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Lexington Partners",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 1,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "KKR",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Goldman Sachs",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Nomura",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Standard Chartered",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Schroders",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Amundi",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "AXA Investment Managers",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Natixis",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Robeco",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Allianz Global Investors",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Vanguard",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Charles Schwab",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 3,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Nuveen",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Principal",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Temasek",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "GIC",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Danone",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "L'Oréal",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "LVMH",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 33,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "recruitee",
+   "no_ats": false
   },
   {
    "name": "Kering",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Hermès",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Chanel",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Pernod Ricard",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Michelin",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Schneider Electric",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Capgemini",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Dassault Systèmes",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Airbus",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Safran",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Thales",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "TotalEnergies",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Engie",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "AXA",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Sanofi",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "BNP Paribas",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Société Générale",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Crédit Agricole",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Nestlé",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Novartis",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Roche",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "ABB",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Siemens",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "SAP",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Allianz",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Adidas",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "ASML",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Heineken",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "BP",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Diageo",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Reckitt",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "GSK",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "AstraZeneca",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Booking.com",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Ubisoft",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 1,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Criteo",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Doctolib",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 155,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "BlaBlaCar",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 6,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Mirakl",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 22,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Contentsquare",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 28,
+   "kept": 1,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Back Market",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 30,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "ashby",
+   "no_ats": false
   },
   {
    "name": "Dataiku",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 14,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Vinted",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bolt",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Delivery Hero",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 60,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Zalando",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Celonis",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 263,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "greenhouse",
+   "no_ats": false
   },
   {
    "name": "Personio",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bosch",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 157,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "IKEA",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Mistral AI",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Procter & Gamble",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Coca-Cola",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "PepsiCo",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Mondelez",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Johnson & Johnson",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Pfizer",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Estée Lauder",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "McKinsey",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "BCG",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bain & Company",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Deloitte",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "EY",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "KPMG",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Sea Group",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Shopee",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Lazada",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Gojek",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "ShopBack",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Carousell",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "PropertyGuru",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Razer",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Lalamove",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 144,
+   "kept": 2,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "lever",
+   "no_ats": false
   },
   {
    "name": "Klook",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Trip.com",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Rakuten",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Mercari",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "SmartNews",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Money Forward",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Sony",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Fast Retailing (Uniqlo)",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "TikTok / ByteDance",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "smartrecruiters",
+   "no_ats": false
   },
   {
    "name": "Alibaba",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Tencent",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Ant International",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : auto"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "MyCareersFuture (Singapour)",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 1585,
+   "kept": 561,
    "reused": 0,
-   "error": "type inconnu : mycareersfuture"
+   "aggregator": true
   },
   {
    "name": "JobsDB (Hong Kong)",
@@ -3098,61 +3335,61 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : seek"
+   "error": "403 Client Error: Forbidden for url: https://hk.jobsdb.com/api/jobsearch/v5/search?siteKey=HK-Main&sourcesystem=houston&"
   },
   {
    "name": "JobStreet (Singapour)",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
+   "ok": true,
+   "read": 4756,
+   "kept": 178,
    "reused": 0,
-   "error": "type inconnu : seek"
+   "aggregator": true
   },
   {
    "name": "Jooble",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : jooble"
+   "aggregator": true
   },
   {
    "name": "Adzuna (Singapour)",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : adzuna"
+   "aggregator": true
   },
   {
    "name": "Careerjet",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "type inconnu : careerjet"
+   "aggregator": true
   }
  ],
- "seconds": 178,
+ "seconds": 616,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 77,
+ "ai_pending": 837,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 10709,
-  "reused": 0,
+  "read": 31901,
+  "reused": 479,
   "rejected": {
-   "lieu": 6708,
-   "langue": 201,
-   "niveau": 1310,
-   "metier": 593,
-   "ancienne": 51,
-   "autre": 239
+   "lieu": 21170,
+   "langue": 165,
+   "niveau": 2160,
+   "metier": 1560,
+   "ancienne": 204,
+   "autre": 658
   },
-  "kept": 77,
-  "langs_ok": 70,
-  "sources_ok": 51,
-  "sources_total": 397
+  "kept": 837,
+  "langs_ok": 815,
+  "sources_ok": 313,
+  "sources_total": 393
  }
 }
