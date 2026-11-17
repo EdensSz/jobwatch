@@ -615,7 +615,8 @@ def seek(src: Dict, terms: List[str]) -> List[Job]:
         for page in range(1, src.get("max_pages", 4) + 1):
             d = _get(s, f"https://{host}/api/jobsearch/v5/search",
                      params={"siteKey": site_key, "sourcesystem": "houston", "page": page, "pageSize": 100,
-                             "keywords": term, "locale": "en-" + site_key[:2]}).json()
+                             "keywords": term, "locale": "en-" + site_key[:2],
+                             **({"where": src["where"]} if src.get("where") else {})}).json()
             res = d.get("data") or []
             if not res:
                 break

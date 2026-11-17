@@ -201,6 +201,7 @@ sources:
 aggregators:
   - {name: "MyCareersFuture (Singapour)", type: mycareersfuture}
   - {name: "JobsDB (Hong Kong)",          type: seek, host: "hk.jobsdb.com", site_key: "HK-Main", city: "Hong Kong", pc_only: true}   # refuse GitHub : lu depuis ton PC
+  - {name: "JobStreet (Hong Kong)",       type: seek, host: "ph.jobstreet.com", site_key: "PH-Main", where: "Hong Kong SAR", city: "Hong Kong"}
   - {name: "JobStreet (Singapour)",       type: seek, host: "sg.jobstreet.com", site_key: "SG-Main", city: "Singapore"}
   - {name: "Jooble",                      type: jooble}
   - {name: "Adzuna (Singapour)",          type: adzuna, country: "sg"}
