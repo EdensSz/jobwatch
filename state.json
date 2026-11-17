@@ -105,7 +105,7 @@
   "ai_h": "ddfa03b22350",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612187323": {
   "first_seen": "2026-11-16",
@@ -123,54 +123,58 @@
  "HSBC::563774611634841": {
   "first_seen": "2026-11-16",
   "ai": {
-   "exclude": true,
-   "exclude_reason": "Poste de Manager exigeant une exp\u00e9rience solide dans l'assurance vie et un track record prouv\u00e9, clairement au-del\u00e0 du niveau junior (Analyst/Associate/VIE) recherch\u00e9 par Th\u00e9o.",
-   "role": "D\u00e9veloppement commercial assurance (courtage)",
-   "level": "Senior (Manager, 3+ ans)",
-   "years_required": 3,
+   "exclude": false,
+   "exclude_reason": "",
+   "role": "Business Development Manager partenariats courtage (assurance-vie)",
+   "level": "Interm\u00e9diaire / Manager (exp\u00e9rience requise)",
+   "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
     "metier": 2,
-    "niveau": 0,
+    "niveau": 1,
     "secteur": 1,
     "atouts": 0
    },
    "explain": {
-    "metier": "D\u00e9veloppement de partenariats courtiers en assurance vie, pas de distribution de fonds ni de relations investisseurs en private markets.",
-    "niveau": "Intitul\u00e9 Manager et exp\u00e9rience solide exig\u00e9e : poste clairement senior, non adapt\u00e9 \u00e0 un profil junior.",
-    "secteur": "Assurance vie bancaire (HSBC Life), secteur adjacent mais hors cible private markets/gestion d'actifs.",
-    "atouts": "Aucun avantage net : pas d'exp\u00e9rience private markets, lev\u00e9e de fonds ou distribution wealth dans cette annonce."
+    "metier": "D\u00e9veloppement commercial de partenariats courtage en assurance-vie : vente et BD, mais pas de distribution de fonds ni de relations investisseurs en gestion d'actifs.",
+    "niveau": "Intitul\u00e9 Manager et 'solid experience' / 'proven track record' exig\u00e9s : trop senior pour ~1,5 an d'exp\u00e9rience.",
+    "secteur": "Assurance (HSBC Life), pas soci\u00e9t\u00e9 de gestion ni private markets.",
+    "atouts": "Aucun \u00e9l\u00e9ment de l'annonce (langue fran\u00e7aise, VIE, RFP-DDQ, lev\u00e9e de fonds) ne correspond \u00e0 un fait distinctif de son CV."
    },
-   "summary": "D\u00e9veloppement des partenariats de courtage d'assurance vie \u00e0 Hong Kong : prospection de courtiers, n\u00e9gociation commerciale, contrats, plans de mise en march\u00e9 et suivi de la performance.",
+   "summary": "D\u00e9veloppement et gestion de partenariats avec des courtiers en assurance-vie \u00e0 Hong Kong : prospection, n\u00e9gociation, contrats, plans de mise sur le march\u00e9 et suivi de la performance. Rattach\u00e9 \u00e0 HSBC Life.",
    "pros": [
-    "Secteur financier \u00e0 Hong Kong",
-    "Anglais comme langue de travail"
+    "Poste de d\u00e9veloppement commercial et partenariats, proche de son exp\u00e9rience en BD chez Keren et Audacia.",
+    "Environnement bancaire international \u00e0 Hong Kong, langue de travail anglais.",
+    "Aucune exigence de langue asiatique explicite dans l'annonce."
    ],
    "cons": [
-    "Niveau Manager trop senior pour un profil junior",
-    "Secteur assurance vie, pas gestion d'actifs ni private markets",
-    "Exp\u00e9rience dans l'assurance exig\u00e9e, non d\u00e9tenue par Th\u00e9o"
+    "Secteur assurance-vie, hors gestion d'actifs, private markets et distribution de fonds vis\u00e9s par Th\u00e9o.",
+    "Niveau Manager avec exp\u00e9rience solide requise : inadapt\u00e9 \u00e0 son profil junior (~1,5 an).",
+    "Pas de lev\u00e9e de fonds, RFP/DDQ ni couverture d'investisseurs institutionnels."
    ],
    "keywords": [
-    "brokerage",
-    "business development",
-    "insurance",
-    "partnerships",
-    "sales",
-    "negotiation",
-    "pipeline",
-    "go-to-market",
-    "KPIs",
-    "regulatory",
-    "compliance",
-    "relationship management",
-    "market intelligence",
-    "contracting",
-    "onboarding"
+    "Brokerage",
+    "Business Development",
+    "Partnerships",
+    "Life Insurance",
+    "Insurance Products",
+    "Sales",
+    "Negotiation",
+    "Contracting",
+    "Onboarding",
+    "Go-to-market",
+    "Pipeline",
+    "KPI",
+    "Market Intelligence",
+    "Regulatory",
+    "Compliance",
+    "Stakeholder Management",
+    "Relationship Management",
+    "Acquisition"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "08e7b65e2757"
  },
@@ -289,7 +293,7 @@
   "ai_h": "5c118ad1f7c1",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210740052": {
   "first_seen": "2026-11-16",
@@ -312,7 +316,7 @@
   "ai_h": "1022b93d77cd",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210806229": {
   "first_seen": "2026-11-16",
@@ -362,7 +366,7 @@
   "ai_h": "666627f9d5ea",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Fidelity International::/job/Hong-Kong-Office-New/Marketing-Specialist--6-month-contract-_J71823": {
   "first_seen": "2026-11-16",
@@ -1044,13 +1048,13 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612631163": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612583497": {
   "first_seen": "2026-11-16",
@@ -1061,43 +1065,43 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612543983": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612516467": {
   "first_seen": "2026-11-16",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612472351": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612462916": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612423681": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612411133": {
   "first_seen": "2026-11-16",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612373236": {
   "first_seen": "2026-11-16",
@@ -1113,25 +1117,25 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612243806": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612243804": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612225211": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612144658": {
   "first_seen": "2026-11-16",
@@ -1142,25 +1146,25 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612091410": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612075333": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612030528": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612027535": {
   "first_seen": "2026-11-16",
@@ -1171,37 +1175,37 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612021997": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612016323": {
   "first_seen": "2026-11-16",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611861244": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611806705": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611786948": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611586174": {
   "first_seen": "2026-11-16",
@@ -1212,7 +1216,7 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611111601": {
   "first_seen": "2026-11-16",
@@ -1221,9 +1225,9 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Sp\u00e9cialiste assurance HNW / conseil client\u00e8le fortun\u00e9e",
-   "level": "Interm\u00e9diaire (Associate, 2-3 ans)",
-   "years_required": 2,
+   "role": "Sp\u00e9cialiste assurance HNW \u2013 vente et conseil client\u00e8le fortun\u00e9e",
+   "level": "Interm\u00e9diaire (exp\u00e9rience assurance requise)",
+   "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
@@ -1233,40 +1237,40 @@
     "atouts": 0
    },
    "explain": {
-    "metier": "Vente d'assurance vie \u00e0 des clients HNW, pas de distribution de fonds ni de private markets. Comp\u00e9tences commerciales transf\u00e9rables mais produit \u00e9loign\u00e9 de son c\u0153ur de cible.",
-    "niveau": "Exp\u00e9rience pr\u00e9c\u00e9dente et historique de croissance exig\u00e9s : poste interm\u00e9diaire plut\u00f4t que junior d\u00e9butant.",
-    "secteur": "HSBC est une banque / assureur, pas une soci\u00e9t\u00e9 de gestion d'actifs ou de private markets.",
-    "atouts": "Aucun avantage net : pas d'exp\u00e9rience assurance, pas de licence requise, pas de lien sp\u00e9cifique avec le march\u00e9 fran\u00e7ais ou asiatique mentionn\u00e9."
+    "metier": "Vente et conseil en assurance vie \u00e0 une client\u00e8le HNW chez HSBC ce n'est ni de la lev\u00e9e de fonds, ni de la distribution de fonds, ni du client coverage de fonds chez un g\u00e9rant d'actifs.",
+    "niveau": "Aucun nombre d'ann\u00e9es pr\u00e9cis\u00e9, mais \u00ab Previous experience \u00bb et \u00ab track record \u00bb impliquent plus qu'un profil 0-1 an non identifi\u00e9 comme graduate ou VIE.",
+    "secteur": "HSBC est une banque et une assurance, pas une soci\u00e9t\u00e9 de gestion, du private markets ou du hedge fund.",
+    "atouts": "Aucune mention de fran\u00e7ais, VIE, lev\u00e9e de fonds, RFP/DDQ ou distribution wholesale rien ne le distingue des candidats locaux."
    },
-   "summary": "Conseil en assurance vie pour client\u00e8le fortun\u00e9e chez HSBC Life \u00e0 Hong Kong. Partenariat avec les gestionnaires de relations, expertise produits, planification commerciale et conformit\u00e9 r\u00e9glementaire.",
+   "summary": "Conseiller sp\u00e9cialis\u00e9 en assurance vie pour clients fortun\u00e9s chez HSBC Life \u00e0 Hong Kong partenariat avec les relationship managers, planification commerciale et conformit\u00e9 r\u00e9glementaire.",
    "pros": [
-    "Poste client-facing et commercial dans la gestion de patrimoine",
-    "Anglais suffisant, aucune langue asiatique exig\u00e9e dans l'annonce"
+    "Poste client-facing en anglais dans une grande banque internationale \u00e0 Hong Kong, coh\u00e9rent avec sa mobilit\u00e9 g\u00e9ographique.",
+    "Activit\u00e9 de vente et de d\u00e9veloppement commercial proche de son exp\u00e9rience de distribution chez Audacia."
    ],
    "cons": [
-    "Produit assurance vie, pas distribution de fonds ou private markets",
-    "Licence d'assurance et exp\u00e9rience du secteur exig\u00e9es",
-    "Niveau interm\u00e9diaire, pas clairement junior ou graduate"
+    "M\u00e9tier centr\u00e9 sur l'assurance, pas sur la distribution de fonds ni les relations investisseurs/LP vis\u00e9es par Th\u00e9o.",
+    "Exige une licence d'assurance locale et une exp\u00e9rience dans l'assurance qu'il ne poss\u00e8de pas.",
+    "Niveau \u00ab Specialist \u00bb avec exp\u00e9rience requise : risque d'\u00eatre trop senior pour un profil junior (~1,5 an)."
    ],
    "keywords": [
     "HNW",
-    "insurance",
     "life insurance",
-    "wealth management",
-    "client-facing",
+    "wealth planning",
     "relationship management",
     "sales planning",
+    "pipeline",
     "regulatory compliance",
-    "insurance licence",
+    "client-facing",
+    "advisory",
+    "business growth",
+    "strategic partnerships",
     "HSBC Life",
     "Hong Kong",
-    "strategic partnerships",
-    "RM",
-    "protection needs",
-    "financial objectives"
+    "insurance licence",
+    "protection needs"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "d5571d52be36"
  },
@@ -1274,37 +1278,37 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774610838988": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774609620236": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774609441388": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774608327231": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774608014479": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607745075": {
   "first_seen": "2026-11-16",
@@ -1320,19 +1324,19 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607739311": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607739219": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607725321": {
   "first_seen": "2026-11-16",
@@ -1353,25 +1357,25 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607703148": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607686462": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612648491": {
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612634837": {
   "first_seen": "2026-11-16",
@@ -1385,9 +1389,9 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Conseil en cr\u00e9dit / souscription de pr\u00eats (banque priv\u00e9e)",
-   "level": "Interm\u00e9diaire (3 ans ou Associate)",
-   "years_required": 3,
+   "role": "Conseiller cr\u00e9dit en banque priv\u00e9e",
+   "level": "Junior+ (exp\u00e9rience en cr\u00e9dit requise)",
+   "years_required": 2,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
@@ -1397,39 +1401,41 @@
     "atouts": 0
    },
    "explain": {
-    "metier": "Souscription de cr\u00e9dits et analyse de risque en banque priv\u00e9e : \u00e9loign\u00e9 de la distribution de fonds et des relations investisseurs vis\u00e9es par Th\u00e9o.",
-    "niveau": "Exp\u00e9rience en pr\u00eat ou cr\u00e9dit priv\u00e9e requise, probablement au-del\u00e0 d'un profil junior 0-2 ans.",
-    "secteur": "Banque internationale (HSBC), pas gestion d'actifs ni private markets.",
-    "atouts": "Aucun \u00e9l\u00e9ment du parcours de Th\u00e9o ne correspond directement au cr\u00e9dit structur\u00e9 ou au pr\u00eat garanti."
+    "metier": "Souscription de cr\u00e9dits et gestion de garanties en banque priv\u00e9e, tr\u00e8s \u00e9loign\u00e9e de la distribution de fonds et des relations investisseurs chez Audacia et Partech.",
+    "niveau": "L'annonce exige de l'exp\u00e9rience en pr\u00eat priv\u00e9, ce qui correspond \u00e0 un niveau 2 ans plut\u00f4t qu'\u00e0 un poste graduate 0-1 an.",
+    "secteur": "HSBC est une banque internationale, secteur not\u00e9 1, non une soci\u00e9t\u00e9 de gestion ou un acteur du private markets.",
+    "atouts": "Aucune mention de fran\u00e7ais, VIE, RFP/DDQ ou distribution wholesale dans l'annonce pour faire valoir un atout distinctif de son CV."
    },
-   "summary": "Poste de Credit Advisor chez HSBC \u00e0 Singapour : souscription de pr\u00eats et d\u00e9riv\u00e9s, analyse de cr\u00e9dit, suivi de portefeuille et conformit\u00e9 aux clauses pour clients priv\u00e9s. Pas de lev\u00e9e de fonds ni de distribution.",
+   "summary": "Souscription, structuration et suivi d'op\u00e9rations de cr\u00e9dit pour clients priv\u00e9s chez HSBC \u00e0 Singapour : analyse de cr\u00e9dit, due diligence, pr\u00e9sentations de cr\u00e9dit, suivi des covenants et des garanties au sein de Wealth & Premier.",
    "pros": [
-    "Banque internationale r\u00e9put\u00e9e",
-    "Singapour est une cible g\u00e9ographique prioritaire"
+    "Poste bas\u00e9 \u00e0 Singapour, l'une des cibles g\u00e9ographiques de Th\u00e9o",
+    "Aucune exigence de langue asiatique ; l'anglais suffit"
    ],
    "cons": [
-    "M\u00e9tier de cr\u00e9dit/risque, hors distribution et relations investisseurs",
-    "Exp\u00e9rience en pr\u00eat priv\u00e9 exig\u00e9e, absente du profil de Th\u00e9o"
+    "M\u00e9tier \u00e9loign\u00e9 : souscription cr\u00e9dit et risque, pas de lev\u00e9e de fonds ni de distribution de produits d'investissement",
+    "Exp\u00e9rience en pr\u00eat priv\u00e9 exig\u00e9e, Th\u00e9o n'a pas ce background sp\u00e9cifique",
+    "Concurrence \u00e9lev\u00e9e des candidats locaux sur le march\u00e9 singapourien",
+    "Orientation cr\u00e9dit/risk contraire \u00e0 son souhait d'\u00e9voluer vers la distribution commerciale"
    ],
    "keywords": [
-    "credit",
-    "lending",
-    "underwriting",
+    "credit underwriting",
     "private banking",
-    "collateral",
-    "structured credit",
-    "loan",
-    "derivative",
-    "risk",
+    "loan structuring",
+    "derivative structures",
+    "due diligence",
+    "credit presentation",
+    "collateral lending",
+    "risk indicators",
+    "covenant compliance",
     "portfolio management",
-    "credit approval",
-    "covenants",
-    "financial reporting",
+    "wealth management",
     "client-facing",
-    "due diligence"
+    "Singapore",
+    "HSBC",
+    "credit analysis"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "26979d1edfda"
  },
@@ -1442,7 +1448,7 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612557150": {
   "first_seen": "2026-11-16",
@@ -1453,71 +1459,69 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612520254": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612463474": {
   "first_seen": "2026-11-16",
   "rej": "fit insuffisant (0)",
   "checked": "2026-11-16",
   "ai": {
-   "exclude": true,
-   "exclude_reason": "Poste de Manager exigeant une exp\u00e9rience avanc\u00e9e en documentation cr\u00e9dit priv\u00e9e banking (plus de 3 ans) ; clairement senior et hors c\u0153ur de m\u00e9tier (middle-office cr\u00e9dit).",
-   "role": "Administration cr\u00e9dit et documentation bancaire",
-   "level": "Senior (3+ ans)",
-   "years_required": 5,
+   "exclude": false,
+   "exclude_reason": "",
+   "role": "Cr\u00e9dit Admin et documentation (private banking)",
+   "level": "Manager (non junior)",
+   "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
     "metier": 1,
-    "niveau": 0,
+    "niveau": 1,
     "secteur": 1,
     "atouts": 0
    },
    "explain": {
-    "metier": "Administration de cr\u00e9dit et documentation bancaire : middle/back-office, \u00e9loign\u00e9 de la distribution, des relations investisseurs et de la lev\u00e9e de fonds.",
-    "niveau": "Intitul\u00e9 Manager et exp\u00e9rience avanc\u00e9e requise : poste senior incompatible avec un profil Analyst/Associate junior.",
-    "secteur": "Banque priv\u00e9e (HSBC), secteur adjacent mais non cibl\u00e9 (pas gestion d'actifs ni private markets).",
-    "atouts": "Aucun atout net : Th\u00e9o n'a pas d'exp\u00e9rience en documentation cr\u00e9dit, garanties bancaires ou gestion de limites de cr\u00e9dit."
+    "metier": "Gestion de la documentation cr\u00e9dit, lettres de cr\u00e9dit et garanties bancaires : op\u00e9rations de middle/back-office, loin de la distribution de fonds et des relations investisseurs chez Partech/Audacia.",
+    "niveau": "Intitul\u00e9 Manager et exp\u00e9rience avanc\u00e9e requise, inadapt\u00e9 \u00e0 un profil Analyst/Associate junior avec environ 1,5 an d'exp\u00e9rience.",
+    "secteur": "HSBC est une banque (Global Private Banking), pas une soci\u00e9t\u00e9 de gestion ou un acteur purement private markets.",
+    "atouts": "Aucune exigence de fran\u00e7ais, de VIE, ni de lev\u00e9e de fonds/RFP-DDQ qui valoriserait son parcours sp\u00e9cifique."
    },
-   "summary": "Gestion de la documentation cr\u00e9dit, des lettres de garantie et des limites de cr\u00e9dit pour la client\u00e8le priv\u00e9e de HSBC \u00e0 Singapour. Poste op\u00e9rationnel de middle-office.",
+   "summary": "Gestion de la documentation de cr\u00e9dit, des lettres de garantie et des reporting r\u00e9glementaires au sein de la banque priv\u00e9e HSBC \u00e0 Singapour. Poste op\u00e9rationnel, non orient\u00e9 vente ou relations investisseurs.",
    "pros": [
-    "Marque employeur forte (HSBC) \u00e0 Singapour",
-    "Secteur banque priv\u00e9e et gestion de fortune"
+    "Marque employeur reconnue (HSBC) et implantation \u00e0 Singapour, place financi\u00e8re majeure.",
+    "Langue de travail anglaise uniquement, compatible avec son niveau TOEIC 925.",
+    "Exposition \u00e0 la client\u00e8le private banking et aux produits de cr\u00e9dit structur\u00e9s."
    ],
    "cons": [
-    "Exp\u00e9rience avanc\u00e9e exig\u00e9e : Th\u00e9o est trop junior pour ce poste de Manager",
-    "M\u00e9tier \u00e9loign\u00e9 : administration cr\u00e9dit, pas distribution ni relations investisseurs",
-    "Pas de lien avec le private markets, la lev\u00e9e de fonds ou la couverture client"
+    "Intitul\u00e9 Manager et exp\u00e9rience avanc\u00e9e requise : inadapt\u00e9 \u00e0 un profil junior (~1,5 an).",
+    "Fonction cr\u00e9dit/documentation (op\u00e9rations), exclue par Th\u00e9o (pas de back-office, risque ou conformit\u00e9).",
+    "Concurrence forte des candidats locaux \u00e0 Singapour pour un poste de middle office.",
+    "Aucun lien avec la distribution de fonds, les LPs ou les RFP-DDQ, son c\u0153ur de m\u00e9tier."
    ],
    "keywords": [
     "Credit Admin",
-    "Private Banking",
-    "credit documentation",
     "facility letters",
     "security documentation",
-    "credit limits",
     "Bank Guarantee",
     "Standby Letter of Credit",
+    "Private Banking",
+    "credit documentation",
     "regulatory reports",
     "audit",
     "MS Office",
-    "Excel",
-    "Word",
-    "PowerPoint",
-    "Access",
-    "UAT",
+    "Singapore",
+    "wealth management",
+    "credit limits",
     "documentation safekeeping",
-    "cash surrender values",
-    "fire insurance policies"
+    "UAT"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "5edc0a32a7ec"
  },
@@ -1580,19 +1584,19 @@
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210805733": {
   "first_seen": "2026-11-16",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210795711": {
   "first_seen": "2026-11-16",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210794830": {
   "first_seen": "2026-11-16",
@@ -1608,13 +1612,13 @@
   "first_seen": "2026-11-16",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210775690": {
   "first_seen": "2026-11-16",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210796423": {
   "first_seen": "2026-11-16",
@@ -1833,60 +1837,58 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Sp\u00e9cialiste fonds et gestion discr\u00e9tionnaire (private banking)",
-   "level": "Junior (0-2 ans)",
-   "years_required": 2,
+   "role": "Specialiste produits fonds et gestion discr\u00e9tionnaire (banque priv\u00e9e)",
+   "level": "Non pr\u00e9cis\u00e9 (junior \u00e0 confirm\u00e9)",
+   "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
-    "metier": 4,
-    "niveau": 3,
-    "secteur": 2,
-    "atouts": 1
+    "metier": 3,
+    "niveau": 2,
+    "secteur": 1,
+    "atouts": 0
    },
    "explain": {
-    "metier": "Support aux relationship managers de banque priv\u00e9e sur les fonds et mandats discr\u00e9tionnaires : exactement du conseil en distribution de produits d'investissement.",
-    "niveau": "Poste de type Specialist sans exigence d'anciennet\u00e9 explicite compatible avec un profil junior de 1 \u00e0 2 ans.",
-    "secteur": "HSBC International Wealth and Premier Banking : gestion de patrimoine et gestion d'actifs.",
-    "atouts": "Son exp\u00e9rience wholesale (accords de distribution, pitch books, RFP/DDQ) est directement transf\u00e9rable au soutien des RMs et \u00e0 la s\u00e9lection de fonds."
+    "metier": "Sp\u00e9cialiste produits fonds et gestion discr\u00e9tionnaire en banque priv\u00e9e : proche du support distribution chez Audacia, mais ce n'est pas de la lev\u00e9e de fonds ni de la couverture client directe en soci\u00e9t\u00e9 de gestion.",
+    "niveau": "Exp\u00e9rience demand\u00e9e sans pr\u00e9cision d'ann\u00e9es pas de poste graduate/VIE explicite, donc niveau interm\u00e9diaire par d\u00e9faut.",
+    "secteur": "HSBC est une banque (Private Bank / Wealth Management), pas une soci\u00e9t\u00e9 de gestion ou un pure player private markets.",
+    "atouts": "Aucun \u00e9l\u00e9ment de l'annonce (fran\u00e7ais, VIE, RFP-DDQ explicite) ne correspond \u00e0 un fait distinctif de son CV."
    },
-   "summary": "Rattach\u00e9 \u00e0 l'\u00e9quipe International Wealth and Premier Banking \u00e0 Singapour, Th\u00e9o apporterait une expertise sur les fonds et les mandats discr\u00e9tionnaires, pr\u00e9parerait des supports clients, assisterait les relationship managers et g\u00e9rerait les relations avec les maisons de gestion, dans un cadre de gouvernance produit et de conformit\u00e9.",
+   "summary": "Appuie les banquiers priv\u00e9s sur les fonds et mandats discr\u00e9tionnaires : positionnement produit, supports clients, due diligence aupr\u00e8s des soci\u00e9t\u00e9s de gestion, conformit\u00e9 et suivi de performance \u00e0 Singapour.",
    "pros": [
-    "M\u00e9tier identique \u00e0 la distribution de fonds et au soutien aux banquiers priv\u00e9s chez Audacia et Partech.",
-    "Anglais suffisant ; aucune langue locale exig\u00e9e dans l'annonce.",
-    "Secteur wealth management / gestion d'actifs chez un acteur mondial (HSBC).",
-    "Exp\u00e9rience RFP/DDQ et due diligence sur les gestionnaires d'actifs directement pertinente."
+    "M\u00e9tier proche de son exp\u00e9rience de distribution et support vente chez Audacia.",
+    "Annonce en anglais uniquement, compatible avec son profil linguistique.",
+    "Secteur wealth management/private banking pertinent pour son projet \u00e0 Hong Kong/Singapour."
    ],
    "cons": [
-    "Intitul\u00e9 Specialist pouvant impliquer 2 \u00e0 3 ans d'exp\u00e9rience, au-dessus du niveau junior pur.",
-    "Moins centr\u00e9 sur la lev\u00e9e de fonds institutionnelle que sur le conseil produit en banque priv\u00e9e.",
-    "Candidats locaux bas\u00e9s \u00e0 Singapour probablement privil\u00e9gi\u00e9s.",
-    "Aucune mention explicite de sponsoring de visa ou de relocation."
+    "Pas de pr\u00e9cision sur les ann\u00e9es d'exp\u00e9rience requises ; risque d'\u00eatre jug\u00e9 trop junior ou trop senior selon l'interpr\u00e9tation locale.",
+    "Concurrence forte des candidats locaux \u00e0 Singapour, souvent bilingues anglais/mandarin.",
+    "Poste en banque, pas en soci\u00e9t\u00e9 de gestion : \u00e9cart avec son c\u0153ur de cible (private markets, distribution de fonds)."
    ],
    "keywords": [
     "funds",
     "discretionary portfolio management",
-    "private bank",
+    "private banking",
     "relationship managers",
     "high-net-worth",
+    "ultra high-net-worth",
+    "investment rationale",
     "product positioning",
     "portfolio construction",
-    "due diligence",
     "fund houses",
+    "due diligence",
     "product governance",
     "suitability",
-    "regulatory",
-    "mutual funds",
-    "discretionary mandates",
-    "asset management",
-    "client materials",
+    "risk management",
+    "regulatory requirements",
+    "assets under management",
     "investment advisory",
-    "wealth management",
-    "product selection",
-    "compliance"
+    "mutual funds",
+    "product development",
+    "client materials"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "3497b3968588"
  },
@@ -1894,2101 +1896,2101 @@
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774607739466": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774610262828": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612387557": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774610033718": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774612384586": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774611755229": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210806692": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210808653": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210808662": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210713035": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210790687": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210790690": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210807784": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210806663": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210801170": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "J.P. Morgan::210792394": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8929646002": {
   "first_seen": "2026-11-17",
   "rej": "japonais fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8899753002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8491138002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8729717002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8905015002": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8545515002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8923145002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8924790002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Point72::8899750002": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ExodusPoint::8938482002": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Corporate-Sales--Global-Markets_JR00012502": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Hong-Kong/FIM-Specialist_JR00012494": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Assistant-Manager--Data-Analytics_JR00012055": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Hong-Kong/Assistant-Relationship-Manager_JR00009439": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Assistant-Manager--Customer-Service_JR00011713": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager--Sales--General-Insurance-_JR00011621": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Assistant-Manager--1-year-contract-_JR00011486-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Project-Manager--Renovation_JR00009814-1": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/FX-Sales_JR00007417": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager--Service-Quality---Transformation--Consumer-Financial-Services_JR00010891": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Bank-Officer--Central-Services_JR00011000-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Contract-Manager--Client-on-boarding---Management--12-month-contract-_JR00011001": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Hong-Kong/Assistant-Relationship-Manager_JR00005544-1": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Assistant-Manager_JR00010226": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Investment-Consultant_JR00007159": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Manager---Assistant-Manager--Data-Processing---Internal-Compliance_JR00009540-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Customer-Service-Manager---SME_JR00009911": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Business-Development-Manager--Consumer-Financial-Services_JR00005771-1": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Business-Development-Manager--Emerging-Business--SME-_JR00009207": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Remittance-Officer---Manager---6-month-contract_JR00006761": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Customer-Service-Manager---SME_JR00006358-1": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Hong-Kong/Remittance-Officer--Assistant-Manager_JR00006318-1": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/SME-Workforce-Transformation-Manager_JR00012441": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Singapore/AIMS---Alternative-Investments---MGR_JR00012626": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Trade-Finance-Officer---AM--Contract-_JR00012550": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Documentation-manager--12-months-contract_JR00012624": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Process-Management-Specialist--1-Year-Contract-_JR00012545": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Documentation-Manager--Contract-_JR00012610": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/VP--Portfolio-Governance---Delivery-Assurance-Analyst--GO-T_JR00011218": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/MGR--Surveillance-and-Investigations-Officer_JR00011544": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/AI-Validation-Specialist_JR00010665": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Documentation-Officer--Contract-_JR00012537": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Documentation-Manager--Contract-_JR00012541": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Reporting-Analyst--Manager_JR00011515": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/International-Wealth---Affluent-Team-Manager_JR00012198": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/ERP-Business-Analyst--1-Year-contract---Group-Finance_JR00012141": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Regional-Cash-Programme-Lead_JR00011448": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Singapore/Service-Ambassador_JR00011043": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Corporate-Banking-Relationship-Management_JR00012075": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Account-Manager--Foreign---Global-Commercial-Banking_JR00005617": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Banca-Specialist--MGR-_JR00004943": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/MGR--Policy---Analytics_JR00011871": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/MGR--Project-Manager--OCBC-Property-Services_JR00007205": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Singapore/Finance-Specialist--1-Year-Contract-_JR00011975": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/CARM-Analytics---MGR_JR00011474-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Business-Analyst--Global-Markets-_JR00011688": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Business-Banking-Service-Manager---Emerging-Business-Customer-Service-Unit_JR00011613": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Enterprise-Knowledge-Management-Specialist_JR00011456": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Relationship-Development-Manager--Offshore-_JR00000104": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Trade-Finance-Manager---Contract--ending-31-Dec-26-_JR00011390": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Markets--FXD---G7---SGD--Jan---Jun-2027-_JR00011366-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Markets--Asset-Liability-Management---Central-Liability-Unit---Interest-Rate-Management--Jan---Jun-2027-_JR00011363": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/SGP-Head-Office/Internship--Global-Markets--Management-Information-Systems--Jan---Jun-2027-_JR00011357": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Markets--Global-Structured-Solutions--Jan---Jun-2027-_JR00011347": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Markets--Securities-Finance--Jan---Jun-2027-_JR00011342": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Business-Analyst--Cards-_JR00011295": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Intership--Global-Transaction-Banking-Division--Global-Transaction-Banking--Cash-Product--Jan-2027---May-2027-_JR00011203-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Group-Finance--Divisional-Office--Jan-to-May-2027-_JR00011184": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Transaction-Banking-Division--Global-Transaction-Banking--Global-Trade-Finance--Jan-2027---May-2027-_JR00011190": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Group-Finance--Digital-Finance--Dec26-to-Jun27-_JR00011183": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Singapore/Life-Insurance-Referral-Management-Specialist_JR00010741": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/FRANK-Consultant---Global-Consumer-Financial-Services_JR00010674-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Project-Manager---Scrum-Master--VP-_JR00008705": {
   "first_seen": "2026-11-17",
   "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/MGR--Property-Management---Operations-Technology--OCBC-Property-Services_JR00009926": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/MGR--Property-Manager---MEP--OCBC-Property-Services_JR00006858": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Wealth-Business-Manager_JR00008657": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/AM-MGR--Collections-System-Administrator_JR00010091": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/BOS-Singapore/Assistant-Relationship-Manager--Financial-Intermediaries_JR00000328": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Analyst--1-year-Contract---AI-Governance--Group-Data-Management-Office--GDMO-_JR00009093": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Digital-Ecosystems-and-Partnerships--Enterprise-Banking-International_JR00008976": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Vulnerability-Management-Specialist_JR00008181": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Relationship-Development-Manager--Onshore-_JR00004977": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Privilege-Identity-Administrator_JR00007761": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Privilege-Identity-Administrator_JR00005872": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Internship--Global-Markets--Asset-Liability-Management--Central-Liability-Unit--Jul-to-Dec-2026-_JR00006467": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OCBC::/job/OCBC-Singapore/Banca-Specialist--Group-Consumer-Financial-Services_JR00002290-1": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "TP ICAP::/job/Tokyo/Associate--Trade-Services_R5552": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "TP ICAP::/job/Tokyo/Senior-Associate-Director---Account-Management--Japan-Parameta-Solutions-_R5885": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8345653": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::7789539": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::7528816": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8348835": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8348731": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8324997": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8326105": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8188088": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8174160": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8040940": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8355357": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8345657": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8352238": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8349481": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8349475": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8355374": {
   "first_seen": "2026-11-17",
   "rej": "cor\u00e9en requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8230296": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8336062": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8334550": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8141829": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8195058": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8351589": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8325019": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8199593": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8267105": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8179341": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8123400": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::8184893": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Stripe::7955056": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Adyen::8080994": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Wise::744000156724589": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Wise::744000156540949": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Wise::744000162022579": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Wise::744000160848154": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Wise::744000152585568": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OKX::8032296003": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OKX::8032284003": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "OKX::8015453003": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Coinbase::8348533": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Ripple::8225681": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Ripple::8327701": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Ripple::8286436": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "BitGo::8523894002": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "BitGo::8523889002": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "BitGo::8523899002": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Crypto.com::08711490-46bf-437a-9f39-2a4effc570cb": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Crypto.com::07b3bcec-8ff2-4b6f-b990-3b9307df3317": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Crypto.com::1e8d77e1-c6f4-4eaa-b666-1c27feb4a96d": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557056042": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557048324": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557020824": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557073426": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557070807": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557056030": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557050820": {
   "first_seen": "2026-11-17",
   "rej": "japonais fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557048094": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557040328": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557053007": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557044349": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557041801": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557037806": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557040439": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557022917": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557022913": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557039443": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557006853": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557005287": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557074702": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557046348": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557070243": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557070831": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557070325": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557050312": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557054182": {
   "first_seen": "2026-11-17",
   "rej": "4 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557050935": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557047608": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557046358": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557043708": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393556999408": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557040866": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Microsoft::1970393557006930": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000162002219": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000161770359": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000161019199": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000160126829": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000159786849": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000159051260": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000158432746": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000155670399": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000155667539": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000154453554": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000153418175": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000152601399": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Grab::744000152076389": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000162025799": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161028219": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000158434359": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000162002629": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161957370": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161804744": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161723739": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161723349": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000161420760": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000160784394": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000160175379": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000159742179": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000159558849": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000158198189": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000155909049": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000155678069": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000155407729": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000154581112": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000151540399": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "ServiceNow::744000151526980": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8758263002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8874579002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8495065002": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8438948002": {
   "first_seen": "2026-11-17",
   "rej": "vietnamien requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8878095002": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8194916002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8501186002": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8440940002": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8440922002": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8878066002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::7856268002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8569594002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8569574002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8783602002": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8916466002": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8910854002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8910842002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Databricks::8880406002": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::6009777": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::6009779": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8330344": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7436312": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7435209": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7526356": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7703553": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8226522": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8233540": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8345094": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8345039": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::6523631": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7439145": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7131726": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8247518": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::8255788": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7439569": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7439149": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7439573": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Datadog::7515110": {
   "first_seen": "2026-11-17",
   "rej": "vietnamien requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "MongoDB::8158531": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "MongoDB::8104941": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "MongoDB::8153054": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "MongoDB::8350841": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::7992071": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8348116": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8288348": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8288308": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8269057": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8288480": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8299819": {
   "first_seen": "2026-11-17",
   "rej": "indon\u00e9sien / malais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8129579": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Okta::8302473": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5215890007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5179814007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5159494007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5251772007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5233183007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5251774007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5233185007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5233187007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5282845007": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5276814007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5159496007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5262054007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5256297007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5263598007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5263596007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Zscaler::5215322007": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8222531": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::7464039": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8232423": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8354970": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::7457367": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8354993": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8212900": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8276078": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8096029": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8334476": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8055027": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8090534": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pure Storage::8232341": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Elastic::8246948": {
   "first_seen": "2026-11-17",
   "rej": "7 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Elastic::8281059": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Elastic::8156378": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Twilio::8125581": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Twilio::6372770": {
   "first_seen": "2026-11-17",
   "rej": "12 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Twilio::8178812": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Twilio::8350289": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8370557": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223043": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223049": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223036": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223155": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223118": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8345590": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Rubrik::8223214": {
   "first_seen": "2026-11-17",
   "rej": "langue asiatique requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8332958": {
   "first_seen": "2026-11-17",
   "rej": "tagalog requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8378851": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::7868936": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8332960": {
   "first_seen": "2026-11-17",
   "rej": "indon\u00e9sien / malais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8332956": {
   "first_seen": "2026-11-17",
   "rej": "tagalog requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8155946": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Cloudflare::8378849": {
   "first_seen": "2026-11-17",
   "rej": "tha\u00ef requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5456491008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5477774008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5479890008": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5391356008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5458159008": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Anthropic::5460521008": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Airbnb::8345532": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Airbnb::8236127": {
   "first_seen": "2026-11-17",
   "rej": "6 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Airbnb::8349111": {
   "first_seen": "2026-11-17",
   "rej": "10 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8114016": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8323920": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::7532659": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::7483441": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8288347": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8280925": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8345104": {
   "first_seen": "2026-11-17",
   "rej": "m\u00e9tier hors cible",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::7946210": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8210432": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8190448": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8163672": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::6774775": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::8238672": {
   "first_seen": "2026-11-17",
   "rej": "5 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Agoda::7294490": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pinterest::8016642": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pinterest::8336037": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Pinterest::8247248": {
   "first_seen": "2026-11-17",
   "rej": "chinois fortement souhait\u00e9",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Figma::5753209004": {
   "first_seen": "2026-11-17",
   "rej": "8 ans d'exp\u00e9rience demand\u00e9s",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Figma::6161021004": {
   "first_seen": "2026-11-17",
   "rej": "chinois requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "Figma::6231832004": {
   "first_seen": "2026-11-17",
   "rej": "japonais requis",
   "checked": "2026-11-17",
-  "rv": 3
+  "rv": 4
  },
  "HSBC::563774608994127": {
   "first_seen": "2026-11-17"
@@ -4001,8 +4003,8 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "\u00c9conomiste / Recherche macro\u00e9conomique (stagiaire)",
-   "level": "Junior (stagiaire)",
+   "role": "Stagiaire \u00e9conomiste \u2013 recherche macro\u00e9conomique et analyse de donn\u00e9es pour \u00e9quipes d'investissement",
+   "level": "Junior / stagiaire (\u00e9tudiant ou r\u00e9cent dipl\u00f4m\u00e9)",
    "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
@@ -4013,45 +4015,46 @@
     "atouts": 0
    },
    "explain": {
-    "metier": "Recherche macro\u00e9conomique et soutien aux g\u00e9rants : ce n'est ni de la distribution, ni de la lev\u00e9e de fonds, ni de la couverture client.",
-    "niveau": "Stage ouvert aux \u00e9tudiants et jeunes dipl\u00f4m\u00e9s : adapt\u00e9 \u00e0 son profil junior.",
-    "secteur": "Fonds alternatifs mondial (hedge fund) : secteur cible de Th\u00e9o.",
-    "atouts": "Aucun avantage net : le poste exige de l'\u00e9conom\u00e9trie et une connaissance de l'\u00e9conomie chinoise qu'il ne poss\u00e8de pas."
+    "metier": "Recherche macro\u00e9conomique et analyse de donn\u00e9es pour \u00e9quipes d'investissement : \u00e9loign\u00e9 de la distribution, des relations investisseurs et de la lev\u00e9e de fonds qui constituent son c\u0153ur de m\u00e9tier chez Audacia et Partech.",
+    "niveau": "Stage ouvert aux \u00e9tudiants et jeunes dipl\u00f4m\u00e9s sans exp\u00e9rience exig\u00e9e, donc niveau junior adapt\u00e9 \u00e0 ses ~1,5 an d'exp\u00e9rience.",
+    "secteur": "Point72 est un fonds alternatif global (hedge fund), secteur vis\u00e9 par Th\u00e9o.",
+    "atouts": "Aucune exigence de l'annonce (\u00e9conomie chinoise, \u00e9conom\u00e9trie, statistiques) ne correspond \u00e0 un \u00e9l\u00e9ment distinctif de son CV (distribution, RFP-DDQ, fran\u00e7ais)."
    },
-   "summary": "Soutien \u00e0 l'\u00e9quipe de recherche \u00e9conomique sur les \u00e9conomies asiatiques : collecte de donn\u00e9es, mod\u00e9lisation statistique et notes th\u00e9matiques pour les gestionnaires de portefeuille. Poste bas\u00e9 \u00e0 Singapour.",
+   "summary": "Soutien \u00e0 l'\u00e9quipe Economic and Strategy Research de Point72 \u00e0 Singapour : collecte de donn\u00e9es, analyses statistiques sur les \u00e9conomies asiatiques, recherches th\u00e9matiques pour les gestionnaires de portefeuille. Poste de recherche d'investissement, non commercial.",
    "pros": [
-    "Secteur gestion d'actifs alternatifs (hedge fund) \u00e0 Singapour",
-    "Stage junior accessible sans exp\u00e9rience pr\u00e9alable exig\u00e9e",
-    "Anglais suffisant, aucune langue asiatique exig\u00e9e",
-    "Exposition aux march\u00e9s asiatiques et \u00e0 la macro\u00e9conomie"
+    "Secteur vis\u00e9 : fonds alternatif / hedge fund (Point72), coh\u00e9rent avec son projet de carri\u00e8re.",
+    "Niveau junior / stage, accessible avec son exp\u00e9rience d'environ 1,5 an.",
+    "Anglais de travail suffisant ; aucune langue asiatique exig\u00e9e."
    ],
    "cons": [
-    "M\u00e9tier de recherche \u00e9conomique, pas de distribution ni de relations investisseurs",
-    "Exige des comp\u00e9tences en \u00e9conom\u00e9trie et \u00e9conomie chinoise",
-    "Hors cible pour son projet de carri\u00e8re en vente de fonds et couverture client"
+    "M\u00e9tier \u00e9loign\u00e9 : recherche macro\u00e9conomique et analyse de donn\u00e9es, pas de distribution, de relations investisseurs ni de lev\u00e9e de fonds.",
+    "Pas d'atout distinctif : l'annonce valorise l'\u00e9conomie chinoise et l'\u00e9conom\u00e9trie, absents de son CV.",
+    "Stage plut\u00f4t que CDI : peut \u00eatre en d\u00e9calage avec sa recherche d'un poste Analyst/Associate \u00e0 partir de janvier 2027."
    ],
    "keywords": [
-    "economist",
+    "economics",
     "macroeconomics",
     "econometrics",
-    "statistics",
+    "statistical analysis",
+    "data compilation",
     "Asian economies",
     "financial markets",
-    "data analysis",
+    "thematic research",
     "Excel",
     "PowerPoint",
-    "investment strategies",
-    "research",
-    "hedge fund",
-    "Singapore",
-    "macroeconomic data",
-    "statistical models",
-    "AI tools",
+    "investment teams",
     "portfolio managers",
-    "thematic research"
+    "data mining",
+    "market data platforms",
+    "Point72",
+    "hedge fund",
+    "research",
+    "analysis",
+    "finance",
+    "Singapore"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "67dfdeaa4d94"
  },
@@ -4066,54 +4069,54 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Corporate Access (relations investisseurs institutionnels)",
-   "level": "Junior (stage, 0-2 ans)",
+   "role": "Corporate Access Intern chez un hedge fund : support \u00e0 l'acc\u00e8s corporate pour les \u00e9quipes d'investissement (courtiers, conf\u00e9rences, roadshows)",
+   "level": "Stage (\u00e9tudiant dipl\u00f4m\u00e9 2027-2028)",
    "years_required": 0,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
     "metier": 3,
-    "niveau": 3,
+    "niveau": 2,
     "secteur": 2,
-    "atouts": 1
+    "atouts": 0
    },
    "explain": {
-    "metier": "Corporate access est explicitement vis\u00e9 par Th\u00e9o, mais s'apparente davantage au client service et aux relations qu'\u00e0 la lev\u00e9e de fonds ou la distribution pure.",
-    "niveau": "Stage d'\u00e9t\u00e9 destin\u00e9 aux \u00e9tudiants, parfaitement adapt\u00e9 \u00e0 un profil junior.",
-    "secteur": "Point72 est un gestionnaire d'actifs alternatifs / hedge fund mondial.",
-    "atouts": "Son exp\u00e9rience en client coverage institutionnel et relations investisseurs est directement transf\u00e9rable."
+    "metier": "Corporate access est explicitement dans ses souhaits, mais il s'agit de support aux \u00e9quipes d'investissement d'un hedge fund, pas de distribution de fonds ou de relations investisseurs directe.",
+    "niveau": "Stage pour dipl\u00f4m\u00e9s 2027-2028, aucun niveau d'exp\u00e9rience pr\u00e9cis\u00e9 Th\u00e9o a 1,5 an et cherche un poste Analyst/Associate, pas un stage.",
+    "secteur": "Point72 est un hedge fund / alternative investment firm, secteur vis\u00e9 par Th\u00e9o.",
+    "atouts": "Aucun \u00e9l\u00e9ment pr\u00e9cis de l'annonce (fran\u00e7ais, VIE, lev\u00e9e de fonds, RFP-DDQ) ne correspond \u00e0 un fait distinctif de son CV."
    },
-   "summary": "Stage au sein de l'\u00e9quipe Corporate Access de Point72 \u00e0 Hong Kong : support aux \u00e9quipes d'investissement, gestion des relations avec les courtiers agr\u00e9\u00e9s, organisation de conf\u00e9rences et de roadshows, suivi des donn\u00e9es et reporting d'acc\u00e8s corporate.",
+   "summary": "Stage d'\u00e9t\u00e9 de 10 semaines \u00e0 Hong Kong au sein de l'\u00e9quipe Corporate Access de Point72. Soutien aux professionnels de l'investissement, gestion des relations avec les courtiers agr\u00e9\u00e9s, coordination des conf\u00e9rences et roadshows, suivi des donn\u00e9es et reporting. Annonce en anglais, aucune autre langue exig\u00e9e.",
    "pros": [
-    "M\u00e9tier explicitement recherch\u00e9 par Th\u00e9o",
-    "Secteur gestion d'actifs alternatifs (hedge fund)",
-    "Anglais uniquement, aucune exigence de langue asiatique",
-    "Exp\u00e9rience client coverage et relations investisseurs pertinente"
+    "Le corporate access est explicitement dans les postes recherch\u00e9s par Th\u00e9o.",
+    "Le secteur hedge fund / alternative investment correspond \u00e0 ses cibles (Point72).",
+    "Aucune langue locale (mandarin, cantonais) n'est exig\u00e9e dans l'annonce."
    ],
    "cons": [
-    "Stage d'\u00e9t\u00e9 de 10 semaines, pas un poste \u00e0 temps plein",
-    "Cible des \u00e9tudiants dipl\u00f4mant entre fin 2027 et 2028, Th\u00e9o est d\u00e9j\u00e0 dipl\u00f4m\u00e9",
-    "Pas de mention de VIE ou de contrat long terme"
+    "C'est un stage pour \u00e9tudiants dipl\u00f4m\u00e9s 2027-2028 ; Th\u00e9o est dipl\u00f4m\u00e9 2026 et disponible janvier 2027 (d\u00e9calage de profil et de timing).",
+    "Th\u00e9o cherche un poste Analyst/Associate en distribution ou relations investisseurs, pas un stage d'\u00e9t\u00e9.",
+    "Le corporate access chez un hedge fund est plus proche du support aux \u00e9quipes d'investissement que de la lev\u00e9e de fonds ou de la distribution de fonds.",
+    "Concurrence forte des candidats locaux et des \u00e9tudiants asiatiques pour un stage \u00e0 Hong Kong."
    ],
    "keywords": [
     "corporate access",
-    "investment teams",
+    "investment professionals",
     "compliance",
-    "broker",
+    "broker community",
     "conferences",
     "non-deal roadshows",
     "data",
     "technology",
     "analytics",
     "reporting",
-    "relationships",
-    "investment professionals",
-    "Hong Kong",
+    "Point72",
+    "hedge fund",
+    "alternative investment",
     "summer internship",
-    "Point72"
+    "Hong Kong"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "0321d7a6faee"
  },
@@ -4144,51 +4147,55 @@
    "exclude": false,
    "exclude_reason": "",
    "role": "Analyste donn\u00e9es (banque)",
-   "level": "Junior (0-2 ans)",
+   "level": "Junior+ (2+ ans)",
    "years_required": 2,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
     "metier": 0,
-    "niveau": 3,
+    "niveau": 2,
     "secteur": 1,
     "atouts": 0
    },
    "explain": {
-    "metier": "Poste d'analyste donn\u00e9es en banque, sans lien avec la distribution de fonds ou les relations investisseurs vis\u00e9es par Th\u00e9o.",
-    "niveau": "Analyst junior, 2+ ann\u00e9es demand\u00e9es : coh\u00e9rent avec son profil \u00e0 partir de janvier 2027.",
-    "secteur": "Banque (OCBC / Bank of Singapore), pas gestion d'actifs ni private markets.",
-    "atouts": "Aucun avantage net : son exp\u00e9rience est orient\u00e9e couverture client et distribution, pas l'analyse de donn\u00e9es."
+    "metier": "Analyste data dans la Data Hub d'une banque : analyse de donn\u00e9es clients, Python, Power BI, machine learning. Aucun lien avec les relations investisseurs, la lev\u00e9e de fonds ou la distribution de fonds Th\u00e9o exclut express\u00e9ment la tech.",
+    "niveau": "2+ ans d'exp\u00e9rience hands-on exig\u00e9s Th\u00e9o totalise environ 1,5 an (stages et alternance).",
+    "secteur": "Banque (Bank of Singapore / OCBC), pas une soci\u00e9t\u00e9 de gestion, du private markets ou du wealth management pur.",
+    "atouts": "Aucune mention de fran\u00e7ais, de VIE ou de lev\u00e9e de fonds Python et Power BI sont des comp\u00e9tences courantes qui ne le distinguent pas."
    },
-   "summary": "Analyste donn\u00e9es chez Bank of Singapore (groupe OCBC) : transformation de donn\u00e9es clients et transactionnelles en insights m\u00e9tier, utilisation de Python, Power BI et SQL, support aux \u00e9quipes front-office et direction.",
+   "summary": "R\u00f4le d'analyste data au sein de la Data Hub de Bank of Singapore : analyse de donn\u00e9es clients et transactionnelles, Python, Power BI, SQL, mod\u00e9lisation statistique et machine learning pour soutenir la prise de d\u00e9cision business. Pas de relation investisseurs ni de distribution de fonds.",
    "pros": [
-    "Poste junior accessible avec 2 ans d'exp\u00e9rience",
-    "Anglais requis, compatible avec son niveau courant"
+    "Python et Power BI figurent sur son CV et sont explicitement demand\u00e9s.",
+    "Exp\u00e9rience de pr\u00e9sentation et de gestion des parties prenantes acquise chez Partech et Audacia."
    ],
    "cons": [
-    "Fonction data/tech, hors de son c\u0153ur de m\u00e9tier (distribution et relations investisseurs)",
-    "Pas de couverture client, de lev\u00e9e de fonds ni de RFP/DDQ",
-    "Contrat de 6 mois uniquement"
+    "R\u00f4le tech/data pur, hors de son projet (il exclut la tech, le back-office et la data).",
+    "2+ ans exig\u00e9s contre ~1,5 an r\u00e9el ; forte concurrence locale \u00e0 Singapour.",
+    "Poste bas\u00e9 \u00e0 Singapour (pas Hong Kong/Tokyo) et contrat de 6 mois seulement."
    ],
    "keywords": [
     "Data Analyst",
     "Python",
     "Power BI",
     "SQL",
-    "data analytics",
     "machine learning",
     "statistical models",
-    "stakeholder management",
-    "business intelligence",
     "data visualization",
+    "stakeholder management",
     "customer data",
     "transactional data",
-    "insights",
-    "risk",
-    "profitability"
+    "data insights",
+    "self-service BI",
+    "data investigation",
+    "Bank of Singapore",
+    "OCBC",
+    "regression",
+    "hypothesis testing",
+    "business intelligence",
+    "analytics"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "ccf9d8407271"
  },
@@ -4437,8 +4444,8 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Courtier junior \u2013 ex\u00e9cution de taux (Rates Execution)",
-   "level": "Interm\u00e9diaire (2-5 ans)",
+   "role": "Ex\u00e9cution et booking de swaps sur taux (support trading / middle office)",
+   "level": "Junior (2-5 ans requis)",
    "years_required": 2,
    "languages_required": [],
    "languages_preferred": [],
@@ -4449,40 +4456,47 @@
     "atouts": 0
    },
    "explain": {
-    "metier": "Poste d'ex\u00e9cution et de r\u00e9servation de swaps de taux, tr\u00e8s op\u00e9rationnel. Ce n'est pas de la distribution de fonds, de la lev\u00e9e de capitaux ni de la couverture client institutionnelle. S'apparente \u00e0 des op\u00e9rations client de march\u00e9, \u00e9loign\u00e9es du c\u0153ur de cible de Th\u00e9o.",
-    "niveau": "L'annonce demande 2 \u00e0 5 ans d'exp\u00e9rience sur les march\u00e9s financiers. Th\u00e9o est junior et vise des postes 0-2 ans ce r\u00f4le est l\u00e9g\u00e8rement au-dessus de son niveau cible.",
-    "secteur": "TP ICAP est un courtier interdealer / broker de march\u00e9, pas un gestionnaire d'actifs ni un acteur du private wealth. Secteur adjacent (march\u00e9 de capitaux / courtage).",
-    "atouts": "Aucun avantage net : Th\u00e9o n'a pas d'exp\u00e9rience en swaps de taux, en compensation (clearing), ni sur Marketwire. Son profil IR/distribution ne correspond pas aux comp\u00e9tences essentielles."
+    "metier": "L'annonce porte sur l'ex\u00e9cution et le booking de swaps sur taux (op\u00e9rations de march\u00e9), pas sur la distribution de fonds ni les relations investisseurs cibl\u00e9es par Th\u00e9o.",
+    "niveau": "L'annonce exige 2 \u00e0 5 ans d'exp\u00e9rience sur les march\u00e9s financiers Th\u00e9o en a environ 1,5 (alternance et stages).",
+    "secteur": "TP ICAP est un courtier d'ex\u00e9cution agency (interdealer broker), ni soci\u00e9t\u00e9 de gestion, ni private markets, ni wealth management.",
+    "atouts": "Aucun \u00e9l\u00e9ment de l'annonce (IRS, Marketwire, NPV) ne correspond \u00e0 un fait distinctif de son CV (RFP/DDQ, distribution wholesale, lev\u00e9e de fonds)."
    },
-   "summary": "Ex\u00e9cution et r\u00e9servation de transactions de swaps de taux (IRS) compens\u00e9s pour une client\u00e8le de hedge funds et g\u00e9rants d'actifs. Rapprochement avec les contreparties, courtiers en compensation et les op\u00e9rations. Poste de march\u00e9 op\u00e9rationnel avec une \u00e9volution possible vers la couverture client \u00e0 long terme.",
+   "summary": "Ex\u00e9cution et rapprochement de transactions sur swaps d'int\u00e9r\u00eats (IRS) pour une client\u00e8le de hedge funds et asset managers, avec soutien aux brokers seniors et liaison avec les \u00e9quipes op\u00e9rations et contreparties. Poste bas\u00e9 \u00e0 Singapour, avec une voie \u00e9volutive vers la couverture client \u00e0 long terme.",
    "pros": [
-    "Poste intitul\u00e9 \u00ab Junior \u00bb \u00e0 Singapour, hub pertinent pour l'Asie-Pacifique.",
-    "Environnement institutionnel (hedge funds, asset managers) proche de ses cibles sectorielles."
+    "Poste junior bas\u00e9 \u00e0 Singapour, correspondant \u00e0 sa zone g\u00e9ographique cible.",
+    "Aucune exigence de langue asiatique ; l'anglais seul est requis.",
+    "Interface avec des clients institutionnels (hedge funds, asset managers)."
    ],
    "cons": [
-    "M\u00e9tier d'ex\u00e9cution de taux, pas de distribution ou de relations investisseurs.",
-    "Exige 2-5 ans de march\u00e9s financiers et des comp\u00e9tences techniques (NPV, clearing, Marketwire) qu'il ne poss\u00e8de pas.",
-    "Pas de correspondance avec son souhait d'\u00e9voluer vers la distribution client."
+    "M\u00e9tier d'ex\u00e9cution et de booking de d\u00e9riv\u00e9s de taux, \u00e9loign\u00e9 de la distribution de fonds et des relations investisseurs vis\u00e9es par Th\u00e9o.",
+    "Exigence de 2 \u00e0 5 ans d'exp\u00e9rience alors qu'il en a environ 1,5.",
+    "Concurrence forte \u00e0 Singapour avec des candidats locaux ayant une exp\u00e9rience de march\u00e9 directe.",
+    "Aucun atout distinctif dans l'annonce pour son profil (pas de RFP, pas de lev\u00e9e de fonds, pas de fran\u00e7ais requis)."
    ],
    "keywords": [
     "Rates Execution",
-    "Interest Rate Swaps",
-    "Cleared IRS",
-    "Trade Booking",
+    "Junior Broker",
+    "cleared interest rate swaps",
+    "trade booking",
     "Marketwire",
     "NPV",
-    "Hedge Funds",
-    "Asset Managers",
-    "Fixed Income",
-    "Clearing",
-    "Trade Capture",
-    "Counterparties",
-    "Financial Markets",
-    "Singapore",
-    "Broker"
+    "net present value",
+    "hedge funds",
+    "asset managers",
+    "fixed income",
+    "interest rate markets",
+    "counterparties",
+    "clearing brokers",
+    "trade capture",
+    "Developed Market",
+    "Emerging Market",
+    "G10",
+    "EM interest rates",
+    "financial markets",
+    "client servicing"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "43d1568573e8"
  },
@@ -4491,60 +4505,123 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Courtage et interm\u00e9diation sur les march\u00e9s financiers (trainee broker)",
-   "level": "Junior (0-2 ans)",
+   "role": "Trainee broker en courtage wholesale (support de desk, saisie de trades, relation client)",
+   "level": "Junior / Graduate (trainee, exp\u00e9rience non requise)",
    "years_required": 0,
    "languages_required": [],
-   "languages_preferred": [
-    "mandarin"
-   ],
+   "languages_preferred": [],
    "scores": {
-    "metier": 3,
+    "metier": 2,
     "niveau": 3,
     "secteur": 1,
-    "atouts": 1
+    "atouts": 0
    },
    "explain": {
-    "metier": "Poste de courtier junior en march\u00e9s financiers, orient\u00e9 relation client et d\u00e9veloppement commercial. Ce n'est pas de la distribution de fonds, mais c'est du front-office sales en finance, proche de ton profil.",
-    "niveau": "Trainee sans exp\u00e9rience pr\u00e9alable exig\u00e9e, parfaitement adapt\u00e9 \u00e0 un profil junior.",
-    "secteur": "TP ICAP est un courtier interbancaire et interm\u00e9diaire de march\u00e9s, pas un gestionnaire d'actifs ni de la gestion de fortune.",
-    "atouts": "Ton exp\u00e9rience en d\u00e9veloppement commercial, couverture client et roadshows est directement transf\u00e9rable \u00e0 la prospection et \u00e0 l'onboarding de clients."
+    "metier": "Courtage wholesale et support de desk chez TP ICAP : vente et d\u00e9veloppement commercial hors gestion d'actifs, transposable mais pas de distribution de fonds ni de relations investisseurs.",
+    "niveau": "Poste Trainee Broker, exp\u00e9rience pr\u00e9alable non requise : niveau junior/graduate (0-1 an) adapt\u00e9 \u00e0 ton profil (~1,5 an).",
+    "secteur": "Interm\u00e9diaire en march\u00e9s de gros financiers (courtage), cat\u00e9gorie banque/bourse plut\u00f4t que soci\u00e9t\u00e9 de gestion ou private markets.",
+    "atouts": "Aucune exigence sp\u00e9cifique (fran\u00e7ais, VIE, groupe fran\u00e7ais, RFP-DDQ) ne te distingue des candidats locaux dans l'annonce."
    },
-   "summary": "Support au desk de courtage mondial \u00e0 Singapour : saisie de trades, r\u00e9solution de litiges, relation client, suivi des march\u00e9s et d\u00e9veloppement commercial aupr\u00e8s des clients institutionnels.",
+   "summary": "Support de l'\u00e9quipe de courtage wholesale \u00e0 Singapour : saisie de trades, r\u00e9solution de queries, donn\u00e9es de march\u00e9 en temps r\u00e9el, d\u00e9veloppement commercial et onboarding de clients. Rattach\u00e9 aux brokers et traders.",
    "pros": [
-    "R\u00f4le front-office commercial et relationnel",
-    "Aucune exp\u00e9rience pr\u00e9alable exig\u00e9e",
-    "Anglais suffisant, pas de langue locale impos\u00e9e"
+    "Poste ouvert aux juniors sans exp\u00e9rience pr\u00e9alable requise, adapt\u00e9 \u00e0 ton niveau.",
+    "Localisation \u00e0 Singapour, l'une de tes cibles g\u00e9ographiques prioritaires.",
+    "D\u00e9veloppement commercial et relation client, comp\u00e9tences transf\u00e9rables vers la distribution de fonds.",
+    "Environnement front-office rapide sur les march\u00e9s financiers."
    ],
    "cons": [
-    "Pas de distribution de fonds ni de private markets, ce qui est ton c\u0153ur de cible",
-    "Environnement de trading/ex\u00e9cution plut\u00f4t que de lev\u00e9e de fonds",
-    "Candidats locaux avec langues asiatiques avantag\u00e9s"
+    "M\u00e9tier de courtage/ex\u00e9cution, pas de distribution de fonds ni de relations investisseurs en gestion d'actifs.",
+    "Aucune mention du fran\u00e7ais ; candidats locaux ou r\u00e9gionaux avantag\u00e9s sur la connaissance du march\u00e9 asiatique.",
+    "Hors de ton p\u00e9rim\u00e8tre souhait\u00e9 : ni private markets, ni wealth management, ni lev\u00e9e de fonds.",
+    "Focus sur les produits de march\u00e9 (equities, credit, FX, rates) plut\u00f4t que sur les fonds ou strat\u00e9gies d'investissement."
    ],
    "keywords": [
-    "broking",
+    "broker",
+    "trainee broker",
+    "wholesale broking",
     "financial markets",
     "equities",
     "derivatives",
+    "FX",
+    "rates",
     "client onboarding",
-    "trade execution",
+    "trade support",
     "market data",
+    "business development",
+    "relationship building",
     "Bloomberg",
     "Refinitiv",
-    "relationship building",
-    "new business development",
-    "trading desk",
+    "trading systems",
     "front office",
-    "sales",
-    "Singapore"
+    "Singapore",
+    "TP ICAP"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "fd1d76daf322"
  },
  "Stripe::8354764": {
-  "first_seen": "2026-11-17"
+  "first_seen": "2026-11-17",
+  "ai": {
+   "exclude": false,
+   "exclude_reason": "",
+   "role": "Account Executive - ventes de solutions de paiement aux PME (fintech)",
+   "level": "Confirm\u00e9 (3+ ans requis)",
+   "years_required": 3,
+   "languages_required": [],
+   "languages_preferred": [],
+   "scores": {
+    "metier": 2,
+    "niveau": 1,
+    "secteur": 1,
+    "atouts": 0
+   },
+   "explain": {
+    "metier": "Vente de solutions de paiement aux PME chez Stripe (fintech) : transposable \u00e0 sa vente chez Audacia, mais ce n'est ni distribution de fonds, ni relations investisseurs, ni client coverage dans une soci\u00e9t\u00e9 de gestion.",
+    "niveau": "3+ ann\u00e9es d'exp\u00e9rience exig\u00e9es en minimum, Th\u00e9o en a environ 1,5 : il ne remplit pas le seuil junior.",
+    "secteur": "Stripe est une plateforme d'infrastructure financi\u00e8re / fintech, pas une soci\u00e9t\u00e9 de gestion, private markets ou wealth management.",
+    "atouts": "Aucune exigence de l'annonce (lev\u00e9e de fonds, RFP-DDQ, fran\u00e7ais, VIE) ne correspond \u00e0 un \u00e9l\u00e9ment distinctif de son CV."
+   },
+   "summary": "Poste de vente full cycle pour PME en Asie du Sud-Est chez Stripe : prospection, pipeline, d\u00e9monstrations produits, closing et renouvellements. Rattach\u00e9 \u00e0 l'\u00e9quipe commerciale de Singapour.",
+   "pros": [
+    "Exp\u00e9rience en d\u00e9veloppement commercial et gestion de pipeline chez Audacia et Keren.",
+    "Anglais de travail suffisant, aucune langue asiatique exig\u00e9e.",
+    "Cible g\u00e9ographique : Singapour, l'un de ses march\u00e9s vis\u00e9s.",
+    "Ma\u00eetrise des outils Salesforce, Excel et de la data, utiles pour le suivi de pipeline."
+   ],
+   "cons": [
+    "3+ ann\u00e9es d'exp\u00e9rience exig\u00e9es, Th\u00e9o en a environ 1,5 : il ne remplit pas le minimum.",
+    "M\u00e9tier : vente de paiements/SaaS aux PME, pas de distribution de fonds ni relations investisseurs en gestion d'actifs.",
+    "Secteur fintech, hors private markets, wealth management et soci\u00e9t\u00e9 de gestion.",
+    "Concurrence locale forte \u00e0 Singapour sur des profils commerciaux tech d\u00e9j\u00e0 exp\u00e9riment\u00e9s."
+   ],
+   "keywords": [
+    "Account Executive",
+    "SMB",
+    "Southeast Asia",
+    "sales cycle",
+    "pipeline",
+    "prospecting",
+    "consultative sales",
+    "SaaS",
+    "payments",
+    "product walkthrough",
+    "renewals",
+    "upselling",
+    "CRM",
+    "forecasting",
+    "territory planning",
+    "customer success",
+    "API",
+    "business value",
+    "Stripe",
+    "full sales cycle"
+   ],
+   "model": "nvidia/nemotron-3.5-super-vl:free",
+   "v": 4
+  },
+  "ai_h": "3eef3e662b7b"
  },
  "Stripe::7960875": {
   "first_seen": "2026-11-17"
@@ -4632,52 +4709,53 @@
   "ai": {
    "exclude": false,
    "exclude_reason": "",
-   "role": "Program Manager, Strategic Projects",
-   "level": "Junior (0-2 ans)",
+   "role": "Program Manager ventes op\u00e9rationnelles et projets strat\u00e9giques (tech/IoT)",
+   "level": "Junior+ (2 ans)",
    "years_required": 2,
    "languages_required": [],
    "languages_preferred": [],
    "scores": {
-    "metier": 0,
-    "niveau": 3,
-    "secteur": 1,
+    "metier": 2,
+    "niveau": 2,
+    "secteur": 0,
     "atouts": 0
    },
    "explain": {
-    "metier": "Gestion de programme tech chez Grab (IoT, Physical AI) : aucun lien avec la distribution de fonds ou les relations investisseurs.",
-    "niveau": "2 ans d'exp\u00e9rience demand\u00e9s : niveau junior adapt\u00e9 \u00e0 Th\u00e9o.",
-    "secteur": "Grab est une superapp tech/fintech, pas de la gestion d'actifs ni du private markets.",
-    "atouts": "Aucun atout net : son exp\u00e9rience private markets et distribution de fonds n'est pas pertinente pour ce poste tech."
+    "metier": "Program Manager ventes op\u00e9rations chez Grab (tech/IoT) : vente et op\u00e9rations commerciales transposables, mais pas de distribution de fonds ni de couverture client en gestion d'actifs.",
+    "niveau": "L'annonce exige au moins 2 ans d'exp\u00e9rience pertinente Th\u00e9o en compte environ 1,5 (alternance et stages).",
+    "secteur": "Grab est une superapp tech (IoT, Physical AI), ni soci\u00e9t\u00e9 de gestion, ni private markets, ni wealth management, ni banque.",
+    "atouts": "Aucun \u00e9l\u00e9ment de l'annonce (lev\u00e9e de fonds, RFP-DDQ, wholesale, fran\u00e7ais, VIE) ne correspond \u00e0 un fait distinctif de son CV."
    },
-   "summary": "Gestion de programmes strat\u00e9giques et op\u00e9rations commerciales chez Grab (Singapour), centr\u00e9e sur l'IoT, l'IA physique et le d\u00e9ploiement de revenus. Rattach\u00e9 \u00e0 l'\u00e9quipe Growth and Strategy.",
+   "summary": "Piloter des programmes de revenus IoT, Physical AI et fleet chez Grab \u00e0 Singapour : d\u00e9ploiement de pilotes, workflows IA, coordination commerciale, op\u00e9rations et partenaires. Contrat \u00e0 dur\u00e9e d\u00e9termin\u00e9e.",
    "pros": [
-    "Niveau junior correspondant \u00e0 son profil (2 ans demand\u00e9s)",
-    "Anglais comme langue de travail, aucune autre langue exig\u00e9e"
+    "Exp\u00e9rience en op\u00e9rations commerciales et pipeline chez Audacia transposable au sales operations.",
+    "Ma\u00eetrise des outils IA et automatisation (VBA, Power Automate, Claude) demand\u00e9e par le poste.",
+    "Anglais suffisant ; aucune langue asiatique exig\u00e9e."
    ],
    "cons": [
-    "Secteur tech/IoT sans lien avec la gestion d'actifs ou les private markets",
-    "Pas de relations investisseurs, de distribution de fonds ni de couverture client institutionnel",
-    "Poste op\u00e9rationnel chez une superapp, pas \u00e9volutif vers la distribution financi\u00e8re vis\u00e9e"
+    "Secteur tech/superapp, hors gestion d'actifs et private markets : pas de distribution de fonds.",
+    "2 ans d'exp\u00e9rience requis contre environ 1,5 an pour Th\u00e9o ; forte concurrence locale \u00e0 Singapour.",
+    "Poste orient\u00e9 op\u00e9rations terrain et pilotage de projets, pas de couverture client institutionnelle ni de lev\u00e9e de fonds."
    ],
    "keywords": [
-    "program manager",
-    "strategic projects",
-    "sales operations",
-    "commercial operations",
-    "AI-native",
-    "workflow automation",
+    "Program Manager",
+    "Sales Operations",
+    "Commercial Operations",
     "IoT",
     "Physical AI",
-    "pipeline",
-    "revenue",
-    "vendors",
-    "partners",
-    "dashboards",
-    "commercial rollout",
-    "B2B technology"
+    "Revenue Programs",
+    "AI-assisted workflows",
+    "Pipeline",
+    "Contracting",
+    "Onboarding",
+    "Dashboards",
+    "B2B Technology",
+    "Merchant Operations",
+    "Vendor Management",
+    "Pilot Execution"
    ],
    "model": "nvidia/nemotron-3.5-super-vl:free",
-   "v": 3
+   "v": 4
   },
   "ai_h": "b3ca03b6b7dd"
  },

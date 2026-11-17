@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-17T09:30:37Z",
- "generated_paris": "17/11/2026 10:30",
+ "generated_at": "2026-11-17T10:03:54Z",
+ "generated_paris": "17/11/2026 11:03",
  "offers_total": 531,
- "offers_kept": 193,
+ "offers_kept": 195,
  "new_today": 168,
  "reused_from_previous": 0,
  "ai_calls": 12,
@@ -114,7 +114,7 @@
   {
    "name": "HSBC",
    "ok": true,
-   "read": 284,
+   "read": 286,
    "kept": 24,
    "reused": 0
   },
@@ -270,7 +270,7 @@
   {
    "name": "Point72",
    "ok": true,
-   "read": 196,
+   "read": 197,
    "kept": 4,
    "reused": 0
   },
@@ -379,7 +379,7 @@
   {
    "name": "OCBC",
    "ok": true,
-   "read": 1258,
+   "read": 1260,
    "kept": 82,
    "reused": 0
   },
@@ -409,11 +409,10 @@
   },
   {
    "name": "RBC",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 4,
    "kept": 0,
-   "reused": 0,
-   "error": "'NoneType' object has no attribute 'json'"
+   "reused": 0
   },
   {
    "name": "TD Securities",
@@ -606,7 +605,7 @@
   {
    "name": "Thunes",
    "ok": true,
-   "read": 34,
+   "read": 35,
    "kept": 1,
    "reused": 0
   },
@@ -690,7 +689,7 @@
   {
    "name": "Microsoft",
    "ok": true,
-   "read": 200,
+   "read": 202,
    "kept": 8,
    "reused": 0
   },
@@ -783,7 +782,7 @@
   {
    "name": "Databricks",
    "ok": true,
-   "read": 892,
+   "read": 891,
    "kept": 2,
    "reused": 0
   },
@@ -797,7 +796,7 @@
   {
    "name": "MongoDB",
    "ok": true,
-   "read": 400,
+   "read": 398,
    "kept": 0,
    "reused": 0
   },
@@ -818,42 +817,42 @@
   {
    "name": "Zscaler",
    "ok": true,
-   "read": 380,
+   "read": 382,
    "kept": 2,
    "reused": 0
   },
   {
    "name": "Pure Storage",
    "ok": true,
-   "read": 374,
+   "read": 376,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Elastic",
    "ok": true,
-   "read": 388,
+   "read": 387,
    "kept": 2,
    "reused": 0
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 113,
+   "read": 114,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Rubrik",
    "ok": true,
-   "read": 187,
+   "read": 188,
    "kept": 3,
    "reused": 0
   },
   {
    "name": "Cloudflare",
    "ok": true,
-   "read": 472,
+   "read": 473,
    "kept": 6,
    "reused": 0
   },
@@ -874,7 +873,7 @@
   {
    "name": "Agoda",
    "ok": true,
-   "read": 345,
+   "read": 347,
    "kept": 0,
    "reused": 0
   },
@@ -907,12 +906,28 @@
    "reused": 0
   }
  ],
- "seconds": 735,
+ "seconds": 573,
  "ai_provider": "openrouter",
- "ai_reviewed": 9,
- "ai_pending": 184,
+ "ai_reviewed": 12,
+ "ai_pending": 183,
  "ai_models": [
   "nvidia/nemotron-3.5-super-vl:free"
  ],
- "ai_error": "openrouter (nvidia/nemotron-3.5-super-vl:free) : réponse illisible : {\"exclude\": false, \"exclude_reason\": \"\", \"role\": \"Spécialiste assurance HNW (assurance-vie)\", \"level\": \"Intermédiaire (3 ans ou Associate)\", \"years_re"
+ "ai_error": "",
+ "funnel": {
+  "read": 11072,
+  "reused": 0,
+  "rejected": {
+   "lieu": 8515,
+   "langue": 223,
+   "niveau": 1357,
+   "metier": 710,
+   "ancienne": 72,
+   "autre": 0
+  },
+  "kept": 195,
+  "langs_ok": 180,
+  "sources_ok": 46,
+  "sources_total": 118
+ }
 }
