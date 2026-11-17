@@ -2,7 +2,7 @@
 
 La note est la somme de 4 critères, chacun expliqué en clair (affichés dans l'interface) :
   Métier  /4  : le poste correspond-il à ce que tu cherches (IR, distribution, coverage, produit…) ?
-  Niveau  /3  : junior (0-2 ans) = 3 ; 3 ans ou « Associate » = 2 ; « Manager » sans années = 1
+  Niveau  /3  : junior, 0-1 an demandé = 3 ; 2 ans ou « Associate » = 2 ; 3 ans ou « Manager » = 1 (tu as ~1,5 an)
   Secteur /2  : gestion d'actifs / private markets / wealth = 2 ; banque, assurance, fintech = 1 ; autre = 0
   Atouts  /1  : un plus propre à ton profil (français apprécié, VIE, groupe français, private markets)
   Malus       : -1 si une autre langue est « souhaitée » (une langue exigée = offre exclue)
@@ -12,7 +12,7 @@ import re
 from dataclasses import dataclass, field
 from typing import Callable, Dict, List, Optional
 
-RULES_VERSION = 3          # change = toutes les offres sont réévaluées au passage suivant
+RULES_VERSION = 4          # change = toutes les offres sont réévaluées au passage suivant
 
 WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6,
          "seven": 7, "eight": 8, "nine": 9, "ten": 10,
@@ -141,10 +141,10 @@ FAM = [(l, p, re.compile(t, re.I), re.compile(d, re.I)) for l, p, t, d in FAMILI
 SECTOR_CORE = re.compile(
     r"asset management|asset manager|investment management|private (markets?|equity|credit|assets|wealth|banking)|"
     r"venture capital|hedge funds?|alternative (investments?|assets)|alternatives|wealth management|\baum\b|"
-    r"mutual funds?|\bfunds\b|\betfs?\b|fund (house|manager)|institutional investors?|fund of funds|infrastructure (fund|investing)|"
+    r"mutual funds?|\bfunds\b|\betfs?\b|fund (house|manager)|fund of funds|infrastructure (fund|investing)|"
     r"gestion d'actifs|capital[- ]investissement", re.I)
 SECTOR_FIN = re.compile(
-    r"\bbank(ing)?\b|insurance|insurer|payments?|fintech|crypto|digital assets?|exchange|securities|brokerage|"
+    r"\bbank(ing)?\b|corporate access|roadshows?|brokers?|equities|investment bank|insurance|insurer|payments?|fintech|crypto|digital assets?|exchange|securities|brokerage|"
     r"financial (services|institutions?)|capital markets|banque|assurance", re.I)
 FR_COMPANY = re.compile(
     r"bnp|soci[ée]t[ée] g[ée]n[ée]rale|\bsg cib\b|natixis|amundi|axa|cr[ée]dit agricole|ca[- ]cib|lyxor|"
@@ -387,26 +387,22 @@ def full_check(job: Job, cfg: dict) -> Verdict:
         return Verdict(False, f"{years} ans d'expérience demandés", min_years=years, chinese=chinese,
                        other_langs=other, langs_ok=not other, **base)
     junior = JUNIOR_RE.search(t)
+    mgr = re.search(r"\bmanager\b|\bspecialist\b|\bexecutive\b|\bofficer\b", t, re.I)
     if years is not None and years >= 3:
-        niv, level, nwhy = 2, "Confirmé (3 ans)", f"{years} ans demandés : limite haute (tu as ~2 ans)"
-    elif junior and (years is None or years <= 2):
+        niv, level, nwhy = 1, "Confirmé (3 ans)", f"{years} ans demandés : au-dessus de ton ~1,5 an"
+    elif years == 2:
+        niv, level, nwhy = 2, "Junior+ (2 ans)", "2 ans demandés : tu en as ~1,5, c'est juste"
+    elif junior and not mgr:
         niv, level = 3, "Junior"
-        nwhy = f"Intitulé junior (« {junior.group(0)} »)" + (f", {years} an(s) demandé(s)" if years else ", pas d'années exigées")
+        nwhy = f"Intitulé junior (« {junior.group(0)} »)" + (f", {years} an demandé" if years else ", pas d'années exigées")
     elif re.search(r"\bassociate\b", t, re.I):
-        niv, level = 2, "Associate"
-        nwhy = "« Associate » : souvent 2-4 ans" + (f" ; ici {years} an(s) demandé(s)" if years else "")
-        if years is not None and years <= 2:
-            niv, nwhy = 3, f"« Associate » mais {years} an(s) demandé(s) seulement"
-    elif re.search(r"\bmanager\b|\bspecialist\b|\bexecutive\b", t, re.I):
-        word = re.search(r"\bmanager\b|\bspecialist\b|\bexecutive\b", t, re.I).group(0)
-        if years is not None and years <= 2:
-            niv, level, nwhy = 3, "Junior", f"« {word} » mais {years} an(s) demandé(s) seulement"
-        else:
-            niv, level, nwhy = 1, "À vérifier", f"« {word} » sans années précisées : niveau peut-être au-dessus"
+        niv, level, nwhy = 2, "Associate", "« Associate » : en général 2-4 ans attendus"
+    elif mgr:
+        niv, level, nwhy = 1, "À vérifier", f"« {mgr.group(0)} » sans années précisées : niveau probablement au-dessus"
     elif years is not None:
-        niv, level, nwhy = 3, "Junior", f"{years} an(s) demandé(s)"
+        niv, level, nwhy = 3, "Junior", f"{years} an demandé"
     else:
-        niv, level, nwhy = 2, "Non précisé", "Ni niveau ni années précisés dans l'annonce"
+        niv, level, nwhy = 2, "Non précisé", "Ni niveau ni années précisés : prudence"
     if not text:
         niv, nwhy = min(niv, 2), nwhy + " (annonce non lue)"
 
@@ -426,15 +422,22 @@ def full_check(job: Job, cfg: dict) -> Verdict:
     else:
         sec, swhy = 0, "Hors finance (tech, autre secteur)"
 
-    # ---- atouts (critère /1)
-    at, awhy = 0, "Aucun avantage particulier pour ton profil"
+    # métier : distribution / coverage / IR comptent plein seulement en gestion d'actifs / private markets
+    if met >= 4 and sec < 2:
+        met = 3 if sec == 1 else 2
+        mwhy += " (hors gestion d'actifs : -" + ("1" if sec == 1 else "2") + ")"
+
+    # ---- atouts (critère /1) : seulement un avantage net
+    at, awhy = 0, "Aucun avantage net pour ton profil par rapport aux autres candidats"
+    ir_hits = sorted(set(m.group(0).lower() for m in re.finditer(
+        r"fundrais\w*|limited partners?|\blps?\b|capital raising|investor relations|private markets?|rfps?|ddqs?", text, re.I)))
     if FRENCH_PLUS.search(text) and re.search(r"french", _clause(text, *FRENCH_PLUS.search(text).span()), re.I):
         at, awhy = 1, "Le français est demandé ou apprécié"
     elif FR_COMPANY.search(blob) or job.source.startswith("VIE"):
         m = FR_COMPANY.search(blob)
         at, awhy = 1, f"Groupe français / VIE (« {m.group(0) if m else 'VIE'} »)"
-    elif BACKGROUND_PLUS.search(text):
-        at, awhy = 1, f"Colle à ton expérience private markets / levée (« {BACKGROUND_PLUS.search(text).group(0)} »)"
+    elif len(ir_hits) >= 3:
+        at, awhy = 1, "L'annonce demande ce que tu fais déjà : " + ", ".join(ir_hits[:4])
 
     parts = [
         {"k": "metier", "label": "Métier", "pts": met, "max": 4, "why": mwhy},

@@ -62,7 +62,7 @@ with mock.patch.object(ai_score, "review", return_value=(res, "gemini")), mock.p
     with mock.patch.dict(jobwatch.os.environ, {"GEMINI_API_KEY": "g"}):
         kept = jobwatch.apply_ai([(j, v)], [], {}, cfg)
 v2 = kept[0][1]
-assert v2.note_source == "ia" and v2.note10 == 9 and len(v2.parts) == 5 and v2.keywords, (v2.note10, v2.parts)
+assert v2.note_source == "ia" and v2.note10 == 5 and len(v2.parts) == 5 and v2.keywords, (v2.note10, v2.parts)
 excl = ai_score.normalize(dict(fr, languages_required=["cantonais"], v=ai_score.AI_VERSION))
 rej = []
 v = full_check(j, cfg)

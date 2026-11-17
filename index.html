@@ -171,6 +171,23 @@ main{max-width:820px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-rig
   .nav .badge{position:static}
   .toast{bottom:24px}
 }
+.gauges{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:10px}
+.g-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted)} .g-head b{color:var(--fg)}
+.g-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:560px){.g-grid{grid-template-columns:1fr;gap:9px}}
+.g-top{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--muted);margin-bottom:5px} .g-top b{color:var(--fg);font-variant-numeric:tabular-nums;white-space:nowrap}
+.g-bar,.f-bar{height:8px;border-radius:999px;background:var(--low-bg);overflow:hidden} .g-bar i,.f-bar i{display:block;height:100%;background:var(--good);border-radius:999px}
+.g-bar i.warn{background:var(--warn)}
+.gauges details summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);list-style:none;padding:2px 0} .gauges details summary::-webkit-details-marker{display:none}
+.gauges details summary::after{content:" ▾"} .gauges details[open] summary::after{content:" ▴"}
+.g-sub{font-size:13px;color:var(--muted);margin:12px 0 6px} .g-sub b{color:var(--fg)}
+.funnel{display:flex;flex-direction:column;gap:6px}
+.f-row{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) 52px;gap:8px;align-items:center;font-size:13px}
+.f-row b{text-align:right;font-variant-numeric:tabular-nums} .f-row .f-bar i{background:var(--mid)} .f-row.keep .f-bar i{background:var(--good)} .f-row.keep span{font-weight:600}
+.hist{display:grid;grid-template-columns:repeat(11,1fr);gap:4px;height:96px;align-items:end}
+.h-col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;min-width:0}
+.h-col i{display:block;width:100%;background:var(--low);opacity:.45;border-radius:4px 4px 0 0} .h-col i.mid{background:var(--mid);opacity:1} .h-col i.hi{background:var(--good);opacity:1}
+.h-n{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;min-height:14px} .h-x{font-size:11px;color:var(--muted);margin-top:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style></head><body>
 <header class="top">
@@ -205,6 +222,7 @@ main{max-width:820px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-rig
 <main>
   <section id="v-offres" class="wrap">
     <div class="banner" id="banner" hidden></div>
+    <div class="gauges" id="gauges" hidden></div>
     <div class="stats" id="stats"></div>
     <div class="count"><span id="count"></span><button type="button" id="reset" hidden>Réinitialiser les filtres</button></div>
     <div class="list" id="list"></div>
@@ -401,12 +419,46 @@ function renderOffres(){
   const live=DATA.filter(o=>!o.excluded&&!isDone(stOf(o)));
   const nT=s=>Object.values(TRK).filter(x=>x.status===s).length;
   const stats=[[live.filter(o=>o.langs_ok).length,"sans autre langue"],[live.filter(isNew).length,"nouvelles"],[live.filter(o=>o.langs_ok&&o.note10>=7).length,"notées 7+"],[nT("todo"),"à postuler"]];
+  renderGauges();
   $("stats").innerHTML=stats.map(s=>`<div class="stat"><div class="n">${s[0]}</div><div class="l">${s[1]}</div></div>`).join("");
   markPills();
   const a=filtered();
   $("count").textContent=a.length+" offre"+(a.length>1?"s":"");
   $("list").innerHTML=a.length?a.map(card).join(""):`<div class="empty">Aucune offre avec ces filtres.<br>Essaie « Toutes notes » ou « + langue un plus ».</div>`;
   const ai=M&&M.ai_error;if(ai&&DATA.length){$("banner").textContent="Dernière erreur IA : "+ai;$("banner").hidden=false}
+}
+
+/* ================= jauges du dernier passage ================= */
+function nextRun(iso){/* passages à 7h, 11h, 15h, 19h heure de Paris */
+  const now=new Date(),h=+now.toLocaleString("en-GB",{timeZone:"Europe/Paris",hour:"2-digit",hour12:false});
+  const n=[7,11,15,19].find(x=>x>h);return n?("vers "+n+"h"):"demain vers 7h"}
+function gauge(label,val,txt,cls){return`<div class="g"><div class="g-top"><span>${label}</span><b>${txt}</b></div><div class="g-bar"><i class="${cls||""}" style="width:${Math.max(0,Math.min(100,val))}%"></i></div></div>`}
+function renderGauges(){
+  const M=META.meta,el=$("gauges");
+  if(!M||!M.generated_at){el.hidden=true;return}el.hidden=false;
+  const live=DATA.filter(o=>!o.excluded),ok=live.filter(o=>o.langs_ok);
+  const aiDone=M.ai_reviewed||0,aiTot=aiDone+(M.ai_pending||0);
+  const src=M.sources||[],sOk=src.filter(x=>x.ok).length,ko=src.filter(x=>!x.ok);
+  const n7=ok.filter(o=>o.note10>=7).length;
+  const F=M.funnel;
+  let h=`<div class="g-head"><span>Dernier passage : <b>${parisFmt(M.generated_at)}</b></span><span>Prochain ${nextRun()}</span></div><div class="g-grid">`+
+    gauge("Analyse IA",aiTot?100*aiDone/aiTot:0,aiTot?aiDone+" / "+aiTot:"aucune",aiTot&&aiDone<aiTot?"warn":"")+
+    gauge("Sources qui répondent",src.length?100*sOk/src.length:0,sOk+" / "+src.length,ko.length?"warn":"")+
+    gauge("Notées 7+ (sans autre langue)",ok.length?100*n7/ok.length:0,n7+" / "+ok.length,"")+`</div>`;
+  /* détail : entonnoir, répartition des notes, sources en panne */
+  let det="";
+  if(F){const R=F.rejected||{},lab={lieu:"Hors HK / SG / Tokyo",niveau:"Trop senior ou >3 ans",metier:"Métier hors cible",langue:"Autre langue exigée",ancienne:"Trop ancienne",autre:"Autres"};
+    const tot=Object.values(R).reduce((a,b)=>a+b,0)+(F.kept||0);
+    det+=`<div class="g-sub">Ce passage : <b>${(F.read||0).toLocaleString("fr-FR")}</b> annonces lues, ${(F.reused||0).toLocaleString("fr-FR")} déjà connues non relues</div><div class="funnel">`+
+      Object.entries(lab).filter(([k])=>R[k]).sort((a,b)=>R[b[0]]-R[a[0]]).map(([k,l])=>`<div class="f-row"><span>${l}</span><div class="f-bar"><i style="width:${100*R[k]/Math.max(1,tot)}%"></i></div><b>${R[k].toLocaleString("fr-FR")}</b></div>`).join("")+
+      `<div class="f-row keep"><span>Retenues</span><div class="f-bar"><i style="width:${100*(F.kept||0)/Math.max(1,tot)}%"></i></div><b>${F.kept||0}</b></div></div>`}
+  const bins=Array(11).fill(0);ok.forEach(o=>{if(o.note10!=null)bins[o.note10]++});const mx=Math.max(1,...bins);
+  det+=`<div class="g-sub">Répartition des notes (offres sans autre langue)</div><div class="hist">${bins.map((c,i)=>`<div class="h-col" title="${c} offre(s) notée(s) ${i}"><span class="h-n">${c||""}</span><i class="${i>=7?"hi":i>=5?"mid":""}" style="height:${c?Math.max(6,100*c/mx):0}%"></i><span class="h-x">${i}</span></div>`).join("")}</div>`;
+  if(ko.length)det+=`<div class="g-sub">Sources en panne (offres du passage précédent gardées) : ${esc(ko.map(x=>x.name).join(", "))}</div>`;
+  if(M.ai_error)det+=`<div class="g-sub" style="color:var(--warn)">Dernière erreur IA : ${esc(M.ai_error)}</div>`;
+  const open=lsGet("jw_gopen")==="1";
+  el.innerHTML=h+`<details id="g-det"${open?" open":""}><summary>Détail des données</summary>${det}</details>`;
+  $("g-det").addEventListener("toggle",e=>lsSet("jw_gopen",e.target.open?"1":"0"));
 }
 
 /* ================= fiche offre ================= */
@@ -490,14 +542,14 @@ function renderAll(){
   refreshDetail();
 }
 /* ================= réglages ================= */
-const MODELS={gemini:["gemini-3.5-flash-lite","gemini-3.1-flash-lite","gemini-3.6-flash"],
+const MODELS={gemini:["gemini-3.8-flash","gemini-3.6-flash","gemini-3.5-flash-lite","gemini-3.1-flash-lite"],
   openrouter:["nvidia/nemotron-3.5-super-vl:free","nvidia/nemotron-3-ultra-550b-a55b:free","cohere/north-mini-code:free"]};
-function S(){return Object.assign({prov:"gemini",key:"",model:"",phone:"",email:""},jget("jw_settings",{}))}
+function S(){const s=Object.assign({prov:"gemini",key:"",model:"",phone:"",email:""},jget("jw_settings",{}));if(s.model==="gemini-3.5-flash-lite"&&!s.mv)s.model="";return s}
 function fillSettings(){const s=S();$("s-prov").value=s.prov;$("s-key").value=s.key;$("s-model").value=s.model||MODELS[s.prov][0];
   $("s-model-hint").textContent="Repli automatique : "+MODELS[s.prov].filter(m=>m!==($("s-model").value)).join(", ");
   $("s-phone").value=s.phone;$("s-email").value=s.email;$("s-cv").value=lsGet("jw_cv_base")||"";$("s-cv-src").textContent=CV_SRC;
   const th=lsGet("jw_theme")||"";document.querySelectorAll("#s-theme button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.th===th))}
-function readSettings(){return{prov:$("s-prov").value,key:$("s-key").value.trim(),model:$("s-model").value.trim(),phone:$("s-phone").value.trim(),email:$("s-email").value.trim()}}
+function readSettings(){return{mv:2,prov:$("s-prov").value,key:$("s-key").value.trim(),model:$("s-model").value.trim(),phone:$("s-phone").value.trim(),email:$("s-email").value.trim()}}
 $("s-prov").addEventListener("change",()=>{$("s-model").value=MODELS[$("s-prov").value][0];$("s-model-hint").textContent="Repli automatique : "+MODELS[$("s-prov").value].slice(1).join(", ")});
 $("s-save").addEventListener("click",async()=>{
   lsSet("jw_settings",JSON.stringify(readSettings()));
@@ -521,7 +573,7 @@ async function aiCall(s,prompt,timeoutS){
       for(const m of models){
         const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(m)}:generateContent`,{method:"POST",signal:ctl.signal,
           headers:{"Content-Type":"application/json","x-goog-api-key":s.key},
-          body:JSON.stringify({contents:[{role:"user",parts:[{text:prompt}]}],generationConfig:{responseMimeType:"application/json",temperature:0.35,maxOutputTokens:8192}})});
+          body:JSON.stringify({contents:[{role:"user",parts:[{text:prompt}]}],generationConfig:{responseMimeType:"application/json",temperature:0.2,maxOutputTokens:8192}})});
         if(r.status===429||r.status===404||r.status===503){last=m+" : "+(r.status===429?"quota du jour atteint":r.status===404?"modèle introuvable":"surchargé");continue}
         if(!r.ok)throw new Error("HTTP "+r.status+" "+(await r.text()).slice(0,160));
         const d=await r.json();const parts=((((d.candidates||[])[0]||{}).content||{}).parts||[]);
@@ -531,7 +583,7 @@ async function aiCall(s,prompt,timeoutS){
     }
     const r=await fetch("https://openrouter.ai/api/v1/chat/completions",{method:"POST",signal:ctl.signal,
       headers:{"Content-Type":"application/json","Authorization":"Bearer "+s.key,"X-Title":"jobwatch"},
-      body:JSON.stringify({models:models.slice(0,3),temperature:0.35,max_tokens:6000,response_format:{type:"json_object"},reasoning:{exclude:true},
+      body:JSON.stringify({models:models.slice(0,3),temperature:0.2,max_tokens:6000,response_format:{type:"json_object"},reasoning:{exclude:true},
         messages:[{role:"user",content:prompt}]})});
     if(r.status===429)throw new Error("quota gratuit OpenRouter atteint (50/jour sans crédit)");
     if(!r.ok)throw new Error("HTTP "+r.status+" "+(await r.text()).slice(0,160));
@@ -545,50 +597,95 @@ function parseJson(t){t=String(t||"").replace(/^```(?:json)?|```$/gm,"").trim();
 /* ================= CV adapté ================= */
 function cvPrompt(o,base){
   const b={...base};delete b._note;delete b.target;
-  return `You are a top CV writer for asset management, private markets and wealth roles in Asia-Pacific, and an ATS (Workday, Taleo, Greenhouse, SuccessFactors) optimisation expert.
-Rewrite the candidate's CV so it scores 10/10 for THIS job: maximum ATS keyword match and an obvious fit for the hiring manager, on ONE page.
+  const roles=(base.experience||[]).map((e,i)=>`${i+1}. ${e.title} | ${e.company} (${e.dates})`).join("\n");
+  return `You are a senior CV writer for junior roles in asset management, private markets and wealth in Asia-Pacific, and an ATS expert.
+Tailor the candidate's REAL CV to the job ad below. The result must read as the candidate's own, truthful career, written to make him an obvious fit.
 
-ABSOLUTE RULES (never break):
-- Keep exactly: name, employers (company names), locations, dates, schools, degrees, GPA, nationality, the Languages line (same languages and levels, do NOT add any language), LinkedIn.
-- NEVER invent or add: certifications, licences (CFA, CAIA, SFC, HKSI, MAS, FINRA...), languages, degrees, employers, awards.
-- Allowed and expected: rename each job title to the closest credible equivalent of the target role (keep Analyst-level seniority); rewrite, reorder, merge or split bullets; move the most relevant achievements first; reuse the candidate's real figures (EUR 3bn+ AUM, 45+ meetings, 5,000+ accounts, 6 funds...); add tools, software and technical skills the job asks for (e.g. SQL, Bloomberg, Tableau, CRM names, FactSet) to the Tools line and use them naturally in bullets.
-- Mirror the job ad's exact wording for hard skills, product types, client segments and responsibilities (ATS exact-match), including most of these keywords: ${(o.keywords||[]).join(", ")||"(extract them from the ad)"}.
-- Headline: the target job title + 2-3 core keywords.
-- FORBIDDEN: any "Summary", "Professional Summary", "Profile", "Objective" or "About me" section. The CV has ONLY three sections: Work Experience, Education, Skills.
-- location_line: "Paris, France (relocating to ${o.city||"the job location"}, available from ${base.availability||"January 2027"})".
-- Exactly ONE FULL page (no empty space at the bottom): 5 bullets for each of the 2 most recent roles, 2 bullets for each other role, 1-2 bullets per degree, 4-5 skill lines; each bullet 150-220 characters, strong action verbs, quantified where the base CV has figures, no first person.
-- Write in the language of the job ad (English if the ad is in English).
+HOW TO USE THE JOB AD
+- Use it ONLY to decide (a) which of his real achievements to put first and expand, and (b) which keywords/terms to use.
+- NEVER copy sentences or half-sentences from the ad. NEVER describe the target job's duties as if he had done them
+  (bad: "Increase the private bank's share of discretionary funds assets", "Be a culture carrier and brand ambassador").
+- Keywords go in naturally as nouns inside his real achievements and in the Skills section (good: "Prepared RFP/DDQ responses and product one-pagers on private market funds for institutional and wealth investors").
 
-JOB AD
+JOB TITLES (strict)
+- Keep his real titles. You may adjust ONLY the 2 most recent titles (Partech, Audacia) by swapping in 1-2 words of the target vocabulary,
+  and they must stay true to what he did and DIFFERENT from each other. Never give the target job title to every role.
+- All older roles keep their exact original title.
+
+BULLETS (strict)
+- Every bullet must be a rewrite of a fact in that SAME role's base bullets (same employer). Keep his real figures (EUR 3bn+ AUM, 45+ meetings, 5 mandates, 5,000+ accounts, 6 funds, 60+ meetings, 4 accounts).
+  You may split one base bullet into two, add context, results and keywords, but never move facts between employers and never invent clients, products or figures.
+- Past tense for past roles, present tense for the current role (Partech). Strong action verb first. 150-220 characters each.
+- Counts: 5 bullets for Partech, 5 for Audacia, 2 for each other role.
+
+ALLOWED ADDITIONS
+- Add tools/software the ad asks for (e.g. Bloomberg, SQL, Tableau, FactSet, a CRM) to the "Tools & Data" skill line, and mention them in at most 2 bullets.
+- Skills: 4-5 lines; first line = the ad's core hard skills that he really has (renamed with the ad's vocabulary).
+
+NEVER
+- No summary / profile / objective section. Only experience, education, skills.
+- No new certifications, licences, languages, degrees, employers, awards. Keep the Languages line exactly.
+- Education: keep degree, school, dates; details may only rephrase the base details (no invented courses).
+
+TARGET JOB
 Title: ${o.title}
 Company: ${o.company}
 Location: ${o.location}
+Keywords to include where truthful: ${(o.keywords||[]).join(", ")||"(extract them from the ad)"}
 ${(o.description||"").slice(0,12000)}
+
+CANDIDATE'S REAL ROLES (titles to keep)
+${roles}
 
 BASE CV (JSON)
 ${JSON.stringify(b)}
 
-Return ONLY a JSON object with exactly the base CV structure (name, headline, location_line, nationality, linkedin, experience[{title,company,location,dates,bullets[]}], education[{degree,school,location,dates,details}], skills[{label,text}]) plus:
-"keywords_used": ["..."], "changes": ["3-6 short sentences IN FRENCH describing what you changed and why"]`;
+Return ONLY a JSON object with the base CV structure (name, headline, location_line, nationality, linkedin, experience[{title,company,location,dates,bullets[]}], education[{degree,school,location,dates,details}], skills[{label,text}]) plus
+"keywords_used": [...], "changes": ["3-6 short sentences IN FRENCH explaining what was emphasised and why"].
+headline = target-style title for him (e.g. "Product & Investor Relations Analyst | Funds Distribution, Wealth & Institutional Clients").
+location_line = "Paris, France (relocating to ${o.city||"the job location"}, available from ${base.availability||"January 2027"})".`;
 }
-function guardCv(cv,base){
-  /* garde-fous : employeurs, dates, écoles, langues et certifications toujours ceux du CV de base */
-  const out={...cv};
+const STOP=new Set("with from that this have were their about into across over under while using used make made also more most such than then they them your will would could should been being which where when what other each very well both only just like some many much provide support supported supporting ensure work worked working client clients team teams manage managed managing build built".split(" "));
+function words(s){return (String(s||"").toLowerCase().match(/[a-z0-9][a-z0-9+&/.-]{3,}/g)||[]).filter(w=>!STOP.has(w))}
+function copiesAd(b,ad){/* 7 mots consécutifs repris de l'annonce = phrase copiée */
+  const w=String(b||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").split(/\s+/).filter(Boolean);
+  for(let i=0;i+7<=w.length;i++){if(ad.includes(" "+w.slice(i,i+7).join(" ")+" "))return true}return false}
+function grounded(b,baseBullets){/* la puce doit reprendre un fait réel du même poste */
+  const bw=new Set(words(baseBullets.join(" ")));const nums=(baseBullets.join(" ").match(/\d[\d,.]*\+?/g)||[]);
+  const shared=new Set(words(b).filter(w=>bw.has(w)));
+  return shared.size>=3||(shared.size>=2&&nums.some(n=>String(b).includes(n)))}
+function guardCv(cv,base,o){
+  /* garde-fous : employeurs, dates, écoles, langues, certifications et intitulés anciens toujours ceux du CV de base ;
+     puces copiées de l'annonce ou sans lien avec le vrai poste -> remplacées par les puces d'origine */
+  const out={...cv};const notes=[];
   ["name","nationality","linkedin"].forEach(k=>out[k]=base[k]);
+  const ad=" "+String((o&&o.description)||"").toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\s+/g," ")+" ";
   const norm=s=>String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
-  const exp=[];(cv.experience||[]).forEach(e=>{const b=(base.experience||[]).find(x=>norm(x.company)===norm(e.company))||(base.experience||[]).find(x=>norm(e.company).includes(norm(x.company))||norm(x.company).includes(norm(e.company)));
-    if(b&&!exp.some(x=>x.company===b.company))exp.push({title:String(e.title||b.title),company:b.company,location:b.location,dates:b.dates,bullets:toList(e.bullets).slice(0,5)})});
+  const findBase=e=>(base.experience||[]).find(x=>norm(x.company)===norm(e.company))||(base.experience||[]).find(x=>norm(e.company).includes(norm(x.company))||norm(x.company).includes(norm(e.company)));
+  const exp=[];
+  (cv.experience||[]).forEach(e=>{const b=findBase(e);if(!b||exp.some(x=>x.company===b.company))return;
+    const idx=base.experience.indexOf(b);
+    let title=idx<2?String(e.title||b.title):b.title;
+    let bullets=toList(e.bullets).filter(x=>{if(copiesAd(x,ad)){notes.push("copie");return false}if(!grounded(x,b.bullets)){notes.push("hors sujet");return false}return true});
+    const want=idx<2?5:2;
+    for(const bb of b.bullets){if(bullets.length>=want)break;if(!bullets.some(x=>grounded(x,[bb])))bullets.push(bb)}
+    exp.push({title,company:b.company,location:b.location,dates:b.dates,bullets:bullets.slice(0,want)})});
   (base.experience||[]).forEach(b=>{if(!exp.some(x=>x.company===b.company))exp.push(b)});
   const order=(base.experience||[]).map(b=>b.company);exp.sort((a,b)=>order.indexOf(a.company)-order.indexOf(b.company));
+  if(exp.length>1&&norm(exp[0].title)===norm(exp[1].title))exp[1].title=base.experience[1].title;
   out.experience=exp;
-  out.education=(base.education||[]).map(b=>{const e=(cv.education||[]).find(x=>norm(x.school)===norm(b.school));return{...b,details:e&&e.details?String(e.details):b.details}});
+  out.education=(base.education||[]).map(b=>{const e=(cv.education||[]).find(x=>norm(x.school)===norm(b.school));
+    const d=e&&e.details&&!copiesAd(e.details,ad)&&grounded(e.details,[b.details||""])?String(e.details):b.details;return{...b,details:d}});
   const skills=(Array.isArray(cv.skills)?cv.skills:[]).filter(s=>s&&typeof s==="object"&&s.label);
   const baseLang=(base.skills||[]).find(s=>/language/i.test(s.label));
-  out.skills=skills.filter(s=>!/language|langue/i.test(s.label)&&!/certif/i.test(s.label)).map(s=>({label:String(s.label),text:String(s.text||"")}));
-  if(baseLang)out.skills.splice(Math.min(2,out.skills.length),0,baseLang);
-  const baseInt=(base.skills||[]).find(s=>/interest/i.test(s.label));if(baseInt&&!out.skills.some(s=>/interest/i.test(s.label)))out.skills.push(baseInt);
-  delete out.summary;delete out.profile;delete out.objective;out.headline=String(cv.headline||base.headline||"");out.location_line=String(cv.location_line||base.location_line||"");
+  out.skills=skills.filter(s=>!/language|langue/i.test(s.label)&&!/certif/i.test(s.label)&&!/interest/i.test(s.label)).map(s=>({label:String(s.label),text:String(s.text||"")})).slice(0,4);
+  if(baseLang)out.skills.push(baseLang);
+  const baseInt=(base.skills||[]).find(s=>/interest/i.test(s.label));if(baseInt)out.skills.push(baseInt);
+  delete out.summary;delete out.profile;delete out.objective;
+  out.headline=String(cv.headline||base.headline||"");out.location_line=String(cv.location_line||base.location_line||"");
   out.changes=toList(cv.changes);out.keywords_used=toList(cv.keywords_used);
+  const nc=notes.filter(n=>n==="copie").length,nh=notes.filter(n=>n==="hors sujet").length;
+  if(nc||nh)out.changes.push(`Garde-fou : ${nc+nh} puce(s) de l'IA écartée(s) (${nc} recopiée(s) de l'annonce, ${nh} sans lien avec ton vrai poste) et remplacée(s) par tes puces d'origine.`);
   return out;
 }
 function cvText(cv){return [cv.headline,...cv.experience.flatMap(e=>[e.title,...e.bullets]),...cv.skills.map(s=>s.label+" "+s.text)].join(" ").toLowerCase()}
@@ -627,7 +724,7 @@ async function genCv(o,force){
   $("cv-actions").innerHTML="";
   try{
     const r=await aiCall(s,cvPrompt(o,BASE_CV),150);
-    const cv=guardCv(parseJson(r.text),BASE_CV);
+    const cv=guardCv(parseJson(r.text),BASE_CV,o);
     if(!cv.experience.length)throw new Error("CV vide renvoyé par l'IA");
     lsSet("jw_cvj_"+id,JSON.stringify({cv,model:r.model,at:today()}));
     showCv(o,cv,r.model);refreshDetail();

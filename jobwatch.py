@@ -296,6 +296,23 @@ def apply_ai(kept, rejected, state, cfg):
     return out
 
 
+REJ_CATS = [("lieu", r"^lieu"), ("langue", r"requis|souhaité|langue|japonais|chinois"),
+            ("niveau", r"senior|ans d'exp|ans demandés|relationship manager"), ("metier", r"métier|hors cible|périmètre"),
+            ("ancienne", r"ancienne")]
+
+
+def funnel(rejected, live) -> dict:
+    """Chiffres du passage pour les jauges de la page : annonces lues, écartées par motif, retenues."""
+    rej = {k: 0 for k, _ in REJ_CATS}
+    rej["autre"] = 0
+    for _, v in rejected:
+        cat = next((k for k, pat in REJ_CATS if re.search(pat, v.reason or "", re.I)), "autre")
+        rej[cat] += 1
+    return {"read": sum(s.get("read", 0) for s in SRC_STATS), "reused": sum(s.get("reused", 0) for s in SRC_STATS),
+            "rejected": rej, "kept": len(live), "langs_ok": sum(1 for r in live if r.get("langs_ok")),
+            "sources_ok": sum(1 for s in SRC_STATS if s.get("ok")), "sources_total": len(SRC_STATS)}
+
+
 def write_outputs(kept, rejected, errors, cfg, explain):
     OUT.mkdir(exist_ok=True)
     now = format_datetime(datetime.now(timezone.utc))
@@ -365,7 +382,8 @@ def write_outputs(kept, rejected, errors, cfg, explain):
             "ai_reviewed": sum(1 for r in live if r.get("note_source") == "ia"),
             "ai_pending": sum(1 for r in live if r.get("note_source") != "ia"),
             "ai_models": sorted({r.get("ai_model") for r in live if r.get("ai_model")}),
-            "ai_error": ai_score.LAST_ERROR}
+            "ai_error": ai_score.LAST_ERROR,
+            "funnel": funnel(rejected, live)}
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     with open(OUT / "jobs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["rating"])

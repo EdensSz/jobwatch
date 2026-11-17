@@ -14,7 +14,7 @@ from pathlib import Path
 import requests
 
 HERE = Path(__file__).parent
-AI_VERSION = 3                 # change = les analyses IA en cache sont refaites
+AI_VERSION = 4                 # change = les analyses IA en cache sont refaites
 LAST_ERROR = ""
 EXHAUSTED = set()              # fournisseurs dont le quota du jour est atteint pendant ce passage
 MAX_PTS = {"metier": 4, "niveau": 3, "secteur": 2, "atouts": 1}
@@ -56,19 +56,22 @@ def cv_text(cv: dict) -> str:
 SYSTEM = """Tu es un recruteur expert en gestion d'actifs et private markets en Asie (Hong Kong, Singapour, Tokyo).
 Tu évalues des offres d'emploi pour Théo et réponds UNIQUEMENT par un objet JSON valide, rédigé en FRANÇAIS."""
 
-RUBRIC = """BARÈME (sois strict et cohérent, ne gonfle pas les notes) :
-- metier (0-4) : 4 = cœur de cible (relations investisseurs / levée de fonds, distribution ou vente de fonds,
-  client coverage institutionnel ou wealth, product specialist en gestion d'actifs / private markets) ;
-  3 = proche (client service / reporting / RFP-DDQ, corporate access, sales marchés, graduate programme finance,
-  business development en finance) ; 2 = transposable (vente / BD hors finance, marketing de fonds, business management) ;
-  1 = éloigné (poste d'investissement : analyse de fonds, deals, modélisation, due diligence ; opérations client) ;
-  0 = sans rapport.
-- niveau (0-3) : 3 = junior (analyst, graduate, VIE, 0-2 ans demandés) ; 2 = 3 ans ou « Associate » ;
-  1 = probablement au-dessus (manager, specialist confirmé, 4 ans implicites) ; 0 = clairement senior.
-- secteur (0-2) : 2 = gestion d'actifs, private markets, hedge fund, wealth ; 1 = banque, assurance, fintech, bourse ;
-  0 = autre.
-- atouts (0-1) : 1 si un élément précis de son parcours lui donne un avantage net (private markets / LPs / levée,
-  distribution wealth, français apprécié, VIE ou groupe français, expérience demandée qu'il a déjà).
+RUBRIC = """BARÈME STRICT. Tu es exigeant, comme un recruteur qui reçoit 300 candidatures : une offre moyenne vaut 4 à 6,
+8 = très bon fit, 9-10 = poste quasi taillé pour lui (moins de 5 % des offres). Dans le doute, prends la note inférieure.
+- metier (0-4) : 4 SEULEMENT si le poste est exactement relations investisseurs / levée de fonds, distribution ou vente de fonds,
+  ou client coverage de fonds, DANS une société de gestion / private markets / wealth ; 3 = proche (product specialist, client service
+  / reporting / RFP-DDQ, corporate access, graduate programme finance, sales de fonds dans une banque) ; 2 = transposable (vente / BD
+  hors gestion d'actifs, marketing, business management, fintech) ; 1 = éloigné (investissement : analyse de fonds, deals,
+  modélisation ; opérations) ; 0 = sans rapport.
+- niveau (0-3) : il a environ 1,5 an d'expérience réelle (alternance + stages). 3 = explicitement junior / graduate / VIE avec 0-1 an
+  demandé ; 2 = 2 ans demandés, ou « Associate », ou niveau non précisé ; 1 = 3 ans, « Manager », « Specialist » confirmé ;
+  0 = senior.
+- secteur (0-2) : 2 = société de gestion, private markets, hedge fund, wealth management ; 1 = banque, assurance, bourse, fintech
+  financière ; 0 = autre.
+- atouts (0-1) : 1 UNIQUEMENT si un élément précis de l'annonce correspond à un fait précis de son CV qui le distingue
+  (ex. : levée de fonds / LPs, RFP-DDQ, distribution wholesale, français demandé, VIE ou groupe français). Sinon 0.
+Justifie chaque note par un fait de l'annonce ET de son CV, sans flatterie. Dans cons, cite les vraies faiblesses (années,
+concurrence locale, écart de métier).
 EXCLUSION (exclude = true) si : une langue autre que français / anglais est exigée ou fortement souhaitée
 (mandarin, cantonais, japonais, coréen, « langue locale », « bilingue chinois »…, ou annonce rédigée dans cette langue) ;
 plus de 3 ans d'expérience exigés ; poste clairement senior. Une langue seulement « un plus / advantage » n'exclut PAS :
@@ -76,19 +79,23 @@ mets-la dans languages_preferred."""
 
 EXAMPLE = {
     "exclude": False, "exclude_reason": "",
-    "role": "Distribution de fonds (wholesale)", "level": "Junior (0-2 ans)", "years_required": 2,
+    "role": "Support produit et ventes (banque privée)", "level": "Junior+ (2 ans)", "years_required": 2,
     "languages_required": [], "languages_preferred": ["mandarin"],
-    "scores": {"metier": 4, "niveau": 3, "secteur": 2, "atouts": 1},
-    "explain": {"metier": "Vente de fonds aux banques privées et IFA : exactement ton métier chez Audacia.",
-                "niveau": "Analyst, 2 ans demandés : tu les as.",
-                "secteur": "Gestionnaire d'actifs mondial.",
-                "atouts": "Ton expérience wholesale (accord de distribution signé) est demandée."},
+    "scores": {"metier": 3, "niveau": 2, "secteur": 1, "atouts": 0},
+    "explain": {"metier": "Support produit aux banquiers privés : proche de ta distribution chez Audacia, mais pas de la vente de fonds directe.",
+                "niveau": "2 ans demandés, tu en as ~1,5 : juste.",
+                "secteur": "Banque privée, pas une société de gestion.",
+                "atouts": "Rien dans l'annonce ne te distingue nettement des candidats locaux."},
     "summary": "Soutien de l'équipe de distribution wholesale Asie : supports de vente, RFP, suivi des distributeurs. "
                "Rattaché au head of wholesale Hong Kong.",
     "pros": ["Métier identique à ton poste chez Audacia", "Anglais suffisant"],
     "cons": ["Mandarin apprécié : candidats locaux avantagés"],
     "keywords": ["fund distribution", "wholesale", "RFP", "pitch book", "Salesforce", "private banks", "IFA"],
 }
+# notes et explications en premier : si la réponse est coupée, l'essentiel est déjà là
+EXAMPLE = {k: EXAMPLE[k] for k in ["scores", "explain", "exclude", "exclude_reason", "languages_required",
+                                   "languages_preferred", "years_required", "role", "level", "summary", "pros",
+                                   "cons", "keywords"]}
 
 
 def build_prompt(job_title, company, location, description, hints=""):
@@ -192,15 +199,59 @@ def parts_of(ai):
     return max(0, min(10, sum(p["pts"] for p in parts))), parts
 
 
+def _repair(t):
+    """Répare un JSON abîmé : retours à la ligne dans les chaînes, virgules en trop, réponse coupée (on referme)."""
+    out, stack, ins, esc = [], [], False, False
+    for ch in t:
+        if ins:
+            if esc:
+                esc = False
+            elif ch == "\\":
+                esc = True
+            elif ch == '"':
+                ins = False
+            elif ch in "\n\r\t":
+                out.append({"\n": "\\n", "\r": "", "\t": " "}[ch])
+                continue
+        else:
+            if ch == '"':
+                ins = True
+            elif ch in "{[":
+                stack.append("}" if ch == "{" else "]")
+            elif ch in "}]":
+                if stack:
+                    stack.pop()
+        out.append(ch)
+    s = "".join(out)
+    if ins:
+        s += '"'
+    s = re.sub(r",\s*$", "", s.rstrip())
+    s = re.sub(r'(:\s*)$', r'\1""', s)          # coupé juste après « "clé": »
+    s += "".join(reversed(stack))
+    return re.sub(r",\s*([}\]])", r"\1", s)
+
+
 def _json_from_text(text):
+    """Extrait l'objet JSON de la réponse, même entouré de texte, suivi d'un 2e bloc ou coupé en cours de route."""
     t = re.sub(r"^```(?:json)?|```$", "", (text or "").strip(), flags=re.M).strip()
-    a, b = t.find("{"), t.rfind("}")
-    if a != -1 and b > a:
+    t = t.replace("“", '"').replace("”", '"') if t.count('"') < 4 else t
+    a = t.find("{")
+    if a == -1:
+        return None
+    t = t[a:]
+    try:
+        obj, _ = json.JSONDecoder().raw_decode(t)      # ignore ce qui suit l'objet
+        return obj
+    except ValueError:
+        pass
+    try:
+        return json.loads(_repair(t))
+    except ValueError:
+        b = t.rfind("}")
         try:
-            return json.loads(t[a:b + 1])
+            return json.loads(_repair(t[:b + 1])) if b > 0 else None
         except ValueError:
             return None
-    return None
 
 
 # --------------------------------------------------------------------------- appels
@@ -218,7 +269,7 @@ def _call(provider, key, cfg, prompt):
             body = {"systemInstruction": {"parts": [{"text": SYSTEM}]},
                     "contents": [{"role": "user", "parts": [{"text": prompt}]}],
                     "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2,
-                                         "maxOutputTokens": 4096}}
+                                         "maxOutputTokens": 8192}}
             r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
                               headers={"x-goog-api-key": key, "Content-Type": "application/json"}, json=body, timeout=120)
             if r.status_code in (404, 400) and "model" in r.text.lower():
@@ -234,7 +285,7 @@ def _call(provider, key, cfg, prompt):
             return "".join(p.get("text", "") for p in parts if not p.get("thought")), model
         raise RuntimeError(last or "aucun modèle Gemini disponible")
     if provider == "openrouter":
-        body = {"models": cfg["openrouter_models"][:3], "temperature": 0.2, "max_tokens": 4000,
+        body = {"models": cfg["openrouter_models"][:3], "temperature": 0.2, "max_tokens": 8000,
                 "response_format": {"type": "json_object"}, "reasoning": {"exclude": True},
                 "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": prompt}]}
         url, model = "https://openrouter.ai/api/v1/chat/completions", cfg["openrouter_models"][0]
@@ -289,7 +340,10 @@ def review(job_title, company, location, description, env, cfg=None, hints=""):
                 continue
             res = normalize(_json_from_text(text), model)
             if not res:
-                LAST_ERROR = LAST_ERROR or f"{provider} ({model}) : réponse illisible : {text[:150]}"
+                if attempt == 2:
+                    LAST_ERROR = LAST_ERROR or (f"{provider} ({model}) : réponse illisible après 3 essais "
+                                                f"({len(text)} caractères, fin : …{text[-120:]})")
+                p = prompt + "\n\nRéponds avec un JSON COMPACT et VALIDE, sur une seule ligne, sans texte autour."
                 continue
             res["v"] = AI_VERSION
             if first is None and looks_english(res["summary"] + " " + " ".join(res["pros"] + res["cons"])):

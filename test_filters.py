@@ -33,7 +33,7 @@ CASES = [
  ("Comptable", "Financial Accountant", "Hong Kong", "", False, 0, 0),
  ("Senior", "Wholesale Sales Senior Manager", "Singapore", "", False, 0, 0),
  ("Corporate access", "Corporate Access Analyst", "Hong Kong",
-  "Organise roadshows for institutional investors. Fluent English.", True, 7, 10),
+  "Organise roadshows for institutional investors. Fluent English.", True, 6, 8),
  ("VIE BNP", "VIE - Sales Assistant Asset Management", "Singapore",
   "Support sales team of BNP Paribas Asset Management, institutional clients, French is a plus.", True, 8, 10),
  ("Mandarin requis", "Client Service Analyst", "Hong Kong", "Fluent in English and Mandarin.", False, 0, 0),
