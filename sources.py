@@ -89,7 +89,7 @@ def workday(src: Dict, terms: List[str]) -> List[Job]:
     seen, jobs = set(), []
     for term in terms:
         offset, total = 0, None
-        for _ in range(src.get("max_pages", 40)):
+        for _ in range(src.get("max_pages", 120)):
             r = _post(s, f"{base}/jobs", {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term})
             data = r.json()
             if total is None:
@@ -142,7 +142,7 @@ def oracle(src: Dict, terms: List[str]) -> List[Job]:
     seen, jobs = set(), []
     for term in terms:
         offset = 0
-        for _ in range(src.get("max_pages", 20)):
+        for _ in range(src.get("max_pages", 80)):
             finder = (f"findReqs;siteNumber={site},facetsList=LOCATIONS,limit=25,offset={offset},"
                       f"keyword={term},sortBy=POSTING_DATES_DESC")
             r = _get(s, f"{api}/recruitingCEJobRequisitions",
@@ -158,12 +158,28 @@ def oracle(src: Dict, terms: List[str]) -> List[Job]:
                     continue
                 seen.add(rid)
                 sec = " ".join(x.get("Name", "") for x in q.get("secondaryLocations", []) or [])
-                desc = " ".join(str(q.get(k) or "") for k in
-                                ("ShortDescriptionStr", "ExternalResponsibilitiesStr", "ExternalQualificationsStr"))
-                jobs.append(Job(source=src["name"], company=src["name"], id=rid, title=q.get("Title", ""),
-                                location=q.get("PrimaryLocation", ""), extra_location=sec,
-                                url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{src.get('site_name', site)}/job/{rid}",
-                                posted=_iso(q.get("PostedDate")) or None, description=desc))
+                short = " ".join(str(q.get(k) or "") for k in
+                                 ("ShortDescriptionStr", "ExternalResponsibilitiesStr", "ExternalQualificationsStr"))
+                job = Job(source=src["name"], company=src["name"], id=rid, title=q.get("Title", ""),
+                          location=q.get("PrimaryLocation", ""), extra_location=sec,
+                          url=f"https://{host}/hcmUI/CandidateExperience/en/sites/{src.get('site_name', site)}/job/{rid}",
+                          posted=_iso(q.get("PostedDate")) or None)
+
+                def load(rid=rid, short=short) -> str:
+                    """Annonce complète (la liste ne donne qu'un résumé)."""
+                    try:
+                        d = _get(s, f"{api}/recruitingCEJobRequisitionDetails",
+                                 params={"onlyData": "true", "expand": "all",
+                                         "finder": f'ById;Id="{rid}",siteNumber={site}'}).json()
+                        it = (d.get("items") or [{}])[0]
+                        full = "\n\n".join(str(it.get(k) or "") for k in
+                                            ("ExternalDescriptionStr", "ExternalResponsibilitiesStr",
+                                             "ExternalQualificationsStr", "CorporateDescriptionStr") if it.get(k))
+                        return full or short
+                    except Exception:
+                        return short
+                job.desc_loader = load
+                jobs.append(job)
             offset += len(reqs)
             if offset >= (first.get("TotalJobsCount") or 0):
                 break
@@ -179,7 +195,7 @@ def eightfold(src: Dict, terms: List[str]) -> List[Job]:
     seen, jobs = set(), []
     for term in terms:
         start = 0
-        for _ in range(src.get("max_pages", 40)):
+        for _ in range(src.get("max_pages", 100)):
             r = _get(s, f"https://{host}/api/apply/v2/jobs",
                      params={"domain": domain, "start": start, "num": 25, "location": term, "sort_by": "timestamp"})
             data = r.json()
@@ -216,7 +232,7 @@ def smartrecruiters(src: Dict, terms: List[str]) -> List[Job]:
     seen, jobs = set(), []
     for term in terms:
         offset = 0
-        for _ in range(src.get("max_pages", 8)):
+        for _ in range(src.get("max_pages", 20)):
             r = _get(s, f"https://api.smartrecruiters.com/v1/companies/{src['company']}/postings",
                      params={"limit": 100, "offset": offset, "q": term})
             content = r.json().get("content", [])
@@ -236,7 +252,7 @@ def smartrecruiters(src: Dict, terms: List[str]) -> List[Job]:
                 def load(pid=pid) -> str:
                     d = _get(s, f"https://api.smartrecruiters.com/v1/companies/{src['company']}/postings/{pid}").json()
                     secs = (d.get("jobAd") or {}).get("sections", {})
-                    return " ".join((v or {}).get("text", "") for v in secs.values())
+                    return "\n\n".join((v or {}).get("text", "") for v in secs.values() if v)
                 job.desc_loader = load
                 jobs.append(job)
             if len(content) < 100:
@@ -253,7 +269,9 @@ def greenhouse(src: Dict, terms: List[str]) -> List[Job]:
     jobs = []
     for q in data.get("jobs", []):
         job = Job(source=src["name"], company=src["name"], id=str(q["id"]), title=q.get("title", ""),
-                  location=(q.get("location") or {}).get("name", ""), url=q.get("absolute_url", ""),
+                  location=" ; ".join([(q.get("location") or {}).get("name", "")] +
+                                      [o.get("name", "") for o in q.get("offices") or []]),
+                  url=q.get("absolute_url", ""),
                   posted=_iso(q.get("updated_at")) or None, description=q.get("content", ""))
         jobs.append(job)
     return jobs
@@ -262,9 +280,17 @@ def greenhouse(src: Dict, terms: List[str]) -> List[Job]:
 def lever(src: Dict, terms: List[str]) -> List[Job]:
     s = _session()
     data = _get(s, f"https://api.lever.co/v0/postings/{src['company']}", params={"mode": "json"}).json()
+    def full(q) -> str:
+        """Annonce complète : description + listes (missions, profil) + texte additionnel."""
+        parts = [q.get("description") or q.get("descriptionPlain", "")]
+        for lst in q.get("lists") or []:
+            parts.append(f"<h3>{lst.get('text', '')}</h3><ul>{lst.get('content', '')}</ul>")
+        parts.append(q.get("additional") or q.get("additionalPlain", ""))
+        return "\n".join(p for p in parts if p)
+    cats = lambda q: q.get("categories") or {}
     return [Job(source=src["name"], company=src["name"], id=q["id"], title=q.get("text", ""),
-                location=(q.get("categories") or {}).get("location", ""), url=q.get("hostedUrl", ""),
-                posted=_iso(q.get("createdAt")) or None, description=q.get("descriptionPlain", ""))
+                location=" ; ".join([cats(q).get("location", "")] + (cats(q).get("allLocations") or [])),
+                url=q.get("hostedUrl", ""), posted=_iso(q.get("createdAt")) or None, description=full(q))
             for q in data]
 
 
@@ -277,7 +303,7 @@ def civiweb(src: Dict, terms: List[str]) -> List[Job]:
     seen, jobs = set(), []
     for term in terms:
         skip = 0
-        for _ in range(src.get("max_pages", 10)):
+        for _ in range(src.get("max_pages", 30)):
             body = {"limit": 50, "skip": skip, "query": term, "activitySectorId": [], "missionsTypesIds": [],
                     "missionsDurations": [], "gerographicZones": [], "countriesIds": [], "studiesLevelId": [],
                     "companiesSizes": [], "specializationsIds": [], "entreprisesIds": [0], "missionStartDate": None}
@@ -320,9 +346,47 @@ def rss(src: Dict, terms: List[str]) -> List[Job]:
     return jobs
 
 
+# --------------------------------------------------------------------------- Eightfold « PCSX » (Microsoft, PayPal...)
+def pcsx(src: Dict, terms: List[str]) -> List[Job]:
+    """src: name, host, domain. (Microsoft : host apply.careers.microsoft.com, domain microsoft.com)"""
+    host, domain = src["host"], src["domain"]
+    s = _session()
+    seen, jobs = set(), []
+    for term in terms:
+        start = 0
+        for _ in range(src.get("max_pages", 100)):
+            data = (_get(s, f"https://{host}/api/pcsx/search",
+                         params={"domain": domain, "query": "", "location": term, "start": start,
+                                 "sort_by": "timestamp"}).json().get("data") or {})
+            pos = data.get("positions") or []
+            if not pos:
+                break
+            for q in pos:
+                pid = str(q.get("id"))
+                if pid in seen:
+                    continue
+                seen.add(pid)
+                job = Job(source=src["name"], company=src["name"], id=pid, title=q.get("name", ""),
+                          location="; ".join(q.get("locations") or []),
+                          url=f"https://{host}{q.get('positionUrl') or '/careers/job/' + pid}",
+                          posted=_iso(q.get("postedTs") or q.get("creationTs")) or None)
+
+                def load(pid=pid) -> str:
+                    d = _get(s, f"https://{host}/api/pcsx/position_details",
+                             params={"position_id": pid, "domain": domain, "hl": "en"}).json()
+                    return (d.get("data") or {}).get("jobDescription", "")
+                job.desc_loader = load
+                jobs.append(job)
+            start += len(pos)
+            if start >= (data.get("count") or 0):
+                break
+            time.sleep(PAUSE)
+    return jobs
+
+
 CONNECTORS: Dict[str, Callable[[Dict, List[str]], List[Job]]] = {
     "workday": workday, "oracle": oracle, "eightfold": eightfold, "smartrecruiters": smartrecruiters,
-    "greenhouse": greenhouse, "lever": lever, "civiweb": civiweb, "rss": rss,
+    "greenhouse": greenhouse, "lever": lever, "civiweb": civiweb, "rss": rss, "pcsx": pcsx,
 }
 
 

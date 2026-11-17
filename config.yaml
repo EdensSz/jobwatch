@@ -1,16 +1,33 @@
 # ---------- Profil de recherche ----------
-locations: ["Hong Kong", "Singapore"]     # Tokyo : ajoute "Tokyo" (pour VIE / postes anglophones)
+locations: ["Hong Kong", "Singapore", "Tokyo"]
 max_years: 3                               # rejette si > 3 ans d'expérience demandés
-min_score: 3                               # monte à 5 si trop de bruit
-exclude_languages: ["chinois", "japonais", "coréen", "thaï", "vietnamien", "indonésien"]
-reject_highly_preferred: false             # true : rejette aussi « Mandarin highly preferred »
-max_age_days: 45
-max_description_fetches_per_source: 150
+# Langues : toute langue autre que français / anglais « requise » ou « fortement souhaitée » = offre exclue.
+# Une langue seulement « souhaitée / un plus » : offre gardée, note -1, et masquée par le filtre de base de la page.
+reject_preferred_languages: false          # true : exclut aussi les offres où une autre langue est juste « un plus »
+max_age_days: 60
+max_description_fetches_per_source: 400    # lecture de l'annonce complète (plafond par site et par passage)
+refresh_days: 7                            # une offre déjà analysée est relue au bout de 7 jours
 
-# Mots-clés : on cherche par ville (les sites font une recherche « tous les mots »), les filtres jugent ensuite chaque offre
+# Mots-clés : on cherche par ville (les sites font une recherche « tous les mots »), les règles jugent ensuite chaque offre
 search_terms:
   - "Hong Kong"
   - "Singapore"
+  - "Tokyo"
+  - "Japan"
+
+# ---------- IA (gratuite) ----------
+# Ordre d'essai : Gemini (clé gratuite Google AI Studio, ~500 analyses/jour) puis OpenRouter (modèles :free, ~50/jour
+# sans crédit). Mets la ou les clés dans GitHub > Settings > Secrets : GEMINI_API_KEY, OPENROUTER_API_KEY.
+ai:
+  enabled: true
+  providers: ["gemini", "openrouter", "groq"]
+  gemini_model: "gemini-3.5-flash-lite"            # repli automatique sur gemini-3.1-flash-lite
+  openrouter_models:                               # le 1er qui répond est utilisé (vérifiés le 17/11/2026)
+    - "nvidia/nemotron-3.5-super-vl:free"
+    - "nvidia/nemotron-3-ultra-550b-a55b:free"
+    - "cohere/north-mini-code:free"
+  max_per_run: {gemini: 100, openrouter: 12, groq: 60}
+  pause_seconds: {gemini: 4.5, openrouter: 3.5, groq: 2.5}
 
 # ---------- Sources ----------
 # Les entrées marquées « À VÉRIFIER » sont écrites de mémoire : lance `python jobwatch.py --check`.
@@ -42,10 +59,118 @@ sources:
   - {name: "Barclays",               type: workday, url: "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays"}
   - {name: "UOB",                    type: workday, url: "https://uobgroup.wd3.myworkdayjobs.com/UOBExternal"}
   # -- VIE / VIA (BNP, SG, CA-CIB, Natixis... publient leurs VIE ici)
-  - {name: "VIE Business France", type: civiweb, terms: ["Hong Kong", "Singapour", "Singapore", "Tokyo"]}
+  - {name: "VIE Business France", type: civiweb, terms: ["Hong Kong", "Singapour", "Singapore", "Tokyo", "Japon", "Japan"]}
 
-  # ===== PAS de connecteur (autre système, pas d'API publique simple) =====
-  #   Nomura (careers.nomura.com), Amundi (jobs.amundi.com), Allianz GI (internal-careers.allianz.com),
-  #   BNP Paribas (group.bnpparibas), Natixis IM (Welcome to the Jungle), Principal (iCIMS), Schroders (à identifier).
+  # ===== AJOUTÉ le 16/11/2026, VÉRIFIÉ dans le navigateur : l'API répond =====
+  # (entre parenthèses : nb d'offres trouvées « Hong Kong / Singapore » ce jour-là)
+  # -- Private markets / PE / crédit privé / hedge funds
+  - {name: "Bain Capital",           type: workday, url: "https://baincapital.wd1.myworkdayjobs.com/External_Public"}        # (2/0)
+  - {name: "Apollo",                 type: workday, url: "https://athene.wd5.myworkdayjobs.com/Apollo_Careers"}              # (2/1)
+  - {name: "Oaktree",                type: workday, url: "https://oaktree.wd1.myworkdayjobs.com/Oaktree"}                    # (2/1)
+  - {name: "Blue Owl",               type: workday, url: "https://blueowl.wd1.myworkdayjobs.com/BlueOwl"}                    # (1/0)
+  - {name: "HarbourVest",            type: workday, url: "https://harbourvest.wd5.myworkdayjobs.com/HVP"}                    # (2/8)
+  - {name: "ICG",                    type: workday, url: "https://icg.wd3.myworkdayjobs.com/External_Careers"}               # (1/2)
+  - {name: "PineBridge Investments", type: workday, url: "https://pinebridge.wd5.myworkdayjobs.com/PineBridge_Career_Site"}  # (14/0)
+  - {name: "Brevan Howard",          type: workday, url: "https://brevanhoward.wd3.myworkdayjobs.com/BH_ExternalCareers"}    # (0/1)
+  - {name: "General Atlantic",       type: greenhouse, board: "generalatlantic"}
+  - {name: "StepStone",              type: greenhouse, board: "stepstone"}
+  - {name: "Point72",                type: greenhouse, board: "point72"}            # (27 offres HK+SG)
+  - {name: "Schonfeld",              type: greenhouse, board: "schonfeld"}          # (20)
+  - {name: "ExodusPoint",            type: greenhouse, board: "exoduspoint"}
+  # -- Gestion d'actifs / wealth
+  - {name: "PIMCO",                  type: workday, url: "https://pimco.wd1.myworkdayjobs.com/pimco-careers"}                # (7/6)
+  - {name: "Wellington Management",  type: workday, url: "https://wellington.wd5.myworkdayjobs.com/External"}               # (13/10)
+  - {name: "Capital Group",          type: workday, url: "https://capgroup.wd1.myworkdayjobs.com/capitalgroupcareers"}      # (10/25)
+  - {name: "Neuberger Berman",       type: workday, url: "https://nb.wd1.myworkdayjobs.com/nbCareers"}                       # (2/3)
+  - {name: "Fidelity Investments",   type: workday, url: "https://fmr.wd1.myworkdayjobs.com/targeted"}                       # (3/0)
+  - {name: "Guggenheim",             type: workday, url: "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Careers"}     # (1/0)
+  - {name: "Eastspring (Prudential)", type: workday, url: "https://prudential.wd3.myworkdayjobs.com/prudential_eastspring"} # (0/23)
+  - {name: "Lombard Odier",          type: workday, url: "https://lombardodier.wd3.myworkdayjobs.com/Lombard_Odier_Careers"} # (2/2)
+  - {name: "Morgan Stanley Wealth (private)", type: workday, url: "https://ms.wd5.myworkdayjobs.com/private"}               # (21/5)
+  # -- Banques / courtiers / advisory (placement, M&A)
+  - {name: "Citi",                   type: workday, url: "https://citi.wd5.myworkdayjobs.com/2"}                             # (159/276)
+  - {name: "DBS",                    type: workday, url: "https://dbs.wd3.myworkdayjobs.com/Dbs_Careers"}                    # (335/313)
+  - {name: "OCBC",                   type: workday, url: "https://ocbc.wd102.myworkdayjobs.com/External"}                    # (122/1258)
+  - {name: "MUFG",                   type: workday, url: "https://mufgub.wd3.myworkdayjobs.com/MUFG-Careers"}               # (39/70)
+  - {name: "ING",                    type: workday, url: "https://ing.wd3.myworkdayjobs.com/ICSGBLCOR"}                     # (12/29)
+  - {name: "Santander",              type: workday, url: "https://santander.wd3.myworkdayjobs.com/SantanderCareers"}        # (8/3)
+  - {name: "RBC",                    type: workday, url: "https://rbc.wd3.myworkdayjobs.com/RBCGLOBAL1"}                    # (2/4)
+  - {name: "TD Securities",          type: workday, url: "https://td.wd3.myworkdayjobs.com/TD_Bank_Careers"}                # (4/32)
+  - {name: "PJT Partners (Park Hill)", type: workday, url: "https://pjtpartners.wd1.myworkdayjobs.com/Careers"}              # (2/0)
+  - {name: "TP ICAP",                type: workday, url: "https://tp.wd107.myworkdayjobs.com/TP-ICAP"}                      # (11/15)
+  - {name: "PwC",                    type: workday, url: "https://pwc.wd3.myworkdayjobs.com/Global_Experienced_Careers"}    # (0/123)
+  - {name: "PwC (campus / graduate)", type: workday, url: "https://pwc.wd3.myworkdayjobs.com/Global_Campus_Careers"}        # (0/88)
+  # -- Assurance (gros distributeurs, wealth / partnerships)
+  - {name: "AIA",                    type: workday, url: "https://aia.wd3.myworkdayjobs.com/External"}                      # (144/91)
+  - {name: "Prudential",             type: workday, url: "https://prudential.wd3.myworkdayjobs.com/prudential"}             # (78/94)
+  - {name: "FWD",                    type: workday, url: "https://fwd.wd3.myworkdayjobs.com/FWDcareersite"}                 # (222/15)
+  - {name: "Sun Life",               type: workday, url: "https://sunlife.wd3.myworkdayjobs.com/Experienced-Jobs"}          # (63/4)
+  - {name: "AIG",                    type: workday, url: "https://aig.wd1.myworkdayjobs.com/aig"}                           # (6/21)
+  # -- Bourses / data financière / infrastructure de marché
+  - {name: "HKEX",                   type: workday, url: "https://hkex.wd3.myworkdayjobs.com/HKEXCareerPage"}               # (98/1)
+  - {name: "LSEG",                   type: workday, url: "https://lseg.wd3.myworkdayjobs.com/careers"}                      # (16/27)
+  - {name: "S&P Global",             type: workday, url: "https://spgi.wd5.myworkdayjobs.com/SPGI_Careers"}                 # (7/21)
+  - {name: "Morningstar",            type: workday, url: "https://morningstar.wd5.myworkdayjobs.com/MORNINGSTAR"}           # (4/3)
+  - {name: "Broadridge",             type: workday, url: "https://broadridge.wd5.myworkdayjobs.com/Careers"}                # (8/6)
+  - {name: "JLL (immobilier / capital markets)", type: workday, url: "https://jll.wd1.myworkdayjobs.com/jllcareers"}       # (80/159)
+  # -- Paiements / fintech
+  - {name: "Visa",                   type: workday, url: "https://visa.wd5.myworkdayjobs.com/Visa"}                         # (8/101)
+  - {name: "Mastercard",             type: workday, url: "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers"}       # (8/41)
+  - {name: "PayPal",                 type: workday, url: "https://paypal.wd1.myworkdayjobs.com/Jobs"}                       # (2/19)
+  - {name: "Global Payments (TSYS)", type: workday, url: "https://tsys.wd1.myworkdayjobs.com/tsys"}                         # (4/8)
+  - {name: "Fiserv",                 type: workday, url: "https://fiserv.wd5.myworkdayjobs.com/Ext"}                        # (0/6)
+  - {name: "Stripe",                 type: greenhouse, board: "stripe"}             # (57)
+  - {name: "Adyen",                  type: greenhouse, board: "adyen"}              # (18)
+  - {name: "Carta",                  type: greenhouse, board: "carta"}
+  - {name: "Thunes",                 type: greenhouse, board: "thunes"}
+  - {name: "Wise",                   type: smartrecruiters, company: "Wise"}        # (52/3)
+  - {name: "Nium",                   type: lever, company: "nium"}
+  # -- Crypto / actifs numériques (beaucoup de BD / sales / IR à HK-SG)
+  - {name: "OKX",                    type: greenhouse, board: "okx"}                # (263)
+  - {name: "Bybit",                  type: greenhouse, board: "bybit"}              # (23)
+  - {name: "Coinbase",               type: greenhouse, board: "coinbase"}
+  - {name: "Ripple",                 type: greenhouse, board: "ripple"}
+  - {name: "BitGo",                  type: greenhouse, board: "bitgo"}
+  - {name: "Fireblocks",             type: greenhouse, board: "fireblocks"}
+  - {name: "Gemini",                 type: greenhouse, board: "gemini"}
+  - {name: "Crypto.com",             type: lever, company: "crypto"}                # (36)
+  - {name: "Anchorage Digital",      type: lever, company: "anchorage"}
+  # -- Big tech / logiciels (sales, account management, partnerships)
+  - {name: "Microsoft",              type: pcsx, host: "apply.careers.microsoft.com", domain: "microsoft.com"}   # (SG + 32 HK)
+  - {name: "Salesforce",             type: workday, url: "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site"}  # (0/37)
+  - {name: "Workday",                type: workday, url: "https://workday.wd5.myworkdayjobs.com/Workday"}                   # (5/8)
+  - {name: "Adobe",                  type: workday, url: "https://adobe.wd5.myworkdayjobs.com/external_experienced"}        # (1/7)
+  - {name: "NVIDIA",                 type: workday, url: "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite"}   # (3/129)
+  - {name: "HP",                     type: workday, url: "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite"}             # (0/62)
+  - {name: "HPE",                    type: workday, url: "https://hpe.wd5.myworkdayjobs.com/Jobsathpe"}                     # (5/46)
+  - {name: "Samsung",                type: workday, url: "https://sec.wd3.myworkdayjobs.com/samsung_careers"}               # (2/15)
+  - {name: "CrowdStrike",            type: workday, url: "https://crowdstrike.wd5.myworkdayjobs.com/crowdstrikecareers"}    # (0/6)
+  - {name: "Equinix",                type: workday, url: "https://equinix.wd1.myworkdayjobs.com/External"}                  # (4/19)
+  - {name: "Grab",                   type: smartrecruiters, company: "Grab"}        # (147 SG)
+  - {name: "ServiceNow",             type: smartrecruiters, company: "ServiceNow"}  # (21/2)
+  - {name: "Databricks",             type: greenhouse, board: "databricks"}         # (35)
+  - {name: "Datadog",                type: greenhouse, board: "datadog"}            # (19)
+  - {name: "MongoDB",                type: greenhouse, board: "mongodb"}
+  - {name: "GitLab",                 type: greenhouse, board: "gitlab"}
+  - {name: "Okta",                   type: greenhouse, board: "okta"}
+  - {name: "Zscaler",                type: greenhouse, board: "zscaler"}
+  - {name: "Pure Storage",           type: greenhouse, board: "purestorage"}
+  - {name: "Elastic",                type: greenhouse, board: "elastic"}
+  - {name: "Twilio",                 type: greenhouse, board: "twilio"}
+  - {name: "Rubrik",                 type: greenhouse, board: "rubrik"}
+  - {name: "Cloudflare",             type: greenhouse, board: "cloudflare"}
+  - {name: "Anthropic",              type: greenhouse, board: "anthropic"}
+  - {name: "Airbnb",                 type: greenhouse, board: "airbnb"}
+  - {name: "Agoda",                  type: greenhouse, board: "agoda"}
+  - {name: "Pinterest",              type: greenhouse, board: "pinterest"}
+  - {name: "Figma",                  type: greenhouse, board: "figma"}
+  - {name: "Palantir",               type: lever, company: "palantir"}
+  - {name: "Ninja Van",              type: lever, company: "ninjavan"}
+
+  # ===== PAS de connecteur (testé le 16/11/2026 : site maison / API fermée) =====
+  #   Gros noms à suivre par alertes e-mail : Goldman Sachs, KKR, TPG, Warburg Pincus, EQT, Partners Group, Temasek, GIC,
+  #   UBS, Standard Chartered, Nomura, Macquarie, Bloomberg, Google, Amazon, Meta, Apple, TikTok/ByteDance, Citadel,
+  #   Millennium (Workday vide), Robeco, Schroders, Amundi, Allianz GI, BNP Paribas, Natixis IM, Principal.
   # -> alertes e-mail sur leurs sites, ou flux RSS : - {name: "Nom", type: rss, url: "https://...", location_hint: "Hong Kong"}
   # -> pour un autre site : `python jobwatch.py --detect "<url de la page d'offres>"`
+

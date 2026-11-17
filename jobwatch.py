@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import ai_score
 import sources
-from filters import cheap_check, full_check, html_to_text
+from filters import RULES_VERSION, cheap_check, city_of, full_check, html_to_text
 
 HERE = Path(__file__).parent
 OUT = HERE / "out"
@@ -40,11 +40,31 @@ STATE = HERE / "state.json"
 CACHED_ROWS, SRC_STATS, RUN = [], [], {"ai_calls": 0}
 
 
+def fix_why(why) -> list:
+    """Répare les raisons « IA : T », « IA : h », … (texte IA découpé lettre par lettre par une ancienne version)."""
+    if isinstance(why, str):
+        why = [why]
+    why = [w for w in (why or []) if isinstance(w, str)]
+    ia = [w for w in why if w.startswith("IA : ")]
+    if len(ia) >= 4 and sum(1 for w in ia if len(w) <= 6) >= 0.8 * len(ia):
+        text = "".join(w[5:] for w in ia)
+        return [f"IA : {r}" for r in ai_score.as_list(text)] + [w for w in why if not w.startswith("IA : ")]
+    return why
+
+
+def fix_row(r: dict) -> dict:
+    r["why"] = fix_why(r.get("why"))
+    r["flags"] = [r["flags"]] if isinstance(r.get("flags"), str) else (r.get("flags") or [])
+    r["other_langs"] = ai_score.as_list(r.get("other_langs"))
+    return r
+
+
 def load_prev() -> dict:
     """Offres déjà traitées au passage précédent (out/jobs.json), indexées par clé."""
     try:
         rows = json.loads((OUT / "jobs.json").read_text(encoding="utf-8"))
-        return {r["key"]: r for r in rows if isinstance(r, dict) and r.get("key")}
+        return {r["key"]: fix_row(r) for r in rows
+                if isinstance(r, dict) and r.get("key") and r.get("rv") == RULES_VERSION}
     except Exception:
         return {}
 
@@ -114,7 +134,7 @@ def collect(cfg: dict, explain: bool):
     prev = load_prev()
     refresh_days = int(cfg.get("refresh_days", 7))
     ai_cfg = cfg.get("ai", {}) or {}
-    ai_on = ai_cfg.get("enabled", True) is not False and ai_score.pick_provider(os.environ, ai_cfg.get("provider")) is not None
+    ai_on = ai_cfg.get("enabled", True) is not False and bool(ai_score.available(os.environ, ai_cfg))
     CACHED_ROWS.clear()
     SRC_STATS.clear()
     pending = []      # (nom de source, offre, verdict provisoire)
@@ -137,14 +157,15 @@ def collect(cfg: dict, explain: bool):
                 continue
             seen_ids.add(j.key)
             row = prev.get(j.key)
-            needs_ai = ai_on and not row.get("excluded") and row.get("note_source") != "ia" if row else False
+            needs_ai = bool(row) and ai_on and not row.get("excluded") and \
+                (row.get("note_source") != "ia" or row.get("ai_v", 0) < ai_score.AI_VERSION)
             if row and not needs_ai and is_fresh(row.get("checked_at", ""), refresh_days) \
                     and not too_old(row, cfg.get("max_age_days")):
                 CACHED_ROWS.append(row)          # déjà analysée récemment : on ne la retraite pas
                 st_src["reused"] += 1
                 continue
             st0 = state.get(j.key, {})
-            if st0.get("rej") and is_fresh(st0.get("checked", ""), refresh_days):
+            if st0.get("rej") and st0.get("rv") == RULES_VERSION and is_fresh(st0.get("checked", ""), refresh_days):
                 st_src["reused"] += 1            # déjà jugée hors profil récemment
                 continue
             v = cheap_check(j, cfg)
@@ -175,7 +196,7 @@ def collect(cfg: dict, explain: bool):
         else:
             rejected.append((j, v))
             st = state.setdefault(j.key, {"first_seen": today})
-            st["rej"], st["checked"] = v.reason, today
+            st["rej"], st["checked"], st["rv"] = v.reason, today, RULES_VERSION
     for src in cfg["sources"]:
         s = stats.get(src["name"])
         if s:
@@ -188,8 +209,7 @@ def collect(cfg: dict, explain: bool):
     kept = apply_ai(kept, rejected, state, cfg)
     new = [(j, v) for j, v in kept if j.first_seen == today]
     STATE.write_text(json.dumps(state, indent=1))
-    rk = {"A": 0, "B": 1, "C": 2}
-    kept.sort(key=lambda jv: (rk.get(jv[1].rating, 3), jv[0].first_seen), reverse=False)
+    kept.sort(key=lambda jv: (jv[0].posted or jv[0].first_seen or ""), reverse=True)   # plus récentes d'abord
     RUN["seconds"] = round(time.time() - t0)
     return kept, rejected, new, errors
 
@@ -198,50 +218,78 @@ def collect(cfg: dict, explain: bool):
 CH_ORDER = {"non": 0, "unknown": 0, "souhaité": 1, "fortement souhaité": 2, "requis": 3}
 
 
+LANG_CANON = [(r"mandarin|cantonese|cantonais|chinese|chinois|putonghua", "chinois"), (r"japan|japonais", "japonais"),
+              (r"korea|coréen", "coréen"), (r"thai", "thaï"), (r"vietnam", "vietnamien"),
+              (r"bahasa|indonesia|malay", "indonésien / malais"), (r"german|allemand", "allemand"),
+              (r"spanish|espagnol", "espagnol")]
+
+
+def canon_lang(x: str) -> str:
+    for pat, lab in LANG_CANON:
+        if re.search(pat, x, re.I):
+            return lab
+    return x.strip().lower()
+
+
 def apply_ai(kept, rejected, state, cfg):
-    """Relecture IA des offres retenues (résultats gardés en cache dans state.json)."""
+    """Relecture IA des offres retenues, les plus récentes d'abord (résultats en cache dans state.json)."""
     ai_cfg = cfg.get("ai", {}) or {}
-    picked = None if ai_cfg.get("enabled", True) is False else ai_score.pick_provider(os.environ, ai_cfg.get("provider"))
-    if not picked:
+    provs = [] if ai_cfg.get("enabled", True) is False else ai_score.available(os.environ, ai_cfg)
+    if not provs:
         return kept
-    provider, key, pcfg = picked
-    RUN["provider"] = provider
-    model = ai_cfg.get("model") or pcfg["model"]
-    budget = int(ai_cfg.get("max_per_run", 40 if provider == "openrouter" else 80))
-    pause = float(ai_cfg.get("pause_seconds", 3))
+    RUN["provider"] = provs[0]
+    budgets = {"gemini": 100, "openrouter": 12, "groq": 60, **(ai_cfg.get("max_per_run") or {})}
+    pauses = {"gemini": 4.5, "openrouter": 3.5, "groq": 2.5, **(ai_cfg.get("pause_seconds") or {})}
+    budget = sum(int(budgets.get(p, 20)) for p in provs)
+    used = {}
     out = []
-    for j, v in kept:
+    order = sorted(kept, key=lambda jv: (jv[0].posted or jv[0].first_seen or ""), reverse=True)
+    for j, v in order:
         st = state.setdefault(j.key, {"first_seen": date.today().isoformat()})
-        h = hashlib.sha1((j.title + (v.description or "")[:3000]).encode("utf-8")).hexdigest()[:12]
-        ai = st.get("ai") if st.get("ai_h") == h else None
-        if ai is None and budget > 0 and v.description:
+        h = hashlib.sha1((j.title + (v.description or "")[:4000]).encode("utf-8")).hexdigest()[:12]
+        cached = st.get("ai") if st.get("ai_h") == h else None
+        ai = ai_score.normalize(cached) if cached else None
+        if ai and ai.get("v", 0) < ai_score.AI_VERSION:
+            ai = None                                   # ancien format : à refaire
+        if ai is None and budget > 0 and v.description and len(ai_score.EXHAUSTED) < len(provs):
             budget -= 1
             RUN["ai_calls"] += 1
-            ai = ai_score.review(j.title, j.company, j.location, v.description, key, model, provider)
+            hints = "; ".join(v.other_langs + v.flags + ([f"{v.min_years} ans demandés"] if v.min_years else []))
+            ai, prov = ai_score.review(j.title, j.company, j.location, v.description, os.environ, ai_cfg, hints)
             if ai:
                 st["ai"], st["ai_h"] = ai, h
-            time.sleep(pause)
+                used[prov] = used.get(prov, 0) + 1
+                if used[prov] >= int(budgets.get(prov, 20)):
+                    ai_score.EXHAUSTED.add(prov)        # budget du passage atteint pour ce fournisseur
+            time.sleep(float(pauses.get(prov or provs[0], 3)))
         if not ai:
             out.append((j, v))
             continue
         v.note_source = "ia"
         v.ai_model = ai.get("model", "")
-        v.note10 = ai["note"]
-        v.summary = ai.get("summary", "")
-        reasons = [f"IA : {r}" for r in (ai.get("reasons") or [])]
-        v.why = reasons + [w for w in v.why if not reasons]
-        if CH_ORDER.get(ai["chinese"], 0) > CH_ORDER.get(v.chinese, 0):
-            v.chinese = ai["chinese"]
-        try:
-            yrs = int(float(ai.get("years_required") or 0))
-        except (TypeError, ValueError):
-            yrs = 0
-        if v.chinese == "requis":
-            v.keep, v.reason = False, "chinois requis (IA)"
-            rejected.append((j, v))
-            continue
-        if yrs > cfg.get("max_years", 3):
-            v.keep, v.reason = False, f"{yrs} ans demandés (IA)"
+        v.ai_v = ai.get("v", 0)
+        v.note10, v.parts = ai_score.parts_of(ai)
+        v.rating = "A" if v.note10 >= 8 else "B" if v.note10 >= 6 else "C"
+        v.summary, v.pros, v.cons, v.keywords = ai["summary"], ai["pros"], ai["cons"], ai["keywords"]
+        v.role, v.level = ai["role"] or v.role, ai["level"] or v.level
+        v.why = [f"{p['label']} {p['pts']:+d} : {p['why']}" if not p["max"] else f"{p['label']} {p['pts']}/{p['max']} : {p['why']}"
+                 for p in v.parts]
+        langs = [f"{canon_lang(x)} requis" for x in ai["languages_required"]] + \
+                [f"{canon_lang(x)} souhaité" for x in ai["languages_preferred"]]
+        seen = {l.rsplit(" ", 1)[0] for l in langs}
+        v.other_langs = list(dict.fromkeys(langs + [l for l in (v.other_langs or []) if l.rsplit(" ", 1)[0] not in seen]))
+        v.langs_ok = not v.other_langs
+        zh = re.compile(r"mandarin|cantonais|cantonese|chinois|chinese", re.I)
+        if any(zh.search(x) for x in ai["languages_required"]):
+            v.chinese = "requis"
+        elif any(zh.search(x) for x in ai["languages_preferred"]) and v.chinese in ("non", "unknown"):
+            v.chinese = "souhaité"
+        yrs = ai["years_required"]
+        if yrs and (v.min_years is None or yrs > v.min_years):
+            v.min_years = yrs
+        if ai["exclude"] or yrs > cfg.get("max_years", 3):
+            v.keep = False
+            v.reason = (ai["exclude_reason"] or f"{yrs} ans demandés") + " (IA)"
             rejected.append((j, v))
             continue
         out.append((j, v))
@@ -286,11 +334,14 @@ def write_outputs(kept, rejected, errors, cfg, explain):
                     note10=v.note10, rating=v.rating, chinese=v.chinese, other_langs=v.other_langs,
                     years=v.min_years, flags=v.flags, why=v.why, excerpt=v.excerpt,
                     description=v.description, summary=v.summary, note_source=v.note_source, ai_model=v.ai_model,
+                    ai_v=getattr(v, "ai_v", 0), rv=RULES_VERSION, parts=v.parts, role=v.role, level=v.level,
+                    langs_ok=v.langs_ok, pros=v.pros, cons=v.cons, keywords=v.keywords,
+                    city=city_of(j.location + " " + (j.extra_location or "")),
                     excluded=excluded, excluded_reason=v.reason if excluded else "",
                     url=j.url, source=j.source, score=v.score, key=j.key, checked_at=date.today().isoformat())
     rows = [row(jv, False) for jv in kept]
-    rows += [row(jv, True) for jv in rejected
-             if re.search(r"requis|ans demandés", jv[1].reason or "")]
+    rows += [row(jv, True) for jv in rejected            # exclues, visibles avec le filtre « Exclues »
+             if re.search(r"requis|souhaité|ans d'exp|ans demandés|\(IA\)", jv[1].reason or "")]
     have = {r["key"] for r in rows}
     today_s = date.today().isoformat()
     for r in CACHED_ROWS:
@@ -312,6 +363,7 @@ def write_outputs(kept, rejected, errors, cfg, explain):
             "reused_from_previous": len(CACHED_ROWS), "ai_calls": RUN["ai_calls"], "sources": SRC_STATS,
             "seconds": RUN.get("seconds"), "ai_provider": RUN.get("provider", ""),
             "ai_reviewed": sum(1 for r in live if r.get("note_source") == "ia"),
+            "ai_pending": sum(1 for r in live if r.get("note_source") != "ia"),
             "ai_models": sorted({r.get("ai_model") for r in live if r.get("ai_model")}),
             "ai_error": ai_score.LAST_ERROR}
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")

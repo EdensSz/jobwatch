@@ -1,0 +1,49 @@
+{
+ "_note": "CV de base utilisé par l'IA (notation des offres + CV adapté). Pas de téléphone ni d'e-mail ici : ils sont saisis une fois dans les réglages de la page et restent sur ton téléphone.",
+ "name": "Théo Salerno",
+ "headline": "Investor Relations & Distribution Analyst | Asset Management Sales, Asia-Pacific",
+ "location_line": "Paris, France (relocating to Hong Kong, available from January 2027)",
+ "nationality": "French National",
+ "linkedin": "linkedin.com/in/theosalerno",
+ "availability": "January 2027",
+ "target": "Poste de niveau Analyst / Associate junior (ou VIE / graduate) à Hong Kong, Singapour ou Tokyo, en anglais uniquement : relations investisseurs, levée de fonds, distribution et vente de fonds (wholesale, intermédiaires, wealth, institutionnel), client coverage / relationship, product specialist, client service / RFP-DDQ, corporate access, business development en finance. Secteurs visés : gestion d'actifs, private markets (PE, VC, private credit), hedge funds, wealth management, banques. Veut évoluer vite vers la distribution / la couverture client. Ne veut PAS : postes d'investissement purs (modélisation, deal, analyse de fonds), back-office, conformité, risque, tech, comptabilité.",
+ "languages_spoken": ["French (native)", "English (fluent, TOEIC 925/990)"],
+ "experience": [
+  {"title": "Client Coverage & Investor Relations Analyst", "company": "Partech", "location": "Paris, France", "dates": "Aug 2026 – Present",
+   "bullets": [
+    "Support institutional investor and LP relationships on private market strategies (EUR 3bn+ AUM): tailored pitch books, product one-pagers, pre-meeting briefing packs and RFP/DDQ responses, with sign-offs from Investment, Legal and Compliance.",
+    "Answer institutional investor enquiries on fund performance, share classes, fees and positioning; co-organised the Annual General Meeting and investor seminars.",
+    "Benchmark strategies against peers with fund analytics on S&P Capital IQ and Preqin.",
+    "Automated weekly market intelligence with Power Automate and VBA; cleaned large investor databases with VBA and AI tools."]},
+  {"title": "Intermediary Distribution & Sales Support Analyst", "company": "Audacia", "location": "Paris, France", "dates": "Jul 2025 – Aug 2026",
+   "bullets": [
+    "Supported distribution across IFAs, wealth managers, family offices and institutional platforms (EUR 700m+ AUM); qualified 45+ meetings, contributing to 5 wealth advisor mandates and 1 wholesale distribution agreement.",
+    "Joined client meetings on a Northern Europe roadshow; prepared strategy presentations, pitch materials and briefing packs.",
+    "Built monthly flow, AUM, client segmentation and pipeline dashboards for sales management from 5,000+ accounts on Salesforce and Affinity.",
+    "Maintained distribution agreement registers, fee schedules and approved marketing materials across 6 funds."]},
+  {"title": "Business Development & Strategy Analyst", "company": "Keren", "location": "Bali, Indonesia", "dates": "Jan 2025 – Jun 2025",
+   "bullets": [
+    "Led 60+ B2B client meetings and commercial negotiations, converting 4 accounts; deployed a CRM platform to streamline reporting and consolidate pipeline visibility."]},
+  {"title": "Corporate KYC & Client Onboarding Analyst", "company": "Crédit Agricole CIB", "location": "Montpellier, France", "dates": "May 2024 – Aug 2024",
+   "bullets": [
+    "Managed end-to-end KYC due diligence, AML/CFT checks and compliance sign-offs for corporate and institutional client onboarding."]},
+  {"title": "Strategy & Financial Analyst", "company": "Les Entrepreneurs Réunis", "location": "Paris, France", "dates": "Jan 2024 – Jun 2024",
+   "bullets": [
+    "Performed financial due diligence on PE/VC portfolio companies: audited financial models, P&L and valuation assumptions, and stress-tested business plans for investment committee reviews."]}
+ ],
+ "education": [
+  {"degree": "MiM, MSc Corporate Finance", "school": "NEOMA Business School", "location": "Reims, France", "dates": "Sep 2023 – Jun 2026",
+   "details": "GPA: 3.4/4.0. Coursework: Corporate Finance, Corporate Valuation, Private Equity, Portfolio Management."},
+  {"degree": "Exchange, International Finance", "school": "Meiji Business School", "location": "Tokyo, Japan", "dates": "Sep 2024 – Mar 2025",
+   "details": "International finance and Asia-Pacific capital markets; lived in Tokyo."},
+  {"degree": "BSc in Economics", "school": "University of Montpellier", "location": "Montpellier, France", "dates": "Sep 2020 – Jun 2023",
+   "details": "Erasmus Exchange Year at Athens University of Economics & Business (Sep 2022 – Jun 2023)."}
+ ],
+ "skills": [
+  {"label": "Distribution & Client Coverage", "text": "institutional and wealth client relationships, pipeline management, pitch books and client presentations, RFP/DDQ, fund performance and fee analysis, compliance coordination, KYC/AML."},
+  {"label": "Tools & Data", "text": "Excel (advanced), VBA, Python, PowerPoint, Power BI, Power Automate, AI tools (Claude), S&P Capital IQ, Preqin, PitchBook, Refinitiv, Salesforce, Affinity."},
+  {"label": "Languages & International", "text": "English (Fluent, TOEIC 925/990), French (Native), Spanish (Conversational). Lived in Tokyo, Bali and Athens."},
+  {"label": "Interests & Volunteering", "text": "Classical guitar (14 years), competitive tennis (13 years), rowing; volunteer at Secours Populaire."}
+ ],
+ "certifications": []
+}
