@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-17T08:35:24Z",
- "generated_paris": "17/11/2026 09:35",
- "offers_total": 80,
- "offers_kept": 30,
- "new_today": 0,
- "reused_from_previous": 80,
- "ai_calls": 0,
+ "generated_at": "2026-11-17T09:30:37Z",
+ "generated_paris": "17/11/2026 10:30",
+ "offers_total": 531,
+ "offers_kept": 193,
+ "new_today": 168,
+ "reused_from_previous": 0,
+ "ai_calls": 12,
  "sources": [
   {
    "name": "Fidelity International",
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 2,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -20,7 +20,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 2,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -28,7 +28,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 1,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -52,7 +52,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 1,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -76,7 +76,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 2,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -84,7 +84,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 1,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -92,7 +92,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 1,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -100,7 +100,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 2,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -108,37 +108,37 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 15,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "HSBC",
    "ok": true,
-   "read": 270,
-   "kept": 0,
-   "reused": 69
+   "read": 284,
+   "kept": 24,
+   "reused": 0
   },
   {
    "name": "Morgan Stanley",
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 3,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
-   "read": 150,
-   "kept": 0,
-   "reused": 13
+   "read": 188,
+   "kept": 5,
+   "reused": 0
   },
   {
    "name": "Julius Baer",
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 6,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -146,7 +146,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 4,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -162,7 +162,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 1,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -178,7 +178,7 @@
    "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 4,
+   "reused": 0,
    "error": "'NoneType' object has no attribute 'json'"
   },
   {
@@ -188,23 +188,731 @@
    "kept": 0,
    "reused": 0,
    "error": "401 Client Error: Unauthorized for url: https://api-mon-vie-via.businessfrance.fr/api/Offers/search"
+  },
+  {
+   "name": "Bain Capital",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Apollo",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Oaktree",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Blue Owl",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "HarbourVest",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "ICG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "PineBridge Investments",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Brevan Howard",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "General Atlantic",
+   "ok": true,
+   "read": 13,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "StepStone",
+   "ok": true,
+   "read": 62,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Point72",
+   "ok": true,
+   "read": 196,
+   "kept": 4,
+   "reused": 0
+  },
+  {
+   "name": "Schonfeld",
+   "ok": true,
+   "read": 72,
+   "kept": 3,
+   "reused": 0
+  },
+  {
+   "name": "ExodusPoint",
+   "ok": true,
+   "read": 5,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "PIMCO",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Wellington Management",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Capital Group",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Neuberger Berman",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Fidelity Investments",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Guggenheim",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Eastspring (Prudential)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Lombard Odier",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Morgan Stanley Wealth (private)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Citi",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "DBS",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "OCBC",
+   "ok": true,
+   "read": 1258,
+   "kept": 82,
+   "reused": 0
+  },
+  {
+   "name": "MUFG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "ING",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Santander",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "RBC",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "TD Securities",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "PJT Partners (Park Hill)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "TP ICAP",
+   "ok": true,
+   "read": 22,
+   "kept": 5,
+   "reused": 0
+  },
+  {
+   "name": "PwC",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "PwC (campus / graduate)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "AIA",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Prudential",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "FWD",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Sun Life",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "AIG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "HKEX",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "LSEG",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "S&P Global",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Morningstar",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Broadridge",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "JLL (immobilier / capital markets)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Visa",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Mastercard",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "PayPal",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Global Payments (TSYS)",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Fiserv",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Stripe",
+   "ok": true,
+   "read": 792,
+   "kept": 6,
+   "reused": 0
+  },
+  {
+   "name": "Adyen",
+   "ok": true,
+   "read": 242,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Carta",
+   "ok": true,
+   "read": 77,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Thunes",
+   "ok": true,
+   "read": 34,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Wise",
+   "ok": true,
+   "read": 62,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Nium",
+   "ok": true,
+   "read": 32,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "OKX",
+   "ok": true,
+   "read": 394,
+   "kept": 3,
+   "reused": 0
+  },
+  {
+   "name": "Bybit",
+   "ok": true,
+   "read": 160,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Coinbase",
+   "ok": true,
+   "read": 260,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Ripple",
+   "ok": true,
+   "read": 111,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "BitGo",
+   "ok": true,
+   "read": 58,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Fireblocks",
+   "ok": true,
+   "read": 23,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Gemini",
+   "ok": true,
+   "read": 26,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Crypto.com",
+   "ok": true,
+   "read": 85,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Anchorage Digital",
+   "ok": true,
+   "read": 21,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Microsoft",
+   "ok": true,
+   "read": 200,
+   "kept": 8,
+   "reused": 0
+  },
+  {
+   "name": "Salesforce",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Workday",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Adobe",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "NVIDIA",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "HP",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "HPE",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Samsung",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "CrowdStrike",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Equinix",
+   "ok": false,
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "error": "'NoneType' object has no attribute 'json'"
+  },
+  {
+   "name": "Grab",
+   "ok": true,
+   "read": 148,
+   "kept": 9,
+   "reused": 0
+  },
+  {
+   "name": "ServiceNow",
+   "ok": true,
+   "read": 64,
+   "kept": 4,
+   "reused": 0
+  },
+  {
+   "name": "Databricks",
+   "ok": true,
+   "read": 892,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Datadog",
+   "ok": true,
+   "read": 382,
+   "kept": 8,
+   "reused": 0
+  },
+  {
+   "name": "MongoDB",
+   "ok": true,
+   "read": 400,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "GitLab",
+   "ok": true,
+   "read": 253,
+   "kept": 3,
+   "reused": 0
+  },
+  {
+   "name": "Okta",
+   "ok": true,
+   "read": 358,
+   "kept": 1,
+   "reused": 0
+  },
+  {
+   "name": "Zscaler",
+   "ok": true,
+   "read": 380,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Pure Storage",
+   "ok": true,
+   "read": 374,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Elastic",
+   "ok": true,
+   "read": 388,
+   "kept": 2,
+   "reused": 0
+  },
+  {
+   "name": "Twilio",
+   "ok": true,
+   "read": 113,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Rubrik",
+   "ok": true,
+   "read": 187,
+   "kept": 3,
+   "reused": 0
+  },
+  {
+   "name": "Cloudflare",
+   "ok": true,
+   "read": 472,
+   "kept": 6,
+   "reused": 0
+  },
+  {
+   "name": "Anthropic",
+   "ok": true,
+   "read": 660,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Airbnb",
+   "ok": true,
+   "read": 206,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Agoda",
+   "ok": true,
+   "read": 345,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Pinterest",
+   "ok": true,
+   "read": 167,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Figma",
+   "ok": true,
+   "read": 140,
+   "kept": 3,
+   "reused": 0
+  },
+  {
+   "name": "Palantir",
+   "ok": true,
+   "read": 303,
+   "kept": 0,
+   "reused": 0
+  },
+  {
+   "name": "Ninja Van",
+   "ok": true,
+   "read": 146,
+   "kept": 0,
+   "reused": 0
   }
  ],
- "seconds": 43,
+ "seconds": 735,
  "ai_provider": "openrouter",
- "ai_reviewed": 30,
+ "ai_reviewed": 9,
+ "ai_pending": 184,
  "ai_models": [
-  "baidu/ernie-5.5-flash-preview:free",
-  "cohere/north-mini-code:free",
-  "dots-studio/dots-3-note-preview:free",
-  "inclusionai/ling-3.2-flash:free",
-  "liquid/lfm-3-1.7b:free",
-  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-  "nvidia/nemotron-3-ultra-550b-a55b:free",
-  "nvidia/nemotron-3.5-lightning:free",
-  "nvidia/nemotron-3.5-super-vl:free",
-  "particle-ai/particle-1:free",
-  "recursive/flint-v1.0:free"
+  "nvidia/nemotron-3.5-super-vl:free"
  ],
- "ai_error": ""
+ "ai_error": "openrouter (nvidia/nemotron-3.5-super-vl:free) : réponse illisible : {\"exclude\": false, \"exclude_reason\": \"\", \"role\": \"Spécialiste assurance HNW (assurance-vie)\", \"level\": \"Intermédiaire (3 ans ou Associate)\", \"years_re"
 }
