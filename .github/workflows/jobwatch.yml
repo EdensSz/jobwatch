@@ -25,6 +25,8 @@ jobs:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
+          ALERTS_EMAIL: ${{ secrets.ALERTS_EMAIL }}
+          ALERTS_APP_PASSWORD: ${{ secrets.ALERTS_APP_PASSWORD }}
       - name: Sauvegarde état + flux
         run: |
           git config user.name "jobwatch"; git config user.email "jobwatch@users.noreply.github.com"
