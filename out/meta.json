@@ -1,19 +1,20 @@
 {
- "generated_at": "2026-11-17T14:48:24Z",
- "generated_paris": "17/11/2026 15:48",
- "offers_total": 1440,
- "offers_kept": 895,
- "new_today": 880,
- "reused_from_previous": 1378,
+ "generated_at": "2026-11-17T15:31:54Z",
+ "generated_paris": "17/11/2026 16:31",
+ "offers_total": 1447,
+ "offers_kept": 912,
+ "new_today": 897,
+ "reused_from_previous": 1373,
  "ai_calls": 0,
  "sources": [
   {
    "name": "Fidelity International",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "BlackRock",
@@ -42,18 +43,20 @@
   {
    "name": "AllianceBernstein",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "abrdn",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Franklin Templeton",
@@ -66,49 +69,54 @@
   {
    "name": "Blackstone",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Carlyle",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Ares",
    "ok": true,
-   "read": 17,
+   "skipped": true,
+   "read": 0,
    "kept": 0,
-   "reused": 2
+   "reused": 1,
+   "error": "lu il y a 1 h (toutes les 12 h)"
   },
   {
    "name": "Brookfield",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Hamilton Lane",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 6,
    "kept": 0,
-   "reused": 1,
-   "error": "429 après 3 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs"
+   "reused": 2
   },
   {
    "name": "Manulife",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "HSBC",
@@ -120,32 +128,36 @@
   {
    "name": "Morgan Stanley",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
-   "read": 163,
+   "read": 164,
    "kept": 0,
    "reused": 19
   },
   {
    "name": "Julius Baer",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "State Street",
    "ok": true,
-   "read": 53,
-   "kept": 4,
-   "reused": 0
+   "skipped": true,
+   "read": 0,
+   "kept": 0,
+   "reused": 4,
+   "error": "lu il y a 1 h (toutes les 12 h)"
   },
   {
    "name": "Northern Trust",
@@ -158,33 +170,38 @@
   {
    "name": "Deutsche Bank",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 3 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Barclays",
    "ok": true,
-   "read": 29,
+   "skipped": true,
+   "read": 0,
    "kept": 0,
-   "reused": 2
+   "reused": 1,
+   "error": "lu il y a 1 h (toutes les 12 h)"
   },
   {
    "name": "UOB",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Bain Capital",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Apollo",
@@ -192,55 +209,61 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "429 après 3 essai(s) pour https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs"
   },
   {
    "name": "Oaktree",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Blue Owl",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "HarbourVest",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "ICG",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "PineBridge Investments",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Brevan Howard",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "General Atlantic",
@@ -252,14 +275,14 @@
   {
    "name": "StepStone",
    "ok": true,
-   "read": 61,
+   "read": 62,
    "kept": 0,
    "reused": 0
   },
   {
    "name": "Point72",
    "ok": true,
-   "read": 199,
+   "read": 200,
    "kept": 0,
    "reused": 7
   },
@@ -280,298 +303,331 @@
   {
    "name": "PIMCO",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Wellington Management",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Capital Group",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Neuberger Berman",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Fidelity Investments",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Guggenheim",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Eastspring (Prudential)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Lombard Odier",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Morgan Stanley Wealth (private)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Citi",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "DBS",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "OCBC",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 702,
    "kept": 0,
-   "reused": 49,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "reused": 77
   },
   {
    "name": "MUFG",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "ING",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Santander",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "RBC",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "TD Securities",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "PJT Partners (Park Hill)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "TP ICAP",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 17,
    "kept": 0,
-   "reused": 6,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "reused": 7
   },
   {
    "name": "PwC",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "PwC (campus / graduate)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "AIA",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Prudential",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "FWD",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Sun Life",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "AIG",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "HKEX",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "LSEG",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "S&P Global",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Morningstar",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Broadridge",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "JLL (immobilier / capital markets)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Visa",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Mastercard",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "PayPal",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Global Payments (TSYS)",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Fiserv",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Stripe",
@@ -583,7 +639,7 @@
   {
    "name": "Adyen",
    "ok": true,
-   "read": 239,
+   "read": 237,
    "kept": 0,
    "reused": 3
   },
@@ -634,7 +690,7 @@
   {
    "name": "Coinbase",
    "ok": true,
-   "read": 259,
+   "read": 260,
    "kept": 0,
    "reused": 2
   },
@@ -678,11 +734,11 @@
   {
    "name": "Anchorage Digital",
    "ok": true,
-   "read": 21,
+   "read": 0,
    "kept": 0,
-   "reused": 1,
-   "ats": "lever",
-   "no_ats": false
+   "reused": 0,
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Microsoft",
@@ -694,74 +750,83 @@
   {
    "name": "Salesforce",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Workday",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Adobe",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "NVIDIA",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "HP",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "HPE",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Samsung",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "CrowdStrike",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Equinix",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Grab",
@@ -780,7 +845,7 @@
   {
    "name": "Databricks",
    "ok": true,
-   "read": 892,
+   "read": 894,
    "kept": 0,
    "reused": 20
   },
@@ -788,8 +853,8 @@
    "name": "Datadog",
    "ok": true,
    "read": 380,
-   "kept": 0,
-   "reused": 18
+   "kept": 1,
+   "reused": 17
   },
   {
    "name": "MongoDB",
@@ -817,35 +882,35 @@
    "ok": true,
    "read": 378,
    "kept": 0,
-   "reused": 10
+   "reused": 12
   },
   {
    "name": "Pure Storage",
    "ok": true,
-   "read": 376,
+   "read": 380,
    "kept": 0,
    "reused": 12
   },
   {
    "name": "Elastic",
    "ok": true,
-   "read": 384,
+   "read": 383,
    "kept": 0,
    "reused": 6
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 114,
+   "read": 113,
    "kept": 0,
    "reused": 4
   },
   {
    "name": "Rubrik",
    "ok": true,
-   "read": 188,
+   "read": 189,
    "kept": 0,
-   "reused": 7
+   "reused": 6
   },
   {
    "name": "Cloudflare",
@@ -917,42 +982,47 @@
   {
    "name": "Intel",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Nike",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Philips",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Shell",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Unilever",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Thomson Reuters",
@@ -960,15 +1030,16 @@
    "read": 0,
    "kept": 0,
    "reused": 10,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "429 après 3 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
   },
   {
    "name": "Macquarie",
    "ok": false,
+   "skipped": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "en quarantaine (3 échecs de suite)"
   },
   {
    "name": "Nasdaq",
@@ -976,7 +1047,7 @@
    "read": 0,
    "kept": 0,
    "reused": 4,
-   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
+   "error": "429 après 3 essai(s) pour https://nasdaq.wd1.myworkdayjobs.com/wday/cxs/nasdaq/Global_External_Site/jobs"
   },
   {
    "name": "Netflix",
@@ -997,7 +1068,7 @@
   {
    "name": "Scale AI",
    "ok": true,
-   "read": 169,
+   "read": 168,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1006,7 +1077,7 @@
   {
    "name": "Notion",
    "ok": true,
-   "read": 164,
+   "read": 165,
    "kept": 0,
    "reused": 7,
    "ats": "ashby",
@@ -1114,7 +1185,7 @@
   {
    "name": "Reddit",
    "ok": true,
-   "read": 148,
+   "read": 149,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1222,7 +1293,7 @@
   {
    "name": "Roblox",
    "ok": true,
-   "read": 265,
+   "read": 266,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -1258,7 +1329,7 @@
   {
    "name": "Block",
    "ok": true,
-   "read": 185,
+   "read": 186,
    "kept": 0,
    "reused": 3,
    "ats": "greenhouse",
@@ -1267,7 +1338,7 @@
   {
    "name": "Toast",
    "ok": true,
-   "read": 320,
+   "read": 318,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1276,7 +1347,7 @@
   {
    "name": "Samsara",
    "ok": true,
-   "read": 315,
+   "read": 314,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1321,7 +1392,7 @@
   {
    "name": "Vanta",
    "ok": true,
-   "read": 81,
+   "read": 80,
    "kept": 0,
    "reused": 1,
    "ats": "ashby",
@@ -1348,7 +1419,7 @@
   {
    "name": "Braze",
    "ok": true,
-   "read": 336,
+   "read": 335,
    "kept": 0,
    "reused": 7,
    "ats": "greenhouse",
@@ -1456,7 +1527,7 @@
   {
    "name": "Cohere",
    "ok": true,
-   "read": 125,
+   "read": 126,
    "kept": 0,
    "reused": 3,
    "ats": "ashby",
@@ -1492,11 +1563,11 @@
   {
    "name": "SpaceX",
    "ok": true,
-   "read": 2799,
+   "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "greenhouse",
-   "no_ats": false
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Spotify",
@@ -1735,7 +1806,7 @@
   {
    "name": "Payoneer",
    "ok": true,
-   "read": 101,
+   "read": 102,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1834,7 +1905,7 @@
   {
    "name": "Binance",
    "ok": true,
-   "read": 224,
+   "read": 225,
    "kept": 0,
    "reused": 35,
    "ats": "greenhouse",
@@ -1987,7 +2058,7 @@
   {
    "name": "iCapital",
    "ok": true,
-   "read": 226,
+   "read": 225,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -2131,7 +2202,7 @@
   {
    "name": "Man Group",
    "ok": true,
-   "read": 69,
+   "read": 68,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2151,7 +2222,7 @@
    "ok": true,
    "read": 215,
    "kept": 0,
-   "reused": 6,
+   "reused": 7,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2176,7 +2247,7 @@
   {
    "name": "Hudson River Trading",
    "ok": true,
-   "read": 85,
+   "read": 84,
    "kept": 0,
    "reused": 2,
    "ats": "greenhouse",
@@ -2869,7 +2940,7 @@
   {
    "name": "Doctolib",
    "ok": true,
-   "read": 153,
+   "read": 152,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -3228,12 +3299,11 @@
   },
   {
    "name": "Mercari",
-   "ok": true,
+   "ok": false,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "",
-   "no_ats": true
+   "error": "429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/mercari"
   },
   {
    "name": "SmartNews",
@@ -3310,17 +3380,17 @@
   {
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
-   "read": 1585,
-   "kept": 0,
-   "reused": 788,
+   "read": 1593,
+   "kept": 68,
+   "reused": 726,
    "aggregator": true
   },
   {
    "name": "JobStreet (Singapour)",
    "ok": true,
-   "read": 4757,
-   "kept": 56,
-   "reused": 393,
+   "read": 4756,
+   "kept": 3,
+   "reused": 487,
    "aggregator": true
   },
   {
@@ -3348,26 +3418,26 @@
    "aggregator": true
   }
  ],
- "seconds": 4155,
+ "seconds": 1571,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 895,
+ "ai_pending": 912,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 30555,
-  "reused": 1803,
+  "read": 28372,
+  "reused": 1867,
   "rejected": {
-   "lieu": 20685,
+   "lieu": 18485,
    "langue": 23,
-   "niveau": 1787,
-   "metier": 1137,
+   "niveau": 2048,
+   "metier": 1182,
    "ancienne": 201,
-   "autre": 397
+   "autre": 555
   },
-  "kept": 895,
-  "langs_ok": 873,
-  "sources_ok": 311,
+  "kept": 912,
+  "langs_ok": 892,
+  "sources_ok": 313,
   "sources_total": 390
  }
 }

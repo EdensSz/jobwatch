@@ -1,79 +1,9 @@
-Fidelity International: HTTPError: 429 après 3 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs
 BlackRock: HTTPError: 429 après 3 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs
 Invesco: HTTPError: 429 après 3 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs
 T. Rowe Price: HTTPError: 429 après 3 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs
-AllianceBernstein: HTTPError: 429 après 3 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs
-abrdn: HTTPError: 429 après 3 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs
 Franklin Templeton: HTTPError: 429 après 3 essai(s) pour https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/jobs
-Blackstone: HTTPError: 429 après 3 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs
-Carlyle: HTTPError: 429 après 3 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs
-Brookfield: HTTPError: 429 après 3 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs
-Hamilton Lane: HTTPError: 429 après 3 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs
-Manulife: HTTPError: 429 après 3 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs
-Morgan Stanley: HTTPError: 429 après 3 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs
-Julius Baer: HTTPError: 429 après 3 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs
 Northern Trust: HTTPError: 429 après 3 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs
-Deutsche Bank: HTTPError: 429 après 3 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs
-UOB: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Bain Capital: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Apollo: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Oaktree: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Blue Owl: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-HarbourVest: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-ICG: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PineBridge Investments: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Brevan Howard: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PIMCO: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Wellington Management: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Capital Group: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Neuberger Berman: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Fidelity Investments: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Guggenheim: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Eastspring (Prudential): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Lombard Odier: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Morgan Stanley Wealth (private): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Citi: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-DBS: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-OCBC: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-MUFG: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-ING: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Santander: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-RBC: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-TD Securities: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PJT Partners (Park Hill): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-TP ICAP: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PwC: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PwC (campus / graduate): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-AIA: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Prudential: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-FWD: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Sun Life: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-AIG: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-HKEX: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-LSEG: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-S&P Global: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Morningstar: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Broadridge: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-JLL (immobilier / capital markets): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Visa: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Mastercard: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-PayPal: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Global Payments (TSYS): HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Fiserv: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Salesforce: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Workday: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Adobe: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-NVIDIA: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-HP: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-HPE: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Samsung: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-CrowdStrike: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Equinix: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Intel: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Nike: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Philips: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Shell: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Unilever: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Thomson Reuters: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Macquarie: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
-Nasdaq: HTTPError: Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage
+Apollo: HTTPError: 429 après 3 essai(s) pour https://athene.wd5.myworkdayjobs.com/wday/cxs/athene/Apollo_Careers/jobs
+Thomson Reuters: HTTPError: 429 après 3 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs
+Nasdaq: HTTPError: 429 après 3 essai(s) pour https://nasdaq.wd1.myworkdayjobs.com/wday/cxs/nasdaq/Global_External_Site/jobs
+Mercari: HTTPError: 429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/mercari
