@@ -141,7 +141,8 @@ def all_sources(cfg: dict) -> list:
                 srcs.append({"name": name, "type": "auto", "group": group,
                              "slugs": [x.strip() for x in slugs.split(",") if x.strip()]})
     aggs = [dict(x, aggregator=True) for x in cfg.get("aggregators") or []]
-    return srcs + aggs
+    off = set(cfg.get("disabled_types") or [])          # ex. workday : bloque les serveurs GitHub et ralentit tout
+    return [x for x in srcs + aggs if x.get("type") not in off and not x.get("disabled")]
 
 
 def fetch_all(cfg: dict, health: dict):
@@ -151,9 +152,14 @@ def fetch_all(cfg: dict, health: dict):
     now = datetime.now(timezone.utc)
     every = {"workday": 12, **(cfg.get("refresh_hours") or {})}     # heures minimum entre deux lectures, par type
 
+    on_github = os.environ.get("RUNNER_ENVIRONMENT") == "github-hosted"
+    pc_only = set(cfg.get("pc_only_types") or [])
+
     def one(src):
         h = health.get(src["name"], {})
-        if h.get("fail", 0) >= 3 and h.get("last_try") == today:
+        if on_github and (src.get("type") in pc_only or src.get("pc_only")):     # ex. Workday : bloque GitHub, lu par le passage sur ton PC
+            return src, None, Fresh("lu par le passage sur ton ordinateur (Workday bloque les serveurs GitHub)")
+        if h.get("fail", 0) >= 3 and h.get("last_try") == today and not ((src.get("type") in pc_only or src.get("pc_only")) and not on_github):
             return src, None, Skipped(f"en quarantaine ({h['fail']} échecs de suite)")
         hrs = every.get(src.get("type"))
         if hrs and h.get("last_ok") and not RUN.get("reset"):

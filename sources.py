@@ -1,5 +1,6 @@
 """Connecteurs vers les sites de carrières. Chaque connecteur renvoie une liste de Job
 (avec un `desc_loader` pour lire la description seulement si l'offre passe le premier filtre)."""
+import html
 import re
 import time
 from datetime import date, datetime, timedelta
@@ -47,7 +48,7 @@ def _req(method, s, url, **kw):
     host = _up(url).netloc
     dom = next((d for d in _MIN_GAP if host.endswith(d)), None)
     last = None
-    tries = 3 if dom else 5
+    tries = 2 if dom else 5            # Workday : un seul nouvel essai, inutile d'insister quand il bloque
     for attempt in range(tries):
         if sem:
             sem.acquire()
@@ -69,7 +70,7 @@ def _req(method, s, url, **kw):
                 last = requests.HTTPError(f"{r.status_code} après {attempt + 1} essai(s) pour {url[:120]}")
                 wait = r.headers.get("Retry-After", "")
                 pause = float(wait) if wait.replace(".", "").isdigit() else \
-                    (30 * (attempt + 1) if r.status_code == 429 else 2 * 2 ** attempt)
+                    (20 if r.status_code == 429 else 2 * 2 ** attempt)
                 pause = min(90, pause)
                 if dom and r.status_code == 429:          # toutes les requêtes Workday attendent aussi
                     _LAST[dom] = time.time() + pause
@@ -112,7 +113,7 @@ def _workday_posted(text: str) -> str:
 
 
 WD_CITY_RE = re.compile(r"hong ?kong|singapore|japan|tokyo|香港|東京|日本", re.I)
-WORKDAY_BLOCKED = {"n": 0}          # coupe-circuit : après 3 sites Workday refusés de suite, on arrête Workday pour ce passage
+WORKDAY_BLOCKED = {"n": 0}          # coupe-circuit : après 4 sites Workday refusés, on arrête Workday pour ce passage
 
 
 def _wd_location_facets(facets) -> Dict[str, List[str]]:
@@ -139,7 +140,7 @@ def _wd_location_facets(facets) -> Dict[str, List[str]]:
 def workday(src: Dict, terms: List[str]) -> List[Job]:
     """Workday, en économisant les requêtes : 1 requête pour lire les filtres de lieu du site, puis seulement les
     pages des offres à Hong Kong / Singapour / Japon (au lieu d'une recherche par ville). Repli : recherche par ville."""
-    if WORKDAY_BLOCKED["n"] >= 3:
+    if WORKDAY_BLOCKED["n"] >= 4:
         raise requests.HTTPError("Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage")
     if "url" in src:
         u = urlparse(src["url"])
@@ -157,7 +158,6 @@ def workday(src: Dict, terms: List[str]) -> List[Job]:
         if "429" in str(e):
             WORKDAY_BLOCKED["n"] += 1
         raise
-    WORKDAY_BLOCKED["n"] = 0
     facet = _wd_location_facets(first.get("facets"))
     queries = [(facet, "")] if facet else [({}, t) for t in terms]
     seen, jobs = set(), []
@@ -833,3 +833,328 @@ def auto(src: Dict, terms: List[str]) -> List[Job]:
 CONNECTORS.update({"ashby": ashby, "workable": workable, "recruitee": recruitee, "amazon": amazon,
                    "mycareersfuture": mycareersfuture, "seek": seek, "jooble": jooble, "adzuna": adzuna,
                    "careerjet": careerjet, "auto": auto})
+
+
+# =========================================================================== Hong Kong : sources officielles + alertes e-mail
+def _pick(d: dict, *keys) -> str:
+    """Première valeur non vide dont le nom de champ contient un des mots donnés (formats de données inconnus)."""
+    for k in keys:
+        for kk, v in d.items():
+            if k in kk.lower() and v not in (None, "", []):
+                return v if isinstance(v, str) else (" ".join(map(str, v)) if isinstance(v, list) else str(v))
+    return ""
+
+
+def _records(data):
+    if isinstance(data, list):
+        return [x for x in data if isinstance(x, dict)]
+    if isinstance(data, dict):
+        for k in ("data", "records", "result", "results", "items", "jobs", "list"):
+            if k in data:
+                return _records(data[k])
+        for v in data.values():
+            if isinstance(v, (list, dict)):
+                r = _records(v)
+                if r:
+                    return r
+    return []
+
+
+def hkstp(src: Dict, terms: List[str]) -> List[Job]:
+    """Offres des entreprises du Hong Kong Science Park (données ouvertes officielles, data.gov.hk, temps réel)."""
+    s = _session()
+    data = _get(s, src.get("url", "https://opendata.hkstp.org/corporate/recruitment/v1/")).json()
+    out = []
+    for i, q in enumerate(_records(data)):
+        title = _pick(q, "title", "position", "job_name", "jobname")
+        if not title:
+            continue
+        url = _pick(q, "url", "link", "apply")
+        out.append(Job(source=src["name"], company=_pick(q, "company", "employer", "organi") or "HKSTP company",
+                       id=str(_pick(q, "id") or url or f"{title}-{i}"), title=title,
+                       location=_pick(q, "location", "district") or "Hong Kong", url=url or "https://www.hkstp.org/",
+                       posted=_iso(_pick(q, "post", "date", "publish")) or None,
+                       description="\n".join(x for x in [_pick(q, "description", "detail", "responsib"),
+                                                         _pick(q, "requirement", "qualif")] if x)))
+    return out
+
+
+def hkma(src: Dict, terms: List[str]) -> List[Job]:
+    """Offres de la HKMA (API officielle apidocs.hkma.gov.hk)."""
+    s = _session()
+    out, offset = [], 0
+    for _ in range(5):
+        d = _get(s, "https://api.hkma.gov.hk/public/recruitment", params={"lang": "en", "offset": offset}).json()
+        recs = (d.get("result") or {}).get("records") or _records(d)
+        if not recs:
+            break
+        for q in recs:
+            out.append(Job(source=src["name"], company="Hong Kong Monetary Authority", id=q.get("link") or q.get("title"),
+                           title=q.get("title", ""), location="Hong Kong", url=q.get("link", ""),
+                           posted=_iso(q.get("date")) or None))
+        offset += len(recs)
+        if len(recs) < 100:
+            break
+    return out
+
+
+# ---- alertes e-mail (JobsDB, LinkedIn, eFinancialCareers, Michael Page, Hays, Robert Walters, alertes des banques…)
+JOB_LINK_RE = re.compile(
+    r"linkedin\.com/(comm/)?jobs/view|jobsdb\.com/(job|hk/en/job)|jobstreet\.com/.*job|efinancialcareers\.[a-z.]+/jobs?-|"
+    r"michaelpage\.[a-z.]+/job-detail|roberthalf|robertwalters\.[a-z.]+/.*job|hays\.[a-z.]+/job|morganmckinley\.com/.*job|"
+    r"ctgoodjobs\.hk/job|myworkdayjobs\.com/.*job|greenhouse\.io/.*jobs|lever\.co/|indeed\.[a-z.]+/(rc/clk|viewjob|pagead)|"
+    r"glassdoor\.[a-z.]+/.*job|selbyjennings|randstad\.[a-z.]+/.*job|links\.hk|/job[s]?/|jobid=|job_id=", re.I)
+GENERIC_TXT = re.compile(r"^(view|see|apply|show|more|all|search|unsubscribe|manage|jobs?|here|click|open|details?|"
+                         r"voir|postuler|save|share|similar)\b", re.I)
+
+
+def _alert_jobs(html_: str, sender: str, subject: str, hint: str):
+    """Liens d'offres dans un e-mail d'alerte : (titre, lien, texte qui suit = entreprise / lieu)."""
+    out = []
+    for m in re.finditer(r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', html_, re.I | re.S):
+        href, inner = html.unescape(m.group(1)), re.sub(r"<[^>]+>", " ", m.group(2))
+        title = re.sub(r"\s+", " ", html.unescape(inner)).strip()
+        if not (8 <= len(title) <= 140) or GENERIC_TXT.search(title) or not JOB_LINK_RE.search(href):
+            continue
+        after = re.sub(r"<[^>]+>", "\n", html_[m.end():m.end() + 900])
+        lines = [re.sub(r"\s+", " ", html.unescape(x)).strip(" ·•|-") for x in after.split("\n")]
+        lines = [x for x in lines if x and len(x) < 120][:3]
+        company = lines[0] if lines else ""
+        loc = next((x for x in lines if re.search(r"hong ?kong|singapore|tokyo|japan|\bhk\b|central|kowloon", x, re.I)), hint)
+        if " · " in company:                                  # « Entreprise · Lieu » (LinkedIn)
+            company, _, loc2 = company.partition(" · ")
+            loc = loc2 or loc
+        out.append((title, href, company or sender, loc or hint))
+    return out
+
+
+def email_alerts(src: Dict, terms: List[str]) -> List[Job]:
+    """Lit les alertes e-mail reçues sur une boîte Gmail dédiée (secrets ALERTS_EMAIL + ALERTS_APP_PASSWORD,
+    mot de passe d'application Google). Annonce complète non disponible : seulement titre / entreprise / lieu."""
+    import email as _email
+    import imaplib
+    from email.header import decode_header, make_header
+    user, pwd = _os.environ.get("ALERTS_EMAIL", "").strip(), _os.environ.get("ALERTS_APP_PASSWORD", "").replace(" ", "")
+    if not (user and pwd):
+        return []
+    days = int(src.get("days", 4))
+    since = (date.today() - timedelta(days=days)).strftime("%d-%b-%Y")
+    M = imaplib.IMAP4_SSL(src.get("imap_host", "imap.gmail.com"))
+    M.login(user, pwd)
+    M.select(src.get("folder", "INBOX"), readonly=True)
+    _, ids = M.search(None, "SINCE", since)
+    out, seen = [], set()
+    for mid in (ids[0].split() if ids and ids[0] else [])[-400:]:
+        _, msg_data = M.fetch(mid, "(RFC822)")
+        msg = _email.message_from_bytes(msg_data[0][1])
+        sender = str(make_header(decode_header(msg.get("From", "")))).split("<")[0].strip(' "')
+        subject = str(make_header(decode_header(msg.get("Subject", ""))))
+        when = ""
+        try:
+            from email.utils import parsedate_to_datetime
+            when = parsedate_to_datetime(msg.get("Date")).date().isoformat()
+        except Exception:
+            pass
+        body = ""
+        for part in msg.walk():
+            if part.get_content_type() == "text/html":
+                body += part.get_payload(decode=True).decode(part.get_content_charset() or "utf-8", "ignore")
+        hint = src.get("location_hint", "Hong Kong")
+        for title, href, company, loc in _alert_jobs(body, sender, subject, hint):
+            key = re.sub(r"[?#].*$", "", href)
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(Job(source=src["name"] + " · " + sender[:30], company=company[:80], id=key[:300], title=title,
+                           location=loc, url=href, posted=when or None,
+                           description=""))            # annonce non lue : langues signalées « non vérifiées »
+    M.logout()
+    return out
+
+
+CONNECTORS.update({"hkstp": hkstp, "hkma": hkma, "email_alerts": email_alerts})
+
+
+# =========================================================================== agrégateurs « tout-en-un » (clés API)
+def _rotate(items: List[str], n: int) -> List[str]:
+    """n mots-clés différents à chaque passage (tourne sur la liste au fil des passages)."""
+    if not items:
+        return []
+    k = (date.today().toordinal() * 4 + datetime.utcnow().hour // 6) * n
+    return [items[(k + i) % len(items)] for i in range(min(n, len(items)))]
+
+
+def jsearch(src: Dict, terms: List[str]) -> List[Job]:
+    """JSearch (OpenWeb Ninja) : offres de Google for Jobs = LinkedIn, Indeed, Glassdoor, JobsDB, sites carrières…
+    Secret JSEARCH_API_KEY (direct openwebninja.com) ou RAPIDAPI_KEY (via RapidAPI). Gratuit : 200 requêtes / mois,
+    d'où `per_run` requêtes par passage (2 par défaut x 4 passages x 30 j = 240 : mets 1 si tu restes en gratuit)."""
+    direct, rapid = _os.environ.get("JSEARCH_API_KEY", "").strip(), _os.environ.get("RAPIDAPI_KEY", "").strip()
+    if not (direct or rapid):
+        return []
+    s = _session()
+    out, seen = [], set()
+    for city, cc in src.get("cities", [["Hong Kong", "hk"]]):
+        for term in _rotate(src.get("terms") or terms, int(src.get("per_run", 1))):
+            q = f"{term} in {city}"
+            if direct:
+                r = _get(s, "https://api.openwebninja.com/jsearch/search-v2", headers={"x-api-key": direct},
+                         params={"query": q, "country": cc, "date_posted": src.get("date_posted", "week")})
+            else:
+                r = _get(s, "https://jsearch.p.rapidapi.com/search",
+                         headers={"X-RapidAPI-Key": rapid, "X-RapidAPI-Host": "jsearch.p.rapidapi.com"},
+                         params={"query": q, "country": cc, "page": 1, "num_pages": 1,
+                                 "date_posted": src.get("date_posted", "week")})
+            for q_ in _records(r.json()):
+                jid = q_.get("job_id") or q_.get("job_apply_link")
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                loc = ", ".join(x for x in [q_.get("job_city"), q_.get("job_state"), q_.get("job_country")] if x) \
+                    or q_.get("job_location") or city
+                out.append(Job(source=src["name"] + (f" · {q_['job_publisher']}" if q_.get("job_publisher") else ""),
+                               company=q_.get("employer_name") or "", id=str(jid), title=q_.get("job_title", ""),
+                               location=loc, url=q_.get("job_apply_link") or "",
+                               posted=_iso(q_.get("job_posted_at_datetime_utc")) or None,
+                               description=q_.get("job_description") or ""))
+            time.sleep(PAUSE)
+    return out
+
+
+def google_jobs(src: Dict, terms: List[str]) -> List[Job]:
+    """Google for Jobs via SerpApi (secret SERPAPI_KEY). Gratuit : 250 recherches / mois -> `per_run` par passage."""
+    key = _os.environ.get("SERPAPI_KEY", "").strip()
+    if not key:
+        return []
+    s = _session()
+    out, seen = [], set()
+    for city in src.get("cities", ["Hong Kong"]):
+        for term in _rotate(src.get("terms") or terms, int(src.get("per_run", 2))):
+            d = _get(s, "https://serpapi.com/search.json",
+                     params={"engine": "google_jobs", "q": f"{term} {city}", "location": city, "hl": "en",
+                             "api_key": key}).json()
+            for q in d.get("jobs_results") or []:
+                jid = q.get("job_id") or q.get("share_link") or q.get("title")
+                if jid in seen:
+                    continue
+                seen.add(jid)
+                link = ((q.get("apply_options") or [{}])[0].get("link") or q.get("share_link") or "")
+                posted = ""
+                m = re.search(r"(\d+)\s+day", (q.get("detected_extensions") or {}).get("posted_at", ""))
+                if m:
+                    posted = (date.today() - timedelta(days=int(m.group(1)))).isoformat()
+                out.append(Job(source=src["name"] + (f" · {q['via'].replace('via ', '')}" if q.get("via") else ""),
+                               company=q.get("company_name") or "", id=str(jid)[:300], title=q.get("title", ""),
+                               location=q.get("location") or city, url=link, posted=posted or None,
+                               description=q.get("description") or ""))
+            time.sleep(PAUSE)
+    return out
+
+
+def fantastic_jobs(src: Dict, terms: List[str]) -> List[Job]:
+    """Active Jobs DB (fantastic.jobs) : offres lues directement sur les sites carrières de 58 ATS, Workday compris
+    (Fidelity, BlackRock, Citi, DBS…). Secret FANTASTIC_JOBS_KEY. Essai gratuit 14 jours, puis payant."""
+    key = _os.environ.get("FANTASTIC_JOBS_KEY", "").strip()
+    if not key:
+        return []
+    s = _session()
+    out, cursor = [], None
+    for _ in range(int(src.get("max_pages", 3))):
+        params = {"time_frame": src.get("time_frame", "24h"), "location": src.get("location", "Hong Kong"),
+                  "description_format": "text", "limit": int(src.get("limit", 100))}
+        if cursor:
+            params["cursor"] = cursor
+        d = _get(s, "https://data.fantastic.jobs/v1/active-ats", headers={"Authorization": f"Bearer {key}"},
+                 params=params).json()
+        recs = _records(d)
+        if not recs:
+            break
+        for q in recs:
+            locs = q.get("locations_derived") or q.get("cities_derived") or []
+            out.append(Job(source=src["name"] + (f" · {q['source']}" if q.get("source") else ""),
+                           company=q.get("organization") or "", id=str(q.get("id")), title=q.get("title", ""),
+                           location=" ; ".join(map(str, locs)) if isinstance(locs, list) else str(locs) or "Hong Kong",
+                           url=q.get("url") or "", posted=_iso(q.get("date_posted")) or None,
+                           description=q.get("description_text") or ""))
+        cursor = recs[-1].get("id")
+        if len(recs) < params["limit"]:
+            break
+    return out
+
+
+CONNECTORS.update({"jsearch": jsearch, "google_jobs": google_jobs, "fantastic_jobs": fantastic_jobs})
+
+# =========================================================================== eFinancialCareers (scraping JSON Next.js)
+def efinancialcareers(src: Dict, terms: List[str]) -> List[Job]:
+    """Lit les offres depuis une URL de recherche eFinancialCareers (extrait les données JSON de la page)."""
+    s = _session()
+    s.headers.update({"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"})
+    r = _get(s, src["url"])
+    
+    # Extraction du JSON embarqué dans la page (Next.js __NEXT_DATA__)
+    m = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', r.text, re.S)
+    if not m:
+        return []
+    
+    data = _json.loads(m.group(1))
+    out, seen = [], set()
+
+    # Parcours récursif pour localiser les objets d'offres (souvent sous jobSearchResponse / data / jobs)
+    def find_jobs(obj):
+        if isinstance(obj, dict):
+            # Identification d'une offre par ses clés standards sur eFinancialCareers
+            if ("jobId" in obj or "id" in obj) and ("title" in obj or "jobTitle" in obj) and ("companyName" in obj or "company" in obj):
+                yield obj
+            for v in obj.values():
+                yield from find_jobs(v)
+        elif isinstance(obj, list):
+            for item in obj:
+                yield from find_jobs(item)
+
+    for q in find_jobs(data):
+        jid = str(q.get("jobId") or q.get("id") or "")
+        title = q.get("title") or q.get("jobTitle") or ""
+        if not jid or not title or jid in seen:
+            continue
+        seen.add(jid)
+
+        comp = q.get("companyName") or (q.get("company") or {}).get("name") or ""
+        loc = q.get("location") or q.get("displayLocation") or src.get("location_hint", "Hong Kong")
+        slug_url = q.get("detailsPageUrl") or q.get("url") or ""
+        full_url = f"https://www.efinancialcareers.fr{slug_url}" if slug_url.startswith("/") else slug_url
+        posted = _iso(q.get("postedDate") or q.get("createdDate") or q.get("date")) or None
+        teaser = q.get("summary") or q.get("description") or ""
+
+        job = Job(
+            source=src["name"],
+            company=comp,
+            id=jid,
+            title=title,
+            location=loc,
+            url=full_url or src["url"],
+            posted=posted,
+            description=teaser
+        )
+
+        # Chargement de la description complète uniquement si l'offre passe cheap_check
+        if full_url and len(teaser) < 300:
+            def load(u=full_url, fallback=teaser) -> str:
+                try:
+                    page = _get(s, u).text
+                    m_desc = re.search(r'<script id="__NEXT_DATA__" type="application/json">(.*?)</script>', page, re.S)
+                    if m_desc:
+                        d_json = _json.loads(m_desc.group(1))
+                        # Recherche de la description HTML complète dans le JSON de l'offre
+                        txt_match = re.search(r'"description"\s*:\s*"((?:[^"\\]|\\.){200,})"', m_desc.group(1))
+                        if txt_match:
+                            return _json.loads('"' + txt_match.group(1) + '"')
+                except Exception:
+                    pass
+                return fallback
+            job.desc_loader = load
+
+        out.append(job)
+
+    return out
+
+
+CONNECTORS.update({"efinancialcareers": efinancialcareers})

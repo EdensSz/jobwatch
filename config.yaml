@@ -6,7 +6,9 @@ max_years: 3                               # rejette si > 3 ans d'expérience de
 reject_preferred_languages: false          # true : exclut aussi les offres où une autre langue est juste « un plus »
 max_age_days: 60
 max_description_fetches_per_source: 400    # lecture de l'annonce complète (plafond par site et par passage)
-refresh_hours: {workday: 12}               # Workday limite les requêtes : ses sites ne sont relus que toutes les 12 h
+refresh_hours: {workday: 8}                # Workday limite les requêtes : ses sites ne sont relus que toutes les 8 h
+disabled_types: [workday]                  # Workday bloque GitHub et ralentit tout : désactivé (retire cette ligne pour le remettre)
+pc_only_types: [workday]                   # (si un jour tu installes le passage sur ton ordinateur)
 refresh_days: 7                            # une offre déjà analysée est relue au bout de 7 jours
 
 # Mots-clés : on cherche par ville (les sites font une recherche « tous les mots »), les règles jugent ensuite chaque offre
@@ -84,6 +86,7 @@ sources:
   - {name: "PIMCO",                  type: workday, url: "https://pimco.wd1.myworkdayjobs.com/pimco-careers"}                # (7/6)
   - {name: "Wellington Management",  type: workday, url: "https://wellington.wd5.myworkdayjobs.com/External"}               # (13/10)
   - {name: "Capital Group",          type: workday, url: "https://capgroup.wd1.myworkdayjobs.com/capitalgroupcareers"}      # (10/25)
+- {name: "eFinancialCareers (HK - IR Analyst)", type: efinancialcareers, url: "https://www.efinancialcareers.fr/en/jobs/investor-relations-analyst/in-hong-kong?filters.seniority=ANALYST&filters.postedDate=SEVEN", location_hint: "Hong Kong"}
   - {name: "Neuberger Berman",       type: workday, url: "https://nb.wd1.myworkdayjobs.com/nbCareers"}                       # (2/3)
   - {name: "Fidelity Investments",   type: workday, url: "https://fmr.wd1.myworkdayjobs.com/targeted"}                       # (3/0)
   - {name: "Guggenheim",             type: workday, url: "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Careers"}     # (1/0)
@@ -197,10 +200,22 @@ sources:
 # (ADZUNA_APP_ID + ADZUNA_APP_KEY) : clés gratuites dans les secrets GitHub, sinon ignorés.
 aggregators:
   - {name: "MyCareersFuture (Singapour)", type: mycareersfuture}
+  - {name: "JobsDB (Hong Kong)",          type: seek, host: "hk.jobsdb.com", site_key: "HK-Main", city: "Hong Kong", pc_only: true}   # refuse GitHub : lu depuis ton PC
   - {name: "JobStreet (Singapour)",       type: seek, host: "sg.jobstreet.com", site_key: "SG-Main", city: "Singapore"}
   - {name: "Jooble",                      type: jooble}
   - {name: "Adzuna (Singapour)",          type: adzuna, country: "sg"}
   - {name: "Careerjet",                   type: careerjet}
+  # -- « Tout-en-un » (clés API, voir README) : Google for Jobs = LinkedIn, Indeed, JobsDB, Glassdoor, sites carrières…
+  - {name: "JSearch (Google for Jobs)",   type: jsearch, per_run: 1, cities: [["Hong Kong", "hk"]]}   # 4 passages x 30 j = 120 < 200 gratuits
+  - {name: "Google Jobs (SerpApi)",       type: google_jobs, per_run: 2, cities: ["Hong Kong"]}
+  # -- Tous les sites carrières (Workday, SuccessFactors, Greenhouse… 58 ATS) à Hong Kong, payant après 14 jours d'essai
+  - {name: "Active Jobs DB (Workday & co)", type: fantastic_jobs, location: "Hong Kong", time_frame: "24h", max_pages: 3}
+  # -- Hong Kong : données ouvertes officielles
+  - {name: "HK Science Park (HKSTP)",     type: hkstp}
+  - {name: "HKMA",                        type: hkma}
+  # -- Alertes e-mail lues sur une boîte Gmail dédiée (secrets ALERTS_EMAIL + ALERTS_APP_PASSWORD) :
+  #    JobsDB, LinkedIn, eFinancialCareers, Michael Page, Robert Walters, Hays, alertes des sites carrières des banques…
+  - {name: "Alertes e-mail",              type: email_alerts, location_hint: "Hong Kong", days: 4}
 
 role_terms:
   - "investor relations"
