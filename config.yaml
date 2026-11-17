@@ -86,7 +86,7 @@ sources:
   - {name: "PIMCO",                  type: workday, url: "https://pimco.wd1.myworkdayjobs.com/pimco-careers"}                # (7/6)
   - {name: "Wellington Management",  type: workday, url: "https://wellington.wd5.myworkdayjobs.com/External"}               # (13/10)
   - {name: "Capital Group",          type: workday, url: "https://capgroup.wd1.myworkdayjobs.com/capitalgroupcareers"}      # (10/25)
-- {name: "eFinancialCareers (HK - IR Analyst)", type: efinancialcareers, url: "https://www.efinancialcareers.fr/en/jobs/investor-relations-analyst/in-hong-kong?filters.seniority=ANALYST&filters.postedDate=SEVEN", location_hint: "Hong Kong"}
+  - {name: "eFinancialCareers (HK - IR Analyst)", type: efinancialcareers, url: "https://www.efinancialcareers.fr/en/jobs/investor-relations-analyst/in-hong-kong?filters.seniority=ANALYST&filters.postedDate=SEVEN", location_hint: "Hong Kong"}
   - {name: "Neuberger Berman",       type: workday, url: "https://nb.wd1.myworkdayjobs.com/nbCareers"}                       # (2/3)
   - {name: "Fidelity Investments",   type: workday, url: "https://fmr.wd1.myworkdayjobs.com/targeted"}                       # (3/0)
   - {name: "Guggenheim",             type: workday, url: "https://guggenheim.wd1.myworkdayjobs.com/Guggenheim_Careers"}     # (1/0)
