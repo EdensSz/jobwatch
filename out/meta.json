@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-17T13:16:53Z",
- "generated_paris": "17/11/2026 14:16",
- "offers_total": 1387,
- "offers_kept": 837,
- "new_today": 824,
- "reused_from_previous": 384,
+ "generated_at": "2026-11-17T14:48:24Z",
+ "generated_paris": "17/11/2026 15:48",
+ "offers_total": 1440,
+ "offers_kept": 895,
+ "new_today": 880,
+ "reused_from_previous": 1378,
  "ai_calls": 0,
  "sources": [
   {
@@ -13,7 +13,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs"
+   "error": "429 après 3 essai(s) pour https://fil.wd3.myworkdayjobs.com/wday/cxs/fil/001/jobs"
   },
   {
    "name": "BlackRock",
@@ -21,7 +21,7 @@
    "read": 0,
    "kept": 0,
    "reused": 3,
-   "error": "429 après 5 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
+   "error": "429 après 3 essai(s) pour https://blackrock.wd1.myworkdayjobs.com/wday/cxs/blackrock/BlackRock_Professional/jobs"
   },
   {
    "name": "Invesco",
@@ -29,7 +29,7 @@
    "read": 0,
    "kept": 0,
    "reused": 4,
-   "error": "429 après 5 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
+   "error": "429 après 3 essai(s) pour https://invesco.wd1.myworkdayjobs.com/wday/cxs/invesco/IVZ/jobs"
   },
   {
    "name": "T. Rowe Price",
@@ -37,7 +37,7 @@
    "read": 0,
    "kept": 0,
    "reused": 1,
-   "error": "429 après 5 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs"
+   "error": "429 après 3 essai(s) pour https://troweprice.wd5.myworkdayjobs.com/wday/cxs/troweprice/TRowePriceInternational/jobs"
   },
   {
    "name": "AllianceBernstein",
@@ -45,7 +45,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs"
+   "error": "429 après 3 essai(s) pour https://abglobal.wd1.myworkdayjobs.com/wday/cxs/abglobal/alliancebernsteincareers/jobs"
   },
   {
    "name": "abrdn",
@@ -53,14 +53,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs"
+   "error": "429 après 3 essai(s) pour https://abrdn.wd3.myworkdayjobs.com/wday/cxs/abrdn/abrdn/jobs"
   },
   {
    "name": "Franklin Templeton",
-   "ok": true,
+   "ok": false,
    "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "429 après 3 essai(s) pour https://franklintempleton.wd5.myworkdayjobs.com/wday/cxs/franklintempleton/Primary-External-1/"
   },
   {
    "name": "Blackstone",
@@ -68,7 +69,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs"
+   "error": "429 après 3 essai(s) pour https://blackstone.wd1.myworkdayjobs.com/wday/cxs/blackstone/Blackstone_Careers/jobs"
   },
   {
    "name": "Carlyle",
@@ -76,15 +77,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs"
+   "error": "429 après 3 essai(s) pour https://carlyle.wd1.myworkdayjobs.com/wday/cxs/carlyle/Carlyle/jobs"
   },
   {
    "name": "Ares",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 17,
    "kept": 0,
-   "reused": 1,
-   "error": "429 après 5 essai(s) pour https://aresmgmt.wd1.myworkdayjobs.com/wday/cxs/aresmgmt/External/jobs"
+   "reused": 2
   },
   {
    "name": "Brookfield",
@@ -92,7 +92,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
+   "error": "429 après 3 essai(s) pour https://brookfield.wd5.myworkdayjobs.com/wday/cxs/brookfield/brookfield/jobs"
   },
   {
    "name": "Hamilton Lane",
@@ -100,7 +100,7 @@
    "read": 0,
    "kept": 0,
    "reused": 1,
-   "error": "429 après 5 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs"
+   "error": "429 après 3 essai(s) pour https://hamiltonlane.wd108.myworkdayjobs.com/wday/cxs/hamiltonlane/Search/jobs"
   },
   {
    "name": "Manulife",
@@ -108,7 +108,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
+   "error": "429 après 3 essai(s) pour https://manulife.wd3.myworkdayjobs.com/wday/cxs/manulife/MFCJH_Jobs/jobs"
   },
   {
    "name": "HSBC",
@@ -123,14 +123,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
+   "error": "429 après 3 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/External/jobs"
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
-   "read": 188,
+   "read": 163,
    "kept": 0,
-   "reused": 23
+   "reused": 19
   },
   {
    "name": "Julius Baer",
@@ -138,15 +138,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs"
+   "error": "429 après 3 essai(s) pour https://juliusbaer.wd3.myworkdayjobs.com/wday/cxs/juliusbaer/External/jobs"
   },
   {
    "name": "State Street",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "429 après 5 essai(s) pour https://statestreet.wd1.myworkdayjobs.com/wday/cxs/statestreet/Global/jobs"
+   "ok": true,
+   "read": 53,
+   "kept": 4,
+   "reused": 0
   },
   {
    "name": "Northern Trust",
@@ -154,7 +153,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
+   "error": "429 après 3 essai(s) pour https://ntrs.wd1.myworkdayjobs.com/wday/cxs/ntrs/northerntrust/jobs"
   },
   {
    "name": "Deutsche Bank",
@@ -162,15 +161,14 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs"
+   "error": "429 après 3 essai(s) pour https://db.wd3.myworkdayjobs.com/wday/cxs/db/DBWebsite/jobs"
   },
   {
    "name": "Barclays",
-   "ok": false,
-   "read": 0,
+   "ok": true,
+   "read": 29,
    "kept": 0,
-   "reused": 1,
-   "error": "429 après 5 essai(s) pour https://barclays.wd3.myworkdayjobs.com/wday/cxs/barclays/External_Career_Site_Barclays/jobs"
+   "reused": 2
   },
   {
    "name": "UOB",
@@ -178,15 +176,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://uobgroup.wd3.myworkdayjobs.com/wday/cxs/uobgroup/UOBExternal/jobs"
-  },
-  {
-   "name": "VIE Business France",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "401 Client Error: Unauthorized for url: https://api-mon-vie-via.businessfrance.fr/api/Offers/search"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Bain Capital",
@@ -194,14 +184,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://baincapital.wd1.myworkdayjobs.com/wday/cxs/baincapital/External_Public/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Apollo",
-   "ok": true,
-   "read": 3,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 0
+   "reused": 0,
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Oaktree",
@@ -209,7 +200,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://oaktree.wd1.myworkdayjobs.com/wday/cxs/oaktree/Oaktree/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Blue Owl",
@@ -217,7 +208,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://blueowl.wd1.myworkdayjobs.com/wday/cxs/blueowl/BlueOwl/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "HarbourVest",
@@ -225,7 +216,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://harbourvest.wd5.myworkdayjobs.com/wday/cxs/harbourvest/HVP/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "ICG",
@@ -233,7 +224,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://icg.wd3.myworkdayjobs.com/wday/cxs/icg/External_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "PineBridge Investments",
@@ -241,7 +232,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://pinebridge.wd5.myworkdayjobs.com/wday/cxs/pinebridge/PineBridge_Career_Site/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Brevan Howard",
@@ -249,7 +240,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://brevanhoward.wd3.myworkdayjobs.com/wday/cxs/brevanhoward/BH_ExternalCareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "General Atlantic",
@@ -268,7 +259,7 @@
   {
    "name": "Point72",
    "ok": true,
-   "read": 198,
+   "read": 199,
    "kept": 0,
    "reused": 7
   },
@@ -292,7 +283,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://pimco.wd1.myworkdayjobs.com/wday/cxs/pimco/pimco-careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Wellington Management",
@@ -300,7 +291,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://wellington.wd5.myworkdayjobs.com/wday/cxs/wellington/External/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Capital Group",
@@ -308,7 +299,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://capgroup.wd1.myworkdayjobs.com/wday/cxs/capgroup/capitalgroupcareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Neuberger Berman",
@@ -316,7 +307,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://nb.wd1.myworkdayjobs.com/wday/cxs/nb/nbCareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Fidelity Investments",
@@ -324,7 +315,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://fmr.wd1.myworkdayjobs.com/wday/cxs/fmr/targeted/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Guggenheim",
@@ -332,7 +323,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://guggenheim.wd1.myworkdayjobs.com/wday/cxs/guggenheim/Guggenheim_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Eastspring (Prudential)",
@@ -340,7 +331,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential_eastspring/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Lombard Odier",
@@ -348,7 +339,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://lombardodier.wd3.myworkdayjobs.com/wday/cxs/lombardodier/Lombard_Odier_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Morgan Stanley Wealth (private)",
@@ -356,7 +347,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://ms.wd5.myworkdayjobs.com/wday/cxs/ms/private/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Citi",
@@ -364,7 +355,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://citi.wd5.myworkdayjobs.com/wday/cxs/citi/2/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "DBS",
@@ -372,14 +363,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://dbs.wd3.myworkdayjobs.com/wday/cxs/dbs/Dbs_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "OCBC",
-   "ok": true,
-   "read": 1260,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 77
+   "reused": 49,
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "MUFG",
@@ -387,7 +379,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://mufgub.wd3.myworkdayjobs.com/wday/cxs/mufgub/MUFG-Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "ING",
@@ -395,7 +387,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://ing.wd3.myworkdayjobs.com/wday/cxs/ing/ICSGBLCOR/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Santander",
@@ -403,7 +395,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://santander.wd3.myworkdayjobs.com/wday/cxs/santander/SantanderCareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "RBC",
@@ -411,7 +403,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://rbc.wd3.myworkdayjobs.com/wday/cxs/rbc/RBCGLOBAL1/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "TD Securities",
@@ -419,7 +411,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://td.wd3.myworkdayjobs.com/wday/cxs/td/TD_Bank_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "PJT Partners (Park Hill)",
@@ -427,14 +419,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://pjtpartners.wd1.myworkdayjobs.com/wday/cxs/pjtpartners/Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "TP ICAP",
-   "ok": true,
-   "read": 21,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 7
+   "reused": 6,
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "PwC",
@@ -442,7 +435,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Experienced_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "PwC (campus / graduate)",
@@ -450,7 +443,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://pwc.wd3.myworkdayjobs.com/wday/cxs/pwc/Global_Campus_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "AIA",
@@ -458,7 +451,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://aia.wd3.myworkdayjobs.com/wday/cxs/aia/External/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Prudential",
@@ -466,7 +459,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://prudential.wd3.myworkdayjobs.com/wday/cxs/prudential/prudential/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "FWD",
@@ -474,7 +467,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://fwd.wd3.myworkdayjobs.com/wday/cxs/fwd/FWDcareersite/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Sun Life",
@@ -482,7 +475,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://sunlife.wd3.myworkdayjobs.com/wday/cxs/sunlife/Experienced-Jobs/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "AIG",
@@ -490,7 +483,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://aig.wd1.myworkdayjobs.com/wday/cxs/aig/aig/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "HKEX",
@@ -498,7 +491,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://hkex.wd3.myworkdayjobs.com/wday/cxs/hkex/HKEXCareerPage/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "LSEG",
@@ -506,7 +499,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://lseg.wd3.myworkdayjobs.com/wday/cxs/lseg/careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "S&P Global",
@@ -514,7 +507,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://spgi.wd5.myworkdayjobs.com/wday/cxs/spgi/SPGI_Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Morningstar",
@@ -522,7 +515,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://morningstar.wd5.myworkdayjobs.com/wday/cxs/morningstar/MORNINGSTAR/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Broadridge",
@@ -530,7 +523,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://broadridge.wd5.myworkdayjobs.com/wday/cxs/broadridge/Careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "JLL (immobilier / capital markets)",
@@ -538,7 +531,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://jll.wd1.myworkdayjobs.com/wday/cxs/jll/jllcareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Visa",
@@ -546,7 +539,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://visa.wd5.myworkdayjobs.com/wday/cxs/visa/Visa/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Mastercard",
@@ -554,7 +547,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "PayPal",
@@ -562,7 +555,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://paypal.wd1.myworkdayjobs.com/wday/cxs/paypal/Jobs/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Global Payments (TSYS)",
@@ -570,7 +563,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://tsys.wd1.myworkdayjobs.com/wday/cxs/tsys/tsys/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Fiserv",
@@ -578,19 +571,19 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://fiserv.wd5.myworkdayjobs.com/wday/cxs/fiserv/Ext/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Stripe",
    "ok": true,
-   "read": 794,
+   "read": 795,
    "kept": 0,
    "reused": 35
   },
   {
    "name": "Adyen",
    "ok": true,
-   "read": 238,
+   "read": 239,
    "kept": 0,
    "reused": 3
   },
@@ -629,7 +622,7 @@
    "ok": true,
    "read": 395,
    "kept": 0,
-   "reused": 3
+   "reused": 4
   },
   {
    "name": "Bybit",
@@ -678,7 +671,7 @@
    "ok": true,
    "read": 85,
    "kept": 0,
-   "reused": 0,
+   "reused": 3,
    "ats": "lever",
    "no_ats": false
   },
@@ -686,17 +679,17 @@
    "name": "Anchorage Digital",
    "ok": true,
    "read": 21,
-   "kept": 1,
-   "reused": 0,
+   "kept": 0,
+   "reused": 1,
    "ats": "lever",
    "no_ats": false
   },
   {
    "name": "Microsoft",
    "ok": true,
-   "read": 202,
+   "read": 199,
    "kept": 0,
-   "reused": 40
+   "reused": 39
   },
   {
    "name": "Salesforce",
@@ -704,7 +697,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Workday",
@@ -712,7 +705,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://workday.wd5.myworkdayjobs.com/wday/cxs/workday/Workday/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Adobe",
@@ -720,7 +713,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "NVIDIA",
@@ -728,7 +721,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "HP",
@@ -736,7 +729,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://hp.wd5.myworkdayjobs.com/wday/cxs/hp/ExternalCareerSite/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "HPE",
@@ -744,7 +737,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://hpe.wd5.myworkdayjobs.com/wday/cxs/hpe/Jobsathpe/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Samsung",
@@ -752,7 +745,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://sec.wd3.myworkdayjobs.com/wday/cxs/sec/samsung_careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "CrowdStrike",
@@ -760,7 +753,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://crowdstrike.wd5.myworkdayjobs.com/wday/cxs/crowdstrike/crowdstrikecareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Equinix",
@@ -768,7 +761,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://equinix.wd1.myworkdayjobs.com/wday/cxs/equinix/External/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Grab",
@@ -782,7 +775,7 @@
    "ok": true,
    "read": 65,
    "kept": 0,
-   "reused": 22
+   "reused": 23
   },
   {
    "name": "Databricks",
@@ -795,8 +788,8 @@
    "name": "Datadog",
    "ok": true,
    "read": 380,
-   "kept": 2,
-   "reused": 13
+   "kept": 0,
+   "reused": 18
   },
   {
    "name": "MongoDB",
@@ -808,23 +801,23 @@
   {
    "name": "GitLab",
    "ok": true,
-   "read": 253,
+   "read": 254,
    "kept": 0,
    "reused": 3
   },
   {
    "name": "Okta",
    "ok": true,
-   "read": 358,
+   "read": 360,
    "kept": 0,
    "reused": 9
   },
   {
    "name": "Zscaler",
    "ok": true,
-   "read": 379,
+   "read": 378,
    "kept": 0,
-   "reused": 11
+   "reused": 10
   },
   {
    "name": "Pure Storage",
@@ -837,13 +830,13 @@
    "name": "Elastic",
    "ok": true,
    "read": 384,
-   "kept": 1,
-   "reused": 5
+   "kept": 0,
+   "reused": 6
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 115,
+   "read": 114,
    "kept": 0,
    "reused": 4
   },
@@ -852,7 +845,7 @@
    "ok": true,
    "read": 188,
    "kept": 0,
-   "reused": 6
+   "reused": 7
   },
   {
    "name": "Cloudflare",
@@ -918,8 +911,8 @@
    "name": "Amazon / AWS",
    "ok": true,
    "read": 2000,
-   "kept": 1,
-   "reused": 0
+   "kept": 0,
+   "reused": 13
   },
   {
    "name": "Intel",
@@ -927,7 +920,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://intel.wd1.myworkdayjobs.com/wday/cxs/intel/External/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Nike",
@@ -935,7 +928,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://nike.wd1.myworkdayjobs.com/wday/cxs/nike/nke/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Philips",
@@ -943,7 +936,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://philips.wd3.myworkdayjobs.com/wday/cxs/philips/jobs-and-careers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Shell",
@@ -951,7 +944,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://shell.wd3.myworkdayjobs.com/wday/cxs/shell/ShellCareers/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Unilever",
@@ -959,7 +952,7 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://unilever.wd3.myworkdayjobs.com/wday/cxs/unilever/Unilever_Experienced_Professionals/jo"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Thomson Reuters",
@@ -967,7 +960,7 @@
    "read": 0,
    "kept": 0,
    "reused": 10,
-   "error": "429 après 5 essai(s) pour https://thomsonreuters.wd5.myworkdayjobs.com/wday/cxs/thomsonreuters/External_Career_Site/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Macquarie",
@@ -975,22 +968,15 @@
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://mq.wd3.myworkdayjobs.com/wday/cxs/mq/CareersatMQ/jobs"
-  },
-  {
-   "name": "MSCI",
-   "ok": false,
-   "read": 0,
-   "kept": 0,
-   "reused": 0,
-   "error": "401 Client Error: Unauthorized for url: https://msci.wd1.myworkdayjobs.com/wday/cxs/msci/MSCI/jobs"
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Nasdaq",
-   "ok": true,
-   "read": 6,
+   "ok": false,
+   "read": 0,
    "kept": 0,
-   "reused": 4
+   "reused": 4,
+   "error": "Workday refuse les requêtes depuis ce serveur : site sauté pour ce passage"
   },
   {
    "name": "Netflix",
@@ -1004,7 +990,7 @@
    "ok": true,
    "read": 840,
    "kept": 0,
-   "reused": 0,
+   "reused": 8,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1021,8 +1007,8 @@
    "name": "Notion",
    "ok": true,
    "read": 164,
-   "kept": 2,
-   "reused": 0,
+   "kept": 0,
+   "reused": 7,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1103,7 +1089,7 @@
    "ok": true,
    "read": 41,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1146,9 +1132,9 @@
   {
    "name": "Snowflake",
    "ok": true,
-   "read": 379,
-   "kept": 1,
-   "reused": 0,
+   "read": 380,
+   "kept": 0,
+   "reused": 5,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1157,7 +1143,7 @@
    "ok": true,
    "read": 113,
    "kept": 0,
-   "reused": 0,
+   "reused": 3,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1193,7 +1179,7 @@
    "ok": true,
    "read": 12,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1220,7 +1206,7 @@
    "ok": true,
    "read": 39,
    "kept": 0,
-   "reused": 0,
+   "reused": 2,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1229,7 +1215,7 @@
    "ok": true,
    "read": 59,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1238,7 +1224,7 @@
    "ok": true,
    "read": 265,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1265,7 +1251,7 @@
    "ok": true,
    "read": 201,
    "kept": 0,
-   "reused": 0,
+   "reused": 6,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1274,14 +1260,14 @@
    "ok": true,
    "read": 185,
    "kept": 0,
-   "reused": 0,
+   "reused": 3,
    "ats": "greenhouse",
    "no_ats": false
   },
   {
    "name": "Toast",
    "ok": true,
-   "read": 331,
+   "read": 320,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1328,16 +1314,16 @@
    "ok": true,
    "read": 108,
    "kept": 0,
-   "reused": 0,
+   "reused": 2,
    "ats": "greenhouse",
    "no_ats": false
   },
   {
    "name": "Vanta",
    "ok": true,
-   "read": 80,
+   "read": 81,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1355,16 +1341,16 @@
    "ok": true,
    "read": 141,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
   {
    "name": "Braze",
    "ok": true,
-   "read": 335,
+   "read": 336,
    "kept": 0,
-   "reused": 0,
+   "reused": 7,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1381,8 +1367,8 @@
    "name": "Mixpanel",
    "ok": true,
    "read": 40,
-   "kept": 1,
-   "reused": 0,
+   "kept": 0,
+   "reused": 5,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1472,7 +1458,7 @@
    "ok": true,
    "read": 125,
    "kept": 0,
-   "reused": 0,
+   "reused": 3,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1517,7 +1503,7 @@
    "ok": true,
    "read": 87,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "lever",
    "no_ats": false
   },
@@ -1704,7 +1690,7 @@
   {
    "name": "Monzo",
    "ok": true,
-   "read": 59,
+   "read": 60,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1849,8 +1835,8 @@
    "name": "Binance",
    "ok": true,
    "read": 224,
-   "kept": 6,
-   "reused": 0,
+   "kept": 0,
+   "reused": 35,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1868,7 +1854,7 @@
    "ok": true,
    "read": 13,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "lever",
    "no_ats": false
   },
@@ -1912,8 +1898,8 @@
    "name": "Airwallex",
    "ok": true,
    "read": 486,
-   "kept": 2,
-   "reused": 0,
+   "kept": 0,
+   "reused": 16,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1957,8 +1943,8 @@
    "name": "Funding Societies",
    "ok": true,
    "read": 90,
-   "kept": 2,
-   "reused": 0,
+   "kept": 0,
+   "reused": 3,
    "ats": "workable",
    "no_ats": false
   },
@@ -2001,9 +1987,9 @@
   {
    "name": "iCapital",
    "ok": true,
-   "read": 224,
+   "read": 226,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2145,7 +2131,7 @@
   {
    "name": "Man Group",
    "ok": true,
-   "read": 68,
+   "read": 69,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2163,9 +2149,9 @@
   {
    "name": "Jane Street",
    "ok": true,
-   "read": 216,
+   "read": 215,
    "kept": 0,
-   "reused": 0,
+   "reused": 6,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2183,7 +2169,7 @@
    "ok": true,
    "read": 154,
    "kept": 0,
-   "reused": 0,
+   "reused": 2,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2192,7 +2178,7 @@
    "ok": true,
    "read": 85,
    "kept": 0,
-   "reused": 0,
+   "reused": 2,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2201,7 +2187,7 @@
    "ok": true,
    "read": 89,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -2244,11 +2230,11 @@
   {
    "name": "PAI Partners",
    "ok": true,
-   "read": 0,
+   "read": 8,
    "kept": 0,
    "reused": 0,
-   "ats": "",
-   "no_ats": true
+   "ats": "recruitee",
+   "no_ats": false
   },
   {
    "name": "EQT",
@@ -2883,7 +2869,7 @@
   {
    "name": "Doctolib",
    "ok": true,
-   "read": 155,
+   "read": 153,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -2911,8 +2897,8 @@
    "name": "Contentsquare",
    "ok": true,
    "read": 28,
-   "kept": 1,
-   "reused": 0,
+   "kept": 0,
+   "reused": 1,
    "ats": "lever",
    "no_ats": false
   },
@@ -2921,7 +2907,7 @@
    "ok": true,
    "read": 30,
    "kept": 0,
-   "reused": 0,
+   "reused": 2,
    "ats": "ashby",
    "no_ats": false
   },
@@ -2957,7 +2943,7 @@
    "ok": true,
    "read": 60,
    "kept": 0,
-   "reused": 0,
+   "reused": 16,
    "ats": "smartrecruiters",
    "no_ats": false
   },
@@ -2973,7 +2959,7 @@
   {
    "name": "Celonis",
    "ok": true,
-   "read": 263,
+   "read": 262,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2982,18 +2968,18 @@
   {
    "name": "Personio",
    "ok": true,
-   "read": 0,
+   "read": 1,
    "kept": 0,
    "reused": 0,
-   "ats": "",
-   "no_ats": true
+   "ats": "recruitee",
+   "no_ats": false
   },
   {
    "name": "Bosch",
    "ok": true,
-   "read": 157,
+   "read": 24,
    "kept": 0,
-   "reused": 0,
+   "reused": 1,
    "ats": "smartrecruiters",
    "no_ats": false
   },
@@ -3208,8 +3194,8 @@
    "name": "Lalamove",
    "ok": true,
    "read": 144,
-   "kept": 2,
-   "reused": 0,
+   "kept": 0,
+   "reused": 5,
    "ats": "lever",
    "no_ats": false
   },
@@ -3325,24 +3311,16 @@
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
    "read": 1585,
-   "kept": 561,
-   "reused": 0,
-   "aggregator": true
-  },
-  {
-   "name": "JobsDB (Hong Kong)",
-   "ok": false,
-   "read": 0,
    "kept": 0,
-   "reused": 0,
-   "error": "403 Client Error: Forbidden for url: https://hk.jobsdb.com/api/jobsearch/v5/search?siteKey=HK-Main&sourcesystem=houston&"
+   "reused": 788,
+   "aggregator": true
   },
   {
    "name": "JobStreet (Singapour)",
    "ok": true,
-   "read": 4756,
-   "kept": 178,
-   "reused": 0,
+   "read": 4757,
+   "kept": 56,
+   "reused": 393,
    "aggregator": true
   },
   {
@@ -3370,26 +3348,26 @@
    "aggregator": true
   }
  ],
- "seconds": 616,
+ "seconds": 4155,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 837,
+ "ai_pending": 895,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 31901,
-  "reused": 479,
+  "read": 30555,
+  "reused": 1803,
   "rejected": {
-   "lieu": 21170,
-   "langue": 165,
-   "niveau": 2160,
-   "metier": 1560,
-   "ancienne": 204,
-   "autre": 658
+   "lieu": 20685,
+   "langue": 23,
+   "niveau": 1787,
+   "metier": 1137,
+   "ancienne": 201,
+   "autre": 397
   },
-  "kept": 837,
-  "langs_ok": 815,
-  "sources_ok": 313,
-  "sources_total": 393
+  "kept": 895,
+  "langs_ok": 873,
+  "sources_ok": 311,
+  "sources_total": 390
  }
 }
