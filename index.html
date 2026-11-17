@@ -121,6 +121,7 @@ h1{font-family:var(--font-head);font-size:28px;line-height:1.1;margin:0;letter-s
 
   <div class="tabs" role="tablist" id="tabs">
     <button class="tab" role="tab" data-tab="offres" id="tab-offres">Offres<span class="pill" id="p-offres">0</span></button>
+    <button class="tab" role="tab" data-tab="traitees" id="tab-traitees">Traitées<span class="pill" id="p-traitees">0</span></button>
     <button class="tab" role="tab" data-tab="candidatures" id="tab-candidatures">Candidatures<span class="pill" id="p-candidatures">0</span></button>
     <button class="tab" role="tab" data-tab="mails" id="tab-mails">Mails<span class="pill" id="p-mails">0</span></button>
   </div>
@@ -139,7 +140,7 @@ h1{font-family:var(--font-head);font-size:28px;line-height:1.1;margin:0;letter-s
     </select>
     <select id="fc" aria-label="Ville"><option value="">Hong Kong et Singapour</option><option value="hk">Hong Kong</option><option value="sg">Singapour</option></select>
     <select id="fn" aria-label="Note minimale"><option value="0">Toutes notes</option><option value="5">Note 5 et plus</option><option value="7">Note 7 et plus</option></select>
-    <select id="fs" aria-label="Suivi"><option value="">Tout le suivi</option><option value="todo">À postuler</option><option value="applied">Postulé</option><option value="none">Non traité</option><option value="skip">Ignoré</option></select>
+    <select id="fs" aria-label="Suivi"><option value="">Tout le suivi</option><option value="todo">À postuler</option><option value="none">Non traité</option></select>
     <select id="so" aria-label="Tri"><option value="note">Tri : meilleure note</option><option value="date">Tri : plus récentes</option><option value="co">Tri : groupe</option></select>
     <label class="check"><input type="checkbox" id="fnew"> Nouvelles</label>
     <span class="count" id="count"></span>
@@ -148,6 +149,7 @@ h1{font-family:var(--font-head);font-size:28px;line-height:1.1;margin:0;letter-s
   <div class="list" id="list"></div>
   </section>
 
+  <section id="v-traitees" class="wrap" hidden></section>
   <section id="v-candidatures" class="wrap" hidden></section>
   <section id="v-mails" class="wrap" hidden></section>
 
@@ -218,6 +220,7 @@ const city=o=>/hong/i.test(o.location)?"hk":/singap/i.test(o.location)?"sg":"";
 const stOf=o=>{const t=TRK[hid(keyOf(o))];return t&&t.status||""};
 const ST={todo:"À postuler",applied:"Postulé",skip:"Ignoré"};
 function isNew(o){if(!o.first_seen)return false;const d=new Date(o.first_seen);return !isNaN(d)&&(Date.now()-d.getTime())<=2*86400000}
+const isDone=st=>st==="applied"||st==="skip";
 const nTrk=st=>Object.values(TRK).filter(t=>t.status===st).length;
 const parisFmt=iso=>{const d=new Date(iso);return isNaN(d)?"":d.toLocaleString("fr-FR",{timeZone:"Europe/Paris",day:"2-digit",month:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit"}).replace(",", " à")};
 
@@ -233,6 +236,7 @@ function filtered(){
     if(fn&&!(o.note10>=fn))return false;
     if(nw&&!isNew(o))return false;
     const st=stOf(o)||"none";
+    if(isDone(st))return false;
     if(fs&&st!==fs)return false;
     return true;
   });
@@ -240,11 +244,13 @@ function filtered(){
   return a;
 }
 function renderOffres(){
-  const kept=DATA.filter(o=>!o.excluded);
+  const kept=DATA.filter(o=>!o.excluded&&!isDone(stOf(o)));
   const M=META.meta;let t="";
   if(DATA.length&&M&&M.generated_at){t="Données du "+parisFmt(M.generated_at)+" (heure de Paris), fichier jobs.json";
     const r=(M.sources||[]).reduce((a,x)=>a+(x.read||0),0);
     t+=" · "+r+" annonces lues sur les sites · "+(M.new_today||0)+" nouvelles · "+(M.reused_from_previous||0)+" déjà connues, non retraitées";
+    if(M.ai_provider){t+=" · IA ("+M.ai_provider+") : "+(M.ai_reviewed||0)+"/"+DATA.filter(o=>!o.excluded).length+" offres analysées"+(M.ai_models&&M.ai_models.length?" par "+M.ai_models.join(", "):"")+(M.ai_error?" · dernière erreur IA : "+M.ai_error:"")}
+    else if(M.generated_at){t+=" · aucune IA active : notes calculées par règles"}
     const ko=(M.sources||[]).filter(x=>!x.ok).map(x=>x.name);if(ko.length)t+=" · sources en panne : "+ko.join(", ");}
   else if(DATA.length&&META.at){t="Données du "+parisFmt(META.at)+" (date du fichier jobs.json)"}
   if(META.loadedAt)t+=" · chargé ici à "+new Date(META.loadedAt).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
@@ -256,7 +262,7 @@ function renderOffres(){
   if(!a.length){$("list").innerHTML=`<div class="empty">Aucune offre ne correspond à ces filtres.</div>`;return}
   $("list").innerHTML=a.map(o=>{
     const k=keyOf(o),isOpen=open_===k,zl=zhLabel(o),st=stOf(o);
-    const chips=[isNew(o)?`<span class="chip c-new">Nouvelle</span>`:"",`<span class="chip ${zl[1]}">${zl[0]}</span>`,
+    const chips=[isNew(o)?`<span class="chip c-new">Nouvelle</span>`:"",`<span class="chip ${zl[1]}">${zl[0]}</span>`,o.note_source==="ia"?`<span class="chip c-good" title="${esc(o.ai_model)}">IA</span>`:`<span class="chip c-grey" title="Note calculée par règles, pas encore analysée par l'IA">Règles</span>`,
       st==="applied"?`<span class="chip c-good">Postulé</span>`:st==="todo"?`<span class="chip c-warn">À postuler</span>`:st==="skip"?`<span class="chip c-grey">Ignoré</span>`:""].join("");
     const nv=o.excluded?"–":(o.note10==null?"?":o.note10);
     return `<div class="row${isOpen?" open":""}${o.excluded||st==="skip"?" excl":""}">
@@ -280,6 +286,19 @@ function detail(o,k,st){
   const seg=`<div class="seg" role="group" aria-label="Suivi">${Object.keys(ST).map(s=>`<button type="button" data-st="${s}" data-k="${esc(k)}" aria-pressed="${st===s}">${s==="skip"?"Ignorer":ST[s]}</button>`).join("")}</div>`;
   const full=o.description?`<div class="fulltext"><h3>Annonce complète</h3><div class="body">${esc(o.description)}</div></div>`:`<div class="fulltext"><h3>Annonce complète</h3><p class="src">Le texte de l'annonce n'a pas pu être lu par le script. Utilise « Ouvrir l'offre ».</p></div>`;
   return `<div class="detail"><div>${sum}${why}</div><div>${kv}${fl}<div class="actions">${link}${seg}</div></div>${full}</div>`;
+}
+
+/* ---------- traitées ---------- */
+function renderTraitees(){
+  const items=Object.entries(TRK).filter(([,t])=>isDone(t.status)).sort((a,b)=>(b[1].appliedAt||b[1].addedAt||"").localeCompare(a[1].appliedAt||a[1].addedAt||""));
+  if(!items.length){$("v-traitees").innerHTML=`<div class="empty">Aucune offre traitée. Quand tu marques une offre « Postulé » ou « Ignoré », elle quitte l'onglet Offres et arrive ici.</div>`;return}
+  const ap=items.filter(x=>x[1].status==="applied").length;
+  $("v-traitees").innerHTML=`<div class="tsum"><span><b>${items.length}</b> traitées</span><span><b>${ap}</b> postulées</span><span><b>${items.length-ap}</b> ignorées</span></div><div class="list">`+
+  items.map(([id,t])=>{const o=DATA.find(x=>hid(keyOf(x))===id);
+    return `<div class="trow"><div style="min-width:0"><div class="t">${t.url?`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a>`:esc(t.title)}</div><div class="meta">${esc(t.company)} · ${esc(t.location)}${o&&o.note10!=null?" · note "+o.note10+"/10":""}</div></div>
+    <div><span class="chip ${t.status==="applied"?"c-good":"c-grey"}">${t.status==="applied"?"Postulé":"Ignoré"}</span></div>
+    <div><span class="lbl">Date</span>${fmtDate(t.appliedAt||t.addedAt)}</div>
+    <div><button class="rm" data-back="${id}" type="button">Remettre dans les offres</button></div></div>`}).join("")+`</div>`;
 }
 
 /* ---------- candidatures ---------- */
@@ -308,17 +327,17 @@ function renderMails(){
 /* ---------- onglets ---------- */
 function renderAll(){
   const c=cands();
-  $("p-offres").textContent=DATA.filter(o=>!o.excluded).length;$("p-candidatures").textContent=c.length;$("p-mails").textContent=c.filter(x=>x[1].mailSent).length+"/"+c.length;
-  ["offres","candidatures","mails"].forEach(t=>{$("v-"+t).hidden=TAB!==t;$("tab-"+t).setAttribute("aria-selected",TAB===t)});
-  if(TAB==="offres")renderOffres();else if(TAB==="candidatures")renderCands();else renderMails();
+  $("p-offres").textContent=DATA.filter(o=>!o.excluded&&!isDone(stOf(o))).length;$("p-traitees").textContent=Object.values(TRK).filter(t=>isDone(t.status)).length;$("p-candidatures").textContent=c.length;$("p-mails").textContent=c.filter(x=>x[1].mailSent).length+"/"+c.length;
+  ["offres","traitees","candidatures","mails"].forEach(t=>{$("v-"+t).hidden=TAB!==t;$("tab-"+t).setAttribute("aria-selected",TAB===t)});
+  if(TAB==="offres")renderOffres();else if(TAB==="traitees")renderTraitees();else if(TAB==="candidatures")renderCands();else renderMails();
 }
 function goTab(t){TAB=t;if(location.hash!=="#"+t)history.replaceState(null,"","#"+t);renderAll()}
 $("tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]");if(b)goTab(b.dataset.tab)});
-window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(["offres","candidatures","mails"].includes(h)){TAB=h;renderAll()}});
+window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(["offres","traitees","candidatures","mails"].includes(h)){TAB=h;renderAll()}});
 
 $("list").addEventListener("click",e=>{
   const b=e.target.closest("[data-st]");
-  if(b){const o=DATA.find(x=>keyOf(x)===b.dataset.k);if(o)setStatus(o,b.dataset.st);return}
+  if(b){const o=DATA.find(x=>keyOf(x)===b.dataset.k);if(o){setStatus(o,b.dataset.st);if(isDone(stOf(o)))open_=null;renderAll()}return}
   const h=e.target.closest(".row-head");
   if(h){open_=open_===h.dataset.k?null:h.dataset.k;renderAll()}
 });
@@ -327,6 +346,7 @@ $("v-candidatures").addEventListener("change",e=>{
   if(el.dataset.f==="status")trkSave(id,{...t,status:el.value,appliedAt:el.value==="applied"?(t.appliedAt||today()):t.appliedAt});
   else trkSave(id,{...t,appliedAt:el.value});
 });
+$("v-traitees").addEventListener("click",e=>{const b=e.target.closest("[data-back]");if(!b)return;const id=b.dataset.back,t=TRK[id];if(!t)return;if(t.mailSent)trkSave(id,{...t,status:""});else trkDel(id)});
 $("v-candidatures").addEventListener("click",e=>{const b=e.target.closest("[data-rm]");if(b)trkDel(b.dataset.rm)});
 $("v-mails").addEventListener("change",e=>{
   const el=e.target.closest("[data-mail]");if(!el)return;const id=el.dataset.id,t=TRK[id];if(!t)return;
@@ -337,7 +357,7 @@ $("pick").addEventListener("click",load);
 
 /* ---------- démarrage ---------- */
 (function boot(){
-  const h=location.hash.slice(1);if(["offres","candidatures","mails"].includes(h))TAB=h;
+  const h=location.hash.slice(1);if(["offres","traitees","candidatures","mails"].includes(h))TAB=h;
   try{TRK=JSON.parse(lsGet("jw_trk")||"{}")}catch(e){TRK={}}
   renderAll();load();
 })();

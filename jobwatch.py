@@ -26,6 +26,8 @@ from xml.sax.saxutils import escape
 
 import yaml
 
+from concurrent.futures import ThreadPoolExecutor
+
 import ai_score
 import sources
 from filters import cheap_check, full_check, html_to_text
@@ -92,43 +94,58 @@ def check_sources(cfg: dict) -> int:
     return ko
 
 
+def fetch_all(cfg: dict):
+    """Lit les listes d'offres de toutes les sources en parallèle."""
+    def one(src):
+        try:
+            return src, run_source(src, cfg), None
+        except Exception as e:
+            return src, None, e
+    with ThreadPoolExecutor(max_workers=int(cfg.get("workers", 8))) as ex:
+        return list(ex.map(one, cfg["sources"]))
+
+
 def collect(cfg: dict, explain: bool):
+    t0 = time.time()
     state = load_state()
     today = date.today().isoformat()
     kept, rejected, errors = [], [], []
     max_desc = cfg.get("max_description_fetches_per_source", 150)
     prev = load_prev()
     refresh_days = int(cfg.get("refresh_days", 7))
+    ai_cfg = cfg.get("ai", {}) or {}
+    ai_on = ai_cfg.get("enabled", True) is not False and ai_score.pick_provider(os.environ, ai_cfg.get("provider")) is not None
     CACHED_ROWS.clear()
     SRC_STATS.clear()
-    for src in cfg["sources"]:
-        try:
-            jobs = run_source(src, cfg)
-        except Exception as e:
-            errors.append(f"{src['name']}: {type(e).__name__}: {str(e)[:150]}")
-            print(f"[KO] {src['name']}: {e}", file=sys.stderr)
+    pending = []      # (nom de source, offre, verdict provisoire)
+    stats = {}
+    for src, jobs, err in fetch_all(cfg):
+        name = src["name"]
+        if err is not None:
+            errors.append(f"{name}: {type(err).__name__}: {str(err)[:150]}")
+            print(f"[KO] {name}: {err}", file=sys.stderr)
             # source en panne : on garde ses offres du passage précédent
-            old = [r for r in prev.values() if r.get("source") == src["name"] or r.get("company") == src["name"]]
+            old = [r for r in prev.values() if r.get("source") == name or r.get("company") == name]
             CACHED_ROWS.extend(old)
-            SRC_STATS.append({"name": src["name"], "ok": False, "read": 0, "kept": 0, "reused": len(old),
-                              "error": str(e)[:120]})
+            stats[name] = {"name": name, "ok": False, "read": 0, "kept": 0, "reused": len(old), "error": str(err)[:120]}
             continue
+        st_src = stats[name] = {"name": name, "ok": True, "read": len(jobs), "kept": 0, "reused": 0}
         fetched = 0
-        n_keep = 0
-        n_reused = 0
         seen_ids = set()
         for j in jobs:
             if j.key in seen_ids:
                 continue
             seen_ids.add(j.key)
             row = prev.get(j.key)
-            if row and is_fresh(row.get("checked_at", ""), refresh_days) and not too_old(row, cfg.get("max_age_days")):
+            needs_ai = ai_on and not row.get("excluded") and row.get("note_source") != "ia" if row else False
+            if row and not needs_ai and is_fresh(row.get("checked_at", ""), refresh_days) \
+                    and not too_old(row, cfg.get("max_age_days")):
                 CACHED_ROWS.append(row)          # déjà analysée récemment : on ne la retraite pas
-                n_reused += 1
+                st_src["reused"] += 1
                 continue
             st0 = state.get(j.key, {})
             if st0.get("rej") and is_fresh(st0.get("checked", ""), refresh_days):
-                n_reused += 1                    # déjà jugée hors profil récemment
+                st_src["reused"] += 1            # déjà jugée hors profil récemment
                 continue
             v = cheap_check(j, cfg)
             if not v.keep:
@@ -136,25 +153,34 @@ def collect(cfg: dict, explain: bool):
                 continue
             if not j.description and j.desc_loader:
                 if fetched >= max_desc:
-                    v = type(v)(False, "plafond de lecture de descriptions atteint")
-                    rejected.append((j, v))
+                    rejected.append((j, type(v)(False, "plafond de lecture de descriptions atteint")))
                     continue
-                try:
-                    j.description = j.desc_loader()
-                except Exception as e:
-                    print(f"[!] description illisible {j.url}: {e}", file=sys.stderr)
                 fetched += 1
-            v = full_check(j, cfg)
-            if v.keep:
-                n_keep += 1
-                kept.append((j, v))
-            else:
-                rejected.append((j, v))
-                if "plafond" not in (v.reason or ""):
-                    st = state.setdefault(j.key, {"first_seen": today})
-                    st["rej"], st["checked"] = v.reason, today
-        SRC_STATS.append({"name": src["name"], "ok": True, "read": len(jobs), "kept": n_keep, "reused": n_reused})
-        print(f"[ok] {src['name']:<28} {len(jobs):>4} lues, {n_keep} retenues, {n_reused} déjà connues")
+            pending.append((name, j, v))
+    # lecture des annonces en parallèle (c'est l'étape la plus lente)
+    def load(item):
+        j = item[1]
+        if not j.description and j.desc_loader:
+            try:
+                j.description = j.desc_loader()
+            except Exception as e:
+                print(f"[!] description illisible {j.url}: {e}", file=sys.stderr)
+    with ThreadPoolExecutor(max_workers=int(cfg.get("workers", 8))) as ex:
+        list(ex.map(load, pending))
+    for name, j, _ in pending:
+        v = full_check(j, cfg)
+        if v.keep:
+            stats[name]["kept"] += 1
+            kept.append((j, v))
+        else:
+            rejected.append((j, v))
+            st = state.setdefault(j.key, {"first_seen": today})
+            st["rej"], st["checked"] = v.reason, today
+    for src in cfg["sources"]:
+        s = stats.get(src["name"])
+        if s:
+            SRC_STATS.append(s)
+            print(f"[{'ok' if s['ok'] else 'KO'}] {s['name']:<28} {s['read']:>4} lues, {s['kept']} retenues, {s['reused']} déjà connues")
     # état : première apparition
     for j, v in kept:
         st = state.setdefault(j.key, {"first_seen": today})
@@ -164,6 +190,7 @@ def collect(cfg: dict, explain: bool):
     STATE.write_text(json.dumps(state, indent=1))
     rk = {"A": 0, "B": 1, "C": 2}
     kept.sort(key=lambda jv: (rk.get(jv[1].rating, 3), jv[0].first_seen), reverse=False)
+    RUN["seconds"] = round(time.time() - t0)
     return kept, rejected, new, errors
 
 
@@ -178,9 +205,10 @@ def apply_ai(kept, rejected, state, cfg):
     if not picked:
         return kept
     provider, key, pcfg = picked
+    RUN["provider"] = provider
     model = ai_cfg.get("model") or pcfg["model"]
     budget = int(ai_cfg.get("max_per_run", 40 if provider == "openrouter" else 80))
-    pause = float(ai_cfg.get("pause_seconds", 5))
+    pause = float(ai_cfg.get("pause_seconds", 3))
     out = []
     for j, v in kept:
         st = state.setdefault(j.key, {"first_seen": date.today().isoformat()})
@@ -281,7 +309,11 @@ def write_outputs(kept, rejected, errors, cfg, explain):
     meta = {"generated_at": now_utc.strftime("%Y-%m-%dT%H:%M:%SZ"), "generated_paris": paris,
             "offers_total": len(rows), "offers_kept": len(live),
             "new_today": sum(1 for r in live if r.get("is_new")),
-            "reused_from_previous": len(CACHED_ROWS), "ai_calls": RUN["ai_calls"], "sources": SRC_STATS}
+            "reused_from_previous": len(CACHED_ROWS), "ai_calls": RUN["ai_calls"], "sources": SRC_STATS,
+            "seconds": RUN.get("seconds"), "ai_provider": RUN.get("provider", ""),
+            "ai_reviewed": sum(1 for r in live if r.get("note_source") == "ia"),
+            "ai_models": sorted({r.get("ai_model") for r in live if r.get("ai_model")}),
+            "ai_error": ai_score.LAST_ERROR}
     (OUT / "meta.json").write_text(json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8")
     with open(OUT / "jobs.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()) if rows else ["rating"])
