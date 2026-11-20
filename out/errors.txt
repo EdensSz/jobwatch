@@ -1,1 +1,0 @@
-SmartNews: HTTPError: 429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/smartnews
