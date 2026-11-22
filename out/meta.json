@@ -1,18 +1,18 @@
 {
- "generated_at": "2026-11-22T13:47:37Z",
- "generated_paris": "22/11/2026 14:47",
- "offers_total": 2053,
- "offers_kept": 1418,
- "new_today": 25,
- "reused_from_previous": 2003,
+ "generated_at": "2026-11-22T20:33:43Z",
+ "generated_paris": "22/11/2026 21:33",
+ "offers_total": 2040,
+ "offers_kept": 1407,
+ "new_today": 31,
+ "reused_from_previous": 2020,
  "ai_calls": 0,
  "sources": [
   {
    "name": "HSBC",
    "ok": true,
-   "read": 276,
+   "read": 269,
    "kept": 0,
-   "reused": 67
+   "reused": 66
   },
   {
    "name": "J.P. Morgan",
@@ -94,7 +94,7 @@
   {
    "name": "Wise",
    "ok": true,
-   "read": 58,
+   "read": 57,
    "kept": 0,
    "reused": 7
   },
@@ -110,9 +110,9 @@
   {
    "name": "OKX",
    "ok": true,
-   "read": 390,
-   "kept": 1,
-   "reused": 3
+   "read": 391,
+   "kept": 0,
+   "reused": 4
   },
   {
    "name": "Bybit",
@@ -191,14 +191,14 @@
   {
    "name": "ServiceNow",
    "ok": true,
-   "read": 74,
+   "read": 75,
    "kept": 0,
    "reused": 24
   },
   {
    "name": "Databricks",
    "ok": true,
-   "read": 895,
+   "read": 893,
    "kept": 0,
    "reused": 20
   },
@@ -226,7 +226,7 @@
   {
    "name": "Okta",
    "ok": true,
-   "read": 374,
+   "read": 373,
    "kept": 0,
    "reused": 8
   },
@@ -275,21 +275,21 @@
   {
    "name": "Anthropic",
    "ok": true,
-   "read": 633,
+   "read": 636,
    "kept": 0,
    "reused": 6
   },
   {
    "name": "Airbnb",
    "ok": true,
-   "read": 202,
+   "read": 203,
    "kept": 0,
    "reused": 4
   },
   {
    "name": "Agoda",
    "ok": true,
-   "read": 344,
+   "read": 342,
    "kept": 0,
    "reused": 11
   },
@@ -335,7 +335,7 @@
   {
    "name": "Netflix",
    "ok": true,
-   "read": 33,
+   "read": 34,
    "kept": 0,
    "reused": 7
   },
@@ -621,7 +621,7 @@
   {
    "name": "Toast",
    "ok": true,
-   "read": 325,
+   "read": 324,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -630,7 +630,7 @@
   {
    "name": "Samsara",
    "ok": true,
-   "read": 299,
+   "read": 300,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -693,7 +693,7 @@
   {
    "name": "Klaviyo",
    "ok": true,
-   "read": 126,
+   "read": 124,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -1485,7 +1485,7 @@
   {
    "name": "Man Group",
    "ok": true,
-   "read": 67,
+   "read": 66,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1890,10 +1890,10 @@
   {
    "name": "LVMH",
    "ok": true,
-   "read": 0,
+   "read": 35,
    "kept": 0,
    "reused": 0,
-   "ats": "smartrecruiters",
+   "ats": "recruitee",
    "no_ats": false
   },
   {
@@ -2664,9 +2664,9 @@
   {
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
-   "read": 1499,
-   "kept": 5,
-   "reused": 694,
+   "read": 1463,
+   "kept": 6,
+   "reused": 678,
    "aggregator": true
   },
   {
@@ -2681,17 +2681,17 @@
   {
    "name": "JobStreet (Hong Kong)",
    "ok": true,
-   "read": 4101,
-   "kept": 22,
-   "reused": 1456,
+   "read": 4103,
+   "kept": 5,
+   "reused": 1491,
    "aggregator": true
   },
   {
    "name": "JobStreet (Singapour)",
    "ok": true,
-   "read": 4722,
-   "kept": 8,
-   "reused": 448,
+   "read": 4716,
+   "kept": 5,
+   "reused": 453,
    "aggregator": true
   },
   {
@@ -2746,8 +2746,8 @@
    "name": "HK Science Park (HKSTP)",
    "ok": true,
    "read": 495,
-   "kept": 8,
-   "reused": 20,
+   "kept": 0,
+   "reused": 65,
    "aggregator": true
   },
   {
@@ -2767,25 +2767,25 @@
    "aggregator": true
   }
  ],
- "seconds": 187,
+ "seconds": 191,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 1418,
+ "ai_pending": 1407,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 35016,
-  "reused": 3155,
+  "read": 35002,
+  "reused": 3224,
   "rejected": {
-   "lieu": 20652,
-   "langue": 214,
-   "niveau": 2906,
-   "metier": 2070,
+   "lieu": 20666,
+   "langue": 213,
+   "niveau": 2896,
+   "metier": 2014,
    "ancienne": 302,
-   "autre": 612
+   "autre": 611
   },
-  "kept": 1418,
-  "langs_ok": 1394,
+  "kept": 1407,
+  "langs_ok": 1383,
   "sources_ok": 317,
   "sources_total": 317
  }
