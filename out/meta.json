@@ -1,25 +1,25 @@
 {
- "generated_at": "2026-11-26T01:20:31Z",
- "generated_paris": "26/11/2026 02:20",
- "offers_total": 1873,
- "offers_kept": 1253,
- "new_today": 23,
- "reused_from_previous": 1568,
+ "generated_at": "2026-11-26T16:01:25Z",
+ "generated_paris": "26/11/2026 17:01",
+ "offers_total": 1985,
+ "offers_kept": 1327,
+ "new_today": 102,
+ "reused_from_previous": 1665,
  "ai_calls": 0,
  "sources": [
   {
    "name": "HSBC",
    "ok": true,
-   "read": 284,
-   "kept": 1,
-   "reused": 69
+   "read": 293,
+   "kept": 0,
+   "reused": 72
   },
   {
    "name": "J.P. Morgan",
    "ok": true,
-   "read": 157,
+   "read": 151,
    "kept": 0,
-   "reused": 17
+   "reused": 18
   },
   {
    "name": "General Atlantic",
@@ -66,15 +66,15 @@
   {
    "name": "Stripe",
    "ok": true,
-   "read": 772,
+   "read": 769,
    "kept": 0,
-   "reused": 32
+   "reused": 31
   },
   {
    "name": "Adyen",
    "ok": true,
-   "read": 242,
-   "kept": 0,
+   "read": 233,
+   "kept": 1,
    "reused": 3
   },
   {
@@ -82,7 +82,7 @@
    "ok": true,
    "read": 81,
    "kept": 0,
-   "reused": 1
+   "reused": 2
   },
   {
    "name": "Thunes",
@@ -94,14 +94,14 @@
   {
    "name": "Wise",
    "ok": true,
-   "read": 54,
+   "read": 55,
    "kept": 0,
-   "reused": 7
+   "reused": 8
   },
   {
    "name": "Nium",
    "ok": true,
-   "read": 31,
+   "read": 36,
    "kept": 0,
    "reused": 0,
    "ats": "lever",
@@ -110,14 +110,14 @@
   {
    "name": "OKX",
    "ok": true,
-   "read": 390,
-   "kept": 0,
-   "reused": 4
+   "read": 388,
+   "kept": 1,
+   "reused": 3
   },
   {
    "name": "Bybit",
    "ok": true,
-   "read": 165,
+   "read": 166,
    "kept": 0,
    "reused": 0
   },
@@ -131,16 +131,16 @@
   {
    "name": "Ripple",
    "ok": true,
-   "read": 109,
+   "read": 107,
    "kept": 0,
    "reused": 2
   },
   {
    "name": "BitGo",
    "ok": true,
-   "read": 56,
+   "read": 58,
    "kept": 0,
-   "reused": 3
+   "reused": 2
   },
   {
    "name": "Fireblocks",
@@ -159,11 +159,11 @@
   {
    "name": "Crypto.com",
    "ok": true,
-   "read": 93,
+   "read": 0,
    "kept": 0,
-   "reused": 3,
-   "ats": "lever",
-   "no_ats": false
+   "reused": 0,
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Anchorage Digital",
@@ -177,14 +177,14 @@
   {
    "name": "Microsoft",
    "ok": true,
-   "read": 169,
+   "read": 165,
    "kept": 0,
    "reused": 30
   },
   {
    "name": "Grab",
    "ok": true,
-   "read": 143,
+   "read": 144,
    "kept": 0,
    "reused": 14
   },
@@ -193,26 +193,26 @@
    "ok": true,
    "read": 66,
    "kept": 0,
-   "reused": 17
+   "reused": 20
   },
   {
    "name": "Databricks",
    "ok": true,
-   "read": 874,
+   "read": 880,
    "kept": 0,
    "reused": 20
   },
   {
    "name": "Datadog",
    "ok": true,
-   "read": 392,
+   "read": 391,
    "kept": 0,
-   "reused": 16
+   "reused": 18
   },
   {
    "name": "MongoDB",
    "ok": true,
-   "read": 423,
+   "read": 420,
    "kept": 0,
    "reused": 6
   },
@@ -226,56 +226,56 @@
   {
    "name": "Okta",
    "ok": true,
-   "read": 366,
+   "read": 360,
    "kept": 0,
-   "reused": 7
+   "reused": 6
   },
   {
    "name": "Zscaler",
    "ok": true,
-   "read": 391,
+   "read": 389,
    "kept": 0,
-   "reused": 11
+   "reused": 13
   },
   {
    "name": "Pure Storage",
    "ok": true,
-   "read": 393,
+   "read": 395,
    "kept": 0,
    "reused": 12
   },
   {
    "name": "Elastic",
    "ok": true,
-   "read": 392,
+   "read": 375,
    "kept": 0,
    "reused": 6
   },
   {
    "name": "Twilio",
    "ok": true,
-   "read": 110,
+   "read": 113,
    "kept": 0,
    "reused": 3
   },
   {
    "name": "Rubrik",
    "ok": true,
-   "read": 220,
+   "read": 223,
    "kept": 0,
-   "reused": 9
+   "reused": 8
   },
   {
    "name": "Cloudflare",
    "ok": true,
-   "read": 524,
+   "read": 526,
    "kept": 0,
-   "reused": 13
+   "reused": 14
   },
   {
    "name": "Anthropic",
    "ok": true,
-   "read": 635,
+   "read": 634,
    "kept": 0,
    "reused": 6
   },
@@ -284,27 +284,27 @@
    "ok": true,
    "read": 199,
    "kept": 0,
-   "reused": 3
+   "reused": 4
   },
   {
    "name": "Agoda",
    "ok": true,
-   "read": 336,
+   "read": 332,
    "kept": 0,
    "reused": 11
   },
   {
    "name": "Pinterest",
    "ok": true,
-   "read": 166,
+   "read": 167,
    "kept": 0,
    "reused": 3
   },
   {
    "name": "Figma",
    "ok": true,
-   "read": 142,
-   "kept": 1,
+   "read": 141,
+   "kept": 0,
    "reused": 6
   },
   {
@@ -319,7 +319,7 @@
   {
    "name": "Ninja Van",
    "ok": true,
-   "read": 139,
+   "read": 137,
    "kept": 0,
    "reused": 0,
    "ats": "lever",
@@ -330,14 +330,14 @@
    "ok": true,
    "read": 2000,
    "kept": 0,
-   "reused": 3
+   "reused": 4
   },
   {
    "name": "Netflix",
    "ok": true,
-   "read": 32,
+   "read": 33,
    "kept": 0,
-   "reused": 6
+   "reused": 7
   },
   {
    "name": "OpenAI",
@@ -414,7 +414,7 @@
   {
    "name": "Robinhood",
    "ok": true,
-   "read": 161,
+   "read": 163,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -423,7 +423,7 @@
   {
    "name": "Affirm",
    "ok": true,
-   "read": 213,
+   "read": 210,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -486,16 +486,16 @@
   {
    "name": "Snowflake",
    "ok": true,
-   "read": 369,
+   "read": 376,
    "kept": 0,
-   "reused": 2,
+   "reused": 4,
    "ats": "ashby",
    "no_ats": false
   },
   {
    "name": "Asana",
    "ok": true,
-   "read": 110,
+   "read": 109,
    "kept": 0,
    "reused": 4,
    "ats": "greenhouse",
@@ -513,7 +513,7 @@
   {
    "name": "Intercom",
    "ok": true,
-   "read": 132,
+   "read": 133,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -522,8 +522,8 @@
   {
    "name": "Canva",
    "ok": true,
-   "read": 0,
-   "kept": 0,
+   "read": 1,
+   "kept": 1,
    "reused": 0,
    "ats": "smartrecruiters",
    "no_ats": false
@@ -531,7 +531,7 @@
   {
    "name": "Miro",
    "ok": true,
-   "read": 13,
+   "read": 12,
    "kept": 0,
    "reused": 2,
    "ats": "ashby",
@@ -558,7 +558,7 @@
   {
    "name": "Coursera",
    "ok": true,
-   "read": 33,
+   "read": 34,
    "kept": 0,
    "reused": 2,
    "ats": "greenhouse",
@@ -603,7 +603,7 @@
   {
    "name": "Riot Games",
    "ok": true,
-   "read": 198,
+   "read": 199,
    "kept": 0,
    "reused": 6,
    "ats": "greenhouse",
@@ -621,7 +621,7 @@
   {
    "name": "Toast",
    "ok": true,
-   "read": 301,
+   "read": 300,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -630,7 +630,7 @@
   {
    "name": "Samsara",
    "ok": true,
-   "read": 297,
+   "read": 300,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -666,7 +666,7 @@
   {
    "name": "Wiz",
    "ok": true,
-   "read": 100,
+   "read": 98,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -702,7 +702,7 @@
   {
    "name": "Braze",
    "ok": true,
-   "read": 352,
+   "read": 350,
    "kept": 0,
    "reused": 8,
    "ats": "greenhouse",
@@ -810,7 +810,7 @@
   {
    "name": "Cohere",
    "ok": true,
-   "read": 122,
+   "read": 123,
    "kept": 0,
    "reused": 3,
    "ats": "ashby",
@@ -819,7 +819,7 @@
   {
    "name": "Hugging Face",
    "ok": true,
-   "read": 10,
+   "read": 9,
    "kept": 0,
    "reused": 0,
    "ats": "workable",
@@ -855,7 +855,7 @@
   {
    "name": "Spotify",
    "ok": true,
-   "read": 96,
+   "read": 97,
    "kept": 0,
    "reused": 1,
    "ats": "lever",
@@ -909,7 +909,7 @@
   {
    "name": "Twitch",
    "ok": true,
-   "read": 51,
+   "read": 54,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1044,7 +1044,7 @@
   {
    "name": "Monzo",
    "ok": true,
-   "read": 54,
+   "read": 57,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1116,7 +1116,7 @@
   {
    "name": "Ebury",
    "ok": true,
-   "read": 170,
+   "read": 173,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1125,7 +1125,7 @@
   {
    "name": "Qonto",
    "ok": true,
-   "read": 64,
+   "read": 65,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -1134,7 +1134,7 @@
   {
    "name": "Pennylane",
    "ok": true,
-   "read": 204,
+   "read": 207,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -1161,7 +1161,7 @@
   {
    "name": "Ledger",
    "ok": true,
-   "read": 18,
+   "read": 19,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -1188,16 +1188,16 @@
   {
    "name": "Binance",
    "ok": true,
-   "read": 230,
-   "kept": 0,
-   "reused": 35,
+   "read": 221,
+   "kept": 1,
+   "reused": 36,
    "ats": "greenhouse",
    "no_ats": false
   },
   {
    "name": "Bitpanda",
    "ok": true,
-   "read": 39,
+   "read": 38,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1251,9 +1251,9 @@
   {
    "name": "Airwallex",
    "ok": true,
-   "read": 508,
-   "kept": 2,
-   "reused": 16,
+   "read": 510,
+   "kept": 0,
+   "reused": 18,
    "ats": "ashby",
    "no_ats": false
   },
@@ -1296,7 +1296,7 @@
   {
    "name": "Funding Societies",
    "ok": true,
-   "read": 90,
+   "read": 91,
    "kept": 0,
    "reused": 3,
    "ats": "workable",
@@ -1377,7 +1377,7 @@
   {
    "name": "Juniper Square",
    "ok": true,
-   "read": 50,
+   "read": 49,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -1413,7 +1413,7 @@
   {
    "name": "Alan",
    "ok": true,
-   "read": 141,
+   "read": 139,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -1485,7 +1485,7 @@
   {
    "name": "Man Group",
    "ok": true,
-   "read": 67,
+   "read": 66,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1521,7 +1521,7 @@
   {
    "name": "IMC Trading",
    "ok": true,
-   "read": 151,
+   "read": 149,
    "kept": 0,
    "reused": 2,
    "ats": "greenhouse",
@@ -1539,7 +1539,7 @@
   {
    "name": "Jump Trading",
    "ok": true,
-   "read": 81,
+   "read": 83,
    "kept": 0,
    "reused": 1,
    "ats": "greenhouse",
@@ -1890,10 +1890,10 @@
   {
    "name": "LVMH",
    "ok": true,
-   "read": 0,
+   "read": 35,
    "kept": 0,
    "reused": 0,
-   "ats": "smartrecruiters",
+   "ats": "recruitee",
    "no_ats": false
   },
   {
@@ -2223,7 +2223,7 @@
   {
    "name": "Doctolib",
    "ok": true,
-   "read": 145,
+   "read": 149,
    "kept": 0,
    "reused": 0,
    "ats": "ashby",
@@ -2232,7 +2232,7 @@
   {
    "name": "BlaBlaCar",
    "ok": true,
-   "read": 6,
+   "read": 7,
    "kept": 0,
    "reused": 0,
    "ats": "lever",
@@ -2259,7 +2259,7 @@
   {
    "name": "Back Market",
    "ok": true,
-   "read": 30,
+   "read": 28,
    "kept": 0,
    "reused": 2,
    "ats": "ashby",
@@ -2268,7 +2268,7 @@
   {
    "name": "Dataiku",
    "ok": true,
-   "read": 16,
+   "read": 15,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2295,7 +2295,7 @@
   {
    "name": "Delivery Hero",
    "ok": true,
-   "read": 65,
+   "read": 62,
    "kept": 0,
    "reused": 18,
    "ats": "smartrecruiters",
@@ -2313,7 +2313,7 @@
   {
    "name": "Celonis",
    "ok": true,
-   "read": 260,
+   "read": 257,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -2664,9 +2664,9 @@
   {
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
-   "read": 1511,
+   "read": 1552,
    "kept": 37,
-   "reused": 649,
+   "reused": 662,
    "aggregator": true
   },
   {
@@ -2681,17 +2681,17 @@
   {
    "name": "JobStreet (Hong Kong)",
    "ok": true,
-   "read": 4109,
-   "kept": 156,
-   "reused": 705,
+   "read": 4131,
+   "kept": 177,
+   "reused": 1055,
    "aggregator": true
   },
   {
    "name": "JobStreet (Singapour)",
    "ok": true,
-   "read": 4768,
-   "kept": 25,
-   "reused": 428,
+   "read": 4807,
+   "kept": 27,
+   "reused": 263,
    "aggregator": true
   },
   {
@@ -2745,9 +2745,9 @@
   {
    "name": "HK Science Park (HKSTP)",
    "ok": true,
-   "read": 499,
+   "read": 507,
    "kept": 10,
-   "reused": 21,
+   "reused": 1,
    "aggregator": true
   },
   {
@@ -2767,25 +2767,25 @@
    "aggregator": true
   }
  ],
- "seconds": 195,
+ "seconds": 219,
  "ai_provider": "",
  "ai_reviewed": 0,
- "ai_pending": 1253,
+ "ai_pending": 1327,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 35073,
-  "reused": 2309,
+  "read": 35105,
+  "reused": 2501,
   "rejected": {
-   "lieu": 20652,
-   "langue": 245,
-   "niveau": 2929,
-   "metier": 2250,
-   "ancienne": 314,
-   "autre": 1031
+   "lieu": 20779,
+   "langue": 248,
+   "niveau": 2972,
+   "metier": 2241,
+   "ancienne": 299,
+   "autre": 709
   },
-  "kept": 1253,
-  "langs_ok": 1233,
+  "kept": 1327,
+  "langs_ok": 1308,
   "sources_ok": 317,
   "sources_total": 317
  }
