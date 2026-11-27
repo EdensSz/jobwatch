@@ -1,0 +1,1 @@
+MyCareersFuture (Singapour): HTTPError: 504 après 5 essai(s) pour https://api.mycareersfuture.gov.sg/v2/jobs
