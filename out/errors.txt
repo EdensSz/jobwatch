@@ -1,3 +1,2 @@
-Hugging Face: HTTPError: 429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/huggingface
 JobStreet (Hong Kong): HTTPError: 403 Client Error: Forbidden for url: https://ph.jobstreet.com/api/jobsearch/v5/search?siteKey=PH-Main&sourcesystem=houston&page=1&pageSize=100&keyword
 JobStreet (Singapour): HTTPError: 403 Client Error: Forbidden for url: https://sg.jobstreet.com/api/jobsearch/v5/search?siteKey=SG-Main&sourcesystem=houston&page=1&pageSize=100&keyword

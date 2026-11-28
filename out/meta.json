@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-28T00:51:47Z",
- "generated_paris": "28/11/2026 01:51",
- "offers_total": 1994,
+ "generated_at": "2026-11-28T14:45:29Z",
+ "generated_paris": "28/11/2026 15:45",
+ "offers_total": 1993,
  "offers_kept": 1333,
- "new_today": 5,
- "reused_from_previous": 1920,
+ "new_today": 19,
+ "reused_from_previous": 1977,
  "ai_calls": 0,
  "sources": [
   {
@@ -12,7 +12,7 @@
    "ok": true,
    "read": 284,
    "kept": 0,
-   "reused": 66
+   "reused": 67
   },
   {
    "name": "J.P. Morgan",
@@ -31,7 +31,7 @@
   {
    "name": "StepStone",
    "ok": true,
-   "read": 64,
+   "read": 62,
    "kept": 0,
    "reused": 0
   },
@@ -96,7 +96,7 @@
    "ok": true,
    "read": 58,
    "kept": 0,
-   "reused": 7
+   "reused": 8
   },
   {
    "name": "Nium",
@@ -179,12 +179,12 @@
    "ok": true,
    "read": 160,
    "kept": 0,
-   "reused": 29
+   "reused": 30
   },
   {
    "name": "Grab",
    "ok": true,
-   "read": 143,
+   "read": 142,
    "kept": 0,
    "reused": 14
   },
@@ -193,19 +193,19 @@
    "ok": true,
    "read": 65,
    "kept": 0,
-   "reused": 20
+   "reused": 21
   },
   {
    "name": "Databricks",
    "ok": true,
-   "read": 889,
+   "read": 888,
    "kept": 0,
    "reused": 20
   },
   {
    "name": "Datadog",
    "ok": true,
-   "read": 390,
+   "read": 392,
    "kept": 0,
    "reused": 19
   },
@@ -263,12 +263,12 @@
    "ok": true,
    "read": 231,
    "kept": 0,
-   "reused": 9
+   "reused": 10
   },
   {
    "name": "Cloudflare",
    "ok": true,
-   "read": 533,
+   "read": 532,
    "kept": 0,
    "reused": 14
   },
@@ -305,7 +305,7 @@
    "ok": true,
    "read": 140,
    "kept": 0,
-   "reused": 5
+   "reused": 6
   },
   {
    "name": "Palantir",
@@ -335,9 +335,9 @@
   {
    "name": "Netflix",
    "ok": true,
-   "read": 29,
+   "read": 30,
    "kept": 0,
-   "reused": 8
+   "reused": 7
   },
   {
    "name": "OpenAI",
@@ -549,7 +549,7 @@
   {
    "name": "Gusto",
    "ok": true,
-   "read": 86,
+   "read": 85,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -630,7 +630,7 @@
   {
    "name": "Samsara",
    "ok": true,
-   "read": 292,
+   "read": 297,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -703,8 +703,8 @@
    "name": "Braze",
    "ok": true,
    "read": 357,
-   "kept": 1,
-   "reused": 7,
+   "kept": 0,
+   "reused": 8,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -818,11 +818,12 @@
   },
   {
    "name": "Hugging Face",
-   "ok": false,
+   "ok": true,
    "read": 0,
    "kept": 0,
    "reused": 0,
-   "error": "429 après 5 essai(s) pour https://apply.workable.com/api/v1/widget/accounts/huggingface"
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Perplexity",
@@ -845,7 +846,7 @@
   {
    "name": "SpaceX",
    "ok": true,
-   "read": 2890,
+   "read": 2891,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1043,7 +1044,7 @@
   {
    "name": "Monzo",
    "ok": true,
-   "read": 56,
+   "read": 55,
    "kept": 0,
    "reused": 0,
    "ats": "greenhouse",
@@ -1189,7 +1190,7 @@
    "ok": true,
    "read": 223,
    "kept": 0,
-   "reused": 38,
+   "reused": 39,
    "ats": "greenhouse",
    "no_ats": false
   },
@@ -1268,11 +1269,11 @@
   {
    "name": "YouTrip",
    "ok": true,
-   "read": 54,
+   "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "workable",
-   "no_ats": false
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Xendit",
@@ -1295,11 +1296,11 @@
   {
    "name": "Funding Societies",
    "ok": true,
-   "read": 89,
-   "kept": 2,
-   "reused": 1,
-   "ats": "workable",
-   "no_ats": false
+   "read": 0,
+   "kept": 0,
+   "reused": 0,
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Endowus",
@@ -1583,11 +1584,11 @@
   {
    "name": "PAI Partners",
    "ok": true,
-   "read": 7,
+   "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "recruitee",
-   "no_ats": false
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "EQT",
@@ -1889,10 +1890,10 @@
   {
    "name": "LVMH",
    "ok": true,
-   "read": 0,
+   "read": 35,
    "kept": 0,
    "reused": 0,
-   "ats": "smartrecruiters",
+   "ats": "recruitee",
    "no_ats": false
   },
   {
@@ -2296,7 +2297,7 @@
    "ok": true,
    "read": 63,
    "kept": 0,
-   "reused": 16,
+   "reused": 18,
    "ats": "smartrecruiters",
    "no_ats": false
   },
@@ -2321,11 +2322,11 @@
   {
    "name": "Personio",
    "ok": true,
-   "read": 1,
+   "read": 0,
    "kept": 0,
    "reused": 0,
-   "ats": "recruitee",
-   "no_ats": false
+   "ats": "",
+   "no_ats": true
   },
   {
    "name": "Bosch",
@@ -2663,9 +2664,9 @@
   {
    "name": "MyCareersFuture (Singapour)",
    "ok": true,
-   "read": 1492,
-   "kept": 45,
-   "reused": 628,
+   "read": 1497,
+   "kept": 15,
+   "reused": 674,
    "aggregator": true
   },
   {
@@ -2745,8 +2746,8 @@
    "name": "HK Science Park (HKSTP)",
    "ok": true,
    "read": 508,
-   "kept": 10,
-   "reused": 20,
+   "kept": 0,
+   "reused": 64,
    "aggregator": true
   },
   {
@@ -2766,26 +2767,26 @@
    "aggregator": true
   }
  ],
- "seconds": 191,
+ "seconds": 199,
  "ai_provider": "",
  "ai_reviewed": 0,
  "ai_pending": 1333,
  "ai_models": [],
  "ai_error": "",
  "funnel": {
-  "read": 26153,
-  "reused": 2157,
+  "read": 26044,
+  "reused": 2255,
   "rejected": {
-   "lieu": 17353,
-   "langue": 76,
-   "niveau": 1405,
-   "metier": 1136,
-   "ancienne": 152,
-   "autre": 236
+   "lieu": 17281,
+   "langue": 66,
+   "niveau": 1388,
+   "metier": 1088,
+   "ancienne": 147,
+   "autre": 223
   },
   "kept": 1333,
   "langs_ok": 1313,
-  "sources_ok": 314,
+  "sources_ok": 315,
   "sources_total": 317
  }
 }
